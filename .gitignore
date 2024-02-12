@@ -1,0 +1,16 @@
+*.vscode-project
+*.vscode-workspace
+*.vscode
+
+*.class
+
+.hugo_build.lock
+
+.idea/
+out/
+build/
+
+.DS_Store
+
+docs/
+resources/
