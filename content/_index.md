@@ -1,8 +1,8 @@
 ---
-title: "Software Engineering Skills"
+title: "Full Stack Web Development"
 author: Arne Duyver
 ---
 
-# Software Engineering Skills
+# Full Stack Web Development
 
 Academiejaar 2023---2024.
