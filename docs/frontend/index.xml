@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frontend on Full Stack Web Development</title>
+    <link>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/</link>
+    <description>Recent content in Frontend on Full Stack Web Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</webMaster>
+    <atom:link href="https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML</title>
+      <link>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/hrml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/hrml/</guid>
+      <description>Hyper Text Markup language </description>
+    </item>
+  </channel>
+</rss>
