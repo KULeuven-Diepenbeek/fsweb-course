@@ -12,22 +12,22 @@
     <title>HTML :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1707993044" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1707993044" rel="stylesheet">
-    <link href="../../css/hybrid.css?1707993044" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1707993044" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1707993044" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1707993044" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1707993044" rel="stylesheet">
-    <link href="../../css/theme.css?1707993044" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1707993044" rel="stylesheet">
-    <link href="../../css/devselector.css?1707993044" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1707993044" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1707993044" rel="stylesheet">
+    <link href="../../css/nucleus.css?1707995864" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1707995864" rel="stylesheet">
+    <link href="../../css/hybrid.css?1707995864" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1707995864" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1707995864" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1707995864" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1707995864" rel="stylesheet">
+    <link href="../../css/theme.css?1707995864" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1707995864" rel="stylesheet">
+    <link href="../../css/devselector.css?1707995864" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1707995864" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1707995864" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1707993044"></script>
-    <script src="../../js/devselector.js?1707993044"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1707995864"></script>
+    <script src="../../js/devselector.js?1707995864"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1707993044"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1707993044"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1707995864"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1707995864"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1707993044"></script>
+<script type="text/javascript" src="../../js/search.js?1707995864"></script>
 
     
   </div>
@@ -249,11 +249,7 @@
         <li><a href="#elements-tags-en-attributes">Elements, Tags en Attributes</a></li>
         <li><a href="#structuur-van-een-html-document">Structuur van een HTML-document</a></li>
         <li><a href="#types-van-html-elements">Types van HTML elements</a></li>
-        <li><a href="#een-overzicht-van-de-meest-voorkomende-html-elementen-en-hun-functies">Een overzicht van de meest voorkomende HTML elementen en hun functies</a>
-          <ol>
-            <li><a href="#a-het-anker-element">&lt;a&gt; het anker element</a></li>
-          </ol>
-        </li>
+        <li><a href="#een-overzicht-van-de-meest-voorkomende-html-elementen-en-hun-functies">Een overzicht van de meest voorkomende HTML elementen en hun functies</a></li>
         <li><a href="#html-vs-html5">HTML vs HTML5</a></li>
       </ol>
     </li>
@@ -315,40 +311,59 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
 </span></span></code></pre></div><ul>
-<li><strong>Doctype</strong>: Hiermee geven we weer welk type dit document is.</li>
-<li><strong>html element</strong>: Het HTML element met de naam &lsquo;html&rsquo;.
+<li><strong>Doctype</strong>: Hiermee geven we weer welk type dit document is. In ons geval dus steeds html.</li>
+<li><strong>html element</strong>: Het HTML element met de naam &lsquo;html&rsquo;. Dit wordt de <strong>root tag</strong> van het HTML bestand genoemd, want alle html code moet binnen de <code>&lt;html&gt;</code> en <code>&lt;/html&gt;</code> tags staan
 <ul>
-<li><strong>lang attribuut</strong>:</li>
+<li><strong>lang attribuut</strong>: Met het language attribuut geven we meer informatie mee aan de webbrowser door te vermelden dat de content op deze webpagina in het Engels (<code>en</code>) geschreven is. (Nederlands =  <code>nl</code>)</li>
 </ul>
 </li>
-<li><strong>head element</strong>: meta, title, links, &hellip;
+<li><strong>head element</strong>: dit is een container voor de volgende metadata: <code>&lt;title&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code> and <code>&lt;base&gt;</code>.
 <ul>
-<li><strong>meta element</strong>:
+<li><strong>meta element</strong>: wordt gebruikt om de karakterset/encoding, paginabeschrijving, trefwoorden, auteur van het document en viewport settings te declareren.
 <ul>
-<li><strong>character encoding</strong>:</li>
+<li><strong>character encoding</strong>: dit verteld de webbrowser hoe de karakters gecodeerd zijn zodat hij ze correct kan decoderen. Tenzij je een goede reden hebt is de gebruikte codering normaal <code>utf-8</code>.</li>
 </ul>
 </li>
 </ul>
 </li>
+<li><strong>body element</strong>: een element container die al de overige inhoud van het HTML bevat. De headers, paragrafen, de tekst &hellip;</li>
 </ul>
 <h3 id="types-van-html-elements">Types van HTML elements</h3>
 <ul>
-<li></li>
-<li></li>
-<li></li>
+<li><strong>Sectioning elements</strong>: elementen die worden gebruikt om de structuur van een webpagina te definiëren door secties van inhoud te scheiden. Bv. <code>&lt;header&gt;</code> en <code>&lt;footer&gt;</code>.</li>
+<li><strong>Grouping elements</strong>: elementen die worden gebruikt om meerdere inhoudsitems te groeperen of te bundelen onder één overkoepelend element. Bv. <code>&lt;div&gt;</code> en <code>&lt;span&gt;</code>.</li>
+<li><strong>Text-level semantics</strong>: dit verwijst naar de manier waarop HTML elements de betekenis en structuur van tekst op een webpagina definiëren. Deze elementen worden gebruikt om specifieke delen van de tekst te markeren en hun semantische betekenis aan te geven. Bv. <code>&lt;em&gt;</code> en <code>&lt;strong&gt;</code>.</li>
 </ul>
 <h3 id="een-overzicht-van-de-meest-voorkomende-html-elementen-en-hun-functies">Een overzicht van de meest voorkomende HTML elementen en hun functies</h3>
-<h4 id="a-het-anker-element">&lt;a&gt; het anker element</h4>
+<!-- 
+
+#### \<a\> het anker element
+>The a tag (short for anchor tag) is arguably the most important and defining tag of HTML. The
+anchor tag is the tag used to link from the document a user is on to another document elsewhere
+on the internet, or another point in the same document.
+De link wordt meegegeven via het `href` attribuut, de tekst die getoond moet worden is de content van het anchor element.
+- Refereren naar een lokaal bestand via relatieve paden
+```html
+<a href="index.html">The home page</a>
+```
+- Refereren naar een webpagina via url's
+```html
+<a href="www.google.com">google</a> 
+```
+
+-->
 <h3 id="html-vs-html5">HTML vs HTML5</h3>
-<p>HTML5 is de nieuwere versie van HTML met een aantal nuttige voordelen. Zo is HTML5 zeer vrijgevend gezind in het weglaten van bepaalde attributen en gebruikt HTML5 default waarden voor attributen die nodig zijn maar niet specifiek uitgetyped werden. Bijvoorbeeld:</p>
+<p>HTML5 is de nieuwere versie van HTML met een aantal nuttige voordelen. Zo is HTML5 zeer vrijgevend gezind in het weglaten van bepaalde attributen en gebruikt HTML5 default waarden voor attributen die nodig zijn maar niet specifiek uitgetyped werden. W Bijvoorbeeld:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;CSS/main.css&#34;</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text/css&#34;</span> <span style="color:#111">/&gt;</span>
 </span></span></code></pre></div><p>HTML5:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">CSS/main.css</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">stylesheet</span> <span style="color:#111">&gt;</span>
 </span></span></code></pre></div><p>Merk op dat in het HTML5 voorbeeld geen &ldquo;/&rdquo; heeft voor het sluitende groter dan teken, geen quotes gebruikt voor de value van het attribuut &lsquo;href&rsquo; en &lsquo;rel&rsquo; en er geen attribuut &rsquo;type&rsquo; gedefinieerd is. HTML5 zal hier echter niet moeilijk over doen.</p>
+<!-- TODO: fix icon -->
 <blockquote>
 <p><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
 In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek mogelijk te coderen om problemen in een later stadium te vermijden.</p>
 </blockquote>
+<p>Aangezien HTML5 dus gewoon de nieuwere versie is van HTML gaan we dit gebruiken.</p>
 
 </article>
 
@@ -457,15 +472,15 @@ In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek m
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1707993044"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1707993044"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1707993044"></script>
-    <script src="../../js/jquery.sticky.js?1707993044"></script>
-    <script src="../../js/featherlight.min.js?1707993044"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1707993044"></script>
-    <script src="../../js/learn.js?1707993044"></script>
-    <script src="../../js/hugo-learn.js?1707993044"></script>
-    <script src="../../js/mermaid.min.js?1707993044"></script>
+    <script src="../../js/clipboard.min.js?1707995864"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1707995864"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1707995864"></script>
+    <script src="../../js/jquery.sticky.js?1707995864"></script>
+    <script src="../../js/featherlight.min.js?1707995864"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1707995864"></script>
+    <script src="../../js/learn.js?1707995864"></script>
+    <script src="../../js/hugo-learn.js?1707995864"></script>
+    <script src="../../js/mermaid.min.js?1707995864"></script>
     <script>
     window.MathJax = {
       chtml: {
