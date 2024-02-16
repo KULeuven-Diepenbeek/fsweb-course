@@ -58,24 +58,33 @@ Je kan eender welke simpele tekst- of code-editor gebruiken om HTML bestanden aa
 - **Grouping elements**: elementen die worden gebruikt om meerdere inhoudsitems te groeperen of te bundelen onder één overkoepelend element. Bv. `<div>` en `<span>`.
 - **Text-level semantics**: dit verwijst naar de manier waarop HTML elements de betekenis en structuur van tekst op een webpagina definiëren. Deze elementen worden gebruikt om specifieke delen van de tekst te markeren en hun semantische betekenis aan te geven. Bv. `<em>` en `<strong>`.
 
-### Een overzicht van de meest voorkomende HTML elementen en hun functies
-<!-- 
+### Een overzicht een deel HTML elementen
+#### Anchor element
 
-#### \<a\> het anker element
->The a tag (short for anchor tag) is arguably the most important and defining tag of HTML. The
-anchor tag is the tag used to link from the document a user is on to another document elsewhere
-on the internet, or another point in the same document.
-De link wordt meegegeven via het `href` attribuut, de tekst die getoond moet worden is de content van het anchor element.
-- Refereren naar een lokaal bestand via relatieve paden
-```html
-<a href="index.html">The home page</a>
-```
-- Refereren naar een webpagina via url's
-```html
-<a href="www.google.com">google</a> 
-```
 
--->
+### Mappenstructuur voor je webpagina's
+```
+root
+|
++--- html
+    |
+    +--- index.html
+    |
+    +--- about
+    |    |
+    |    +--- about.html
+    |
+    +--- contact
+    |    |
+    |    +--- contact.html
+    ...
++--- assets
+    |
+    +--- images
+        |
+        +--- image1.png
+...
+```
 
 ### HTML vs HTML5
 
@@ -95,3 +104,31 @@ Merk op dat in het HTML5 voorbeeld geen "/" heeft voor het sluitende groter dan 
 > In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek mogelijk te coderen om problemen in een later stadium te vermijden.
 
 Aangezien HTML5 dus gewoon de nieuwere versie is van HTML gaan we dit gebruiken.
+
+## Opdrachten
+1. Maak een HTML-bestand en noem het portfolio.html
+2. Geef de titel van je webpagina de naam "<naam> portfolio".
+3. Voeg jezelf toe als auteur van de webpagina
+4. Gebruik het header element om de onderstaande structuur aan te brengen aan je webpagina.
+    - Expertise
+    - Over mij
+    - Mijn projecten
+    - Technische vaardigheden en CV
+    - Contact
+5. Gebruik de relevante html elementen om het volgende toe te voegen aan je webpagina: voeg boven de header expertise een welkomstbericht toe. (Voor inspiratie voor het tekstje kan je ChatGPT gebruiken, de vormgeving doe je ZELF). Emphasize een aantal inspirerende woorden door ze in het vetgedrukt/schuin te zetten.
+6. Voeg ook een mooie afbeelding toe die je online ophaalt. Gerbuik hiervoor het 'figure' element en voeg een caption toe
+7. Plaats de welkomsttekst binnenin een div en geef die div de klassenaam 'welcometext'.
+8. Geef in de Expertise sectie een lijst waarin je je eigen vaardigheden in de verf zet. (je kan ook inspiratie opdoen op andere portfolio websites).
+9. Plaats in de Expertise sectie ook een link naar de sectie Technische vaardigheden en CV
+10. Plaats in de 'Over mij' je favoriete quote van je lievelingsfilm/-boek in de Over mij sectie. Gerbuik hier het juiste element voor.
+11. Geef ook wat meer informatie over jezelf en plaats minstens één belangrijke zin in een span en geef die de id 'important-sentence'.
+12. Plaats hier ook een afbeelding (de afbeelding moet je lokaal hebben staan)
+13. Maak onder de sectie 'Mijn projecten' subsecties voor alle projecten die je al eens gemaakt hebt. Bijvoorbeeld je project van ELSY van het eerste jaar, je PES project, eigen andere projecten …
+14. Onder technische vaardigheden maak je een tabel met je verschillende opleidingen in (naam opleiding, startjaar, eindjaar). Voeg ook een lijst met beheerste talen toe en link hier ergens naar  volgende webpagina: [https://detaalbrigade.nl/taalniveaus/](https://detaalbrigade.nl/taalniveaus/ )
+15. Breng wat meer structuur aan in je teksten met divs, paragrafen en line breaks. Voeg ook eens wat symbolen via hun htmlcode toe waar nuttig. Gebruik verschillende achtergrond kleurtjes om te bekijken hoe de verschillende structuren werken (doe dit ook voor je span).
+16. Gerbuik inputs boxen, knoppen, checkboxen, … om een contactformulier aan te maken. Je vindt hier ontelbare voorbeelden van op het internet. 
+17. Neem nu je 'Contact' sectie en plaats die in een nieuw bestand genaamd 'contact.html' en plaats deze in de subfolder genaamd 'contact'.
+18. Maak footer aan waarmee je navigeert naar je 'contact' page van je website.
+19. Voeg in je head een link toe naar fa-icons zodat je die icoontjes kan gebruiken: 
+<br/>`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">`
+20. Voeg aan je footer ook een link toe via een icoon naar je Github profiel en een icoon voor je linkedIn profiel (indien je dat hebt)

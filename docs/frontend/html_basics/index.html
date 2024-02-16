@@ -12,22 +12,22 @@
     <title>HTML :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1707996014" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1707996014" rel="stylesheet">
-    <link href="../../css/hybrid.css?1707996014" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1707996014" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1707996014" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1707996014" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1707996014" rel="stylesheet">
-    <link href="../../css/theme.css?1707996014" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1707996014" rel="stylesheet">
-    <link href="../../css/devselector.css?1707996014" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1707996014" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1707996014" rel="stylesheet">
+    <link href="../../css/nucleus.css?1708082246" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1708082246" rel="stylesheet">
+    <link href="../../css/hybrid.css?1708082246" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1708082246" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1708082246" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1708082246" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1708082246" rel="stylesheet">
+    <link href="../../css/theme.css?1708082246" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1708082246" rel="stylesheet">
+    <link href="../../css/devselector.css?1708082246" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1708082246" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1708082246" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1707996014"></script>
-    <script src="../../js/devselector.js?1707996014"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1708082246"></script>
+    <script src="../../js/devselector.js?1708082246"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1707996014"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1707996014"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1708082246"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1708082246"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1707996014"></script>
+<script type="text/javascript" src="../../js/search.js?1708082246"></script>
 
     
   </div>
@@ -249,10 +249,16 @@
         <li><a href="#elements-tags-en-attributes">Elements, Tags en Attributes</a></li>
         <li><a href="#structuur-van-een-html-document">Structuur van een HTML-document</a></li>
         <li><a href="#types-van-html-elements">Types van HTML elements</a></li>
-        <li><a href="#een-overzicht-van-de-meest-voorkomende-html-elementen-en-hun-functies">Een overzicht van de meest voorkomende HTML elementen en hun functies</a></li>
+        <li><a href="#een-overzicht-een-deel-html-elementen">Een overzicht een deel HTML elementen</a>
+          <ol>
+            <li><a href="#anchor-element">Anchor element</a></li>
+          </ol>
+        </li>
+        <li><a href="#mappenstructuur-voor-je-webpaginas">Mappenstructuur voor je webpagina&rsquo;s</a></li>
         <li><a href="#html-vs-html5">HTML vs HTML5</a></li>
       </ol>
     </li>
+    <li><a href="#opdrachten">Opdrachten</a></li>
   </ol>
 </nav></div>
 </div>
@@ -334,25 +340,30 @@
 <li><strong>Grouping elements</strong>: elementen die worden gebruikt om meerdere inhoudsitems te groeperen of te bundelen onder één overkoepelend element. Bv. <code>&lt;div&gt;</code> en <code>&lt;span&gt;</code>.</li>
 <li><strong>Text-level semantics</strong>: dit verwijst naar de manier waarop HTML elements de betekenis en structuur van tekst op een webpagina definiëren. Deze elementen worden gebruikt om specifieke delen van de tekst te markeren en hun semantische betekenis aan te geven. Bv. <code>&lt;em&gt;</code> en <code>&lt;strong&gt;</code>.</li>
 </ul>
-<h3 id="een-overzicht-van-de-meest-voorkomende-html-elementen-en-hun-functies">Een overzicht van de meest voorkomende HTML elementen en hun functies</h3>
-<!-- 
-
-#### \<a\> het anker element
->The a tag (short for anchor tag) is arguably the most important and defining tag of HTML. The
-anchor tag is the tag used to link from the document a user is on to another document elsewhere
-on the internet, or another point in the same document.
-De link wordt meegegeven via het `href` attribuut, de tekst die getoond moet worden is de content van het anchor element.
-- Refereren naar een lokaal bestand via relatieve paden
-```html
-<a href="index.html">The home page</a>
-```
-- Refereren naar een webpagina via url's
-```html
-<a href="www.google.com">google</a> 
-```
-
--->
-<h3 id="html-vs-html5">HTML vs HTML5</h3>
+<h3 id="een-overzicht-een-deel-html-elementen">Een overzicht een deel HTML elementen</h3>
+<h4 id="anchor-element">Anchor element</h4>
+<h3 id="mappenstructuur-voor-je-webpaginas">Mappenstructuur voor je webpagina&rsquo;s</h3>
+<pre tabindex="0"><code>root
+|
++--- html
+    |
+    +--- index.html
+    |
+    +--- about
+    |    |
+    |    +--- about.html
+    |
+    +--- contact
+    |    |
+    |    +--- contact.html
+    ...
++--- assets
+    |
+    +--- images
+        |
+        +--- image1.png
+...
+</code></pre><h3 id="html-vs-html5">HTML vs HTML5</h3>
 <p>HTML5 is de nieuwere versie van HTML met een aantal nuttige voordelen. Zo is HTML5 zeer vrijgevend gezind in het weglaten van bepaalde attributen en gebruikt HTML5 default waarden voor attributen die nodig zijn maar niet specifiek uitgetyped werden. W Bijvoorbeeld:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;CSS/main.css&#34;</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text/css&#34;</span> <span style="color:#111">/&gt;</span>
 </span></span></code></pre></div><p>HTML5:</p>
@@ -364,6 +375,38 @@ De link wordt meegegeven via het `href` attribuut, de tekst die getoond moet wor
 In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek mogelijk te coderen om problemen in een later stadium te vermijden.</p>
 </blockquote>
 <p>Aangezien HTML5 dus gewoon de nieuwere versie is van HTML gaan we dit gebruiken.</p>
+<h2 id="opdrachten">Opdrachten</h2>
+<ol>
+<li>Maak een HTML-bestand en noem het portfolio.html</li>
+<li>Geef de titel van je webpagina de naam &ldquo;<naam> portfolio&rdquo;.</li>
+<li>Voeg jezelf toe als auteur van de webpagina</li>
+<li>Gebruik het header element om de onderstaande structuur aan te brengen aan je webpagina.
+<ul>
+<li>Expertise</li>
+<li>Over mij</li>
+<li>Mijn projecten</li>
+<li>Technische vaardigheden en CV</li>
+<li>Contact</li>
+</ul>
+</li>
+<li>Gebruik de relevante html elementen om het volgende toe te voegen aan je webpagina: voeg boven de header expertise een welkomstbericht toe. (Voor inspiratie voor het tekstje kan je ChatGPT gebruiken, de vormgeving doe je ZELF). Emphasize een aantal inspirerende woorden door ze in het vetgedrukt/schuin te zetten.</li>
+<li>Voeg ook een mooie afbeelding toe die je online ophaalt. Gerbuik hiervoor het &lsquo;figure&rsquo; element en voeg een caption toe</li>
+<li>Plaats de welkomsttekst binnenin een div en geef die div de klassenaam &lsquo;welcometext&rsquo;.</li>
+<li>Geef in de Expertise sectie een lijst waarin je je eigen vaardigheden in de verf zet. (je kan ook inspiratie opdoen op andere portfolio websites).</li>
+<li>Plaats in de Expertise sectie ook een link naar de sectie Technische vaardigheden en CV</li>
+<li>Plaats in de &lsquo;Over mij&rsquo; je favoriete quote van je lievelingsfilm/-boek in de Over mij sectie. Gerbuik hier het juiste element voor.</li>
+<li>Geef ook wat meer informatie over jezelf en plaats minstens één belangrijke zin in een span en geef die de id &lsquo;important-sentence&rsquo;.</li>
+<li>Plaats hier ook een afbeelding (de afbeelding moet je lokaal hebben staan)</li>
+<li>Maak onder de sectie &lsquo;Mijn projecten&rsquo; subsecties voor alle projecten die je al eens gemaakt hebt. Bijvoorbeeld je project van ELSY van het eerste jaar, je PES project, eigen andere projecten …</li>
+<li>Onder technische vaardigheden maak je een tabel met je verschillende opleidingen in (naam opleiding, startjaar, eindjaar). Voeg ook een lijst met beheerste talen toe en link hier ergens naar  volgende webpagina: <a href="https://detaalbrigade.nl/taalniveaus/">https://detaalbrigade.nl/taalniveaus/</a></li>
+<li>Breng wat meer structuur aan in je teksten met divs, paragrafen en line breaks. Voeg ook eens wat symbolen via hun htmlcode toe waar nuttig. Gebruik verschillende achtergrond kleurtjes om te bekijken hoe de verschillende structuren werken (doe dit ook voor je span).</li>
+<li>Gerbuik inputs boxen, knoppen, checkboxen, … om een contactformulier aan te maken. Je vindt hier ontelbare voorbeelden van op het internet.</li>
+<li>Neem nu je &lsquo;Contact&rsquo; sectie en plaats die in een nieuw bestand genaamd &lsquo;contact.html&rsquo; en plaats deze in de subfolder genaamd &lsquo;contact&rsquo;.</li>
+<li>Maak footer aan waarmee je navigeert naar je &lsquo;contact&rsquo; page van je website.</li>
+<li>Voeg in je head een link toe naar fa-icons zodat je die icoontjes kan gebruiken:
+<br/><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot;&gt;</code></li>
+<li>Voeg aan je footer ook een link toe via een icoon naar je Github profiel en een icoon voor je linkedIn profiel (indien je dat hebt)</li>
+</ol>
 
 </article>
 
@@ -472,15 +515,15 @@ In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek m
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1707996014"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1707996014"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1707996014"></script>
-    <script src="../../js/jquery.sticky.js?1707996014"></script>
-    <script src="../../js/featherlight.min.js?1707996014"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1707996014"></script>
-    <script src="../../js/learn.js?1707996014"></script>
-    <script src="../../js/hugo-learn.js?1707996014"></script>
-    <script src="../../js/mermaid.min.js?1707996014"></script>
+    <script src="../../js/clipboard.min.js?1708082246"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1708082246"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1708082246"></script>
+    <script src="../../js/jquery.sticky.js?1708082246"></script>
+    <script src="../../js/featherlight.min.js?1708082246"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1708082246"></script>
+    <script src="../../js/learn.js?1708082246"></script>
+    <script src="../../js/hugo-learn.js?1708082246"></script>
+    <script src="../../js/mermaid.min.js?1708082246"></script>
     <script>
     window.MathJax = {
       chtml: {
