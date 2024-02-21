@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="description" content="">
+<meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Arne Duyver]">
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>CSS :: Full Stack Web Development</title>
+
+    
+    <link href="../../css/nucleus.css?1708486803" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1708486803" rel="stylesheet">
+    <link href="../../css/hybrid.css?1708486803" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1708486803" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1708486803" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1708486803" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1708486803" rel="stylesheet">
+    <link href="../../css/theme.css?1708486803" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1708486803" rel="stylesheet">
+    <link href="../../css/devselector.css?1708486803" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1708486803" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1708486803" rel="stylesheet">
+    
+
+    <script src="../../js/jquery-3.3.1.min.js?1708486803"></script>
+    <script src="../../js/devselector.js?1708486803"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="../../frontend/css_basics/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="https://www.kuleuven.be/kuleuven/" target="_blank">
+  <img src="../../images/kul.png" alt="KU Leuven" /><br/>
+</a>
+<a href="https://www.uhasselt.be/" target="_blank">
+  <img src="../../images/uhasselt.svg" alt="UHasselt" id="uhlogo" />
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1708486803"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1708486803"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1708486803"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+
+      <h3><a href="../../">Course Contents</a></h3>
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/introductie/" title="Introductie" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../introductie/">
+          Introductie
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/frontend/" title="Frontend" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../frontend/">
+          Frontend
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/html_basics/" title="HTML" class="dd-item ">
+        <a href="../../frontend/html_basics/">
+        HTML
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/css_basics/" title="CSS" class="dd-item active">
+        <a href="../../frontend/css_basics/">
+        CSS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4891"><i class='fa fa-university'></i> Studiegids</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://toledo.kuleuven.be/portal/"><i class='fa fa-university'></i> Toledo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://github.com/kuleuven-diepenbeek/fsweb-course/"><i class='fab fa-github'></i> Course Git Repository</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>Index</a> > <a href='../../frontend/'>Frontend</a> > CSS
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper toc"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#cascading-style-sheet">Cascading Style Sheet</a>
+      <ol>
+        <li><a href="#css-definiëren-op-verschillende-niveaus">CSS definiëren op verschillende niveaus</a></li>
+        <li><a href="#syntax">Syntax</a></li>
+        <li><a href="#selectors-pseudo-classes-en-pseudo-elements">Selectors, Pseudo-classes en Pseudo-elements</a></li>
+        <li><a href="#margin-padding-en-outline">Margin, padding en outline</a></li>
+        <li><a href="#sizing">Sizing</a></li>
+        <li><a href="#positioning">Positioning</a></li>
+        <li><a href="#calculations">Calculations</a></li>
+        <li><a href="#css-variables">CSS variables</a></li>
+      </ol>
+    </li>
+    <li><a href="#opdrachten">Opdrachten</a></li>
+  </ol>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              CSS
+            </h1>
+          
+
+        
+
+        
+
+
+
+
+
+<article class='content'>
+<p><em>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain</em></br>
+<em>bron 2: <a href="https://www.w3schools.com/html/default.asp">W3Schools</a></em></p>
+<h2 id="cascading-style-sheet">Cascading Style Sheet</h2>
+<p>HTML alleen maakt een website niet visueel aantrekkelijk. CSS is
+verantwoordelijk voor dit deel. Met CSS-regels kun je ontwerpen hoe de
+afzonderlijke componenten die je eerder in HTML hebt gedefinieerd, moeten worden weergegeven.
+worden weergegeven. Je kan CSS dus gebruiken om het ontwerp en de lay-out van
+een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, randen, achtergrondkleuren, kleurverlopen enzovoort definiëren, randen, achtergrondkleuren, kleurverlopen, enzovoort.</p>
+<h3 id="css-definiëren-op-verschillende-niveaus">CSS definiëren op verschillende niveaus</h3>
+<ul>
+<li>Aparte file</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;mystyle.css&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><ul>
+<li>In html &lt;style&gt; element</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">style</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      /*Write your CSS code here*/
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">style</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><ul>
+<li>Inline</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">htmlElement</span> <span style="color:#75af00">style</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;property1:value1 ; property2:value2;&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  ...
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">htmlElement</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><h3 id="syntax">Syntax</h3>
+<img src="../../img/css_syntax.png" alt="drawing" style="max-height: 10rem;"/>
+<h3 id="selectors-pseudo-classes-en-pseudo-elements">Selectors, Pseudo-classes en Pseudo-elements</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">elementName</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">className</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">idName</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#111">:</span><span style="color:#75af00">pseudo-classname</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*e.g.: a:hover{...;}*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#111">::</span><span style="color:#75af00">pseudo-elementname</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*e.g.: h1:before{...;}*/</span>
+</span></span></code></pre></div><p><strong>Types of combinators:</strong></p>
+<ul>
+<li>descendant selector (space) specifies all descendants</li>
+<li>child selector (&gt;) only goes one deep</li>
+<li>adjacent sibling selector (+) selects an element that is directly after another specific element.</li>
+<li>general sibling selector (~) selects all elements that are next siblings of a specified element.</li>
+</ul>
+<h3 id="margin-padding-en-outline">Margin, padding en outline</h3>
+<img src="../../img/margin_padding.png" alt="drawing" style="max-height: 10rem;"/>
+<img src="../../img/outline.png" alt="drawing" style="max-height: 10rem;"/>
+<h3 id="sizing">Sizing</h3>
+<ul>
+<li><strong>Absolute</strong>: <code>px</code>, <code>pt</code>, <code>pc</code>, <code>in</code>, <code>cm</code>, <code>mm</code></li>
+<li><strong>Relative</strong>: <code>%</code>, <code>ex</code>, <code>ch</code>, <code>fr</code>, <code>em</code>, <code>rem</code></li>
+<li><strong>Viewport</strong> (define in head): <code>vw</code>, <code>vh</code>, <code>vmin</code>, <code>vmax</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">meta</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;viewport&#34;</span> <span style="color:#75af00">content</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><h3 id="positioning">Positioning</h3>
+<ul>
+<li><strong>Static</strong>: An element with <code>position: static;</code> is not positioned in any special way; it is always positioned according to the normal flow of the page.
+<br>Static positioned elements are not affected by the top, bottom, left, and right properties.</li>
+<li><strong>Relative</strong>: An element with <code>position: relative;</code> is positioned relative to its normal position.
+<br>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.</li>
+<li><strong>Fixes</strong>: An element with <code>position: fixed;</code> is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+<br>A fixed element does not leave a gap in the page where it would normally have been located.</li>
+<li><strong>Absolute</strong>: An element with <code>position: absolute;</code> is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+<br>Absolute positioned elements are removed from the normal flow, and can overlap elements.</li>
+<li><strong>Sticky</strong>: An element with <code>position: sticky;</code> is positioned based on the user&rsquo;s scroll position.
+<br>A sticky element toggles between <code>relative</code> and <code>fixed</code>, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it &ldquo;sticks&rdquo; in place (like position:fixed).</li>
+</ul>
+<h3 id="calculations">Calculations</h3>
+<p>e.g.:</p>
+<ul>
+<li><code>width: calc(100% - 100px);</code></li>
+<li><code>width: max(50%, 300px);</code></li>
+<li><code>width: min(50%, 300px);</code></li>
+</ul>
+<h3 id="css-variables">CSS variables</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>  <span style="color:#111">:</span><span style="color:#75af00">root</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">--blue</span><span style="color:#111">:</span> <span style="color:#ae81ff">#1e90ff</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">--white</span><span style="color:#111">:</span> <span style="color:#ae81ff">#ffffff</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">body</span> <span style="color:#111">{</span> <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#75af00">var</span><span style="color:#111">(</span><span style="color:#f92672">--</span><span style="color:#00a8c8">blue</span><span style="color:#111">);</span> <span style="color:#111">}</span>
+</span></span></code></pre></div><h2 id="opdrachten">Opdrachten</h2>
+<ol>
+<li>Maak je footer fixed onderaan de pagina</li>
+<li>Voeg een afbeelding van jezelf (of) een stockfoto toe aan je over mij sectie en zorg ervoor dat de afbeelding steeds richts staat</li>
+<li>Maak een nav sectie die 2 anchor elementen heeft: 1 voor de home page en een voor de contact page.</li>
+<li>Gebruik volgende <a href="https://www.w3schools.com/css/css_navbar.asp">bron</a> om je nav sectie te stijlen zodat je een verticale navigatie sectie hebt aan de linkerkant van je pagina die 100% van de hoogte in beslag neemt.</li>
+<li>Gebruik een input checkbox die je gefixed houd in de rechterboven hoek. Zorg ervoor dat je navigatie sectie verborgen wordt wanneer de checkbox niet is aangevinkt en getoond wordt wanneer je de checkbox aanduid.</li>
+<li>Gebruik volgende <a href="https://www.w3schools.com/css/css_form.asp">bron</a> om je formulier in je contact pagina te stijlen..</li>
+<li>Gebruik volgende <a href="https://www.w3schools.com/css/css_website_layout.asp">bron</a> om de globale layout van je site te updaten.</li>
+<li>Zorg al voor een responsive design door al je font-sizes aan te passen aan een vaste font-size die zich aanpast aan de grootte van de pagina.</li>
+<li>Kies een leuke font voor je pagina en eventueel complementaire fonts voor speciale secties zoals quotes. (zorg ook voor fallback fonts)</li>
+<li>Gebruik icons in plaats van tekst in je navigation sectie.</li>
+<li>Geef je creativiteit de vrije loop om je site zo mooi mogelijk te maken.</li>
+</ol>
+
+</article>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../frontend/html_basics/" title="HTML"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../frontend/html_basics/" title="HTML" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1708486803"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1708486803"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1708486803"></script>
+    <script src="../../js/jquery.sticky.js?1708486803"></script>
+    <script src="../../js/featherlight.min.js?1708486803"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1708486803"></script>
+    <script src="../../js/learn.js?1708486803"></script>
+    <script src="../../js/hugo-learn.js?1708486803"></script>
+    <script src="../../js/mermaid.min.js?1708486803"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 2,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
+    
+    
+
+  </body>
+</html>
+
