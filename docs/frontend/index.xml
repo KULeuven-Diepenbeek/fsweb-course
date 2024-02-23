@@ -23,5 +23,12 @@
       <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/css_basics/</guid>
       <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;Cascading Style Sheet HTML alleen maakt een website niet visueel aantrekkelijk. CSS is verantwoordelijk voor dit deel. Met CSS-regels kun je ontwerpen hoe de afzonderlijke componenten die je eerder in HTML hebt gedefinieerd, moeten worden weergegeven. worden weergegeven. Je kan CSS dus gebruiken om het ontwerp en de lay-out van een webpagina te definiëren.</description>
     </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/javascript_basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/javascript_basics/</guid>
+      <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;JavaScript JavaScript wordt gebruikt om interactie en dynamische functionaliteit aan je website toe te voegen. Het stelt ontwikkelaars in staat om webpagina&amp;rsquo;s te manipuleren, gebruikersacties te verwerken en te communiceren met servers zonder de pagina opnieuw te laden. JavaScript is veelzijdig en wordt ondersteund door alle belangrijke webbrowsers. Het maakt deel uit van de frontend is vaak niet of minimaal aanwezig op statische websites.</description>
+    </item>
   </channel>
 </rss>

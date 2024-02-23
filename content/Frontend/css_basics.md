@@ -107,7 +107,7 @@ e.g.:
 2. Voeg een afbeelding van jezelf (of) een stockfoto toe aan je over mij sectie en zorg ervoor dat de afbeelding steeds richts staat
 3. Maak een nav sectie die 2 anchor elementen heeft: 1 voor de home page en een voor de contact page.
 4. Gebruik volgende [bron](https://www.w3schools.com/css/css_navbar.asp) om je nav sectie te stijlen zodat je een verticale navigatie sectie hebt aan de linkerkant van je pagina die 100% van de hoogte in beslag neemt. 
-5. Gebruik een input checkbox die je gefixed houd in de rechterboven hoek. Zorg ervoor dat je navigatie sectie verborgen wordt wanneer de checkbox niet is aangevinkt en getoond wordt wanneer je de checkbox aanduid.
+5. Gebruik een input checkbox die je gefixed houd in de linkerboven hoek. Zorg ervoor dat je navigatie sectie verborgen wordt wanneer de checkbox niet is aangevinkt en getoond wordt wanneer je de checkbox aanduidt.
 6. Gebruik volgende [bron](https://www.w3schools.com/css/css_form.asp) om je formulier in je contact pagina te stijlen..
 7. Gebruik volgende [bron](https://www.w3schools.com/css/css_website_layout.asp) om de globale layout van je site te updaten.
 8. Zorg al voor een responsive design door al je font-sizes aan te passen aan een vaste font-size die zich aanpast aan de grootte van de pagina.

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="description" content="">
+<meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Arne Duyver]">
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>JavaScript :: Full Stack Web Development</title>
+
+    
+    <link href="../../css/nucleus.css?1708692393" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1708692393" rel="stylesheet">
+    <link href="../../css/hybrid.css?1708692393" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1708692393" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1708692393" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1708692393" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1708692393" rel="stylesheet">
+    <link href="../../css/theme.css?1708692393" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1708692393" rel="stylesheet">
+    <link href="../../css/devselector.css?1708692393" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1708692393" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1708692393" rel="stylesheet">
+    
+
+    <script src="../../js/jquery-3.3.1.min.js?1708692393"></script>
+    <script src="../../js/devselector.js?1708692393"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="../../frontend/javascript_basics/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="https://www.kuleuven.be/kuleuven/" target="_blank">
+  <img src="../../images/kul.png" alt="KU Leuven" /><br/>
+</a>
+<a href="https://www.uhasselt.be/" target="_blank">
+  <img src="../../images/uhasselt.svg" alt="UHasselt" id="uhlogo" />
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1708692393"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1708692393"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1708692393"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+
+      <h3><a href="../../">Course Contents</a></h3>
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/introductie/" title="Introductie" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../introductie/">
+          Introductie
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/frontend/" title="Frontend" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../frontend/">
+          Frontend
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/html_basics/" title="HTML" class="dd-item ">
+        <a href="../../frontend/html_basics/">
+        HTML
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/css_basics/" title="CSS" class="dd-item ">
+        <a href="../../frontend/css_basics/">
+        CSS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/javascript_basics/" title="JavaScript" class="dd-item active">
+        <a href="../../frontend/javascript_basics/">
+        JavaScript
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4891"><i class='fa fa-university'></i> Studiegids</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://toledo.kuleuven.be/portal/"><i class='fa fa-university'></i> Toledo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://github.com/kuleuven-diepenbeek/fsweb-course/"><i class='fab fa-github'></i> Course Git Repository</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>Index</a> > <a href='../../frontend/'>Frontend</a> > JavaScript
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper toc"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#javascript">JavaScript</a>
+      <ol>
+        <li><a href="#hoe-javascript-toevoegen-aan-je-website">Hoe JavaScript toevoegen aan je website</a></li>
+        <li><a href="#developper-tools-and-logging">Developper tools and logging</a></li>
+        <li><a href="#webcontent-inspecteren">Webcontent inspecteren</a>
+          <ol>
+            <li><a href="#informatie-over-elementen-inspecteren">Informatie over elementen inspecteren</a></li>
+            <li><a href="#webcontent-manipuleren">Webcontent manipuleren</a></li>
+          </ol>
+        </li>
+        <li><a href="#gebruiker-interactie-verwerken">Gebruiker interactie verwerken</a>
+          <ol>
+            <li><a href="#met-alert-confirm-en-prompt-kan-je-snel-pop-up-berichtjes-toevoegen">Met alert, confirm en prompt kan je snel pop-up berichtjes toevoegen</a></li>
+          </ol>
+        </li>
+        <li><a href="#basis-javascript-syntax">Basis JavaScript syntax</a>
+          <ol>
+            <li><a href="#variabelen">Variabelen</a></li>
+            <li><a href="#types">Types</a></li>
+            <li><a href="#if-switch-for-while-en-try-catch">If, switch, for, while en try-catch</a></li>
+            <li><a href="#functies-en-klassen-definiëren">Functies en klassen definiëren</a></li>
+          </ol>
+        </li>
+        <li><a href="#content-wegschrijven-naar-localstorage-of-sessionstorage">Content wegschrijven naar localstorage of sessionstorage</a></li>
+        <li><a href="#async-functions-promises-await--fetch-from-apis">Async functions, promises, await &amp; fetch from api&rsquo;s</a></li>
+      </ol>
+    </li>
+    <li><a href="#canvas-met-p5jshttpseditorp5jsorg">Canvas met <a href="https://editor.p5js.org/">p5.js</a></a></li>
+    <li><a href="#opdracht">Opdracht</a></li>
+  </ol>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              JavaScript
+            </h1>
+          
+
+        
+
+        
+
+
+
+
+
+<article class='content'>
+<p><em>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain</em></br>
+<em>bron 2: <a href="https://www.w3schools.com/html/default.asp">W3Schools</a></em></p>
+<h2 id="javascript">JavaScript</h2>
+<p>JavaScript wordt gebruikt om interactie en dynamische functionaliteit aan je website toe te voegen. Het stelt ontwikkelaars in staat om webpagina&rsquo;s te manipuleren, gebruikersacties te verwerken en te communiceren met servers zonder de pagina opnieuw te laden. JavaScript is veelzijdig en wordt ondersteund door alle belangrijke webbrowsers. Het maakt deel uit van de frontend is vaak niet of minimaal aanwezig op statische websites.</p>
+<p>Wat nog belangrijk is om te weten, is dat de JavaScript standaard (<strong>ECMAScript</strong>) beheerd wordt door <em>Ecma International</em>, vroeger ook wel de <em>European Computer Manufacturers Association (ECMA)</em> genoemd. Een overzicht van de historische details zijn terug te vinden op de JS <a href="https://en.wikipedia.org/wiki/JavaScript">wikipage</a>.</p>
+
+<div class="notices info" ><p>We gaan er vanuit dat je al een basiskennis programmeren bezit. In deze sectie zoomen we vooral in op de interactie die JavaScript ons biedt met HTML-elementen en andere functionaliteiten die specifiek zijn voor het maken van websites.</p>
+</div>
+
+<h3 id="hoe-javascript-toevoegen-aan-je-website">Hoe JavaScript toevoegen aan je website</h3>
+<p>Je kan JavaScipt rechtstreeks in je html-document toevoegen via het <code>&lt;script&gt;</code> element. Deze manier wordt echter niet aangeraden. Je kan het <code>&lt;script&gt;-element</code> toevoegen in de sectie <code>head</code> of in de <code>body</code> van je HTML-document. Het is echter aan te raden om scripts onderaan het <code>&lt;body&gt;-element</code> toe te voegen, omdat dit de laadtijd van een webpagina kan verbeteren. <a href="https://www.shecodes.io/athena/37573-where-does-the-script-tag-go-in-html#:~:text=You%20can%20add%20the%20%3Cscript,body%3E%20of%20your%20HTML%20document.">[bron]</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text/javascript&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Jouw code komt hier
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>JavaScipts worden echter beter verzameld in een <code>scripts</code>-directory. Op die manier heb jee betere scheiding van verantwoordelijkheden tussen html en JavaScript (JS). Je kan ook zeer makkelijk verschillende JS-scripts aanmaken voor je verschillende webpaginas. Je kan hier weer het <code>&lt;script&gt;-element</code> voor gebruiken, maar dit keer laten we de content leeg en verwijzen we met behulp van het <code>scr</code>-attribuut naar de juiste JS-file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text/javascript&#34;</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;./path_to_your/javascript_file.js&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Een veelgebruikte directory structuur voor het beheren van al je client-side files ziet er zo uit.</p>
+<pre tabindex="0"><code>root/
+|
++--- index.html
+|   
++--- scripts/
+|   |
+|   +--- main.js
+|   ...
++--- styles/
+    |
+    +--- main.css
+    ...
+...
+</code></pre><h3 id="developper-tools-and-logging">Developper tools and logging</h3>
+<p>Om onze JS code te debuggen gaan we veel gebruik maken van de developper tools die beschikbaar zijn in je browser. In google chrome kan je de develepper tools openen met <code>F12</code>. De plaats waar we de meeste tijd gaan doorbrengen in de <code>console</code>. We kunnen namelijk allerhande informatie laten printen naar de console. Dit kan op volgende manieren:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Ik ben een normaal log bericht&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">debug</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Ik ben een debug bericht&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">error</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Ik ben een error&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">info</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Ik ben info&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">warn</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Ik ben een warning&#34;</span><span style="color:#111">);</span>
+</span></span></code></pre></div><p>In de developper console kan je dan ook filteren op de verschillende soorten logberichten.</p>
+<h3 id="webcontent-inspecteren">Webcontent inspecteren</h3>
+<p>Om informatie over bepaalde content op te vragen moeten we eerst weten hoe we HTML-elementen kunnen opvragen om ze daarna te inspecteren.</p>
+<p>Eén van de gemakkelijkste manieren om een specifiek element op te vragen is op basis van de <code>id</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#d88200">&#34;idName&#34;</span><span style="color:#111">);</span> <span style="color:#75715e">//returns an HTMLObject
+</span></span></span></code></pre></div><p><strong>Als je een element in een HTML-pagina wilt opvragen, begin je altijd met het refereren naar het documentobject.</strong>
+Andere manieren om een element te krijgen is via de klassenaam of de tagnaam. Hier wordt dan echter steeds een lijst greturned op basis van de volgorde in het HTML-bestand.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementsByClassName</span><span style="color:#111">(</span><span style="color:#d88200">&#34;className&#34;</span><span style="color:#111">);</span>        <span style="color:#75715e">//returns an HTMLCollection
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementsByName</span><span style="color:#111">(</span><span style="color:#d88200">&#34;valueOfAttributeName&#34;</span><span style="color:#111">);</span>  <span style="color:#75715e">//returns an HTMLCollection
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementsByTagname</span><span style="color:#111">(</span><span style="color:#d88200">&#34;tagName&#34;</span><span style="color:#111">);</span>            <span style="color:#75715e">//returns an HTMLCollection
+</span></span></span></code></pre></div><p>Verder kan je ook <code>CSS-selector syntax</code> gebruiken om een element op te vragen. De <code>querySelector</code>-functie geeft telkens het eerste <code>HTMLObject</code> terug dat voldoet aan de query. De <code>querySelectorAll</code>-functie geeft een <code>NodeList</code> met alle objecten terug die voldoen aan de query.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">querySelector</span><span style="color:#111">(</span><span style="color:#d88200">&#34;#idName&#34;</span><span style="color:#111">);</span>     <span style="color:#75715e">//returns an HTMLObject
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">querySelector</span><span style="color:#111">(</span><span style="color:#d88200">&#34;.className&#34;</span><span style="color:#111">);</span>  <span style="color:#75715e">//returns an HTMLObject
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">querySelector</span><span style="color:#111">(</span><span style="color:#d88200">&#34;tagName.className:not(.className) tagName[attibuteName=&#39;attibuteValue&#39;]&#34;</span><span style="color:#111">);</span> <span style="color:#75715e">//returns an HTMLObject
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">querySelectorAll</span><span style="color:#111">(</span><span style="color:#d88200">&#34;#idName&#34;</span><span style="color:#111">);</span>  <span style="color:#75715e">//returns a NodeList
+</span></span></span></code></pre></div><p><em>Sommige functies geven een HTMLCollection terug terwijl anderen een NodeList teruggeven. Een NodeList bevat bovenop descendent HTML-elementen ook de stukken tekst die tussen andere eventuele HTML-elementen gebruikt worden. Dit wordt belangrijk bij het opvragen van <code>children</code> (HTMLCollection) of <code>childNodes</code> (NodeList)</em></p>
+<h4 id="informatie-over-elementen-inspecteren">Informatie over elementen inspecteren</h4>
+<p>Nu we een element kunnen opvragen, kunnen we meer specifieke informatie over dat element inspecteren zoals de waarde van attributen, textcontent, descendents &hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javaScript" data-lang="javaScript"><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">innerText</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">textContent</span><span style="color:#111">);</span>  
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">innerHTML</span><span style="color:#111">);</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">children</span><span style="color:#111">);</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">childNodes</span><span style="color:#111">);</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">getAttributeNames</span><span style="color:#111">());</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">getAttribute</span><span style="color:#111">(</span><span style="color:#d88200">&#34;attributeName&#34;</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">getAttributeNode</span><span style="color:#111">(</span><span style="color:#d88200">&#34;attributeName&#34;</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">style</span><span style="color:#111">.</span><span style="color:#75af00">fontsize</span><span style="color:#111">);</span> <span style="color:#75715e">//Dit werkt niet altijd op deze manier wanneer er specifieke CSS styling werd toegepast. 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//Gerbuik dan volgende methode in de plaats:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#111">window</span><span style="color:#111">.</span><span style="color:#75af00">getComputedStyle</span><span style="color:#111">(</span><span style="color:#75af00">html_object</span><span style="color:#111">,</span> <span style="color:#00a8c8">null</span><span style="color:#111">).</span><span style="color:#75af00">getPropertyValue</span><span style="color:#111">(</span><span style="color:#d88200">&#39;font-size&#39;</span><span style="color:#111">));</span>
+</span></span></code></pre></div>
+<div class="notices info" ><p>Je kan de console gebruiken om te inspecteren welke attributen een HTML-element allemaal bevat. Bovendien kan je in de documentatie steeds terugvinden wat de return-typen zijn van de verschillende functie. Je kan echter ook zeer snel het type controleren met de JS-functie <code>typeof naamObject</code>.</p>
+</div>
+
+
+<div class="notices warning" ><p>Wanneer een attribuut of object niet gevonden wordt, wordt meestal <code>undefined</code> gereturned.</p>
+</div>
+
+<h4 id="webcontent-manipuleren">Webcontent manipuleren</h4>
+<p>Je kan nu ook snel content aanpassen door de attribuut waarde te veranderen:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javaScript" data-lang="javaScript"><span style="display:flex;"><span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">innerText</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;nieweTekst&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">innerText</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;&lt;h1 id=&#34;nieuweId&#34; &gt; Nieuwe header &lt;/h1&gt;&#39;</span><span style="color:#111">;</span> <span style="color:#75715e">// Je kan dus zelfs dynamisch HTML-elementen toevoegen of verwijderen 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">style</span><span style="color:#111">.</span><span style="color:#75af00">fontsize</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;15px&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">setAttribute</span><span style="color:#111">(</span><span style="color:#d88200">&#34;attributeName&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;newValue&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Examples
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">voornaamInput_object</span><span style="color:#111">.</span><span style="color:#75af00">setAttribute</span><span style="color:#111">(</span><span style="color:#d88200">&#34;value&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;Arne&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">inputCheckbox_object</span><span style="color:#111">.</span><span style="color:#75af00">setAttribute</span><span style="color:#111">(</span><span style="color:#d88200">&#34;checked&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;true&#34;</span><span style="color:#111">);</span>
+</span></span></code></pre></div><h3 id="gebruiker-interactie-verwerken">Gebruiker interactie verwerken</h3>
+<p>Je kan rechtstreeks in een HTML-element functies (of zelfs gewoon java code) toevoegen om uitgevoerd te worden bij bepaalde acties van de gebruiker.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;functionName&#34;</span><span style="color:#111">&gt;</span>Click me<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;console.log(&#39;button clicked&#39;)&#34;</span><span style="color:#111">&gt;</span>Click me<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>Dit doe je echter beter in de JavaScript file zelf door <code>eventListeners</code> te koppelen aan de gewenste HTML-elementen. Een aantal voorbeelden vind je hieronder. Je kan onder andere een listener toevoegen voor <code>click</code>, <code>mouseover</code>, <code>mouseout</code>, <code>mousemove</code> &hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#34;click&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">functionName</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Je kan ook rechtrstreeks functies definiëren als parameter:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#34;click&#34;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span><span style="color:#111">(){</span><span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#d88200">&#34;I was clicked&#34;</span><span style="color:#111">);});</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Of door gebruik te maken van de pijl notatie:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">html_object</span><span style="color:#111">.</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#34;click&#34;</span><span style="color:#111">,</span> <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span><span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#d88200">&#34;I was clicked&#34;</span><span style="color:#111">);});</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Je kan ook eventListeners toevoegen aan je window
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">window</span><span style="color:#111">.</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#34;resize&#34;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span><span style="color:#111">()</span> <span style="color:#111">{</span> <span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#d88200">&#34;resized window&#34;</span><span style="color:#111">);});</span>
+</span></span></code></pre></div><h4 id="met-alert-confirm-en-prompt-kan-je-snel-pop-up-berichtjes-toevoegen">Met alert, confirm en prompt kan je snel pop-up berichtjes toevoegen</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">//alert
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Alert message, click &#39;ok&#39; to continue.&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//confirm
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">var</span> <span style="color:#75af00">confirmOutput</span> <span style="color:#f92672">=</span> <span style="color:#75af00">confirm</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Confirm message, click &#39;ok&#39; or &#39;cancel&#39; to continue.&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">confirmOutput</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//prompt
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">var</span> <span style="color:#75af00">promptOutput</span> <span style="color:#f92672">=</span> <span style="color:#75af00">prompt</span><span style="color:#111">(</span><span style="color:#d88200">&#34;The prompt message&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">promptOutput</span><span style="color:#111">)</span>
+</span></span></code></pre></div><h3 id="basis-javascript-syntax">Basis JavaScript syntax</h3>
+<h4 id="variabelen">Variabelen</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">var</span> <span style="color:#75af00">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>                    <span style="color:#75715e">// met &#39;var&#39; definiëer je een variabele die beschikbaar blijft binnen de functie scope.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">let</span> <span style="color:#75af00">y</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;let&#34;</span><span style="color:#111">;</span>                <span style="color:#75715e">// met &#39;let&#39; definiëer je een variabele die beschikbaar blijft binnen de block scope. (bv enkel binnenin die if-statement)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">const</span> <span style="color:#75af00">z</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;Ik verander niet&#34;</span><span style="color:#111">;</span> <span style="color:#75715e">// met &#39;const&#39; definiëer je een variabele die niet meer verandert
+</span></span></span></code></pre></div><h4 id="types">Types</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Numbers:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">let</span> <span style="color:#75af00">length</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">let</span> <span style="color:#75af00">weight</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">7.5</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Strings:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">let</span> <span style="color:#75af00">color</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;Yellow&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">let</span> <span style="color:#75af00">lastName</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;Johnson&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Booleans
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">let</span> <span style="color:#75af00">x</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">true</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">let</span> <span style="color:#75af00">y</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">false</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Object:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">const</span> <span style="color:#75af00">person</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span><span style="color:#75af00">firstName</span><span style="color:#f92672">:</span><span style="color:#d88200">&#34;John&#34;</span><span style="color:#111">,</span> <span style="color:#75af00">lastName</span><span style="color:#f92672">:</span><span style="color:#d88200">&#34;Doe&#34;</span><span style="color:#111">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">const</span> <span style="color:#75af00">person</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">firstName</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#34;John&#34;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">lastName</span> <span style="color:#f92672">:</span> <span style="color:#d88200">&#34;Doe&#34;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">id</span>       <span style="color:#f92672">:</span> <span style="color:#ae81ff">5566</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fullName</span> <span style="color:#f92672">:</span> <span style="color:#00a8c8">function</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#00a8c8">this</span><span style="color:#111">.</span><span style="color:#75af00">firstName</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#00a8c8">this</span><span style="color:#111">.</span><span style="color:#75af00">lastName</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Array object:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">const</span> <span style="color:#75af00">cars</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#d88200">&#34;Saab&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;Volvo&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;BMW&#34;</span><span style="color:#111">];</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Date object:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">const</span> <span style="color:#75af00">date</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">Date</span><span style="color:#111">(</span><span style="color:#d88200">&#34;2022-03-25&#34;</span><span style="color:#111">);</span>
+</span></span></code></pre></div><h4 id="if-switch-for-while-en-try-catch">If, switch, for, while en try-catch</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">//IF-STATEMENT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">condition1</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//  block of code to be executed if condition1 is true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span> <span style="color:#00a8c8">else</span> <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">condition2</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//  block of code to be executed if the condition1 is false and condition2 is true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span> <span style="color:#00a8c8">else</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//  block of code to be executed if the condition1 is false and condition2 is false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//SWITCH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">switch</span><span style="color:#111">(</span><span style="color:#75af00">expression</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">case</span> <span style="color:#75af00">x</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// code block
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#00a8c8">break</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">case</span> <span style="color:#75af00">y</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// code block
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#00a8c8">break</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// code block
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//FOR-LOOP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">for</span> <span style="color:#111">(</span><span style="color:#00a8c8">let</span> <span style="color:#75af00">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span> <span style="color:#75af00">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#75af00">cars</span><span style="color:#111">.</span><span style="color:#75af00">length</span><span style="color:#111">;</span> <span style="color:#75af00">i</span><span style="color:#f92672">++</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">text</span> <span style="color:#f92672">+=</span> <span style="color:#75af00">cars</span><span style="color:#111">[</span><span style="color:#75af00">i</span><span style="color:#111">]</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34;&lt;br&gt;&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//WHILE
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">while</span> <span style="color:#111">(</span><span style="color:#75af00">condition</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// code block to be executed
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//TRY CATCH
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">try</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Block of code to try
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">catch</span><span style="color:#111">(</span><span style="color:#75af00">err</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Block of code to handle errors
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">finally</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//Block of code to be executed regardless of the try / catch result
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span>
+</span></span></code></pre></div><h4 id="functies-en-klassen-definiëren">Functies en klassen definiëren</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">//FUNCTIE
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">function</span><span style="color:#111">(</span><span style="color:#75af00">parameter</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//mijn code
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#00a8c8">return</span> <span style="color:#75af00">result</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//EXAMPLE Class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">class</span> <span style="color:#75af00">Car</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">constructor</span><span style="color:#111">(</span><span style="color:#75af00">name</span><span style="color:#111">,</span> <span style="color:#75af00">year</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">this</span><span style="color:#111">.</span><span style="color:#75af00">name</span> <span style="color:#f92672">=</span> <span style="color:#75af00">name</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">this</span><span style="color:#111">.</span><span style="color:#75af00">year</span> <span style="color:#f92672">=</span> <span style="color:#75af00">year</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">age</span><span style="color:#111">(</span><span style="color:#75af00">x</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#75af00">x</span> <span style="color:#f92672">-</span> <span style="color:#00a8c8">this</span><span style="color:#111">.</span><span style="color:#75af00">year</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">const</span> <span style="color:#75af00">myCar</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#75af00">Car</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Ford&#34;</span><span style="color:#111">,</span> <span style="color:#ae81ff">2014</span><span style="color:#111">);</span>
+</span></span></code></pre></div><h3 id="content-wegschrijven-naar-localstorage-of-sessionstorage">Content wegschrijven naar localstorage of sessionstorage</h3>
+<p>Je kan met JavaScript ook data opslaan in je browser. Dit is steeds een <code>key-value</code> pair waarbij beide waarde <code>Strings</code> zijn. Wegschrijven naar <code>localStorage</code> behoudt de data tussen sessies. Wegschrijven naar <code>sessionStorage</code> behoudt de data tussen sessies <strong>NIET</strong>. Maak gebruik van <code>JSON</code> om gemakkelijk data objecten op te slaan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">//Het op te slagen object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">var</span> <span style="color:#75af00">testObject</span> <span style="color:#f92672">=</span> <span style="color:#111">{</span> <span style="color:#d88200">&#39;one&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;two&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;three&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span> <span style="color:#111">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Opslaan in localStorage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">localStorage</span><span style="color:#111">.</span><span style="color:#75af00">setItem</span><span style="color:#111">(</span><span style="color:#d88200">&#39;testObject&#39;</span><span style="color:#111">,</span> <span style="color:#75af00">JSON</span><span style="color:#111">.</span><span style="color:#75af00">stringify</span><span style="color:#111">(</span><span style="color:#75af00">testObject</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Inladen vanuit localStorage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">var</span> <span style="color:#75af00">retrievedObject</span> <span style="color:#f92672">=</span> <span style="color:#75af00">localStorage</span><span style="color:#111">.</span><span style="color:#75af00">getItem</span><span style="color:#111">(</span><span style="color:#d88200">&#39;testObject&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">var</span> <span style="color:#75af00">retrievedTestObject</span> <span style="color:#f92672">=</span> <span style="color:#75af00">JSON</span><span style="color:#111">.</span><span style="color:#75af00">parse</span><span style="color:#111">(</span><span style="color:#75af00">retrievedObject</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//idem voor sessionStorage
+</span></span></span></code></pre></div><h3 id="async-functions-promises-await--fetch-from-apis">Async functions, promises, await &amp; fetch from api&rsquo;s</h3>
+<p>Soms wil je dingen opvragen of kan het een tijd duren voordat een functie een return geeft. Om te voorkomen dat je gedurende die tijd niet kan interageren met de website, moet je gebruik maken <code>async</code> functions. Ergens in je functie gebruik je dan het woord <code>await</code> zodat de rest van je funtie verder gaat wanneer je een return waarde hebt ontvangen. Tijdens het wachten kan dan andere code uitgevoerd worden.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">resolveAfter2Seconds</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#00a8c8">new</span> <span style="color:#111">Promise</span><span style="color:#111">((</span><span style="color:#75af00">resolve</span><span style="color:#111">)</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">setTimeout</span><span style="color:#111">(()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75af00">resolve</span><span style="color:#111">(</span><span style="color:#d88200">&#39;resolved&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">},</span> <span style="color:#ae81ff">2000</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">async</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">asyncCall</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#d88200">&#39;calling&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">const</span> <span style="color:#75af00">result</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">await</span> <span style="color:#75af00">resolveAfter2Seconds</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">result</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Expected output: &#34;resolved&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">asyncCall</span><span style="color:#111">();</span>
+</span></span></code></pre></div><p>Een voorbeeld waarvoor je vaak de <code>async function</code> gebruikt is bij het gebruik van api&rsquo;s om data op te halen/weg te schrijven:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">async</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">cuteDogPicture</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#39;https://dog.ceo/api/breeds/image/random&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">((</span><span style="color:#75af00">response</span><span style="color:#111">)</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>           <span style="color:#75715e">// Parameter &#39;response&#39; refers to the return of the function above this (fetch)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#00a8c8">return</span> <span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">json</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">((</span><span style="color:#75af00">myContent</span><span style="color:#111">)</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>          <span style="color:#75715e">// Parameter &#39;myContent&#39; refers to the return of the function above this
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;&lt;img src=&#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#75af00">myContent</span><span style="color:#111">[</span><span style="color:#d88200">&#39;message&#39;</span><span style="color:#111">]</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34;&#39;/&gt;&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">window</span><span style="color:#111">.</span><span style="color:#75af00">addEventListener</span><span style="color:#111">(</span><span style="color:#d88200">&#34;click&#34;</span><span style="color:#111">,</span> <span style="color:#111">()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span> <span style="color:#75af00">cuteDogPicture</span><span style="color:#111">()</span> <span style="color:#111">});</span>
+</span></span></code></pre></div><h2 id="canvas-met-p5jshttpseditorp5jsorg">Canvas met <a href="https://editor.p5js.org/">p5.js</a></h2>
+<h2 id="opdracht">Opdracht</h2>
+<p>Voeg op minstens 2 plaatsen JavaScript toe aan je portfolio website. Ten eerste zorg je ervoor dat wanneer mensen op de &lsquo;submit&rsquo;-knop drukken in je contactenformulier dat je de data van de inputvelden op een correcte manier in een object variabele opslaat. Sla daarna de data op in je <code>sessionStorage</code> door gebruik te maken van JSON. Zorg er ook voor dat wanneer je je contactformulier opent het formulier al is ingevuld met de laatst opgeslagen gegevens indien ze bestaan.</p>
+<p>Voeg verder op home-pagina nog een extra sectie toe genaamd &lsquo;Interactie met p5.js&rsquo;. Gebruik de modules van de p5.js library om een canvas te tekenen en een leuke creatieve interactie te creëren met de bezoekers van je website. Doe dit bijvoorbeeld door een kleine animatie te starten die verandert op basis van de muis positie.</p>
+<p>Volgende les komen enkele studenten hun interactie met de portfolio webpagina kort voorstellen.</p>
+
+</article>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../frontend/css_basics/" title="CSS"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../frontend/html_basics/" title="HTML" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1708692393"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1708692393"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1708692393"></script>
+    <script src="../../js/jquery.sticky.js?1708692393"></script>
+    <script src="../../js/featherlight.min.js?1708692393"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1708692393"></script>
+    <script src="../../js/learn.js?1708692393"></script>
+    <script src="../../js/hugo-learn.js?1708692393"></script>
+    <script src="../../js/mermaid.min.js?1708692393"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 2,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
+    
+    
+
+  </body>
+</html>
+

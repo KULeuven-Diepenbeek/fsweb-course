@@ -64,23 +64,23 @@ Je kan eender welke simpele tekst- of code-editor gebruiken om HTML bestanden aa
 
 ### Mappenstructuur voor je webpagina's
 ```
-root
+root/
 |
-+--- html
++--- html/
     |
     +--- index.html
     |
-    +--- about
+    +--- about/
     |    |
     |    +--- about.html
     |
-    +--- contact
+    +--- contact/
     |    |
     |    +--- contact.html
     ...
-+--- assets
++--- assets/
     |
-    +--- images
+    +--- images/
         |
         +--- image1.png
 ...
