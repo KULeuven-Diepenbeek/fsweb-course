@@ -16,7 +16,7 @@ Academiejaar 2023---2024.
 | 01  | do 15-02-2024 | Introductie + HTML
 | 02  | vr 16-02-2024 | HTML + Webbrowser tools
 | 03  | wo 21-02-2024 | CSS
-| 04  | vr 23-02-2024 | Javascript in HTML
+| 04  | vr 23-02-2024 | Javascript
 | 05  | wo 28-02-2024 | Putting it all together + start Advanced CSS
 | 06  | do 29-02-2024 | Advanced CSS
 | 07  | do 07-03-2024 | Responsive Design (part 1)
