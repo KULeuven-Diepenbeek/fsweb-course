@@ -14,11 +14,11 @@ Academiejaar 2023---2024.
 | nr  | datum         | onderwerp                 |
 |-----|---------------|---------------------------|
 | 01  | do 15-02-2024 | Introductie + HTML
-| 02  | vr 16-02-2024 | HTML 
-| 03  | wo 21-02-2024 | Webbrowser tools + CSS
-| 04  | vr 23-02-2024 | CSS
-| 05  | wo 28-02-2024 | Javascript in HTML
-| 06  | do 29-02-2024 | Putting it all together + Advanced CSS
+| 02  | vr 16-02-2024 | HTML + Webbrowser tools
+| 03  | wo 21-02-2024 | CSS
+| 04  | vr 23-02-2024 | Javascript in HTML
+| 05  | wo 28-02-2024 | Putting it all together + start Advanced CSS
+| 06  | do 29-02-2024 | Advanced CSS
 | 07  | do 07-03-2024 | Responsive Design (part 1)
 | 08  | vr 08-03-2024 | Responsive Design (part 2)
 | 09  | do 14-03-2024 | Svelte Kit
