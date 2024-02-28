@@ -103,5 +103,13 @@ Voor de transition-timing-function zijn er een aantal mogelijkheden. (**In de de
 - **`ease-in-out`** - specifies a transition effect with a slow start and end
 - **`cubic-bezier(n,n,n,n)`** - lets you define your own values in a cubic-bezier function
 
-## Animations
+<!-- ## Animations
 
+### Verschil met transitions
+**CSS-animations** definiëren complexe bewegingen met keyframes, zoals `rotate` of `fade`, terwijl **CSS-transitions** soepele veranderingen maken in elementeigenschappen, zoals grootte of kleur, tijdens gebeurtenissen zoals `hover`. Animaties gebruiken keyframes en kunnen oneindig herhalen, terwijl overgangen optreden bij eigenschapsveranderingen en meer geschikt zijn voor subtiele effecten. Beiden voegen interactiviteit en aantrekkelijkheid toe aan webpagina's, maar hebben verschillende toepassingen.
+
+### Animation utility classes
+
+### Animation play state
+
+## Opdrachten -->
