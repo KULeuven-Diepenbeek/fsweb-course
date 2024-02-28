@@ -35,4 +35,4 @@ _bron 2: [W3Schools](https://www.w3schools.com/html/default.asp)_
 
 
 ## Extra opdracht
-Bestudeer grondig de webpagina die gegenereerd wordt door intellij wanneer je testen uitvoert. Gebruik je eigen skills om nu een kopie te maken van deze webpagina, zonder naar de broncode te gaan kijken. Maak een eigen JSON-object aan waar de informatie van de testen inzit die je dan uitleest met JavaScript om de content van je webpagina dynamisch te genereren. <a href="/static/files/frontendExercise.zip">file</a>
+Bestudeer grondig de webpagina die gegenereerd wordt door intellij wanneer je testen uitvoert. Gebruik je eigen skills om nu een kopie te maken van deze webpagina, zonder naar de broncode te gaan kijken. Maak een eigen JSON-object aan waar de informatie van de testen inzit die je dan uitleest met JavaScript om de content van je webpagina dynamisch te genereren. <a href="https://github.com/KULeuven-Diepenbeek/fsweb-course/blob/main/static/files/frontendExercise.zip">file</a>
