@@ -30,5 +30,19 @@
       <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/javascript_basics/</guid>
       <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;JavaScript JavaScript wordt gebruikt om interactie en dynamische functionaliteit aan je website toe te voegen. Het stelt ontwikkelaars in staat om webpagina&amp;rsquo;s te manipuleren, gebruikersacties te verwerken en te communiceren met servers zonder de pagina opnieuw te laden. JavaScript is veelzijdig en wordt ondersteund door alle belangrijke webbrowsers. Het maakt deel uit van de frontend is vaak niet of minimaal aanwezig op statische websites.</description>
     </item>
+    <item>
+      <title>Extra</title>
+      <link>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/extra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/extra/</guid>
+      <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;Extra tips and tricks Alles is een Box in HTML (Box-model). In de mozilla firefox browser kan je live veranderingen aanbrengen aan. Je kan CSS variabelen overschrijven door van het Cascading-principe gebruik te maken. Dit wordt vooral handig wanneer we transitions bekijken in Advanced CSS&#xA;Je kan CSS variabelen in andere CSS variabelen gebruiken.</description>
+    </item>
+    <item>
+      <title>Advanced CSS</title>
+      <link>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/css_advanced/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/css_advanced/</guid>
+      <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;Quicktips Transformations Transitions Animations </description>
+    </item>
   </channel>
 </rss>
