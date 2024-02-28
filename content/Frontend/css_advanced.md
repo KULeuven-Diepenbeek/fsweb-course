@@ -55,7 +55,7 @@ div{
 ```
 
 ## Transitions
-Met CSS-overgangen kun je de waarden van eigenschappen soepel veranderen gedurende een bepaalde tijd.
+Met **CSS-transitions** kun je de waarden van eigenschappen soepel veranderen gedurende een bepaalde tijd.
 We bespreken de volgende overgang properties:
 - `transition`
 - `transition-delay`
@@ -103,7 +103,73 @@ Voor de transition-timing-function zijn er een aantal mogelijkheden. (**In de de
 - **`ease-in-out`** - specifies a transition effect with a slow start and end
 - **`cubic-bezier(n,n,n,n)`** - lets you define your own values in a cubic-bezier function
 
-<!-- ## Animations
+## Animations
+
+Met **CSS-animations** laat je een element geleidelijk veranderen van de ene stijl naar de andere. Je kunt zoveel CSS-properties wijzigen als je wil, zo vaak je wil. 
+We bespreken de volgende animation properties:
+- `animation`
+- `@keyframes`
+- `animation-name`
+- `animation-duration`
+- `animation-delay`
+- `animation-iteration-count`
+- `animation-direction`
+- `animation-timing-function`
+- `animation-fill-mode`
+- `animation`
+
+Om CSS-animations te gebruiken, moet je eerst een aantal keyframes opgeven voor de animatie.
+Keyframes geven aan welke stijlen het element op bepaalde momenten zal hebben.
+
+```css
+/* The animation code */
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+/* The element to apply the animation to */
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+```
+
+Shorthand:
+
+```css
+div {
+  animation-name: example;            /*keyframe name*/
+  animation-duration: 5s;             
+  animation-timing-function: linear;  /*linear, ease, ease-in, ease-out, ease-in-out*/
+  animation-delay: 2s;                
+  animation-iteration-count: infinite;
+  animation-direction: alternate;     /*normal, reverse, alternate, alternate-reverse*/
+  animation-fill-mode: forwards;      /*none, forwards, basckwards, both*/ 
+}
+
+/* Shorthand */
+div {
+  animation: example 5s linear 2s infinite alternate forwards;
+}
+```
+**animation-timing-function**: zie `transitions`
+
+**animation-direction**:
+-**`normal`** - The animation is played as normal (forwards). This is default
+-**`reverse`** - The animation is played in reverse direction (backwards)
+-**`alternate`** - The animation is played forwards first, then backwards
+-**`alternate-reverse`** - The animation is played backwards first, then forwards
+
+**animation-fill-mode**:
+-**`none`** - Default value. Animation will not apply any styles to the element before or after it is executing
+-**`forwards`** - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+-**`backwards`** - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+-**`both`** - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions
+
 
 ### Verschil met transitions
 **CSS-animations** definiëren complexe bewegingen met keyframes, zoals `rotate` of `fade`, terwijl **CSS-transitions** soepele veranderingen maken in elementeigenschappen, zoals grootte of kleur, tijdens gebeurtenissen zoals `hover`. Animaties gebruiken keyframes en kunnen oneindig herhalen, terwijl overgangen optreden bij eigenschapsveranderingen en meer geschikt zijn voor subtiele effecten. Beiden voegen interactiviteit en aantrekkelijkheid toe aan webpagina's, maar hebben verschillende toepassingen.
@@ -112,4 +178,4 @@ Voor de transition-timing-function zijn er een aantal mogelijkheden. (**In de de
 
 ### Animation play state
 
-## Opdrachten -->
+## Opdrachten
