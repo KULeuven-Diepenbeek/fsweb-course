@@ -108,6 +108,8 @@ Aangezien HTML5 dus gewoon de nieuwere versie is van HTML gaan we dit gebruiken.
 
 <img src="/img/common_website_layout.png" alt="drawing" style="max-height: 23em;"/>
 
+<!-- TODO
+## List of usefull elements (by type) -->
 
 ## Opdrachten
 1. Maak een HTML-bestand en noem het portfolio.html

@@ -12,22 +12,22 @@
     <title>CSS :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1709119247" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1709119247" rel="stylesheet">
-    <link href="../../css/hybrid.css?1709119247" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1709119247" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1709119247" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1709119247" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1709119247" rel="stylesheet">
-    <link href="../../css/theme.css?1709119247" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1709119247" rel="stylesheet">
-    <link href="../../css/devselector.css?1709119247" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1709119247" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1709119247" rel="stylesheet">
+    <link href="../../css/nucleus.css?1709167440" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1709167440" rel="stylesheet">
+    <link href="../../css/hybrid.css?1709167440" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1709167440" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1709167440" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1709167440" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1709167440" rel="stylesheet">
+    <link href="../../css/theme.css?1709167440" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1709167440" rel="stylesheet">
+    <link href="../../css/devselector.css?1709167440" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1709167440" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1709167440" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1709119247"></script>
-    <script src="../../js/devselector.js?1709119247"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1709167440"></script>
+    <script src="../../js/devselector.js?1709167440"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1709119247"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1709119247"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1709167440"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1709167440"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1709119247"></script>
+<script type="text/javascript" src="../../js/search.js?1709167440"></script>
 
     
   </div>
@@ -336,8 +336,12 @@
         <li><a href="#margin-padding-en-outline">Margin, padding en outline</a></li>
         <li><a href="#sizing">Sizing</a></li>
         <li><a href="#positioning">Positioning</a></li>
+        <li><a href="#list-of-usefull-properties">List of usefull properties</a></li>
+        <li><a href="#icons">Icons</a></li>
+        <li><a href="#text-effects">Text effects</a></li>
         <li><a href="#calculations">Calculations</a></li>
         <li><a href="#css-variables">CSS variables</a></li>
+        <li><a href="#extra">Extra</a></li>
       </ol>
     </li>
     <li><a href="#opdrachten">Opdrachten</a></li>
@@ -405,12 +409,22 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">elementName</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">className</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">idName</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*Dit is een comment*/</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#111">:</span><span style="color:#75af00">pseudo-classname</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/*e.g.: a:hover{...;}*/</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#111">::</span><span style="color:#75af00">pseudo-elementname</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span> 
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/*e.g.: h1:before{...;}*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*Attribute selectors*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#f92672">[</span><span style="color:#f92672">attribute</span><span style="color:#f92672">]</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#f92672">[</span><span style="color:#f92672">attribute</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;value&#34;</span><span style="color:#f92672">]</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#f92672">[</span><span style="color:#f92672">attribute</span><span style="color:#f92672">~=</span><span style="color:#d88200">&#34;value&#34;</span><span style="color:#f92672">]</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span> <span style="color:#75715e">/*contains specific words*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#f92672">[</span><span style="color:#f92672">attribute</span><span style="color:#f92672">|=</span><span style="color:#d88200">&#34;value&#34;</span><span style="color:#f92672">]</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span> <span style="color:#75715e">/*specific value or followed by - */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#f92672">[</span><span style="color:#f92672">attribute</span><span style="color:#f92672">^=</span><span style="color:#d88200">&#34;value&#34;</span><span style="color:#f92672">]</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span> <span style="color:#75715e">/*starts with specific value*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#f92672">[</span><span style="color:#f92672">attribute</span><span style="color:#f92672">$=</span><span style="color:#d88200">&#34;value&#34;</span><span style="color:#f92672">]</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span> <span style="color:#75715e">/*ends with specific value*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#f92672">[</span><span style="color:#f92672">attribute</span><span style="color:#f92672">*=</span><span style="color:#d88200">&#34;value&#34;</span><span style="color:#f92672">]</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span> <span style="color:#75715e">/*contains a specified value*/</span>
 </span></span></code></pre></div><p><strong>Types of combinators:</strong></p>
 <ul>
 <li>descendant selector (space) specifies all descendants</li>
@@ -424,9 +438,10 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
 <h3 id="sizing">Sizing</h3>
 <ul>
 <li><strong>Absolute</strong>: <code>px</code>, <code>pt</code>, <code>pc</code>, <code>in</code>, <code>cm</code>, <code>mm</code></li>
-<li><strong>Relative</strong>: <code>%</code>, <code>ex</code>, <code>ch</code>, <code>fr</code>, <code>em</code>, <code>rem</code></li>
+<li><strong>Relative</strong>: <code>%</code>, <code>em</code>, <code>rem</code>, <code>ex</code>, <code>ch</code>, <code>fr</code></li>
 <li><strong>Viewport</strong> (define in head): <code>vw</code>, <code>vh</code>, <code>vmin</code>, <code>vmax</code></li>
 </ul>
+<p><em>We gaan in 99% van de gevallen enkel gebruik maken van <code>px</code>, <code>rem</code> en <code>%</code> (af en toe <code>em</code> relatief t.o.v. font-size eigen element)!!!</em></p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">meta</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;viewport&#34;</span> <span style="color:#75af00">content</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#111">&gt;</span>
 </span></span></code></pre></div><h3 id="positioning">Positioning</h3>
 <ul>
@@ -441,7 +456,149 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
 <li><strong>Sticky</strong>: An element with <code>position: sticky;</code> is positioned based on the user&rsquo;s scroll position.
 <br>A sticky element toggles between <code>relative</code> and <code>fixed</code>, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it &ldquo;sticks&rdquo; in place (like position:fixed).</li>
 </ul>
-<h3 id="calculations">Calculations</h3>
+<h3 id="list-of-usefull-properties">List of usefull properties</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">elementId</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">red</span><span style="color:#111">;</span> <span style="color:#75715e">/*rgb(255,0,0) , #FF0000, hsl(0, 100%, 50%) , rgba(255,0,0,0.5), hsla(0, 100%, 50%, 0.5)*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">opacity</span><span style="color:#111">:</span> <span style="color:#ae81ff">0.3</span><span style="color:#111">;</span> <span style="color:#75715e">/*Doorschijnbaarheid 0-1*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-image</span><span style="color:#111">:</span> <span style="color:#111">url</span><span style="color:#111">(</span><span style="color:#d88200">&#34;image.jpg&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-repeat</span><span style="color:#111">:</span> <span style="color:#00a8c8">repeat-x</span><span style="color:#111">;</span> <span style="color:#75715e">/*repeat-y, no-repeat*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-position</span><span style="color:#111">:</span> <span style="color:#00a8c8">right</span> <span style="color:#00a8c8">top</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-attachment</span><span style="color:#111">:</span> <span style="color:#00a8c8">fixed</span><span style="color:#111">;</span> <span style="color:#75715e">/*scroll*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border-style</span><span style="color:#111">:</span> <span style="color:#00a8c8">dotted</span><span style="color:#111">;</span> <span style="color:#75715e">/*dashed, solid, double, groove, ridge, inset, outset, none, hidden*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*border-top-style, border-right-style, border-bottom-style, border-left-style*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border-width</span><span style="color:#111">:</span> <span style="color:#ae81ff">5</span><span style="color:#00a8c8">rem</span><span style="color:#111">;</span> <span style="color:#75715e">/*top right bottom left*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border-width</span><span style="color:#111">:</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border-radius</span><span style="color:#111">:</span> <span style="color:#ae81ff">5</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">margin</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span> <span style="color:#75715e">/*top right bottom left*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*margin-top, margin-right, margin-bottom, margin-left*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span> <span style="color:#75715e">/*top right bottom left*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*padding-top, padding-right, padding-bottom, padding-left*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">height</span><span style="color:#111">:</span> <span style="color:#ae81ff">200</span><span style="color:#00a8c8">rem</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">max-height</span><span style="color:#111">:</span> <span style="color:#ae81ff">20</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">width</span><span style="color:#111">:</span> <span style="color:#ae81ff">80</span><span style="color:#00a8c8">%</span><span style="color:#111">;</span> <span style="color:#75715e">/*relative to parent*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">max-width</span><span style="color:#111">:</span> <span style="color:#ae81ff">60</span><span style="color:#00a8c8">ch</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">outline</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">red</span><span style="color:#111">;</span> <span style="color:#75715e">/*width style color*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">outline-offset</span><span style="color:#111">:</span> <span style="color:#ae81ff">15</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">color</span><span style="color:#111">:</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span> <span style="color:#75715e">/*Text color*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-align</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span> <span style="color:#75715e">/*left, right, justify*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-align-last</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span> <span style="color:#75715e">/*right, justify*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">direction</span><span style="color:#111">:</span> <span style="color:#00a8c8">rtl</span><span style="color:#111">;</span> <span style="color:#75715e">/*ltr*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">vertical-align</span><span style="color:#111">:</span> <span style="color:#00a8c8">baseline</span><span style="color:#111">;</span> <span style="color:#75715e">/*text-top, text-bottom, sub, super*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-decoration-line</span><span style="color:#111">:</span> <span style="color:#00a8c8">overline</span><span style="color:#111">;</span> <span style="color:#75715e">/*line-through, underline, overline underline*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-decoration-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">red</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-decoration-style</span><span style="color:#111">:</span> <span style="color:#00a8c8">solid</span><span style="color:#111">;</span> <span style="color:#75715e">/*double, dotted, dashed, wavy*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">text-decoration-thickness</span><span style="color:#111">:</span> <span style="color:#ae81ff">5</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-transform</span><span style="color:#111">:</span> <span style="color:#00a8c8">uppercase</span><span style="color:#111">;</span> <span style="color:#75715e">/*lowecase, capitalize*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-indent</span><span style="color:#111">:</span> <span style="color:#ae81ff">5</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span> <span style="color:#75715e">/*first line indent*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">letter-spacing</span><span style="color:#111">:</span> <span style="color:#ae81ff">-2</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">line-height</span><span style="color:#111">:</span> <span style="color:#ae81ff">0.8</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">word-spacing</span><span style="color:#111">:</span> <span style="color:#ae81ff">5</span><span style="color:#00a8c8">rem</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">white-space</span><span style="color:#111">:</span> <span style="color:#00a8c8">nowrap</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-shadow</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">black</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">25</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">blue</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">5</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">darkblue</span><span style="color:#111">;</span> <span style="color:#75715e">/*horizontal vertical blur color, ...*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">font-family</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;Times New Roman&#34;</span><span style="color:#111">,</span> <span style="color:#111">Times</span><span style="color:#111">,</span> <span style="color:#00a8c8">serif</span><span style="color:#111">;</span> <span style="color:#75715e">/*desired, fallback1, fallback2*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">font-style</span><span style="color:#111">:</span> <span style="color:#00a8c8">normal</span><span style="color:#111">;</span> <span style="color:#75715e">/*itallic, oblique*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">font-weight</span><span style="color:#111">:</span> <span style="color:#00a8c8">normal</span><span style="color:#111">;</span> <span style="color:#75715e">/*bold*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">font-size</span><span style="color:#111">:</span> <span style="color:#ae81ff">0.5</span><span style="color:#00a8c8">rem</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">font-variant</span><span style="color:#111">:</span> <span style="color:#00a8c8">normal</span><span style="color:#111">;</span> <span style="color:#75715e">/*small-caps*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">overflow-x</span><span style="color:#111">:</span> <span style="color:#00a8c8">scroll</span><span style="color:#111">;</span> <span style="color:#75715e">/*hidden, auto, visible*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">overflow-y</span><span style="color:#111">:</span> <span style="color:#00a8c8">scroll</span><span style="color:#111">;</span> <span style="color:#75715e">/*hidden, auto, visible*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">inline</span><span style="color:#111">;</span> <span style="color:#75715e">/*block, inline-block, contents, flex, grid*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">position</span><span style="color:#111">:</span> <span style="color:#00a8c8">static</span><span style="color:#111">;</span> <span style="color:#75715e">/*relative, fixed, absolute, sticky (to parent)*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">bottom</span><span style="color:#111">:</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">right</span><span style="color:#111">:</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">z-index</span><span style="color:#111">:</span> <span style="color:#ae81ff">-1</span><span style="color:#111">;</span> <span style="color:#75715e">/*lower = further in background*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">float</span><span style="color:#111">:</span> <span style="color:#00a8c8">right</span><span style="color:#111">;</span> <span style="color:#75715e">/*left, none, inherit*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*in parent*/</span>  <span style="color:#00a8c8">clear</span><span style="color:#111">:</span> <span style="color:#00a8c8">left</span><span style="color:#111">;</span> <span style="color:#75715e">/*right, none, inherit*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">box-sizing</span><span style="color:#111">:</span> <span style="color:#00a8c8">content-box</span><span style="color:#111">;</span> <span style="color:#75715e">/*border-box*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*IF display: flex*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">flex-direction</span><span style="color:#111">:</span> <span style="color:#00a8c8">row</span><span style="color:#111">;</span> <span style="color:#75715e">/*column, column-reverse, row-reverse*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">flex-wrap</span><span style="color:#111">:</span> <span style="color:#00a8c8">wrap</span><span style="color:#111">;</span> <span style="color:#75715e">/*nowrap, wrap-reverse*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*flex-flow: row wrap;*/</span> <span style="color:#75715e">/*direction wrap*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex-start</span><span style="color:#111">;</span> <span style="color:#75715e">/*center, flex-end, space-around, space-between*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">stretch</span><span style="color:#111">;</span> <span style="color:#75715e">/*baseline, flex-start, center, flex-end*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">align-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">space-between</span><span style="color:#111">;</span> <span style="color:#75715e">/*space-around, stretch, center, flex-start, flex-end*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*IF display: grid*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">ul</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">list-style-type</span><span style="color:#111">:</span> <span style="color:#00a8c8">circle</span><span style="color:#111">;</span> <span style="color:#75715e">/*square, upper-roman, lower-alpha, none*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">list-style-image</span><span style="color:#111">:</span> <span style="color:#111">url</span><span style="color:#111">(</span><span style="color:#d88200">&#39;sqpurple.gif&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">list-style-position</span><span style="color:#111">:</span> <span style="color:#00a8c8">outside</span><span style="color:#111">;</span> <span style="color:#75715e">/*inside*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">table</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border-collapse</span><span style="color:#111">:</span> <span style="color:#00a8c8">collapse</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tr</span><span style="color:#111">:</span><span style="color:#75af00">nth-child</span><span style="color:#f92672">(</span><span style="color:#f92672">even</span><span style="color:#f92672">)</span> <span style="color:#111">{</span><span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#ae81ff">#f2f2f2</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">input</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">outline</span><span style="color:#111">:</span> <span style="color:#00a8c8">none</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">a</span><span style="color:#111">:</span><span style="color:#75af00">link</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">a</span><span style="color:#111">:</span><span style="color:#75af00">visited</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">a</span><span style="color:#111">:</span><span style="color:#75af00">hover</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">a</span><span style="color:#111">:</span><span style="color:#75af00">active</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*COUNTERS*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">containerElement</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">counter-reset</span><span style="color:#111">:</span> <span style="color:#111">section</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">element</span><span style="color:#111">::</span><span style="color:#75af00">before</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">counter-increment</span><span style="color:#111">:</span> <span style="color:#111">section</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">content</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;Section &#34;</span> <span style="color:#111">counter</span><span style="color:#111">(</span><span style="color:#111">section</span><span style="color:#111">)</span> <span style="color:#d88200">&#34;: &#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><!-- TODO add flex-items and grid above -->
+<h3 id="icons">Icons</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://kit.fontawesome.com/yourcode.js&#34;</span> <span style="color:#75af00">crossorigin</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;anonymous&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span> <span style="color:#75715e">&lt;!-- In the head --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">i</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fas fa-cloud&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">i</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><h3 id="text-effects">Text effects</h3>
+<p><strong>text-overflow</strong>: hoe moet verborgen overflowing content weergegeven worden?</p>
+<ul>
+<li>clip</li>
+<li>ellipsis
+<em>overflow moet hidden zijn (werkt niet vij overflow visible)</em></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">textOverflow</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-overflow</span><span style="color:#111">:</span> <span style="color:#00a8c8">clip</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">overflow</span><span style="color:#111">:</span> <span style="color:#00a8c8">hidden</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">textOverflow2</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">text-overflow</span><span style="color:#111">:</span> <span style="color:#00a8c8">ellipsis</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">overflow</span><span style="color:#111">:</span> <span style="color:#00a8c8">hidden</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p><strong>word-wrap</strong>: om lange woorden op te breken en te wrappen naar de volgende regel</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">wordWrap</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">word-wrap</span><span style="color:#111">:</span> <span style="color:#00a8c8">break-word</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p><strong>word-break</strong>: hoe moeten lijnen text gebroken worden.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">wordWrap</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">word-break</span><span style="color:#111">:</span> <span style="color:#111">keep-all</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">wordWrap2</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">word-break</span><span style="color:#111">:</span> <span style="color:#111">break-all</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p><strong>writing-mode</strong>: horizontaal of verticaal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">writingMode</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">writing-mode</span><span style="color:#111">:</span> <span style="color:#00a8c8">horizontal</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">writingMode</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">writing-mode</span><span style="color:#111">:</span> <span style="color:#00a8c8">vertical</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h3 id="calculations">Calculations</h3>
 <p>e.g.:</p>
 <ul>
 <li><code>width: calc(100% - 100px);</code></li>
@@ -455,6 +612,44 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
 </span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
 </span></span><span style="display:flex;"><span>  
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">body</span> <span style="color:#111">{</span> <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#75af00">var</span><span style="color:#111">(</span><span style="color:#f92672">--</span><span style="color:#00a8c8">blue</span><span style="color:#111">);</span> <span style="color:#111">}</span>
+</span></span></code></pre></div><h3 id="extra">Extra</h3>
+<p><strong>Andere CSS files importeren in de <code>main.css</code></strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">@</span><span style="color:#00a8c8">import</span> <span style="color:#d88200">&#34;style.css&#34;</span><span style="color:#111">;</span>
+</span></span></code></pre></div><p><strong>!important</strong>: om alle andere styling te overschrijven.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">element</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">red</span> <span style="color:#75715e">!important</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p><strong>simple linear gradient</strong>: gebruik <code>background-image</code> property en niet <code>background-color</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">grad</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-image</span><span style="color:#111">:</span> <span style="color:#111">linear-gradient</span><span style="color:#111">(</span><span style="color:#00a8c8">to</span> <span style="color:#00a8c8">right</span><span style="color:#111">,</span> <span style="color:#00a8c8">red</span> <span style="color:#111">,</span> <span style="color:#00a8c8">yellow</span><span style="color:#111">);</span> <span style="color:#75715e">/*direction, color-stop1, color-stop2, ...*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p><strong>Divs, columns, User Interface</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">column-count</span><span style="color:#111">:</span> <span style="color:#ae81ff">3</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">column-gap</span><span style="color:#111">:</span> <span style="color:#ae81ff">40</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">column-width</span><span style="color:#111">:</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">column-rule-style</span><span style="color:#111">:</span> <span style="color:#00a8c8">solid</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">column-rule-width</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">column-rule-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightblue</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*element inside the div*/</span> <span style="color:#00a8c8">column-span</span><span style="color:#111">:</span> <span style="color:#00a8c8">all</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">resize</span><span style="color:#111">:</span> <span style="color:#00a8c8">horizontal</span><span style="color:#111">;</span> <span style="color:#75715e">/*vertical, both*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">overflow</span><span style="color:#111">:</span> <span style="color:#00a8c8">auto</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p><strong>img</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">img</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">border-radius</span><span style="color:#111">:</span> <span style="color:#ae81ff">8</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">opacity</span><span style="color:#111">:</span> <span style="color:#ae81ff">0.5</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">filter</span><span style="color:#111">:</span> <span style="color:#111">grayscale</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">%</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">box-shadow</span><span style="color:#111">:</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">px</span> <span style="color:#111">rgba</span><span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">140</span><span style="color:#111">,</span> <span style="color:#ae81ff">186</span><span style="color:#111">,</span> <span style="color:#ae81ff">0.5</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">-webkit-</span><span style="color:#111">box-reflect</span><span style="color:#111">:</span> <span style="color:#00a8c8">below</span><span style="color:#111">;</span> <span style="color:#75715e">/*above, left, right*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">object-fit</span><span style="color:#111">:</span> <span style="color:#00a8c8">cover</span><span style="color:#111">;</span> <span style="color:#75715e">/*contain, fill, none, scale-down*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">object-position</span><span style="color:#111">:</span> <span style="color:#ae81ff">80</span><span style="color:#00a8c8">%</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">%</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">-webkit-</span><span style="color:#00a8c8">mask-image</span><span style="color:#111">:</span> <span style="color:#111">url</span><span style="color:#111">(</span><span style="color:#d88200">img1.png</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">mask-image</span><span style="color:#111">:</span> <span style="color:#111">url</span><span style="color:#111">(</span><span style="color:#d88200">img1.png</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">-webkit-</span><span style="color:#00a8c8">mask-repeat</span><span style="color:#111">:</span> <span style="color:#00a8c8">no-repeat</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">mask-repeat</span><span style="color:#111">:</span> <span style="color:#00a8c8">no-repeat</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
 </span></span></code></pre></div><h2 id="opdrachten">Opdrachten</h2>
 <ol>
 <li>Maak je footer fixed onderaan de pagina</li>
@@ -647,15 +842,15 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1709119247"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1709119247"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1709119247"></script>
-    <script src="../../js/jquery.sticky.js?1709119247"></script>
-    <script src="../../js/featherlight.min.js?1709119247"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1709119247"></script>
-    <script src="../../js/learn.js?1709119247"></script>
-    <script src="../../js/hugo-learn.js?1709119247"></script>
-    <script src="../../js/mermaid.min.js?1709119247"></script>
+    <script src="../../js/clipboard.min.js?1709167440"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1709167440"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1709167440"></script>
+    <script src="../../js/jquery.sticky.js?1709167440"></script>
+    <script src="../../js/featherlight.min.js?1709167440"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1709167440"></script>
+    <script src="../../js/learn.js?1709167440"></script>
+    <script src="../../js/hugo-learn.js?1709167440"></script>
+    <script src="../../js/mermaid.min.js?1709167440"></script>
     <script>
     window.MathJax = {
       chtml: {

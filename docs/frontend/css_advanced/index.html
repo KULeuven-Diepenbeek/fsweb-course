@@ -12,22 +12,22 @@
     <title>Advanced CSS :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1709119247" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1709119247" rel="stylesheet">
-    <link href="../../css/hybrid.css?1709119247" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1709119247" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1709119247" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1709119247" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1709119247" rel="stylesheet">
-    <link href="../../css/theme.css?1709119247" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1709119247" rel="stylesheet">
-    <link href="../../css/devselector.css?1709119247" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1709119247" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1709119247" rel="stylesheet">
+    <link href="../../css/nucleus.css?1709167440" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1709167440" rel="stylesheet">
+    <link href="../../css/hybrid.css?1709167440" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1709167440" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1709167440" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1709167440" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1709167440" rel="stylesheet">
+    <link href="../../css/theme.css?1709167440" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1709167440" rel="stylesheet">
+    <link href="../../css/devselector.css?1709167440" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1709167440" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1709167440" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1709119247"></script>
-    <script src="../../js/devselector.js?1709119247"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1709167440"></script>
+    <script src="../../js/devselector.js?1709167440"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1709119247"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1709119247"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1709167440"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1709167440"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1709119247"></script>
+<script type="text/javascript" src="../../js/search.js?1709167440"></script>
 
     
   </div>
@@ -328,10 +328,21 @@
                     <div class="progress">
   <div class="wrapper toc"><nav id="TableOfContents">
   <ol>
-    <li><a href="#quicktips">Quicktips</a></li>
-    <li><a href="#transformations">Transformations</a></li>
+    <li><a href="#quicktip">Quicktip</a></li>
+    <li><a href="#transformations">Transformations</a>
+      <ol>
+        <li><a href="#matrix">Matrix</a></li>
+      </ol>
+    </li>
     <li><a href="#transitions">Transitions</a></li>
-    <li><a href="#animations">Animations</a></li>
+    <li><a href="#animations">Animations</a>
+      <ol>
+        <li><a href="#verschil-met-transitions">Verschil met transitions</a></li>
+        <li><a href="#animation-utility-classes-en-dubbele-classes">Animation utility classes en dubbele classes</a></li>
+        <li><a href="#animation-play-state">Animation play state</a></li>
+      </ol>
+    </li>
+    <li><a href="#opdrachten-zie-voorbeelden">Opdrachten zie voorbeelden</a></li>
   </ol>
 </nav></div>
 </div>
@@ -363,10 +374,180 @@
 <article class='content'>
 <p><em>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain</em></br>
 <em>bron 2: <a href="https://www.w3schools.com/html/default.asp">W3Schools</a></em></p>
-<h2 id="quicktips">Quicktips</h2>
-<h2 id="transformations">Transformations</h2>
-<h2 id="transitions">Transitions</h2>
+<h2 id="quicktip">Quicktip</h2>
+<p>Je css code spreiden over meerdere stylesheets is mogelijk door in je <code>main.css</code> andere CSS-bestanden te importeren. Je kan bijvoorbeeld al je animation klassen in een aparte <code>animations.css</code> plaatsen en dat bestand dan importeren met onderstaande code in je <code>main.css</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">@</span><span style="color:#00a8c8">import</span> <span style="color:#d88200">&#34;animations.css&#34;</span><span style="color:#111">;</span>
+</span></span></code></pre></div><h2 id="transformations">Transformations</h2>
+<p>Met CSS-transformaties kun je elementen verplaatsen, roteren, schalen en scheef trekken. Volgende 2D-transformaties zijn beschikbaar:</p>
+<ul>
+<li><code>translate()</code></li>
+<li><code>rotate()</code></li>
+<li><code>scaleX()</code></li>
+<li><code>scaleY()</code></li>
+<li><code>scale()</code></li>
+<li><code>skewX()</code></li>
+<li><code>skewY()</code></li>
+<li><code>skew()</code></li>
+<li><code>matrix()</code></li>
+</ul>
+<p>Examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transform</span><span style="color:#111">:</span> <span style="color:#111">translate</span><span style="color:#111">(</span><span style="color:#ae81ff">50</span><span style="color:#00a8c8">px</span><span style="color:#111">,</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transform</span><span style="color:#111">:</span> <span style="color:#111">rotate</span><span style="color:#111">(</span><span style="color:#ae81ff">20</span><span style="color:#00a8c8">deg</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transform</span><span style="color:#111">:</span> <span style="color:#111">rotate</span><span style="color:#111">(</span><span style="color:#ae81ff">-20</span><span style="color:#00a8c8">deg</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transform</span><span style="color:#111">:</span> <span style="color:#111">scale</span><span style="color:#111">(</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span> <span style="color:#ae81ff">3</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transform</span><span style="color:#111">:</span> <span style="color:#111">scale</span><span style="color:#111">(</span><span style="color:#ae81ff">0.5</span><span style="color:#111">,</span> <span style="color:#ae81ff">0.5</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* transform: scaleX(2);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  transform: scaleY(3); */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transform</span><span style="color:#111">:</span> <span style="color:#75af00">skew</span><span style="color:#111">(</span><span style="color:#ae81ff">20</span><span style="color:#00a8c8">deg</span><span style="color:#111">,</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">deg</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* transform: skewX(20deg);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  transform: skewY(20deg); */</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h3 id="matrix">Matrix</h3>
+<p>De methode <code>matrix()</code> combineert alle 2D-transformatiemethoden in één. De <code>matrix()</code> methode neemt zes parameters, die wiskundige functies bevatten, waarmee je elementen kunt roteren, schalen, verplaatsen (vertalen) en schuin houden.</p>
+<p>De parameters zijn als volgt: <code>matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transform</span><span style="color:#111">:</span> <span style="color:#111">matrix</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#ae81ff">-0.3</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#ae81ff">0</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h2 id="transitions">Transitions</h2>
+<p>Met <strong>CSS-transitions</strong> kun je de waarden van eigenschappen soepel veranderen gedurende een bepaalde tijd.
+We bespreken de volgende overgang properties:</p>
+<ul>
+<li><code>transition</code></li>
+<li><code>transition-property</code></li>
+<li><code>transition-duration</code></li>
+<li><code>transition-timing-function</code></li>
+<li><code>transition-delay</code></li>
+</ul>
+<p>Om een transition effect te maken, moet je twee dingen specificeren:</p>
+<ol>
+<li>de CSS-property waaraan u een effect wilt toevoegen</li>
+<li>de duur van het effect
+<em>Opmerking: Als het onderdeel duur niet wordt opgegeven, heeft de overgang geen effect, omdat de standaardwaarde 0 is.</em></li>
+</ol>
+<p>Om een transition te laten plaatsvinden, moet een element een verandering in state hebben en moeten voor elke state verschillende styles worden bepaald. De eenvoudigste manier om styles voor verschillende states te bepalen is door gebruik te maken van de <code>:hover</code>, <code>:focus</code>, <code>:active</code> en <code>:target</code> pseudo-klassen.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">width</span><span style="color:#111">:</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">height</span><span style="color:#111">:</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background</span><span style="color:#111">:</span> <span style="color:#00a8c8">red</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transition</span><span style="color:#111">:</span> <span style="color:#00a8c8">width</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">s</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">div</span><span style="color:#111">:</span><span style="color:#75af00">hover</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">width</span><span style="color:#111">:</span> <span style="color:#ae81ff">300</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>Je kan de transition properties apart definiëren of allemaal samen in een shorthand:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transition-property</span><span style="color:#111">:</span> <span style="color:#00a8c8">width</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transition-duration</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">s</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transition-timing-function</span><span style="color:#111">:</span> <span style="color:#00a8c8">linear</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transition-delay</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">s</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Shorthand */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transition</span><span style="color:#111">:</span> <span style="color:#00a8c8">width</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">s</span> <span style="color:#00a8c8">linear</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">s</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>Voor de transition-timing-function zijn er een aantal mogelijkheden. (<strong>In de developper tools van je browser kan je met deze waarden spelen en de gewenste beziercurve kopiëren</strong>):</p>
+<ul>
+<li><strong><code>ease</code></strong> - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+<li><strong><code>linear</code></strong> - specifies a transition effect with the same speed from start to end</li>
+<li><strong><code>ease-in</code></strong> - specifies a transition effect with a slow start</li>
+<li><strong><code>ease-out</code></strong> - specifies a transition effect with a slow end</li>
+<li><strong><code>ease-in-out</code></strong> - specifies a transition effect with a slow start and end</li>
+<li><strong><code>cubic-bezier(n,n,n,n)</code></strong> - lets you define your own values in a cubic-bezier function</li>
+</ul>
 <h2 id="animations">Animations</h2>
+<p>Met <strong>CSS-animations</strong> laat je een element geleidelijk veranderen van de ene stijl naar de andere. Je kunt zoveel CSS-properties wijzigen als je wil, zo vaak je wil.
+We bespreken de volgende animation properties:</p>
+<ul>
+<li><code>animation</code></li>
+<li><code>@keyframes</code></li>
+<li><code>animation-name</code></li>
+<li><code>animation-duration</code></li>
+<li><code>animation-delay</code></li>
+<li><code>animation-iteration-count</code></li>
+<li><code>animation-direction</code></li>
+<li><code>animation-timing-function</code></li>
+<li><code>animation-fill-mode</code></li>
+<li><code>animation</code></li>
+</ul>
+<p>Om CSS-animations te gebruiken, moet je eerst een aantal keyframes opgeven voor de animatie.
+Keyframes geven aan welke stijlen het element op bepaalde momenten zal hebben.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* The animation code */</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">@</span><span style="color:#00a8c8">keyframes</span> <span style="color:#f92672">example</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">from</span> <span style="color:#111">{</span><span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">red</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">to</span> <span style="color:#111">{</span><span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">yellow</span><span style="color:#111">;}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* The element to apply the animation to */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">width</span><span style="color:#111">:</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">height</span><span style="color:#111">:</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">red</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-name</span><span style="color:#111">:</span> <span style="color:#111">example</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-duration</span><span style="color:#111">:</span> <span style="color:#ae81ff">4</span><span style="color:#00a8c8">s</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>Shorthand:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-name</span><span style="color:#111">:</span> <span style="color:#111">example</span><span style="color:#111">;</span>            <span style="color:#75715e">/*keyframe name*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-duration</span><span style="color:#111">:</span> <span style="color:#ae81ff">5</span><span style="color:#00a8c8">s</span><span style="color:#111">;</span>             
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-timing-function</span><span style="color:#111">:</span> <span style="color:#00a8c8">linear</span><span style="color:#111">;</span>  <span style="color:#75715e">/*linear, ease, ease-in, ease-out, ease-in-out*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-delay</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">s</span><span style="color:#111">;</span>                
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-iteration-count</span><span style="color:#111">:</span> <span style="color:#00a8c8">infinite</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-direction</span><span style="color:#111">:</span> <span style="color:#00a8c8">alternate</span><span style="color:#111">;</span>     <span style="color:#75715e">/*normal, reverse, alternate, alternate-reverse*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-fill-mode</span><span style="color:#111">:</span> <span style="color:#00a8c8">forwards</span><span style="color:#111">;</span>      <span style="color:#75715e">/*none, forwards, basckwards, both*/</span> 
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* Shorthand */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation</span><span style="color:#111">:</span> <span style="color:#111">example</span> <span style="color:#ae81ff">5</span><span style="color:#00a8c8">s</span> <span style="color:#00a8c8">linear</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">s</span> <span style="color:#00a8c8">infinite</span> <span style="color:#00a8c8">alternate</span> <span style="color:#00a8c8">forwards</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p><strong>animation-timing-function</strong>: zie <code>transitions</code></p>
+<p><strong>animation-direction</strong>:
+-<strong><code>normal</code></strong> - The animation is played as normal (forwards). This is default
+-<strong><code>reverse</code></strong> - The animation is played in reverse direction (backwards)
+-<strong><code>alternate</code></strong> - The animation is played forwards first, then backwards
+-<strong><code>alternate-reverse</code></strong> - The animation is played backwards first, then forwards</p>
+<p><strong>animation-fill-mode</strong>:
+-<strong><code>none</code></strong> - Default value. Animation will not apply any styles to the element before or after it is executing
+-<strong><code>forwards</code></strong> - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+-<strong><code>backwards</code></strong> - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+-<strong><code>both</code></strong> - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions</p>
+<h3 id="verschil-met-transitions">Verschil met transitions</h3>
+<p><strong>CSS-animations</strong> definiëren complexe bewegingen met keyframes, zoals <code>rotate</code> of <code>fade</code>, terwijl <strong>CSS-transitions</strong> soepele veranderingen maken in elementeigenschappen, zoals grootte of kleur, tijdens gebeurtenissen zoals <code>hover</code>. Animaties gebruiken keyframes en kunnen oneindig herhalen, terwijl overgangen optreden bij eigenschapsveranderingen en meer geschikt zijn voor subtiele effecten. Beiden voegen interactiviteit en aantrekkelijkheid toe aan webpagina&rsquo;s, maar hebben verschillende toepassingen.</p>
+<h3 id="animation-utility-classes-en-dubbele-classes">Animation utility classes en dubbele classes</h3>
+<p>Je gebruikt <strong><code>animation utility classes</code></strong> om de relatie tussen animatie en element te ontkoppelen en voor herbruikbaarheid.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">fade-in</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">animation</span><span style="color:#111">:</span> <span style="color:#111">fadeIn</span> <span style="color:#ae81ff">0.5</span><span style="color:#00a8c8">s</span> <span style="color:#00a8c8">ease-in</span> <span style="color:#00a8c8">forwards</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">@</span><span style="color:#00a8c8">keyframes</span> <span style="color:#f92672">fadeIn</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">from</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">opacity</span><span style="color:#111">:</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">to</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">opacity</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>Je gebruikt <strong>dubbele klasse</strong> notaties ter bescherming:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">animatie</span> <span style="color:#111">.</span><span style="color:#75af00">fade-in</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">animation</span><span style="color:#111">:</span> <span style="color:#111">fadeIn</span> <span style="color:#ae81ff">0.5</span><span style="color:#00a8c8">s</span> <span style="color:#00a8c8">ease-in</span> <span style="color:#00a8c8">forwards</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h3 id="animation-play-state">Animation play state</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span><span style="color:#111">:</span><span style="color:#75af00">hover</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">animation-play-state</span><span style="color:#111">:</span> <span style="color:#00a8c8">paused</span><span style="color:#111">;</span> <span style="color:#75715e">/*running, initial, inherit*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><!-- TODO in responsive
+## Viewport
+## Flexbox
+## Grid
+## Media queries
+## aspect-ratio: 3 / 2;
+## Images
+## Videos
+## Frameworks
+## Templates -->
+<h2 id="opdrachten-zie-voorbeelden">Opdrachten zie voorbeelden</h2>
 
 </article>
 
@@ -542,15 +723,15 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1709119247"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1709119247"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1709119247"></script>
-    <script src="../../js/jquery.sticky.js?1709119247"></script>
-    <script src="../../js/featherlight.min.js?1709119247"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1709119247"></script>
-    <script src="../../js/learn.js?1709119247"></script>
-    <script src="../../js/hugo-learn.js?1709119247"></script>
-    <script src="../../js/mermaid.min.js?1709119247"></script>
+    <script src="../../js/clipboard.min.js?1709167440"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1709167440"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1709167440"></script>
+    <script src="../../js/jquery.sticky.js?1709167440"></script>
+    <script src="../../js/featherlight.min.js?1709167440"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1709167440"></script>
+    <script src="../../js/learn.js?1709167440"></script>
+    <script src="../../js/hugo-learn.js?1709167440"></script>
+    <script src="../../js/mermaid.min.js?1709167440"></script>
     <script>
     window.MathJax = {
       chtml: {
