@@ -190,12 +190,17 @@ Je gebruikt **`animation utility classes`** om de relatie tussen animatie en ele
         opacity: 1;
     }
 }
+
+@keyframes fadeAnimation {
+  0%, 50%, 100%   {opacity: 1;}
+  25%, 75%  {opacity: 0.5;}
+}
 ```
 
 Je gebruikt **dubbele klasse** notaties ter bescherming:
 
 ```css
-.animatie .fade-in {
+.animatie.fade-in {
     animation: fadeIn 0.5s ease-in forwards;
 }
 ```
@@ -206,6 +211,9 @@ div:hover {
   animation-play-state: paused; /*running, initial, inherit*/
 }
 ```
+
+### Animatie klasse dynamisch toevoegen met JavaScript
+<!-- TODO -->
 
 <!-- TODO in responsive
 ## Viewport
@@ -218,4 +226,13 @@ div:hover {
 ## Frameworks
 ## Templates -->
 
-## Opdrachten zie voorbeelden
+## [Opdrachten](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student/tree/CSS-advanced-exercises)
+
+**Exercise 1, 2, 3, 4**: Er worden drie `transitions` getoond. Je hebt ongeveer 8 minuten om de transities zo goed mogelijk te evenaren. Daarna wordt de oplossing overlopen. (De exacte pixel afstanden worden niet verwacht, het is voldoende wanneer de transitie gelijkaardig is).
+
+**Exercise 5, 6, 7, 8**: Er worden drie `animations` getoond. Je hebt ongeveer 8 minuten om de animations zo goed mogelijk te evenaren. Daarna wordt de oplossing overlopen. (De exacte pixel afstanden worden niet verwacht, het is voldoende wanneer de transitie gelijkaardig is).
+
+**Exercise 9, 10, 11, 12, 13, 14, 15**: Er worden 7 `transitions` of `animations` getoond. Je hebt ongeveer 15 minuten om de voorbeelden zo goed mogelijk te evenaren. Daarna wordt de oplossing overlopen. (De exacte pixel afstanden worden niet verwacht, het is voldoende wanneer de transitie gelijkaardig is).
+
+### Portfolio website
+Fleur nu je eigen portfolio website op door wat transitions en animaties toe te voegen waar nuttig.
