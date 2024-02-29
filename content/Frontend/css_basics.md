@@ -280,8 +280,9 @@ e.g.:
 
 **Andere CSS files importeren in de `main.css`**
 ```css
-@import "style.css";
+@import url('./animations.css');
 ```
+**Moet helemaal in het begin van je CSS-file staan**
 
 **!important**: om alle andere styling te overschrijven.
 ```css
