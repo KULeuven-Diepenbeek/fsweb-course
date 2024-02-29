@@ -13,8 +13,10 @@ _bron 2: [W3Schools](https://www.w3schools.com/html/default.asp)_
 Je css code spreiden over meerdere stylesheets is mogelijk door in je `main.css` andere CSS-bestanden te importeren. Je kan bijvoorbeeld al je animation klassen in een aparte `animations.css` plaatsen en dat bestand dan importeren met onderstaande code in je `main.css`:
 
 ```css
-@import "animations.css";
+@import url('./animations.css');
 ```
+
+**Moet helemaal in het begin van je CSS-file staan**
 
 ## Transformations
 Met CSS-transformaties kun je elementen verplaatsen, roteren, schalen en scheef trekken. Volgende 2D-transformaties zijn beschikbaar:
