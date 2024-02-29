@@ -58,15 +58,17 @@ div{
 Met **CSS-transitions** kun je de waarden van eigenschappen soepel veranderen gedurende een bepaalde tijd.
 We bespreken de volgende overgang properties:
 - `transition`
-- `transition-delay`
-- `transition-duration`
 - `transition-property`
+- `transition-duration`
 - `transition-timing-function`
+- `transition-delay`
 
 Om een transition effect te maken, moet je twee dingen specificeren:
 1. de CSS-property waaraan u een effect wilt toevoegen
 2. de duur van het effect
 _Opmerking: Als het onderdeel duur niet wordt opgegeven, heeft de overgang geen effect, omdat de standaardwaarde 0 is._
+
+Om een transition te laten plaatsvinden, moet een element een verandering in state hebben en moeten voor elke state verschillende styles worden bepaald. De eenvoudigste manier om styles voor verschillende states te bepalen is door gebruik te maken van de `:hover`, `:focus`, `:active` en `:target` pseudo-klassen.
 
 Example:
 ```css
@@ -137,9 +139,7 @@ div {
   animation-duration: 4s;
 }
 ```
-
 Shorthand:
-
 ```css
 div {
   animation-name: example;            /*keyframe name*/
@@ -174,8 +174,48 @@ div {
 ### Verschil met transitions
 **CSS-animations** definiëren complexe bewegingen met keyframes, zoals `rotate` of `fade`, terwijl **CSS-transitions** soepele veranderingen maken in elementeigenschappen, zoals grootte of kleur, tijdens gebeurtenissen zoals `hover`. Animaties gebruiken keyframes en kunnen oneindig herhalen, terwijl overgangen optreden bij eigenschapsveranderingen en meer geschikt zijn voor subtiele effecten. Beiden voegen interactiviteit en aantrekkelijkheid toe aan webpagina's, maar hebben verschillende toepassingen.
 
-### Animation utility classes
+### Animation utility classes en dubbele classes
+Je gebruikt **`animation utility classes`** om de relatie tussen animatie en element te ontkoppelen en voor herbruikbaarheid.
+
+```css
+.fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+```
+
+Je gebruikt **dubbele klasse** notaties ter bescherming:
+
+```css
+.animatie .fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+```
 
 ### Animation play state
+```css
+div:hover {
+  animation-play-state: paused; /*running, initial, inherit*/
+}
+```
 
-## Opdrachten
+<!-- TODO in responsive
+## Viewport
+## Flexbox
+## Grid
+## Media queries
+## aspect-ratio: 3 / 2;
+## Images
+## Videos
+## Frameworks
+## Templates -->
+
+## Opdrachten zie voorbeelden

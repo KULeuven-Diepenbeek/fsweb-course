@@ -48,12 +48,22 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
 elementName {...;}
 .className {...;}
 #idName {...;}
+/*Dit is een comment*/
 
 element:pseudo-classname {...;}
 /*e.g.: a:hover{...;}*/
 
 element::pseudo-elementname {...;} 
 /*e.g.: h1:before{...;}*/
+
+/*Attribute selectors*/
+element[attribute] {...;}
+element[attribute="value"] {...;}
+element[attribute~="value"] {...;} /*contains specific words*/
+element[attribute|="value"] {...;} /*specific value or followed by - */
+element[attribute^="value"] {...;} /*starts with specific value*/
+element[attribute$="value"] {...;} /*ends with specific value*/
+element[attribute*="value"] {...;} /*contains a specified value*/
 ```
 
 **Types of combinators:**
@@ -68,8 +78,11 @@ element::pseudo-elementname {...;}
 
 ### Sizing
 - **Absolute**: `px`, `pt`, `pc`, `in`, `cm`, `mm`
-- **Relative**: `%`, `ex`, `ch`, `fr`, `em`, `rem`
+- **Relative**: `%`, `em`, `rem`, `ex`, `ch`, `fr`
 - **Viewport** (define in head): `vw`, `vh`, `vmin`, `vmax`
+
+_We gaan in 99% van de gevallen enkel gebruik maken van `px`, `rem` en `%` (af en toe `em` relatief t.o.v. font-size eigen element)!!!_
+
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
@@ -86,6 +99,167 @@ element::pseudo-elementname {...;}
 - **Sticky**: An element with `position: sticky;` is positioned based on the user's scroll position.
 <br>A sticky element toggles between `relative` and `fixed`, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
 
+### List of usefull properties
+```css
+#elementId {
+  background-color: red; /*rgb(255,0,0) , #FF0000, hsl(0, 100%, 50%) , rgba(255,0,0,0.5), hsla(0, 100%, 50%, 0.5)*/
+  opacity: 0.3; /*Doorschijnbaarheid 0-1*/
+  background-image: url("image.jpg");
+  background-repeat: repeat-x; /*repeat-y, no-repeat*/
+  background-position: right top;
+  background-attachment: fixed; /*scroll*/
+
+  border-style: dotted; /*dashed, solid, double, groove, ridge, inset, outset, none, hidden*/
+  /*border-top-style, border-right-style, border-bottom-style, border-left-style*/
+  border-width: 5rem; /*top right bottom left*/
+  border-width: black;
+  border-radius: 5px;
+
+  margin: 10px; /*top right bottom left*/
+  /*margin-top, margin-right, margin-bottom, margin-left*/
+  padding: 10px; /*top right bottom left*/
+  /*padding-top, padding-right, padding-bottom, padding-left*/
+
+  height: 200rem;
+  max-height: 20px;
+  width: 80%; /*relative to parent*/
+  max-width: 60ch;
+
+  outline: 1px solid red; /*width style color*/
+  outline-offset: 15px;
+
+  color: black; /*Text color*/
+  text-align: center; /*left, right, justify*/
+  text-align-last: center; /*right, justify*/
+  direction: rtl; /*ltr*/
+  vertical-align: baseline; /*text-top, text-bottom, sub, super*/
+  text-decoration-line: overline; /*line-through, underline, overline underline*/
+  text-decoration-color: red;
+  text-decoration-style: solid; /*double, dotted, dashed, wavy*/
+  text-decoration-thickness: 5px;
+  text-transform: uppercase; /*lowecase, capitalize*/
+  text-indent: 5px; /*first line indent*/
+  letter-spacing: -2px;
+  line-height: 0.8;
+  word-spacing: 5rem;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; /*horizontal vertical blur color, ...*/
+  font-family: "Times New Roman", Times, serif; /*desired, fallback1, fallback2*/
+  font-style: normal; /*itallic, oblique*/
+  font-weight: normal; /*bold*/
+  font-size: 0.5rem;
+  font-variant: normal; /*small-caps*/
+
+  overflow-x: scroll; /*hidden, auto, visible*/
+  overflow-y: scroll; /*hidden, auto, visible*/
+
+  display: inline; /*block, inline-block, contents, flex, grid*/
+  position: static; /*relative, fixed, absolute, sticky (to parent)*/
+  bottom: 0;
+  right: 0;
+  z-index: -1; /*lower = further in background*/
+
+  float: right; /*left, none, inherit*/
+  /*in parent*/  clear: left; /*right, none, inherit*/
+
+  box-sizing: content-box; /*border-box*/
+
+  /*IF display: flex*/
+  flex-direction: row; /*column, column-reverse, row-reverse*/
+  flex-wrap: wrap; /*nowrap, wrap-reverse*/
+  /*flex-flow: row wrap;*/ /*direction wrap*/
+  justify-content: flex-start; /*center, flex-end, space-around, space-between*/
+  align-items: stretch; /*baseline, flex-start, center, flex-end*/
+  align-content: space-between; /*space-around, stretch, center, flex-start, flex-end*/
+
+  /*IF display: grid*/
+
+}
+
+ul {
+  list-style-type: circle; /*square, upper-roman, lower-alpha, none*/
+  list-style-image: url('sqpurple.gif');
+  list-style-position: outside; /*inside*/
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+input {
+  outline: none;
+}
+
+a:link {...;}
+a:visited {...;}
+a:hover {...;}
+a:active {...;}
+
+/*COUNTERS*/
+#containerElement {
+  counter-reset: section;
+}
+element::before{
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+
+```
+
+<!-- TODO add flex-items and grid above -->
+
+### Icons
+```html
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> <!-- In the head -->
+<i class="fas fa-cloud"></i>
+```
+
+### Text effects
+
+**text-overflow**: hoe moet verborgen overflowing content weergegeven worden?
+- clip
+- ellipsis
+_overflow moet hidden zijn (werkt niet vij overflow visible)_
+```css
+#textOverflow {
+  text-overflow: clip;
+  overflow: hidden;
+}
+#textOverflow2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+```
+
+**word-wrap**: om lange woorden op te breken en te wrappen naar de volgende regel
+```css
+#wordWrap {
+  word-wrap: break-word;
+}
+```
+
+**word-break**: hoe moeten lijnen text gebroken worden.
+```css
+#wordWrap {
+  word-break: keep-all;
+}
+#wordWrap2 {
+  word-break: break-all;
+}
+```
+
+**writing-mode**: horizontaal of verticaal.
+```css
+#writingMode {
+  writing-mode: horizontal;
+}
+#writingMode {
+  writing-mode: vertical;
+}
+```
+
 ### Calculations
 e.g.:
 - `width: calc(100% - 100px);`
@@ -100,6 +274,60 @@ e.g.:
   }
   
   body { background-color: var(--blue); }
+```
+
+### Extra
+
+**Andere CSS files importeren in de `main.css`**
+```css
+@import "style.css";
+```
+
+**!important**: om alle andere styling te overschrijven.
+```css
+element {
+  background-color: red !important;
+}
+```
+
+**simple linear gradient**: gebruik `background-image` property en niet `background-color`. 
+```css
+#grad {
+  background-image: linear-gradient(to right, red , yellow); /*direction, color-stop1, color-stop2, ...*/
+}
+```
+
+**Divs, columns, User Interface**
+```css
+div {
+  column-count: 3;
+  column-gap: 40px;
+  column-width: 100px;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: lightblue;
+  /*element inside the div*/ column-span: all;
+
+  resize: horizontal; /*vertical, both*/
+  overflow: auto;
+}
+```
+
+**img**:
+```css
+img {
+  border-radius: 8px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  -webkit-box-reflect: below; /*above, left, right*/
+  object-fit: cover; /*contain, fill, none, scale-down*/
+  object-position: 80% 100%;
+  -webkit-mask-image: url(img1.png);
+  mask-image: url(img1.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
 ```
 
 ## Opdrachten

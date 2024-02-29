@@ -99,11 +99,15 @@ HTML5:
 ```
 Merk op dat in het HTML5 voorbeeld geen "/" heeft voor het sluitende groter dan teken, geen quotes gebruikt voor de value van het attribuut 'href' en 'rel' en er geen attribuut 'type' gedefinieerd is. HTML5 zal hier echter niet moeilijk over doen.  
 
-<!-- TODO: fix icon -->
 > <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
 > In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek mogelijk te coderen om problemen in een later stadium te vermijden.
 
 Aangezien HTML5 dus gewoon de nieuwere versie is van HTML gaan we dit gebruiken.
+
+## Common website layout
+
+<img src="/img/common_website_layout.png" alt="drawing" style="max-height: 23em;"/>
+
 
 ## Opdrachten
 1. Maak een HTML-bestand en noem het portfolio.html
