@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="description" content="">
+<meta name="author" content="map[email:&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; name:Arne Duyver]">
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>Responsive Design :: Full Stack Web Development</title>
+
+    
+    <link href="../../css/nucleus.css?1709817667" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1709817667" rel="stylesheet">
+    <link href="../../css/hybrid.css?1709817667" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1709817667" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1709817667" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1709817667" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1709817667" rel="stylesheet">
+    <link href="../../css/theme.css?1709817667" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1709817667" rel="stylesheet">
+    <link href="../../css/devselector.css?1709817667" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1709817667" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1709817667" rel="stylesheet">
+    
+
+    <script src="../../js/jquery-3.3.1.min.js?1709817667"></script>
+    <script src="../../js/devselector.js?1709817667"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="../../frontend/responsive_design/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="https://www.kuleuven.be/kuleuven/" target="_blank">
+  <img src="../../images/kul.png" alt="KU Leuven" /><br/>
+</a>
+<a href="https://www.uhasselt.be/" target="_blank">
+  <img src="../../images/uhasselt.svg" alt="UHasselt" id="uhlogo" />
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1709817667"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1709817667"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1709817667"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+
+      <h3><a href="../../">Course Contents</a></h3>
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/introductie/" title="Introductie" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../introductie/">
+          Introductie
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/frontend/" title="Frontend" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../frontend/">
+          Frontend
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/html_basics/" title="HTML" class="dd-item ">
+        <a href="../../frontend/html_basics/">
+        HTML
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/css_basics/" title="CSS" class="dd-item ">
+        <a href="../../frontend/css_basics/">
+        CSS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/javascript_basics/" title="JavaScript" class="dd-item ">
+        <a href="../../frontend/javascript_basics/">
+        JavaScript
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/extra/" title="Extra" class="dd-item ">
+        <a href="../../frontend/extra/">
+        Extra
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/css_advanced/" title="Advanced CSS" class="dd-item ">
+        <a href="../../frontend/css_advanced/">
+        Advanced CSS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/frontend/responsive_design/" title="Responsive Design" class="dd-item active">
+        <a href="../../frontend/responsive_design/">
+        Responsive Design
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=4891"><i class='fa fa-university'></i> Studiegids</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://toledo.kuleuven.be/portal/"><i class='fa fa-university'></i> Toledo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://github.com/kuleuven-diepenbeek/fsweb-course/"><i class='fab fa-github'></i> Course Git Repository</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>Index</a> > <a href='../../frontend/'>Frontend</a> > Responsive Design
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper toc"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#lets-talk-about-units">Let&rsquo;s talk about Units</a>
+      <ol>
+        <li><a href="#browser-default-font-size">Browser default font-size</a></li>
+        <li><a href="#-vh-vw">% vh vw</a></li>
+        <li><a href="#ch">ch</a></li>
+      </ol>
+    </li>
+    <li><a href="#starting-fresh">Starting fresh</a></li>
+    <li><a href="#media-queries">Media Queries</a></li>
+    <li><a href="#positioning-herhaling">Positioning (herhaling)</a>
+      <ol>
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#grid">Grid</a></li>
+        <li><a href="#responsive-grid-zonder-media-queries">Responsive grid zonder media queries</a></li>
+      </ol>
+    </li>
+    <li><a href="#other-practical-responsive-tips">Other practical responsive tips</a></li>
+    <li><a href="#up-next">UP NEXT</a></li>
+    <li><a href="#opdrachten">Opdrachten</a></li>
+  </ol>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Responsive Design
+            </h1>
+          
+
+        
+
+        
+
+
+
+
+
+<article class='content'>
+<h2 id="lets-talk-about-units">Let&rsquo;s talk about Units</h2>
+<p>Zoals al eerder vermeld bestaan er verschillende soorten units in HTML/CSS, maar waarvoor gebruik je welke unit nu het beste? Hieronder vind je een aantal tips.</p>
+<p>Maar eerst volgt er nog een kleine uitleg over de abstracte unit <strong>pixel</strong> of <code>px</code>. Er bestaat namelijk wel wat verwarring op het internet over wat hoe groot <code>1px</code> juist is. Allereerst is het de kleinste unit die je kan gebruiken, maar hoe groot is het juist. We gaan geen exacte meting meegeven maar vertellen je wel waarvoor de pixel dient. De pixelgrootte is verschillend voor verschillende schremgrootten en met goede reden. De grootte van de pixel heeft te maken met de aangeraden kijkafstand ten opzichte van het scherm. De pixel unit zorgt er namelijk voor dat <code>10px</code> op een klein scherm er even groot zou moeten uitzien als <code>10px</code> op een groot scherm wanneer je rekening houd met de kijkafstand tot de twee schermen. In werkelijkheid is <code>10px</code> op het grote scherm groter, maar als je op de correcte afstand van het scherm zit zouden de groottes overeen moeten komen. Dit maakt de <strong>pixel</strong> de ideale basis unit voor je design.</p>
+<figure>
+<img src="../../img/pixel_unit.png" alt="drawing" style="min-width: auto;"/>
+<figcaption>Schema werking pixel unit <a href="https://fantasai.inkedblade.net/style/specs/css2.1/px-unit">bron</a></figcation>
+</figure>
+<h3 id="browser-default-font-size">Browser default font-size</h3>
+<p>De browser default font-size is <code>16px</code> voor de meeste moderne browsers. Gebruikers kunnen dit echter aanpassen naar hun accessibility noden. Daarom is het belangrijk specifieke absolute font-sizing te vermijden. Op die manier blijven de accessibility features bruikbaar.</p>
+<p>Gebruik daarom steeds de <code>rem</code> unit om font-size mee te geven zodat alles mee scaled met de default waarde gebruikt door browser. We gebruiken <code>rem</code> omdat die steeds relatief is t.o.v. de root font-size. <code>em</code> is scaling t.o.v. de eigen parent maar dit kan snel de leesbaarheid van je code vermideren. De <code>em</code> unit is wel handig om bijvoorbeeld breedte, hoogte, padding, margins &hellip; van een element in te stellen omdat je op die manier je grootte baseerd op font-size van zijn content.</p>
+<h3 id="-vh-vw">% vh vw</h3>
+<ul>
+<li><strong>Percentage</strong> units zijn altijd relative t.o.v. hun parent.</li>
+<li><strong>Viewport</strong> units zijn altijd relative t.o.v. de schermgrootte.</li>
+</ul>
+<p>Met <code>vh</code> kan je er bijvoorbeeld voor zorgen dat content steeds 80% van de hoogte van je scherm inneemt (<code>min-height: 80vh;</code>).
+<strong>Let op</strong> wanneer je een <code>vw</code> van 100 gebruikt, aangezien de viewport geen rekening houd met scrollbars, zal je bij 100 altijd een zeer kleine &ldquo;irritante&rdquo; horizontale scrollbar krijgen.</p>
+<h3 id="ch">ch</h3>
+<p>Een laatste unit die je voor een specifiek geval kan gebruiken is de <code>ch</code> (of character width) unit. Een bepaalde design filosofie stelt dat het een good practice is om textcontainers niet breder te maken dan 60 karakters. Door de styling <code>max-width: 60ch;</code> toe te passen, wordt automatisch deze good practice toegepast.</p>
+<p><strong>99% van de tijd zal je dus enkel met de hierboven vermelde units werken</strong></p>
+<h2 id="starting-fresh">Starting fresh</h2>
+<p>Start je CSS file met volgende code om enkel &ldquo;ongewenst&rdquo; default gedrag van de browser te overschrijven:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSS" data-lang="CSS"><span style="display:flex;"><span><span style="color:#f92672">*,</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">*</span><span style="color:#111">::</span><span style="color:#75af00">before</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">*</span><span style="color:#111">::</span><span style="color:#75af00">after</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">box-sizing</span><span style="color:#111">:</span> <span style="color:#00a8c8">border-box</span><span style="color:#111">;</span> <span style="color:#75715e">/* Zorgt ervoor dat default padding en border worden meegerekend met breedte en hoogte */</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">*</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">margin</span><span style="color:#111">:</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>  <span style="color:#75715e">/* Zorgt ervoor dat elk element default geen margin heeft */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span> <span style="color:#75715e">/* Zorgt ervoor dat elk element default geen padding heeft */</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h2 id="media-queries">Media Queries</h2>
+<figure>
+<img src="../../img/mediaQuery_syntax.jpg" alt="drawing" style="height:auto;"/>
+<figcaption>Media query syntax <a href="https://dev.to/codewithtee/css-media-queries-16mj">bron</a></figcation>
+</figure>
+<ul>
+<li><strong>Media-type</strong>: kies tussen <code>screen</code>, <code>print</code>, <code>speech</code> of <code>all</code> (default)</li>
+<li><strong>Expression to test</strong>: verschil <code>min-width</code>, <code>max-width</code>. Wanneer je je website voor desktop designed dan gebruik je media queries met <code>max-width</code> om ze ook responsive te maken op kleinere viewports. Vice versa als je je website designed voor mobile, gebruik dan <code>min-width</code> op responsive te zijn op grotere viewports.</li>
+<li><strong>Conditional CSS</strong>: style je elementen zoals ze er moeten uitzien op de gequeriede media.</li>
+</ul>
+<p><em>Je kan dus voor veel verschillende screen sizes custom CSS schrijven.</em></p>
+<p>Voorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSS" data-lang="CSS"><span style="display:flex;"><span><span style="color:#111">@</span><span style="color:#00a8c8">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">500px</span><span style="color:#f92672">)</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">html</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">color</span><span style="color:#111">:</span> <span style="color:#00a8c8">red</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p><strong>Workflow versie 1</strong>: ontwerp je website voor een specifieke viewport, maar laat zo veel mogelijk aan de defaults van de browser over. Test daarna voor andere viewports en pas eventueel je CSS code aan zodat ze automatisch meer responsive is. Schrijf ten slotte scpecifieke media queries voor die dingen die niet automatisch aangepast kunnen worden.</p>
+<p><strong>Workflow versie 2</strong>: Bepaal op voorhand een aantal media query breakpoints (XL, L, M, S, XS) en maak elk ervan responsive.</p>
+<h2 id="positioning-herhaling">Positioning (herhaling)</h2>
+<ul>
+<li><code>position: absolute;</code> item is verwijderd van het document.
+<ul>
+<li><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> unlocked.</li>
+<li>zet <code>position: relative;</code> in parent om het element relative te positioneren t.o.v. van parent i.p.v. hele document.</li>
+<li>gebruik <code>z-index</code> om elementen naar voor te halen of naar achter te brengen.</li>
+<li>(Wanneer je elementen met negatieve waarden niet meer passen op het scherm&lt; verschijnt een scroll bar.Verwijder de scroll bar met <code>overflow: hidden;</code> in parent or body)</li>
+</ul>
+</li>
+<li><code>position: relative;</code> position relative t.o.v. parent en blijven in de normal flow van het document.
+<ul>
+<li><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> unlocked.</li>
+</ul>
+</li>
+<li><code>position: static;</code> default, er gebeurt niks.</li>
+<li><code>position: fixed;</code> gelijkaardig aan absolute en dus ook verwijderd uit document, maar item volgt nu met het scrollen en altijd relative t.o.v. het html element. (ideaal voor headers and footers)</li>
+<li><code>position: sticky;</code> werkt alleen wanneer <code>top</code> of <code>bottom</code> property is meegegeven.
+<ul>
+<li>blijft enkel sticky binnen de parent.</li>
+</ul>
+</li>
+</ul>
+<h3 id="flexbox">Flexbox</h3>
+<p>Geeft het element 2 assen om elementen op te plaatsen en de default as is horizontaal. Dus onze items worden niet meer boven elkaar getoond maar naast elkaar.
+Bijvoorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;item item1&#34;</span><span style="color:#111">&gt;</span>Item 1<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;item item2&#34;</span><span style="color:#111">&gt;</span>Item 2<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;item item3&#34;</span><span style="color:#111">&gt;</span>Item 3<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">containter</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Verander de main axis: column , row (default)*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">flex-direction</span><span style="color:#111">:</span> <span style="color:#00a8c8">row</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Hoe moeten de elementen geplaatst worden op de main axis: flex-start (default) , flex-end , center , space-between , space-around , space-evenly*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex-start</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Hoe moeten de elementen geplaatst worden op de cross axis: flex-start (default) , flex-end , center , baseline*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex-start</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Hoe omgaan met overflow: nowrap (default) , wrap*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">flex-wrap</span><span style="color:#111">:</span> <span style="color:#00a8c8">wrap</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Wrap unlocks align-content zelfde opties als `justify-content`*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">align-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex-start</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Plaats tussen elementen aanpassen: 0px (default)*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">gap</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">em</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">item</span><span style="color:#111">.</span><span style="color:#75af00">item1</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* flex-grow: 1; */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">flex-shrink</span><span style="color:#111">:</span> <span style="color:#ae81ff">5</span><span style="color:#111">;</span> <span style="color:#75715e">/*item 1 shrinkt 5x sneller dan de andere (0 item shrinkt niet)*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">flex-basis</span><span style="color:#111">:</span> <span style="color:#ae81ff">300</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span> <span style="color:#75715e">/*overschrijft breedte item in flex container*/</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*SHORTHAND: grow shrink basis*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">flex</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">align-self</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span> <span style="color:#75715e">/*overschrijf align van container*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">order</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#111">;</span> <span style="color:#75715e">/*verander de volgorde waarin elementen in flex container getoond worden t.o.v. volgorde in html bestand. (beter via HTML aanpassen)*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">item</span><span style="color:#111">.</span><span style="color:#75af00">item2</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">flex-grow</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#111">;</span> <span style="color:#75715e">/*neemt dubbel zoveel plaats in als 1 en 3*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">item</span><span style="color:#111">.</span><span style="color:#75af00">item3</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">flex-grow</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><figure>
+<img src="../../img/flex-info.png" alt="drawing" style="max-height:40rem;"/>
+<figcaption>Flex info <a href="https://medium.com/@MakeComputerScienceGreatAgain/understanding-flexbox-a-comprehensive-guide-992bcd5f04de">bron</a></figcation>
+</figure>
+<h3 id="grid">Grid</h3>
+<p>Met behulp van <strong>Grid</strong> kan je items plaatsen op basis van een soort grid coördinaten:
+Bijvoorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;item item1&#34;</span><span style="color:#111">&gt;</span>Item 1<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;item item2&#34;</span><span style="color:#111">&gt;</span>Item 2<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;item item3&#34;</span><span style="color:#111">&gt;</span>Item 3<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">containter</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">grid</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Geef het aantal rijen en kolommen mee*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-template-rows</span><span style="color:#111">:</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span> <span style="color:#75715e">/*3 rijen van 100px*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-template-columns</span><span style="color:#111">:</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span> <span style="color:#75715e">/*3 kolommen van 100px*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-gap</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">em</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">em</span><span style="color:#111">;</span> <span style="color:#75715e">/*eerst gap tussen rows dan columns*/</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Naamgeving grid vakken*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-template-areas</span><span style="color:#111">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#39;header header header&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#39;vak4 vak5 vak6&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#39;vak7 vak8 vak9&#39;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*Items positioneren*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">item</span><span style="color:#111">.</span><span style="color:#75af00">item1</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-row-start</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-row-end</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*SHORTHAND*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* grid-row: 1 / 2; */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-column-start</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-column-end</span><span style="color:#111">:</span> <span style="color:#ae81ff">4</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*SHORTHAND*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* grid-column: 1 / 4; */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Via area naam*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* grid-area: header; */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">z-index</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span> <span style="color:#75715e">/*to show on top, if overlapping*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">item</span><span style="color:#111">.</span><span style="color:#75af00">item2</span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-row</span><span style="color:#111">:</span> <span style="color:#111">span</span> <span style="color:#ae81ff">2</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-column</span><span style="color:#111">:</span> <span style="color:#111">span</span> <span style="color:#ae81ff">2</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">item</span><span style="color:#111">.</span><span style="color:#75af00">item3</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-area</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><ul>
+<li><strong>Extra items toevoegen</strong>: Als je extra items toevoegd terwijl je grid al vol is, dan krijg je een impliciet grid dat automatische een rij bijmaakt bijvoorbeeld. Met <code>grid-auto-rows: 100px</code> kan je een grootte van <code>100px</code> geven aan de automatisch gegenereerde rijen (idem <code>grid-auto-columns</code>). Met de <code>grid-auto-flow</code> property kan je de overflow op <code>columns</code> toepassen i.p.v. <code>rows</code>.</li>
+<li><strong>Sizing van de templates</strong>: Je kan alle gebruikelijke units gebruiken maar ook een extra speciale unit, specifiek voor grids: <code>fr</code>. Deze <strong>fractional</strong> unit gebruikt dan een fractie van de ruimte beschikbaar door de container. Je kan ook de <code>minmax()</code> functie gebruiken bv. <code>minmax(100px, 3fr)</code></li>
+<li><strong>De <code>repeat()</code> function</strong>: met de repeat functie kan je snel meerdere waarden herhalen bv <code>repeat(3, 100px)</code></li>
+<li><strong>Gridception</strong>: Je hoeft je niet te beperken tot 1 grid om je website op te stellen. Je kan een grid onder een grid, in een grid, naast een grid &hellip; gebruiken. Think, trail, error, repeat is hier de boodschap.</li>
+<li><strong>justify-items en align-items</strong>: deze properties werken gelijkaardig aan de flexbox, maar dan binnenin 1 vak van je grid. (<code>stretch</code> = default, <code>start</code>, <code>end</code>, <code>baseline</code>, <code>center</code>)
+<ul>
+<li>Gebruik de <strong>justify-self</strong> en <strong>align-self</strong> properties in de individuele elementen om ze apart te stijlen.
+-<strong>Plaatsing grid binnenin container</strong>: Gebruik <code>justify-content</code> en <code>align-content</code> properties van de container. (<code>start</code> , <code>end</code> , <code>center</code> , <code>baseline</code> , <code>space-between</code> , <code>space-around</code>, <code>space-evenly</code>)</li>
+</ul>
+</li>
+</ul>
+<figure>
+<img src="../../img/grid-info.png" alt="drawing" style="max-height:40rem;"/>
+<figcaption>Grid info <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdev.to%2Fuzafar90%2Fa-comprehensive-guide-to-using-css-grid-for-creating-flexible-and-responsive-layouts-m4b&psig=AOvVaw0D3G40bRCDMYowZpINI_OO&ust=1709900931552000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMCPn8KT4oQDFQAAAAAdAAAAABA5">bron</a></figcation>
+</figure>
+<h3 id="responsive-grid-zonder-media-queries">Responsive grid zonder media queries</h3>
+<p>Example non responsive:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">grid</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-template-rows</span><span style="color:#111">:</span> <span style="color:#75af00">repeat</span><span style="color:#111">(</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-template-columns</span><span style="color:#111">:</span> <span style="color:#75af00">repeat</span><span style="color:#111">(</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span> <span style="color:#75af00">minmax</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">fr</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>Example responsive:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">grid</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-template-rows</span><span style="color:#111">:</span> <span style="color:#75af00">repeat</span><span style="color:#111">(</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Wrap item to next row if it doesn&#39;t fit*/</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-template-columns</span><span style="color:#111">:</span> <span style="color:#75af00">repeat</span><span style="color:#111">(</span><span style="color:#00a8c8">auto</span><span style="color:#f92672">-</span><span style="color:#111">fit</span><span style="color:#111">,</span> <span style="color:#75af00">minmax</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">fr</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><!-- ## Easy dark mode example -->
+<h2 id="other-practical-responsive-tips">Other practical responsive tips</h2>
+<ul>
+<li>Gebruik container utility classes om je media queries simpel te structureren. (eventueel met max-width container gelijk aan min-width van query)</li>
+<li>Snapping vs resizing (eigen keuze)</li>
+<li>Maak <code>img</code> responsive met <code>display: block ; max-width: 100%;</code></li>
+<li>Gebruik <code>min-height</code> i.p.v. <code>height</code> (idem <code>max-width</code> and <code>width</code>)</li>
+<li>Center met <code>margin-left: auto ; margin-right: auto;</code></li>
+<li>Pas geen CSS aan dat niet nodig is. Zo behoud je het default gedrag opgelegd door de browser.</li>
+<li><code>Width: auto;</code> werkt soms beter dan <code>width: 100%;</code></li>
+<li>Zet de <code>flex-wrap</code> property op <code>wrap</code>, wanneer je een flexbox gebruikt.</li>
+</ul>
+<!-- - Voor `grid-template-columns` gebruik `repeat(auto-fit, minmax(250ox, 1fr))` -->
+<ul>
+<li>Vermijd media-queries waar mogelijk. (uitzondering bv. echt grote layout wijzigingen voor andere schermtypes)</li>
+</ul>
+<h2 id="up-next">UP NEXT</h2>
+<p><strong>Responsive animated navigation bar, headers and footers examples, Easy dark mode example</strong> tijdens volgende les. Denk hier al eens over na.</p>
+<h2 id="opdrachten">Opdrachten</h2>
+<p><strong>Update je portfolio website</strong></p>
+<ol>
+<li>Maak een keuze of je je website ontwikkeld voor desktop first of mobile first. En voeg de <a href="#starting-fresh">clean slate code</a> toe bovenaan je CSS. (Pas nu dan eventuele padding/margins toe op de juiste plaatsen)</li>
+<li>Bepaal 5 sizes waarvoor je media queries gaat schrijven en maak correct gebruik van min- of max-width op basis van je keuze in opdracht 1.</li>
+<li>Gebruik flexboxes waar nodig.</li>
+<li>Gebruik grid om de globale layout van je webpagina te bepalen. Tips voor layouts vind je <a href="../../content/Frontend/html_basics.md#common-website-layouts">hier</a></li>
+</ol>
+<!-- 5. Animeer je navigatiebaar en voeg en checkbox toe om te switchen tussen light- en darkmode. -->
+<!-- 6. Gebruik variables, CSS en javascript om een darkmode toe te voegen. -->
+</article>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../frontend/css_advanced/" title="Advanced CSS"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../frontend/html_basics/" title="HTML" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1709817667"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1709817667"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1709817667"></script>
+    <script src="../../js/jquery.sticky.js?1709817667"></script>
+    <script src="../../js/featherlight.min.js?1709817667"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1709817667"></script>
+    <script src="../../js/learn.js?1709817667"></script>
+    <script src="../../js/hugo-learn.js?1709817667"></script>
+    <script src="../../js/mermaid.min.js?1709817667"></script>
+    <script>
+    window.MathJax = {
+      chtml: {
+        scale: 2,                      
+        minScale: .5,                  
+        matchFontHeight: true,         
+        mtextInheritFont: false,       
+        merrorInheritFont: true,       
+        mathmlSpacing: false,          
+        skipAttributes: {},            
+        exFactor: .5,                  
+        displayAlign: 'center',        
+        displayIndent: '0'             
+      }
+    };
+    </script>
+    
+    
+
+  </body>
+</html>
+
