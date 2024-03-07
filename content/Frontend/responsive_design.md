@@ -258,7 +258,7 @@ _Voorbeeld zie demo 7_
 ## UP NEXT
 **Responsive animated navigation bar, headers and footers examples, Easy dark mode example** tijdens volgende les. Denk hier al eens over na.
 
-## Opdrachten
+## [Opdrachten](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student/)
 
 **Update je portfolio website**
 1. Maak een keuze of je je website ontwikkeld voor desktop first of mobile first. En voeg de [clean slate code](#starting-fresh) toe bovenaan je CSS. (Pas nu dan eventuele padding/margins toe op de juiste plaatsen)
