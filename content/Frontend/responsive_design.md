@@ -232,7 +232,16 @@ Example responsive:
 }
 ```
 
-<!-- ## Easy dark mode example -->
+## Easy dark mode example the right way
+Een goede manier om een darkmode toe te voegen aan je website is gebruik te maken van CSS-variabelen voor je kleurenpallet. Dit is echter niet voldoende aangezien sommige HTML-elementen dan nog niet de correcte styling hebben. Hiervoor moeten we dus ook de color-scheme zelf aanpassen.
+```html
+html {
+  color-scheme: dark light;
+}
+```
+
+_Voorbeeld zie demo 7_
+
 
 ## Other practical responsive tips
 
@@ -244,7 +253,6 @@ Example responsive:
 - Pas geen CSS aan dat niet nodig is. Zo behoud je het default gedrag opgelegd door de browser.
 - `Width: auto;` werkt soms beter dan `width: 100%;`
 - Zet de `flex-wrap` property op `wrap`, wanneer je een flexbox gebruikt.
-<!-- - Voor `grid-template-columns` gebruik `repeat(auto-fit, minmax(250ox, 1fr))` -->
 - Vermijd media-queries waar mogelijk. (uitzondering bv. echt grote layout wijzigingen voor andere schermtypes)
 
 ## UP NEXT
@@ -257,5 +265,5 @@ Example responsive:
 2. Bepaal 5 sizes waarvoor je media queries gaat schrijven en maak correct gebruik van min- of max-width op basis van je keuze in opdracht 1.
 3. Gebruik flexboxes waar nodig.
 4. Gebruik grid om de globale layout van je webpagina te bepalen. Tips voor layouts vind je [hier](/content/Frontend/html_basics.md#common-website-layouts)
-<!-- 5. Animeer je navigatiebaar en voeg en checkbox toe om te switchen tussen light- en darkmode. -->
-<!-- 6. Gebruik variables, CSS en javascript om een darkmode toe te voegen. -->
+5. Voorzie een checkbox en gebruik variables, CSS en javascript om een darkmode toe te voegen.
+<!-- 5. Animeer je navigatiebar en voeg en de checkbox toe om te switchen tussen light- en darkmode. -->

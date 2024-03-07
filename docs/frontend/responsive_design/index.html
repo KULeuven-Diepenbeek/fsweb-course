@@ -12,22 +12,22 @@
     <title>Responsive Design :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1709817667" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1709817667" rel="stylesheet">
-    <link href="../../css/hybrid.css?1709817667" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1709817667" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1709817667" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1709817667" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1709817667" rel="stylesheet">
-    <link href="../../css/theme.css?1709817667" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1709817667" rel="stylesheet">
-    <link href="../../css/devselector.css?1709817667" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1709817667" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1709817667" rel="stylesheet">
+    <link href="../../css/nucleus.css?1709827816" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1709827816" rel="stylesheet">
+    <link href="../../css/hybrid.css?1709827816" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1709827816" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1709827816" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1709827816" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1709827816" rel="stylesheet">
+    <link href="../../css/theme.css?1709827816" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1709827816" rel="stylesheet">
+    <link href="../../css/devselector.css?1709827816" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1709827816" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1709827816" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1709817667"></script>
-    <script src="../../js/devselector.js?1709817667"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1709827816"></script>
+    <script src="../../js/devselector.js?1709827816"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1709817667"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1709817667"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1709827816"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1709827816"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1709817667"></script>
+<script type="text/javascript" src="../../js/search.js?1709827816"></script>
 
     
   </div>
@@ -365,6 +365,7 @@
         <li><a href="#responsive-grid-zonder-media-queries">Responsive grid zonder media queries</a></li>
       </ol>
     </li>
+    <li><a href="#easy-dark-mode-example-the-right-way">Easy dark mode example the right way</a></li>
     <li><a href="#other-practical-responsive-tips">Other practical responsive tips</a></li>
     <li><a href="#up-next">UP NEXT</a></li>
     <li><a href="#opdrachten">Opdrachten</a></li>
@@ -600,7 +601,12 @@ Bijvoorbeeld:</p>
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*Wrap item to next row if it doesn&#39;t fit*/</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">grid-template-columns</span><span style="color:#111">:</span> <span style="color:#75af00">repeat</span><span style="color:#111">(</span><span style="color:#00a8c8">auto</span><span style="color:#f92672">-</span><span style="color:#111">fit</span><span style="color:#111">,</span> <span style="color:#75af00">minmax</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">fr</span><span style="color:#111">));</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">}</span>
-</span></span></code></pre></div><!-- ## Easy dark mode example -->
+</span></span></code></pre></div><h2 id="easy-dark-mode-example-the-right-way">Easy dark mode example the right way</h2>
+<p>Een goede manier om een darkmode toe te voegen aan je website is gebruik te maken van CSS-variabelen voor je kleurenpallet. Dit is echter niet voldoende aangezien sommige HTML-elementen dan nog niet de correcte styling hebben. Hiervoor moeten we dus ook de color-scheme zelf aanpassen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>html {
+</span></span><span style="display:flex;"><span>  color-scheme: dark light;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><em>Voorbeeld zie demo 7</em></p>
 <h2 id="other-practical-responsive-tips">Other practical responsive tips</h2>
 <ul>
 <li>Gebruik container utility classes om je media queries simpel te structureren. (eventueel met max-width container gelijk aan min-width van query)</li>
@@ -611,9 +617,6 @@ Bijvoorbeeld:</p>
 <li>Pas geen CSS aan dat niet nodig is. Zo behoud je het default gedrag opgelegd door de browser.</li>
 <li><code>Width: auto;</code> werkt soms beter dan <code>width: 100%;</code></li>
 <li>Zet de <code>flex-wrap</code> property op <code>wrap</code>, wanneer je een flexbox gebruikt.</li>
-</ul>
-<!-- - Voor `grid-template-columns` gebruik `repeat(auto-fit, minmax(250ox, 1fr))` -->
-<ul>
 <li>Vermijd media-queries waar mogelijk. (uitzondering bv. echt grote layout wijzigingen voor andere schermtypes)</li>
 </ul>
 <h2 id="up-next">UP NEXT</h2>
@@ -625,9 +628,10 @@ Bijvoorbeeld:</p>
 <li>Bepaal 5 sizes waarvoor je media queries gaat schrijven en maak correct gebruik van min- of max-width op basis van je keuze in opdracht 1.</li>
 <li>Gebruik flexboxes waar nodig.</li>
 <li>Gebruik grid om de globale layout van je webpagina te bepalen. Tips voor layouts vind je <a href="../../content/Frontend/html_basics.md#common-website-layouts">hier</a></li>
+<li>Voorzie een checkbox en gebruik variables, CSS en javascript om een darkmode toe te voegen.</li>
 </ol>
-<!-- 5. Animeer je navigatiebaar en voeg en checkbox toe om te switchen tussen light- en darkmode. -->
-<!-- 6. Gebruik variables, CSS en javascript om een darkmode toe te voegen. -->
+<!-- 5. Animeer je navigatiebar en voeg en de checkbox toe om te switchen tussen light- en darkmode. -->
+
 </article>
 
 <footer class="footline">
@@ -818,15 +822,15 @@ Bijvoorbeeld:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1709817667"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1709817667"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1709817667"></script>
-    <script src="../../js/jquery.sticky.js?1709817667"></script>
-    <script src="../../js/featherlight.min.js?1709817667"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1709817667"></script>
-    <script src="../../js/learn.js?1709817667"></script>
-    <script src="../../js/hugo-learn.js?1709817667"></script>
-    <script src="../../js/mermaid.min.js?1709817667"></script>
+    <script src="../../js/clipboard.min.js?1709827816"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1709827816"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1709827816"></script>
+    <script src="../../js/jquery.sticky.js?1709827816"></script>
+    <script src="../../js/featherlight.min.js?1709827816"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1709827816"></script>
+    <script src="../../js/learn.js?1709827816"></script>
+    <script src="../../js/hugo-learn.js?1709827816"></script>
+    <script src="../../js/mermaid.min.js?1709827816"></script>
     <script>
     window.MathJax = {
       chtml: {
