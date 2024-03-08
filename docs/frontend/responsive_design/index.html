@@ -12,22 +12,22 @@
     <title>Responsive Design :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1709890087" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1709890087" rel="stylesheet">
-    <link href="../../css/hybrid.css?1709890087" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1709890087" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1709890087" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1709890087" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1709890087" rel="stylesheet">
-    <link href="../../css/theme.css?1709890087" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1709890087" rel="stylesheet">
-    <link href="../../css/devselector.css?1709890087" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1709890087" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1709890087" rel="stylesheet">
+    <link href="../../css/nucleus.css?1709904801" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1709904801" rel="stylesheet">
+    <link href="../../css/hybrid.css?1709904801" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1709904801" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1709904801" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1709904801" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1709904801" rel="stylesheet">
+    <link href="../../css/theme.css?1709904801" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1709904801" rel="stylesheet">
+    <link href="../../css/devselector.css?1709904801" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1709904801" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1709904801" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1709890087"></script>
-    <script src="../../js/devselector.js?1709890087"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1709904801"></script>
+    <script src="../../js/devselector.js?1709904801"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1709890087"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1709890087"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1709904801"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1709904801"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1709890087"></script>
+<script type="text/javascript" src="../../js/search.js?1709904801"></script>
 
     
   </div>
@@ -357,7 +357,12 @@
       </ol>
     </li>
     <li><a href="#starting-fresh">Starting fresh</a></li>
-    <li><a href="#media-queries">Media Queries</a></li>
+    <li><a href="#media-queries">Media Queries</a>
+      <ol>
+        <li><a href="#extra-media-queries">Extra media queries</a></li>
+      </ol>
+    </li>
+    <li><a href="#workflow">Workflow</a></li>
     <li><a href="#positioning-herhaling">Positioning (herhaling)</a>
       <ol>
         <li><a href="#flexbox">Flexbox</a></li>
@@ -448,7 +453,46 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">color</span><span style="color:#111">:</span> <span style="color:#00a8c8">red</span><span style="color:#111">;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#111">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">}</span>
-</span></span></code></pre></div><p><strong>Workflow versie 1</strong>: ontwerp je website voor een specifieke viewport, maar laat zo veel mogelijk aan de defaults van de browser over. Test daarna voor andere viewports en pas eventueel je CSS code aan zodat ze automatisch meer responsive is. Schrijf ten slotte scpecifieke media queries voor die dingen die niet automatisch aangepast kunnen worden.</p>
+</span></span></code></pre></div><h3 id="extra-media-queries">Extra media queries</h3>
+<p>Je kan ook verschillende CSS files gebruiken om de verschillende layouts te definiëren. Via het <code>&lt;link&gt;</code> element kan je dan alle CSS bestanden laten laden bij de verschillende omstandigheden:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- Load in `portrait-screen.css` when screen is in portrait mode --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">media</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;screen and (orientation: portrait)&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;portrait-screen.css&#34;</span><span style="color:#111">/&gt;</span>
+</span></span></code></pre></div><p>Je kan hetzelfde breiken met imports in je <code>main.css</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#111">@</span><span style="color:#00a8c8">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;portrait-screen.css&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">orientation</span><span style="color:#f92672">:</span> <span style="color:#f92672">portrait</span><span style="color:#f92672">)</span><span style="color:#111">;</span>
+</span></span></code></pre></div><p>Je kan media queries ook <strong>inverteren</strong> met behulp van het keyword <code>not</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSS" data-lang="CSS"><span style="display:flex;"><span><span style="color:#111">@</span><span style="color:#00a8c8">media</span> <span style="color:#f92672">not</span> <span style="color:#f92672">(</span><span style="color:#f92672">orientation</span><span style="color:#f92672">:</span> <span style="color:#f92672">portrait</span><span style="color:#f92672">)</span> <span style="color:#111">{</span> <span style="color:#f92672">...</span> <span style="color:#111">}</span>
+</span></span></code></pre></div><p>Je kan media queries ook <strong>combineren</strong> met behulp van het keyword <code>and</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSS" data-lang="CSS"><span style="display:flex;"><span><span style="color:#111">@</span><span style="color:#00a8c8">media</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">orientation</span><span style="color:#f92672">:</span> <span style="color:#f92672">portrait</span><span style="color:#f92672">)</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">500px</span><span style="color:#f92672">)</span> <span style="color:#111">{</span> <span style="color:#f92672">...</span> <span style="color:#111">}</span>
+</span></span></code></pre></div><p><strong>Lijst met veelgebruikte eigenschappen waar media queries op kunnen testen</strong>:</p>
+<ul>
+<li><code>width</code>: The viewport width.</li>
+<li><code>height</code>: The viewport height.</li>
+<li><code>orientation</code>: This capability checks whether a device is portrait or landscape in orientation.</li>
+<li><code>aspect-ratio</code>: The ratio of width to height based on the viewport width and height. A
+16:9 widescreen display can be written as aspect-ratio: 16/9.</li>
+<li><code>color</code>: The number of bits per color component. For example, min-color: 16 will check
+that the device has 16-bit color.</li>
+<li><code>color-index</code>: The number of entries in the color lookup table (the table is how a device
+changes one set of colors to another) of the device. Values must be numbers and cannot
+be negative.</li>
+<li><code>monochrome</code>: This capability tests how many bits per pixel are in a monochrome frame
+buffer. The value would be a number (integer), for example, monochrome: 2, and cannot
+be negative.</li>
+<li><code>resolution</code>: This capability can be used to test screen or print resolution; for example,
+min-resolution: 300dpi. It can also accept measurements in dots per centimeter; for
+example, min-resolution: 118dpcm.
+74 Media Queries and Container Queries</li>
+<li><code>scan</code>: This can be either progressive or interlace, features largely particular to TVs. For
+example, a 720p HD TV (the “p” part of 720p indicates “progressive”) could be targeted
+with scan: progressive, while a 1080i HD TV (the “i” part of 1080i indicates &ldquo;interlaced&rdquo;)
+could be targeted with scan: interlace.</li>
+<li><code>grid</code>: This capability indicates whether or not the device is grid orbitmap-based.</li>
+<li><code>prefers-color-scheme</code>: The theme selected by the user in the browser settings (&ldquo;light&rdquo; or dark).</li>
+</ul>
+<p><em>Alle bovenstaande functies, met uitzondering van scan, raster en prefers-color-scheme, kunnen voorafgegaan worden door <code>min-</code> of <code>max-</code> om
+bereiken te maken.</em></p>
+<h2 id="workflow">Workflow</h2>
+<p><strong>Workflow versie 1</strong>: ontwerp je website voor een specifieke viewport, maar laat zo veel mogelijk aan de defaults van de browser over. Test daarna voor andere viewports en pas eventueel je CSS code aan zodat ze automatisch meer responsive is. Schrijf ten slotte scpecifieke media queries voor die dingen die niet automatisch aangepast kunnen worden.</p>
 <p><strong>Workflow versie 2</strong>: Bepaal op voorhand een aantal media query breakpoints (XL, L, M, S, XS) en maak elk ervan responsive.</p>
 <h2 id="positioning-herhaling">Positioning (herhaling)</h2>
 <ul>
@@ -831,15 +875,15 @@ Bijvoorbeeld:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1709890087"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1709890087"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1709890087"></script>
-    <script src="../../js/jquery.sticky.js?1709890087"></script>
-    <script src="../../js/featherlight.min.js?1709890087"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1709890087"></script>
-    <script src="../../js/learn.js?1709890087"></script>
-    <script src="../../js/hugo-learn.js?1709890087"></script>
-    <script src="../../js/mermaid.min.js?1709890087"></script>
+    <script src="../../js/clipboard.min.js?1709904801"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1709904801"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1709904801"></script>
+    <script src="../../js/jquery.sticky.js?1709904801"></script>
+    <script src="../../js/featherlight.min.js?1709904801"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1709904801"></script>
+    <script src="../../js/learn.js?1709904801"></script>
+    <script src="../../js/hugo-learn.js?1709904801"></script>
+    <script src="../../js/mermaid.min.js?1709904801"></script>
     <script>
     window.MathJax = {
       chtml: {
