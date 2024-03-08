@@ -72,9 +72,59 @@ Voorbeeld:
 }
 ```
 
-<!-- ### Extra media queries -->
+### Extra media queries
 
+Je kan ook verschillende CSS files gebruiken om de verschillende layouts te definiëren. Via het `<link>` element kan je dan alle CSS bestanden laten laden bij de verschillende omstandigheden:
 
+```html
+<!-- Load in `portrait-screen.css` when screen is in portrait mode -->
+<link rel="stylesheet" media="screen and (orientation: portrait)" href="portrait-screen.css"/>
+```
+
+Je kan hetzelfde breiken met imports in je `main.css` file:
+
+```css
+@import url("portrait-screen.css") screen and (orientation: portrait);
+```
+
+Je kan media queries ook **inverteren** met behulp van het keyword `not`:
+```CSS
+@media not (orientation: portrait) { ... }
+```
+Je kan media queries ook **combineren** met behulp van het keyword `and`:
+```CSS
+@media screen and (orientation: portrait) and (min-width: 500px) { ... }
+```
+
+**Lijst met veelgebruikte eigenschappen waar media queries op kunnen testen**:
+- `width`: The viewport width.
+- `height`: The viewport height.
+- `orientation`: This capability checks whether a device is portrait or landscape in orientation.
+- `aspect-ratio`: The ratio of width to height based on the viewport width and height. A
+16:9 widescreen display can be written as aspect-ratio: 16/9.
+- `color`: The number of bits per color component. For example, min-color: 16 will check
+that the device has 16-bit color.
+- `color-index`: The number of entries in the color lookup table (the table is how a device
+changes one set of colors to another) of the device. Values must be numbers and cannot
+be negative.
+- `monochrome`: This capability tests how many bits per pixel are in a monochrome frame
+buffer. The value would be a number (integer), for example, monochrome: 2, and cannot
+be negative.
+- `resolution`: This capability can be used to test screen or print resolution; for example,
+min-resolution: 300dpi. It can also accept measurements in dots per centimeter; for
+example, min-resolution: 118dpcm.
+74 Media Queries and Container Queries
+- `scan`: This can be either progressive or interlace, features largely particular to TVs. For
+example, a 720p HD TV (the “p” part of 720p indicates “progressive”) could be targeted
+with scan: progressive, while a 1080i HD TV (the “i” part of 1080i indicates "interlaced")
+could be targeted with scan: interlace.
+- `grid`: This capability indicates whether or not the device is grid orbitmap-based.
+- `prefers-color-scheme`: The theme selected by the user in the browser settings ("light" or dark).
+
+_Alle bovenstaande functies, met uitzondering van scan, raster en prefers-color-scheme, kunnen voorafgegaan worden door `min-` of `max-` om
+bereiken te maken._
+
+## Workflow
 
 **Workflow versie 1**: ontwerp je website voor een specifieke viewport, maar laat zo veel mogelijk aan de defaults van de browser over. Test daarna voor andere viewports en pas eventueel je CSS code aan zodat ze automatisch meer responsive is. Schrijf ten slotte scpecifieke media queries voor die dingen die niet automatisch aangepast kunnen worden.
 
