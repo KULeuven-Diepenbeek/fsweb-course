@@ -72,6 +72,10 @@ Voorbeeld:
 }
 ```
 
+<!-- ### Extra media queries -->
+
+
+
 **Workflow versie 1**: ontwerp je website voor een specifieke viewport, maar laat zo veel mogelijk aan de defaults van de browser over. Test daarna voor andere viewports en pas eventueel je CSS code aan zodat ze automatisch meer responsive is. Schrijf ten slotte scpecifieke media queries voor die dingen die niet automatisch aangepast kunnen worden.
 
 **Workflow versie 2**: Bepaal op voorhand een aantal media query breakpoints (XL, L, M, S, XS) en maak elk ervan responsive.
