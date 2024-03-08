@@ -1,6 +1,6 @@
 ---
 title: "Responsive Design"
-weight: 6
+weight: 5
 author: Arne Duyver
 draft: false
 ---
@@ -242,6 +242,12 @@ html {
 
 _Voorbeeld zie demo 7_
 
+## UI design mock ups
+
+Wanneer je start aan het ontwerp van je website is HTML-code schrijven niet de eerste stap. In de eerste plaats ga je nadenken **wat** je wil bereiken met je website, **wie** je wil bereiken met je website. Al je design keuzes moeten een antwoord geven op die vraag. In de eerste plaats ga je nadenken over wat de **content** van je website gaat zijn (wat moet er allemaal op mijn website beschikbaar zijn, wat zijn de functionaliteiten). Ten tweede ga je proberen die content op de beste manier te **presenteren**. Voor deze laatste stap kan je gebruik maken van een UI design tool. Daarmee kan je snel UI mock ups maken die je dan als referentie kan gebruiken bij het implementeren van je website. 
+
+Bekende voorbeelden van zo een design tools zijn: [Figma](https://www.figma.com/ui-design-tool/) (free), [Sketch](https://www.sketch.com/pricing/), [Invision](https://www.invisionapp.com/), [Adobe XD](https://helpx.adobe.com/be_nl/xd/get-started.html), [Proto](https://proto.io/) ...
+
 
 ## Other practical responsive tips
 
@@ -255,8 +261,9 @@ _Voorbeeld zie demo 7_
 - Zet de `flex-wrap` property op `wrap`, wanneer je een flexbox gebruikt.
 - Vermijd media-queries waar mogelijk. (uitzondering bv. echt grote layout wijzigingen voor andere schermtypes)
 
-## UP NEXT
-**Responsive animated navigation bar, headers and footers examples, Easy dark mode example** tijdens volgende les. Denk hier al eens over na.
+## Simple interactive design example
+
+_Voorbeeld zie demo 8_
 
 ## [Opdrachten](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student/)
 
@@ -266,4 +273,6 @@ _Voorbeeld zie demo 7_
 3. Gebruik flexboxes waar nodig.
 4. Gebruik grid om de globale layout van je webpagina te bepalen. Tips voor layouts vind je [hier](/content/Frontend/html_basics.md#common-website-layouts)
 5. Voorzie een checkbox en gebruik variables, CSS en javascript om een darkmode toe te voegen.
-<!-- 5. Animeer je navigatiebar en voeg en de checkbox toe om te switchen tussen light- en darkmode. -->
+6. Animeer je navigatiebar en voeg en de checkbox toe om te switchen tussen light- en darkmode.
+7. Experimenteer met een UI/UX tool. (Maak jouw ideale portfolio website in deze tool. Maak een mock up voor desktop en mobile)
+<!-- https://www.figma.com/file/VqBqi98Ftkuts26CIMu3YH/Figma-basics?type=design&node-id=1669-162202&mode=design&t=rLbw3b4bzB9dkwnf-0 -->

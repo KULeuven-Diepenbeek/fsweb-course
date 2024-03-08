@@ -1,6 +1,6 @@
 ---
 title: "Extra"
-weight: 4
+weight: 6
 author: Arne Duyver
 draft: false
 ---
@@ -36,3 +36,9 @@ _bron 2: [W3Schools](https://www.w3schools.com/html/default.asp)_
 
 ## Extra opdracht
 Bestudeer grondig de webpagina die gegenereerd wordt door intellij wanneer je testen uitvoert. Gebruik je eigen skills om nu een kopie te maken van deze webpagina, zonder naar de broncode te gaan kijken. Maak een eigen JSON-object aan waar de informatie van de testen inzit die je dan uitleest met JavaScript om de content van je webpagina dynamisch te genereren. <a href="https://github.com/KULeuven-Diepenbeek/fsweb-course/blob/main/static/files/frontendExercise.zip">file</a>
+
+## Opgaven
+
+1. Doe de [HTML exercises](https://www.w3schools.com/html/exercise.asp) op w3schools.com
+2. Doe de [CSS exercises](https://www.w3schools.com/css/exercise.asp) op w3schools.com
+3. Doe de [JavaScript exercises](https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1) op w3schools.com

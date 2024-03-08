@@ -1,6 +1,6 @@
 ---
 title: "Advanced CSS"
-weight: 5
+weight: 4
 author: Arne Duyver
 draft: false
 ---
