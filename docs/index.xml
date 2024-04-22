@@ -17,6 +17,13 @@
       <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;HyperText Markup language HTML staat voor &amp;lsquo;HyperText Markup Language&amp;rsquo; en is een manier om content te markeren zodat het door een technologie begrepen kan worden. HTML is essentieel voor menselijk begrijpbare webcontent. Je markeert tekstinhoud met tags/elements om structuur aan te brengen.&#xA;Elements, Tags en Attributes Een HTML element wordt gedefiniëerd door een openingstag, elementinhoud en een sluitingstag.</description>
     </item>
     <item>
+      <title>PHP: Hypertext Preprocessing</title>
+      <link>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/php_basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/php_basics/</guid>
+      <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;PHP: Hypertext Preprocessing We gaan met PHP leren:&#xA;dynamische webpagina&amp;rsquo;s maken onze website te beveiligen te communiceren met een database De PHP syntax PHP is een scripting language die voornamelijk ontworpen werd en gebruikt wordt voor webdevelopment. De PHP code kan onmiddellijk in HTML geïntegreerd worden en wordt uitgevoerd aan de serverside. Aangezien de code aan de serverside uitgevoerd wordt, blijft de broncode verborgen voor de client (goed voor de veiligheid).</description>
+    </item>
+    <item>
       <title>CSS</title>
       <link>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/css_basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>

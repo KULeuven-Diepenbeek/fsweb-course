@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backend on Full Stack Web Development</title>
+    <link>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/</link>
+    <description>Recent content in Backend on Full Stack Web Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</webMaster>
+    <atom:link href="https://kuleuven-diepenbeek.github.io/fsweb-course/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP: Hypertext Preprocessing</title>
+      <link>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/php_basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/php_basics/</guid>
+      <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;PHP: Hypertext Preprocessing We gaan met PHP leren:&#xA;dynamische webpagina&amp;rsquo;s maken onze website te beveiligen te communiceren met een database De PHP syntax PHP is een scripting language die voornamelijk ontworpen werd en gebruikt wordt voor webdevelopment. De PHP code kan onmiddellijk in HTML geïntegreerd worden en wordt uitgevoerd aan de serverside. Aangezien de code aan de serverside uitgevoerd wordt, blijft de broncode verborgen voor de client (goed voor de veiligheid).</description>
+    </item>
+  </channel>
+</rss>
