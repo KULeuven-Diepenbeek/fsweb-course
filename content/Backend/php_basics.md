@@ -50,3 +50,8 @@ Om onze site te hosten moeten al onze bronbestanden staan in de `htdocs`. Dan ka
 2. Maak op W3Schools.com de [exercises](https://www.w3schools.com/php/php_exercises.asp) rond php (Je mag advanced php overslaan).
 3. Maak op W3Schools de PHP [Quiz](https://www.w3schools.com/php/php_quiz.asp). (Sommige antwoorden hebben we nog niet gezien, maar 90% wel)
 4. Gebruik een HTML form, POST-method en PHP om een rekenmachine webpagina te maken.
+
+## [Connect to database + security demos](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student)
+
+## Opdrachten
+1. Maak een volledig werkende signup, signin website die gebruik maakt van session-storage om bij te houden welke gebruiker is ingelogd. Zorg voor login, logout, change pwd. Zorg ervoor dat wachtwoorden veilig opgslagen worden in de database. De index.php moet je automatisch redirecten naar de login/signup page als je er nog geen gebruiker ingelogd is.
