@@ -31,6 +31,13 @@
       <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;Cascading Style Sheet HTML alleen maakt een website niet visueel aantrekkelijk. CSS is verantwoordelijk voor dit deel. Met CSS-regels kun je ontwerpen hoe de afzonderlijke componenten die je eerder in HTML hebt gedefinieerd, moeten worden weergegeven. worden weergegeven. Je kan CSS dus gebruiken om het ontwerp en de lay-out van een webpagina te definiëren.</description>
     </item>
     <item>
+      <title>Laravel: basics</title>
+      <link>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/laravel_basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/laravel_basics/</guid>
+      <description>Laravel Why Laravel? framework -&amp;gt; templates faster libraries MVC model very popular option -&amp;gt; a lot of information more secure -&amp;gt; because php is datasensitive built-in security features automatic integration with database Install Laravel Edit php.ini file line 962 uncomment (delete semicolon in fromt) extention=zip&#xA;line 930 uncomment extention=fileinfo&#xA;line 942 uncomment extention=openssl&#xA;line 944 uncomment extention=pdo_mysql&#xA;Add php.exe to path variables (new system variable) name: PHP location: C:\xampp\php\php.exe&#xA;Add dependency manager: Composer download .</description>
+    </item>
+    <item>
       <title>JavaScript</title>
       <link>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/javascript_basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>

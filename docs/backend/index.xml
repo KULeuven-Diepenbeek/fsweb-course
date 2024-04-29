@@ -16,5 +16,12 @@
       <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/php_basics/</guid>
       <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;PHP: Hypertext Preprocessing We gaan met PHP leren:&#xA;dynamische webpagina&amp;rsquo;s maken onze website te beveiligen te communiceren met een database De PHP syntax PHP is een scripting language die voornamelijk ontworpen werd en gebruikt wordt voor webdevelopment. De PHP code kan onmiddellijk in HTML geïntegreerd worden en wordt uitgevoerd aan de serverside. Aangezien de code aan de serverside uitgevoerd wordt, blijft de broncode verborgen voor de client (goed voor de veiligheid).</description>
     </item>
+    <item>
+      <title>Laravel: basics</title>
+      <link>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/laravel_basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/laravel_basics/</guid>
+      <description>Laravel Why Laravel? framework -&amp;gt; templates faster libraries MVC model very popular option -&amp;gt; a lot of information more secure -&amp;gt; because php is datasensitive built-in security features automatic integration with database Install Laravel Edit php.ini file line 962 uncomment (delete semicolon in fromt) extention=zip&#xA;line 930 uncomment extention=fileinfo&#xA;line 942 uncomment extention=openssl&#xA;line 944 uncomment extention=pdo_mysql&#xA;Add php.exe to path variables (new system variable) name: PHP location: C:\xampp\php\php.exe&#xA;Add dependency manager: Composer download .</description>
+    </item>
   </channel>
 </rss>
