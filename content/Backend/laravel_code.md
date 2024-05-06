@@ -7,6 +7,9 @@ draft: false
 
 ## Important commandline commands
 ```bash
+# Rebuild project
+composer update --no-scripts
+
 # Create new Laravel project
 laravel new <projectName>
 
