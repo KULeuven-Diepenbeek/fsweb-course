@@ -13,6 +13,9 @@ laravel new <projectName>
 # Migrate creation tables
 php artisan migrate
 
+# Start project op poort 8000
+php artisan serve
+
 # Create new Laravel model with options
 php artisan make:model
 # Create just a new Laravel model
@@ -24,7 +27,7 @@ php artisan make:migration create_<modelName>withS_table
 # Create new Laravel controller
 php artisan make:controller <controllerName>
 
-# Create nwe Laravel seeder
+# Create new Laravel seeder
 php artisan make:seeder <seederName>
 # Seed db 
 php artisan db:seed --class=<SeederClassName>
@@ -41,3 +44,10 @@ Enable/uncomment extentions via `php.ini` file:
 
 Set database default in `confid->database.php`:
 - `'default' => env('DB_CONNECTION', 'pgsql'),`
+
+Edit `.env` file:
+```yml
+DB_CONNECTION=pgsql
+DB_URL=<supabase->project->configuration->Database->connectionString->URI>
+DB_PASSWORD=supabasePassword
+```
