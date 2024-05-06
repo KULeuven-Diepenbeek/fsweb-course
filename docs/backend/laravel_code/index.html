@@ -12,22 +12,22 @@
     <title>Laravel: code and commands :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1714985497" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1714985497" rel="stylesheet">
-    <link href="../../css/hybrid.css?1714985497" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1714985497" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1714985497" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1714985497" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1714985497" rel="stylesheet">
-    <link href="../../css/theme.css?1714985497" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1714985497" rel="stylesheet">
-    <link href="../../css/devselector.css?1714985497" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1714985497" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1714985497" rel="stylesheet">
+    <link href="../../css/nucleus.css?1714988608" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1714988608" rel="stylesheet">
+    <link href="../../css/hybrid.css?1714988608" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1714988608" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1714988608" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1714988608" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1714988608" rel="stylesheet">
+    <link href="../../css/theme.css?1714988608" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1714988608" rel="stylesheet">
+    <link href="../../css/devselector.css?1714988608" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1714988608" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1714988608" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1714985497"></script>
-    <script src="../../js/devselector.js?1714985497"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1714988608"></script>
+    <script src="../../js/devselector.js?1714988608"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1714985497"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1714985497"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1714988608"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1714988608"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1714985497"></script>
+<script type="text/javascript" src="../../js/search.js?1714988608"></script>
 
     
   </div>
@@ -508,6 +508,9 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Migrate creation tables</span>
 </span></span><span style="display:flex;"><span>php artisan migrate
 </span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Start project op poort 8000</span>
+</span></span><span style="display:flex;"><span>php artisan serve
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Create new Laravel model with options</span>
 </span></span><span style="display:flex;"><span>php artisan make:model
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Create just a new Laravel model</span>
@@ -519,7 +522,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Create new Laravel controller</span>
 </span></span><span style="display:flex;"><span>php artisan make:controller &lt;controllerName&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create nwe Laravel seeder</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create new Laravel seeder</span>
 </span></span><span style="display:flex;"><span>php artisan make:seeder &lt;seederName&gt;
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Seed db </span>
 </span></span><span style="display:flex;"><span>php artisan db:seed --class<span style="color:#f92672">=</span>&lt;SeederClassName&gt;
@@ -536,7 +539,11 @@
 <ul>
 <li><code>'default' =&gt; env('DB_CONNECTION', 'pgsql'),</code></li>
 </ul>
-
+<p>Edit <code>.env</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">DB_CONNECTION=pgsql</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">DB_URL=&lt;supabase-&gt;project-&gt;configuration-&gt;Database-&gt;connectionString-&gt;URI&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">DB_PASSWORD=supabasePassword</span>
+</span></span></code></pre></div>
 </article>
 
 <footer class="footline">
@@ -810,15 +817,15 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1714985497"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1714985497"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1714985497"></script>
-    <script src="../../js/jquery.sticky.js?1714985497"></script>
-    <script src="../../js/featherlight.min.js?1714985497"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1714985497"></script>
-    <script src="../../js/learn.js?1714985497"></script>
-    <script src="../../js/hugo-learn.js?1714985497"></script>
-    <script src="../../js/mermaid.min.js?1714985497"></script>
+    <script src="../../js/clipboard.min.js?1714988608"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1714988608"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1714988608"></script>
+    <script src="../../js/jquery.sticky.js?1714988608"></script>
+    <script src="../../js/featherlight.min.js?1714988608"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1714988608"></script>
+    <script src="../../js/learn.js?1714988608"></script>
+    <script src="../../js/hugo-learn.js?1714988608"></script>
+    <script src="../../js/mermaid.min.js?1714988608"></script>
     <script>
     window.MathJax = {
       chtml: {
