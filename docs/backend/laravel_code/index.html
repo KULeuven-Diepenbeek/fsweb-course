@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Extra :: Full Stack Web Development</title>
+    <title>Laravel: code and commands :: Full Stack Web Development</title>
 
     
     <link href="../../css/nucleus.css?1714985497" rel="stylesheet">
@@ -44,7 +44,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../../frontend/extra/">
+  <body class="" data-url="../../backend/laravel_code/">
     <nav id="sidebar" class="">
 
 
@@ -117,7 +117,7 @@
   
     
     <li data-nav-id="/frontend/" title="Frontend" class="dd-item
-        parent
+        
         
         
         ">
@@ -248,7 +248,7 @@
  
   
     
-      <li data-nav-id="/frontend/extra/" title="Extra" class="dd-item active">
+      <li data-nav-id="/frontend/extra/" title="Extra" class="dd-item ">
         <a href="../../frontend/extra/">
         Extra
         
@@ -277,7 +277,7 @@
   
     
     <li data-nav-id="/backend/" title="Backend" class="dd-item
-        
+        parent
         
         
         ">
@@ -345,7 +345,7 @@
  
   
     
-      <li data-nav-id="/backend/laravel_code/" title="Laravel: code and commands" class="dd-item ">
+      <li data-nav-id="/backend/laravel_code/" title="Laravel: code and commands" class="dd-item active">
         <a href="../../backend/laravel_code/">
         Laravel: code and commands
         
@@ -456,7 +456,7 @@
             
           
           
-            <a href='../../'>Index</a> > <a href='../../frontend/'>Frontend</a> > Extra
+            <a href='../../'>Index</a> > <a href='../../backend/'>Backend</a> > Laravel: code and commands
           
         
           
@@ -470,9 +470,8 @@
                     <div class="progress">
   <div class="wrapper toc"><nav id="TableOfContents">
   <ol>
-    <li><a href="#extra-tips-and-tricks">Extra tips and tricks</a></li>
-    <li><a href="#extra-opdracht">Extra opdracht</a></li>
-    <li><a href="#opgaven">Opgaven</a></li>
+    <li><a href="#important-commandline-commands">Important commandline commands</a></li>
+    <li><a href="#connect-to-supabase">Connect to supabase</a></li>
   </ol>
 </nav></div>
 </div>
@@ -489,7 +488,7 @@
           
             <h1>
               
-              Extra
+              Laravel: code and commands
             </h1>
           
 
@@ -502,53 +501,41 @@
 
 
 <article class='content'>
-<p><em>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain</em></br>
-<em>bron 2: <a href="https://www.w3schools.com/html/default.asp">W3Schools</a></em></p>
-<h2 id="extra-tips-and-tricks">Extra tips and tricks</h2>
-<ol>
-<li>
-<p>Alles is een Box in HTML (Box-model). In de mozilla firefox browser kan je live veranderingen aanbrengen aan.
-<img src="../../img/margin_padding.png" alt="drawing" style="max-height: 10rem;"/></p>
-</li>
-<li>
-<p>Je kan CSS variabelen overschrijven door van het Cascading-principe gebruik te maken. Dit wordt vooral handig wanneer we transitions bekijken in Advanced CSS</p>
-</li>
-<li>
-<p>Je kan CSS variabelen in andere CSS variabelen gebruiken.</p>
-</li>
-<li>
-<p>Je kan in de Calc-functie (CSS) verschillende units door elkaar gebruiken.</p>
-</li>
-<li>
-<p>Je kan een counter gebruiken om eigen hoofdingen te specialiseren.</p>
-</li>
-<li>
-<p>Je kan de <code>focus-within</code> pseudo klasse gebruiken om rechtstreeks te interageren met content in een dropdown menu.</p>
-</li>
-<li>
-<p>Plaats meerdere variabelen in een object wanneer je ze <code>console.log()</code>-ed om de namen van de variabelen weer te geven.</p>
-</li>
-<li>
-<p>Gebruik de <code>console.table()</code> functie om meerdere dezelfde objecten in een lijst overzichtelijk te loggen.</p>
-</li>
-<li>
-<p>Gebruik <code>%c</code> in een log-statement om CSS stylin toe te passen.</p>
-</li>
-<li>
-<p>Gebruik <code>console.trace()</code> binnenin een functie om ook de hele stack trace te loggen.</p>
-</li>
-<li>
-<p>Maak gebruik van de backtick ` notatie in Strings om eenvoudig variabelen toe te voegen.</p>
-</li>
-</ol>
-<h2 id="extra-opdracht">Extra opdracht</h2>
-<p>Bestudeer grondig de webpagina die gegenereerd wordt door intellij wanneer je testen uitvoert. Gebruik je eigen skills om nu een kopie te maken van deze webpagina, zonder naar de broncode te gaan kijken. Maak een eigen JSON-object aan waar de informatie van de testen inzit die je dan uitleest met JavaScript om de content van je webpagina dynamisch te genereren. <a href="https://github.com/KULeuven-Diepenbeek/fsweb-course/blob/main/static/files/frontendExercise.zip">file</a></p>
-<h2 id="opgaven">Opgaven</h2>
-<ol>
-<li>Doe de <a href="https://www.w3schools.com/html/exercise.asp">HTML exercises</a> op w3schools.com</li>
-<li>Doe de <a href="https://www.w3schools.com/css/exercise.asp">CSS exercises</a> op w3schools.com</li>
-<li>Doe de <a href="https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1">JavaScript exercises</a> op w3schools.com</li>
-</ol>
+<h2 id="important-commandline-commands">Important commandline commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create new Laravel project</span>
+</span></span><span style="display:flex;"><span>laravel new &lt;projectName&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Migrate creation tables</span>
+</span></span><span style="display:flex;"><span>php artisan migrate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create new Laravel model with options</span>
+</span></span><span style="display:flex;"><span>php artisan make:model
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create just a new Laravel model</span>
+</span></span><span style="display:flex;"><span>php artisan make:model &lt;modelName&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create new Laravel migration </span>
+</span></span><span style="display:flex;"><span>php artisan make:migration create_&lt;modelName&gt;withS_table
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create new Laravel controller</span>
+</span></span><span style="display:flex;"><span>php artisan make:controller &lt;controllerName&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create nwe Laravel seeder</span>
+</span></span><span style="display:flex;"><span>php artisan make:seeder &lt;seederName&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Seed db </span>
+</span></span><span style="display:flex;"><span>php artisan db:seed --class<span style="color:#f92672">=</span>&lt;SeederClassName&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Generate a factory for a model</span>
+</span></span><span style="display:flex;"><span>php artisan make:factory &lt;FactoryName&gt; --model<span style="color:#f92672">=</span>&lt;ModelName&gt;
+</span></span></code></pre></div><h2 id="connect-to-supabase">Connect to supabase</h2>
+<p>Enable/uncomment extentions via <code>php.ini</code> file:</p>
+<ul>
+<li>pdo_pgsql.so</li>
+<li>pgsql.so</li>
+</ul>
+<p>Set database default in <code>confid-&gt;database.php</code>:</p>
+<ul>
+<li><code>'default' =&gt; env('DB_CONNECTION', 'pgsql'),</code></li>
+</ul>
 
 </article>
 
@@ -606,126 +593,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -782,6 +649,19 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -789,6 +669,113 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -810,10 +797,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../frontend/responsive_design/" title="Responsive Design"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../backend/laravel_basics/" title="Laravel: basics"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../backend/" title="Backend" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../opdrachten/" title="Opdrachten" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

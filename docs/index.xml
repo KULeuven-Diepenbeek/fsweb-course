@@ -45,6 +45,13 @@
       <description>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain bron 2: W3Schools&#xA;JavaScript JavaScript wordt gebruikt om interactie en dynamische functionaliteit aan je website toe te voegen. Het stelt ontwikkelaars in staat om webpagina&amp;rsquo;s te manipuleren, gebruikersacties te verwerken en te communiceren met servers zonder de pagina opnieuw te laden. JavaScript is veelzijdig en wordt ondersteund door alle belangrijke webbrowsers. Het maakt deel uit van de frontend is vaak niet of minimaal aanwezig op statische websites.</description>
     </item>
     <item>
+      <title>Laravel: code and commands</title>
+      <link>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/laravel_code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/fsweb-course/backend/laravel_code/</guid>
+      <description>Important commandline commands # Create new Laravel project laravel new &amp;lt;projectName&amp;gt; # Migrate creation tables php artisan migrate # Create new Laravel model with options php artisan make:model # Create just a new Laravel model php artisan make:model &amp;lt;modelName&amp;gt; # Create new Laravel migration php artisan make:migration create_&amp;lt;modelName&amp;gt;withS_table # Create new Laravel controller php artisan make:controller &amp;lt;controllerName&amp;gt; # Create nwe Laravel seeder php artisan make:seeder &amp;lt;seederName&amp;gt; # Seed db php artisan db:seed --class=&amp;lt;SeederClassName&amp;gt; # Generate a factory for a model php artisan make:factory &amp;lt;FactoryName&amp;gt; --model=&amp;lt;ModelName&amp;gt; Connect to supabase Enable/uncomment extentions via php.</description>
+    </item>
+    <item>
       <title>Advanced CSS</title>
       <link>https://kuleuven-diepenbeek.github.io/fsweb-course/frontend/css_advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
