@@ -12,22 +12,22 @@
     <title>Laravel: code and commands :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1715587477" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1715587477" rel="stylesheet">
-    <link href="../../css/hybrid.css?1715587477" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1715587477" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1715587477" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1715587477" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1715587477" rel="stylesheet">
-    <link href="../../css/theme.css?1715587477" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1715587477" rel="stylesheet">
-    <link href="../../css/devselector.css?1715587477" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1715587477" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1715587477" rel="stylesheet">
+    <link href="../../css/nucleus.css?1715597178" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1715597178" rel="stylesheet">
+    <link href="../../css/hybrid.css?1715597178" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1715597178" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1715597178" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1715597178" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1715597178" rel="stylesheet">
+    <link href="../../css/theme.css?1715597178" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1715597178" rel="stylesheet">
+    <link href="../../css/devselector.css?1715597178" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1715597178" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1715597178" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1715587477"></script>
-    <script src="../../js/devselector.js?1715587477"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1715597178"></script>
+    <script src="../../js/devselector.js?1715597178"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1715587477"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1715587477"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1715597178"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1715597178"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1715587477"></script>
+<script type="text/javascript" src="../../js/search.js?1715597178"></script>
 
     
   </div>
@@ -472,8 +472,8 @@
   <ol>
     <li><a href="#important-commandline-commands">Important commandline commands</a></li>
     <li><a href="#connect-to-supabase">Connect to supabase</a></li>
-    <li><a href="#routeswebphp">routes/web.php</a></li>
-    <li><a href="#controller-class-example-apphttpcontrollers">Controller class example: app/Http/Controllers</a></li>
+    <li><a href="#routeswebphphttpslaravelcomdocs11xrouting"><a href="https://laravel.com/docs/11.x/routing">routes/web.php</a></a></li>
+    <li><a href="#controllerhttpslaravelcomdocs11xcontrollers-class-example-apphttpcontrollers"><a href="https://laravel.com/docs/11.x/controllers">Controller</a> class example: app/Http/Controllers</a></li>
     <li><a href="#blade-views-en-syntax">Blade views en syntax</a></li>
     <li><a href="#models-migrationtables-en-factories">Models, migrationtables en factories</a>
       <ol>
@@ -497,6 +497,9 @@
       </ol>
     </li>
     <li><a href="#de-public-files">De public files</a></li>
+    <li><a href="#laravel-sessionshttpslaravelcomdocs11xsession"><a href="https://laravel.com/docs/11.x/session">Laravel sessions</a></a></li>
+    <li><a href="#error-handlinghttpslaravelcomdocs11xerrors"><a href="https://laravel.com/docs/11.x/errors">Error Handling</a></a></li>
+    <li><a href="#logginghttpslaravelcomdocs11xlogging"><a href="https://laravel.com/docs/11.x/logging">Logging</a></a></li>
   </ol>
 </nav></div>
 </div>
@@ -571,8 +574,8 @@
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">DB_CONNECTION=pgsql</span>
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">DB_URL=&lt;supabase-&gt;project-&gt;configuration-&gt;Database-&gt;connectionString-&gt;URI&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">DB_PASSWORD=supabasePassword</span>
-</span></span></code></pre></div><h2 id="routeswebphp">routes/web.php</h2>
-<p>Hier worden alle endpoints van je websites gedeclareerd:</p>
+</span></span></code></pre></div><h2 id="routeswebphphttpslaravelcomdocs11xrouting"><a href="https://laravel.com/docs/11.x/routing">routes/web.php</a></h2>
+<p>Hier worden alle endpoints van je websites gedeclareerd (Meer info rond: <a href="https://laravel.com/docs/11.x/requests">requests</a>, <a href="https://laravel.com/docs/11.x/responses">responses</a>):</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Schrijf de functie die moet uitgevoerd worden rechtstreeks in de `get`-methode 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// get request naar endpoint &#39;/&#39;
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span> <span style="color:#111">()</span> <span style="color:#111">{</span>
@@ -593,7 +596,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">update</span><span style="color:#111">(</span><span style="color:#f92672">...</span><span style="color:#111">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Delete request
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">delete</span><span style="color:#111">(</span><span style="color:#f92672">...</span><span style="color:#111">);</span>
-</span></span></code></pre></div><h2 id="controller-class-example-apphttpcontrollers">Controller class example: app/Http/Controllers</h2>
+</span></span></code></pre></div><h2 id="controllerhttpslaravelcomdocs11xcontrollers-class-example-apphttpcontrollers"><a href="https://laravel.com/docs/11.x/controllers">Controller</a> class example: app/Http/Controllers</h2>
 <p>Bundel wat er moet gebeuren wanneer verschillende endpoints gebruikt worden die te maken hebben met bepaalde modellen:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
 </span></span><span style="display:flex;"><span>
@@ -634,9 +637,17 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Do een redirect naar een ander endpoint
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#00a8c8">return</span> <span style="color:#75af00">redirect</span><span style="color:#111">(</span><span style="color:#d88200">&#34;/&#34;</span><span style="color:#111">);</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">getAllEntriesOfModelInDb</span><span style="color:#111">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Retrieve all users from the database
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#111">$examples</span> <span style="color:#f92672">=</span> <span style="color:#75af00">Example</span><span style="color:#f92672">::</span><span style="color:#75af00">all</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Return the users data (for example, as JSON)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#00a8c8">return</span> <span style="color:#75af00">response</span><span style="color:#111">()</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">json</span><span style="color:#111">(</span><span style="color:#111">$examples</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">}</span>
 </span></span></code></pre></div><h2 id="blade-views-en-syntax">Blade views en syntax</h2>
-<p>Blade views worden dynamisch gemaakt via een aantal specifieke code syntaxen voor <code>if</code>-<code>else</code> statements, <code>for</code>-lussen, importeren van andere views &hellip;</p>
+<p><a href="https://laravel.com/docs/11.x/blade">Blade</a> en <a href="https://laravel.com/docs/11.x/views">views</a> worden dynamisch gemaakt via een aantal specifieke code syntaxen voor <code>if</code>-<code>else</code> statements, <code>for</code>-lussen, importeren van andere views &hellip;</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- template.blade.php --&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>{{ phpVariableExample }}<span style="color:#111">&lt;/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>@include(&#39;otherviewtoinclude&#39;)
@@ -673,8 +684,7 @@
 </span></span><span style="display:flex;"><span>@else
 </span></span><span style="display:flex;"><span>    I don&#39;t have any records!
 </span></span><span style="display:flex;"><span>@endif
-</span></span><span style="display:flex;"><span>// More info on: https://laravel.com/docs/11.x/blade
-</span></span></code></pre></div><p>Avoid Cross Site Scripting errors in forms met <code>@csrf</code></p>
+</span></span></code></pre></div><p>Avoid <a href="https://laravel.com/docs/11.x/csrf">Cross-site request forgeries</a> errors in forms met <code>@csrf</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#75af00">form</span> <span style="color:#75af00">action</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;/image&#34;</span> <span style="color:#75af00">method</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;POST&#34;</span> <span style="color:#75af00">enctype</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;multipart/form-data&#34;</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">//IMPORTANT
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">@</span><span style="color:#75af00">csrf</span>
@@ -682,7 +692,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#75af00">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;submit&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#75af00">Upload</span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">button</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/</span><span style="color:#75af00">form</span><span style="color:#f92672">&gt;</span>
 </span></span></code></pre></div><h2 id="models-migrationtables-en-factories">Models, migrationtables en factories</h2>
-<p>Bij het aanmaken van modellen kan je rechtstreeks een link maken met de database aan de hand van migration tabellen.
+<p>Bij het aanmaken van modellen kan je rechtstreeks een link maken met de database aan de hand van <a href="https://laravel.com/docs/11.x/migrations">migration tabellen</a>.
 Bovendien kan je een factory gebruiken om dummy data aan te brengen in de database via de commandline. Hieronder een voorbeeld:</p>
 <h4 id="appmodelstestphp">app/Models/Test.php</h4>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
@@ -841,10 +851,13 @@ Bovendien kan je een factory gebruiken om dummy data aan te brengen in de databa
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#75af00">body</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#75af00">h1</span><span style="color:#f92672">&gt;</span><span style="color:#75af00">Example</span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">h1</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#75af00">img</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{url(&#39;/assets/example.jpg&#39;)}}&#34;</span> <span style="color:#75af00">alt</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;image&#34;</span> <span style="color:#75af00">width</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;200px&#34;</span><span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#75af00">script</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{url(&#39;/assets/script.js&#39;)}}&#34;</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text/javascript&#34;</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#75af00">script</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">body</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">html</span><span style="color:#f92672">&gt;</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><h2 id="laravel-sessionshttpslaravelcomdocs11xsession"><a href="https://laravel.com/docs/11.x/session">Laravel sessions</a></h2>
+<h2 id="error-handlinghttpslaravelcomdocs11xerrors"><a href="https://laravel.com/docs/11.x/errors">Error Handling</a></h2>
+<h2 id="logginghttpslaravelcomdocs11xlogging"><a href="https://laravel.com/docs/11.x/logging">Logging</a></h2>
+
 </article>
 
 <footer class="footline">
@@ -1118,15 +1131,15 @@ Bovendien kan je een factory gebruiken om dummy data aan te brengen in de databa
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1715587477"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1715587477"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1715587477"></script>
-    <script src="../../js/jquery.sticky.js?1715587477"></script>
-    <script src="../../js/featherlight.min.js?1715587477"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1715587477"></script>
-    <script src="../../js/learn.js?1715587477"></script>
-    <script src="../../js/hugo-learn.js?1715587477"></script>
-    <script src="../../js/mermaid.min.js?1715587477"></script>
+    <script src="../../js/clipboard.min.js?1715597178"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1715597178"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1715597178"></script>
+    <script src="../../js/jquery.sticky.js?1715597178"></script>
+    <script src="../../js/featherlight.min.js?1715597178"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1715597178"></script>
+    <script src="../../js/learn.js?1715597178"></script>
+    <script src="../../js/hugo-learn.js?1715597178"></script>
+    <script src="../../js/mermaid.min.js?1715597178"></script>
     <script>
     window.MathJax = {
       chtml: {

@@ -55,8 +55,8 @@ DB_URL=<supabase->project->configuration->Database->connectionString->URI>
 DB_PASSWORD=supabasePassword
 ```
 
-## routes/web.php
-Hier worden alle endpoints van je websites gedeclareerd:
+## [routes/web.php](https://laravel.com/docs/11.x/routing)
+Hier worden alle endpoints van je websites gedeclareerd (Meer info rond: [requests](https://laravel.com/docs/11.x/requests), [responses](https://laravel.com/docs/11.x/responses)):
 ```php
 // Schrijf de functie die moet uitgevoerd worden rechtstreeks in de `get`-methode 
 // get request naar endpoint '/'
@@ -80,7 +80,7 @@ Route::update(...);
 Route::delete(...);
 ```
 
-## Controller class example: app/Http/Controllers
+## [Controller](https://laravel.com/docs/11.x/controllers) class example: app/Http/Controllers
 Bundel wat er moet gebeuren wanneer verschillende endpoints gebruikt worden die te maken hebben met bepaalde modellen:
 
 ```php
@@ -123,12 +123,20 @@ class ExampleController extends Controller
         // Do een redirect naar een ander endpoint
         return redirect("/");
     }
+
+    public function getAllEntriesOfModelInDb(){
+        // Retrieve all users from the database
+        $examples = Example::all();
+
+        // Return the users data (for example, as JSON)
+        return response()->json($examples);
+    }
 }
 ```
 
 ## Blade views en syntax
 
-Blade views worden dynamisch gemaakt via een aantal specifieke code syntaxen voor `if`-`else` statements, `for`-lussen, importeren van andere views ...
+[Blade](https://laravel.com/docs/11.x/blade) en [views](https://laravel.com/docs/11.x/views) worden dynamisch gemaakt via een aantal specifieke code syntaxen voor `if`-`else` statements, `for`-lussen, importeren van andere views ...
 
 ```html
 <!-- template.blade.php -->
@@ -167,10 +175,9 @@ Blade views worden dynamisch gemaakt via een aantal specifieke code syntaxen voo
 @else
     I don't have any records!
 @endif
-// More info on: https://laravel.com/docs/11.x/blade
 ```
 
-Avoid Cross Site Scripting errors in forms met `@csrf`
+Avoid [Cross-site request forgeries](https://laravel.com/docs/11.x/csrf) errors in forms met `@csrf`
 ```php
 <form action="/image" method="POST" enctype="multipart/form-data">
     //IMPORTANT
@@ -181,7 +188,7 @@ Avoid Cross Site Scripting errors in forms met `@csrf`
 ```
 
 ## Models, migrationtables en factories
-Bij het aanmaken van modellen kan je rechtstreeks een link maken met de database aan de hand van migration tabellen.
+Bij het aanmaken van modellen kan je rechtstreeks een link maken met de database aan de hand van [migration tabellen](https://laravel.com/docs/11.x/migrations).
 Bovendien kan je een factory gebruiken om dummy data aan te brengen in de database via de commandline. Hieronder een voorbeeld:
 #### app/Models/Test.php
 ```php
@@ -358,7 +365,13 @@ Inside blade views:
 <body>
   <h1>Example</h1>
   <img src="{{url('/assets/example.jpg')}}" alt="image" width="200px"/>
-  
+  <script src="{{url('/assets/script.js')}}" type="text/javascript"></script>
 </body>
 </html>
 ```
+
+## [Laravel sessions](https://laravel.com/docs/11.x/session)
+
+## [Error Handling](https://laravel.com/docs/11.x/errors)
+
+## [Logging](https://laravel.com/docs/11.x/logging)
