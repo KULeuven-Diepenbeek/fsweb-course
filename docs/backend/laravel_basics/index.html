@@ -12,22 +12,22 @@
     <title>Laravel: basics :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1714989453" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1714989453" rel="stylesheet">
-    <link href="../../css/hybrid.css?1714989453" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1714989453" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1714989453" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1714989453" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1714989453" rel="stylesheet">
-    <link href="../../css/theme.css?1714989453" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1714989453" rel="stylesheet">
-    <link href="../../css/devselector.css?1714989453" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1714989453" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1714989453" rel="stylesheet">
+    <link href="../../css/nucleus.css?1715587477" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1715587477" rel="stylesheet">
+    <link href="../../css/hybrid.css?1715587477" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1715587477" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1715587477" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1715587477" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1715587477" rel="stylesheet">
+    <link href="../../css/theme.css?1715587477" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1715587477" rel="stylesheet">
+    <link href="../../css/devselector.css?1715587477" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1715587477" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1715587477" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1714989453"></script>
-    <script src="../../js/devselector.js?1714989453"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1715587477"></script>
+    <script src="../../js/devselector.js?1715587477"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1714989453"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1714989453"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1715587477"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1715587477"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1714989453"></script>
+<script type="text/javascript" src="../../js/search.js?1715587477"></script>
 
     
   </div>
@@ -471,29 +471,15 @@
   <div class="wrapper toc"><nav id="TableOfContents">
   <ol>
     <li><a href="#why-laravel">Why Laravel?</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#edit-phpini-file">Edit php.ini file</a>
+    <li><a href="#install-laravel">Install Laravel</a>
       <ol>
-        <li><a href="#line-962">line 962</a></li>
-        <li><a href="#line-930">line 930</a></li>
-        <li><a href="#line-942">line 942</a></li>
-        <li><a href="#line-944">line 944</a></li>
+        <li>
+          <ol>
+            <li></li>
+          </ol>
+        </li>
       </ol>
     </li>
-    <li><a href="#add-phpexe-to-path-variables-new-system-variable">Add php.exe to path variables (new system variable)</a></li>
-    <li><a href="#add-dependency-manager-composerhttpsgetcomposerorgdownload">Add dependency manager: <a href="https://getcomposer.org/download/">Composer</a></a></li>
-    <li><a href="#install-laravel-using-composer">Install Laravel using Composer</a></li>
-    <li><a href="#reinstall-xampp-and-move-project-into-dashboard---laravel">Reinstall XAMPP and move project into Dashboard -&gt; Laravel</a></li>
-    <li><a href="#create-laravel-project-in-your-project-folder">Create laravel project in your project folder</a></li>
-    <li><a href="#front-page-is-in-publicindexphp">Front page is in public/index.php</a></li>
-    <li><a href="#setup-database">Setup database</a>
-      <ol>
-        <li><a href="#start-webserver-without-apache-inside-project-folder">(Start webserver without apache: inside project folder)</a></li>
-      </ol>
-    </li>
-    <li><a href="#intro-into-laravel-todolist">Intro into Laravel TodoList</a></li>
     <li><a href="#create-object-and-db-migration">Create object and db migration</a></li>
     <li><a href="#blade-placeholdersvariables">.blade placeholders/variables</a></li>
   </ol>
@@ -543,42 +529,42 @@
 </ul>
 </li>
 </ul>
-<h1 id="install-laravel">Install Laravel</h1>
-<h2 id="edit-phpini-file">Edit php.ini file</h2>
-<h3 id="line-962">line 962</h3>
-<p>uncomment (delete semicolon in fromt) extention=zip</p>
-<h3 id="line-930">line 930</h3>
-<p>uncomment extention=fileinfo</p>
-<h3 id="line-942">line 942</h3>
-<p>uncomment extention=openssl</p>
-<h3 id="line-944">line 944</h3>
-<p>uncomment extention=pdo_mysql</p>
-<h2 id="add-phpexe-to-path-variables-new-system-variable">Add php.exe to path variables (new system variable)</h2>
+<h2 id="install-laravel">Install Laravel</h2>
+<h5 id="edit-phpini-file">Edit php.ini file</h5>
+<p><strong>line 962</strong>
+uncomment (delete semicolon in fromt) extention=zip
+<strong>line 930</strong>
+uncomment extention=fileinfo
+<strong>line 942</strong>
+uncomment extention=openssl
+<strong>line 944</strong>
+uncomment extention=pdo_mysql</p>
+<h5 id="add-phpexe-to-path-variables-new-system-variable">Add php.exe to path variables (new system variable)</h5>
 <p>name: PHP
 location: C:\xampp\php\php.exe</p>
-<h2 id="add-dependency-manager-composerhttpsgetcomposerorgdownload">Add dependency manager: <a href="https://getcomposer.org/download/">Composer</a></h2>
+<h5 id="add-dependency-manager-composerhttpsgetcomposerorgdownload">Add dependency manager: <a href="https://getcomposer.org/download/">Composer</a></h5>
 <p>download .exe
 add to path: C:\ProgramData\ComposerSetup\bin</p>
-<h2 id="install-laravel-using-composer">Install Laravel using Composer</h2>
+<h5 id="install-laravel-using-composer">Install Laravel using Composer</h5>
 <p><code>$ composer global require laravel/installer</code></p>
-<h2 id="reinstall-xampp-and-move-project-into-dashboard---laravel">Reinstall XAMPP and move project into Dashboard -&gt; Laravel</h2>
+<h5 id="reinstall-xampp-and-move-project-into-dashboard---laravel">Reinstall XAMPP and move project into Dashboard -&gt; Laravel</h5>
 <p>first delete all files inside the dashboard directory</p>
-<h2 id="create-laravel-project-in-your-project-folder">Create laravel project in your project folder</h2>
+<h5 id="create-laravel-project-in-your-project-folder">Create laravel project in your project folder</h5>
 <p><code>$ laravel new &lt;projectName&gt;</code>
 starterkit -&gt; none
 Pest -&gt; 0 (testing framework, PHPUnit is older)
 Git -&gt; no</p>
 <p>db -&gt; mysql (via XAMPP)
 default database migrations -&gt; yes (make sure MySQL server is turned on in XAMPP)</p>
-<h2 id="front-page-is-in-publicindexphp">Front page is in public/index.php</h2>
-<h2 id="setup-database">Setup database</h2>
+<h5 id="front-page-is-in-publicindexphp">Front page is in public/index.php</h5>
+<h5 id="setup-database">Setup database</h5>
 <p>inside phpmyadmin -&gt; new database (give same name as laravel project &lsquo;-&rsquo; becomes &lsquo;_&rsquo;).
 OR set name in <code>.env</code> file</p>
 <p>(<code>$ php artisan migrate</code>)</p>
 <p>creates tables that integrate with laravel !</p>
-<h3 id="start-webserver-without-apache-inside-project-folder">(Start webserver without apache: inside project folder)</h3>
+<h5 id="start-webserver-without-apache-inside-project-folder">(Start webserver without apache: inside project folder)</h5>
 <p><code>$ php artisan serve</code></p>
-<h2 id="intro-into-laravel-todolist">Intro into Laravel TodoList</h2>
+<h5 id="intro-into-laravel-todolist">Intro into Laravel TodoList</h5>
 <p>resources/views/welcome.blade.php
 routes/web.php
 public/index.php</p>
@@ -864,15 +850,15 @@ model will be in <code>app/model</code></p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1714989453"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1714989453"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1714989453"></script>
-    <script src="../../js/jquery.sticky.js?1714989453"></script>
-    <script src="../../js/featherlight.min.js?1714989453"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1714989453"></script>
-    <script src="../../js/learn.js?1714989453"></script>
-    <script src="../../js/hugo-learn.js?1714989453"></script>
-    <script src="../../js/mermaid.min.js?1714989453"></script>
+    <script src="../../js/clipboard.min.js?1715587477"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1715587477"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1715587477"></script>
+    <script src="../../js/jquery.sticky.js?1715587477"></script>
+    <script src="../../js/featherlight.min.js?1715587477"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1715587477"></script>
+    <script src="../../js/learn.js?1715587477"></script>
+    <script src="../../js/hugo-learn.js?1715587477"></script>
+    <script src="../../js/mermaid.min.js?1715587477"></script>
     <script>
     window.MathJax = {
       chtml: {

@@ -12,22 +12,22 @@
     <title>Laravel: code and commands :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1714989453" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1714989453" rel="stylesheet">
-    <link href="../../css/hybrid.css?1714989453" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1714989453" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1714989453" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1714989453" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1714989453" rel="stylesheet">
-    <link href="../../css/theme.css?1714989453" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1714989453" rel="stylesheet">
-    <link href="../../css/devselector.css?1714989453" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1714989453" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1714989453" rel="stylesheet">
+    <link href="../../css/nucleus.css?1715587477" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1715587477" rel="stylesheet">
+    <link href="../../css/hybrid.css?1715587477" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1715587477" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1715587477" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1715587477" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1715587477" rel="stylesheet">
+    <link href="../../css/theme.css?1715587477" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1715587477" rel="stylesheet">
+    <link href="../../css/devselector.css?1715587477" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1715587477" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1715587477" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1714989453"></script>
-    <script src="../../js/devselector.js?1714989453"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1715587477"></script>
+    <script src="../../js/devselector.js?1715587477"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1714989453"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1714989453"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1715587477"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1715587477"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1714989453"></script>
+<script type="text/javascript" src="../../js/search.js?1715587477"></script>
 
     
   </div>
@@ -472,6 +472,31 @@
   <ol>
     <li><a href="#important-commandline-commands">Important commandline commands</a></li>
     <li><a href="#connect-to-supabase">Connect to supabase</a></li>
+    <li><a href="#routeswebphp">routes/web.php</a></li>
+    <li><a href="#controller-class-example-apphttpcontrollers">Controller class example: app/Http/Controllers</a></li>
+    <li><a href="#blade-views-en-syntax">Blade views en syntax</a></li>
+    <li><a href="#models-migrationtables-en-factories">Models, migrationtables en factories</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#appmodelstestphp">app/Models/Test.php</a></li>
+            <li><a href="#databasemigrations2024_05_06_084113_create_tests_tablephp">database/migrations/2024_05_06_084113_create_tests_table.php</a></li>
+            <li><a href="#databasefactoriestestfactoryphp">database/factories/TestFactory.php</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#seeder">Seeder</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#databaseseedersdatabaseseederphp">database/seeders/DatabaseSeeder.php</a></li>
+            <li><a href="#databaseseederstestseederphp">database/seeders/TestSeeder.php</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#de-public-files">De public files</a></li>
   </ol>
 </nav></div>
 </div>
@@ -546,6 +571,279 @@
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#ae81ff">DB_CONNECTION=pgsql</span>
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">DB_URL=&lt;supabase-&gt;project-&gt;configuration-&gt;Database-&gt;connectionString-&gt;URI&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">DB_PASSWORD=supabasePassword</span>
+</span></span></code></pre></div><h2 id="routeswebphp">routes/web.php</h2>
+<p>Hier worden alle endpoints van je websites gedeclareerd:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Schrijf de functie die moet uitgevoerd worden rechtstreeks in de `get`-methode 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// get request naar endpoint &#39;/&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span> <span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Do stuff
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// Geef een view terug met eventueel extra data die kan gebruikt worden in de blade template
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#00a8c8">return</span> <span style="color:#75af00">view</span><span style="color:#111">(</span><span style="color:#d88200">&#39;home&#39;</span><span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;posts&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">$posts</span><span style="color:#111">]);</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Of je kan een bepaald endpoint doorgeven naar een controller klasse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Post request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">post</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/postendpoint&#39;</span><span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#75af00">ExampleController</span><span style="color:#f92672">::</span><span style="color:#75af00">class</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;methodInsideControllerClass&#39;</span><span style="color:#111">]);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Get request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#f92672">...</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Put request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">put</span><span style="color:#111">(</span><span style="color:#f92672">...</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Update request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">update</span><span style="color:#111">(</span><span style="color:#f92672">...</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Delete request
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">delete</span><span style="color:#111">(</span><span style="color:#f92672">...</span><span style="color:#111">);</span>
+</span></span></code></pre></div><h2 id="controller-class-example-apphttpcontrollers">Controller class example: app/Http/Controllers</h2>
+<p>Bundel wat er moet gebeuren wanneer verschillende endpoints gebruikt worden die te maken hebben met bepaalde modellen:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">namespace</span> <span style="color:#75af00">App\Http\Controllers</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">App\Models\User</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Http\Request</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Validation\Rule</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">ExampleController</span> <span style="color:#00a8c8">extends</span> <span style="color:#75af00">Controller</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">methodInsideControllerClass</span><span style="color:#111">(){</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// do stuff
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#75715e">// Return een blade view
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#00a8c8">return</span> <span style="color:#75af00">view</span><span style="color:#111">(</span><span style="color:#d88200">&#39;home&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">redirectExample</span><span style="color:#111">(</span><span style="color:#75af00">Request</span> <span style="color:#111">$request</span><span style="color:#111">){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Get the values inside a request and validate them
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#111">$incomingFields</span> <span style="color:#f92672">=</span> <span style="color:#111">$request</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">validate</span><span style="color:#111">([</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;name&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;required&#39;</span><span style="color:#111">,</span> <span style="color:#75af00">Rule</span><span style="color:#f92672">::</span><span style="color:#75af00">unique</span><span style="color:#111">(</span><span style="color:#d88200">&#39;users&#39;</span><span style="color:#111">,</span><span style="color:#d88200">&#39;name&#39;</span><span style="color:#111">)],</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;email&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;required&#39;</span><span style="color:#111">],</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;password&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;required&#39;</span><span style="color:#111">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">]);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// show more info on a php object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//dd($request)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Create a php obeject
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#111">$example</span> <span style="color:#f92672">=</span> <span style="color:#75af00">Example</span><span style="color:#f92672">::</span><span style="color:#75af00">create</span><span style="color:#111">(</span><span style="color:#111">$incomingFields</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//Login to session as a user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75af00">auth</span><span style="color:#111">()</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">login</span><span style="color:#111">(</span><span style="color:#111">$user</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//Logout
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//auth()-&gt;logout();
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Do een redirect naar een ander endpoint
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#00a8c8">return</span> <span style="color:#75af00">redirect</span><span style="color:#111">(</span><span style="color:#d88200">&#34;/&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h2 id="blade-views-en-syntax">Blade views en syntax</h2>
+<p>Blade views worden dynamisch gemaakt via een aantal specifieke code syntaxen voor <code>if</code>-<code>else</code> statements, <code>for</code>-lussen, importeren van andere views &hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- template.blade.php --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>{{ phpVariableExample }}<span style="color:#111">&lt;/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>@include(&#39;otherviewtoinclude&#39;)
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>@yield(&#39;contentToBeIncluded&#39;)
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- actualView.blade.php --&gt;</span>
+</span></span><span style="display:flex;"><span>@extends(&#39;template&#39;)
+</span></span><span style="display:flex;"><span>@section(&#39;body&#39;)
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">h3</span><span style="color:#111">&gt;</span>Html to be inserted<span style="color:#111">&lt;/</span><span style="color:#f92672">h3</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>@endsection
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- forifelseExample.blade.php --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>For loop example:<span style="color:#111">&lt;/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>@for ($i = 0; $i <span style="color:#111">&lt;</span> <span style="color:#f92672">10</span><span style="color:#960050;background-color:#1e0010">;</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#75af00">i</span><span style="color:#960050;background-color:#1e0010">++)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">The</span> <span style="color:#75af00">current</span> <span style="color:#75af00">value</span> <span style="color:#75af00">is</span> <span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#75af00">i</span> <span style="color:#960050;background-color:#1e0010">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#75af00">endfor</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#75af00">foreach</span> <span style="color:#960050;background-color:#1e0010">($</span><span style="color:#75af00">users</span> <span style="color:#75af00">as</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#75af00">user</span><span style="color:#960050;background-color:#1e0010">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#75af00">p</span><span style="color:#111">&gt;</span>This is user {{ $user-&gt;id }}<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>@endforeach
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>@while (true)
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>I&#39;m looping forever.<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>@endwhile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>If Else example:<span style="color:#111">&lt;/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>@if (count($records) === 1)
+</span></span><span style="display:flex;"><span>    I have one record!
+</span></span><span style="display:flex;"><span>@elseif (count($records) &gt; 1)
+</span></span><span style="display:flex;"><span>    I have multiple records!
+</span></span><span style="display:flex;"><span>@else
+</span></span><span style="display:flex;"><span>    I don&#39;t have any records!
+</span></span><span style="display:flex;"><span>@endif
+</span></span><span style="display:flex;"><span>// More info on: https://laravel.com/docs/11.x/blade
+</span></span></code></pre></div><p>Avoid Cross Site Scripting errors in forms met <code>@csrf</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#75af00">form</span> <span style="color:#75af00">action</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;/image&#34;</span> <span style="color:#75af00">method</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;POST&#34;</span> <span style="color:#75af00">enctype</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;multipart/form-data&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//IMPORTANT
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">@</span><span style="color:#75af00">csrf</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#75af00">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;file&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;image&#34;</span> <span style="color:#75af00">accept</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;image/*&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span><span style="color:#75af00">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;submit&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#75af00">Upload</span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">button</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/</span><span style="color:#75af00">form</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><h2 id="models-migrationtables-en-factories">Models, migrationtables en factories</h2>
+<p>Bij het aanmaken van modellen kan je rechtstreeks een link maken met de database aan de hand van migration tabellen.
+Bovendien kan je een factory gebruiken om dummy data aan te brengen in de database via de commandline. Hieronder een voorbeeld:</p>
+<h4 id="appmodelstestphp">app/Models/Test.php</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">namespace</span> <span style="color:#75af00">App\Models</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Eloquent\Factories\HasFactory</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Eloquent\Model</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">Test</span> <span style="color:#00a8c8">extends</span> <span style="color:#75af00">Model</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// To be able to use a factory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#00a8c8">use</span> <span style="color:#75af00">HasFactory</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     * The attributes that are mass assignable.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     *  Namen komen overeen met de kolomnamen in de database
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     * @var array&lt;int, string&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">protected</span> <span style="color:#111">$fillable</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#d88200">&#39;testname&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#d88200">&#39;testemail&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#d88200">&#39;testnumber&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#d88200">&#39;testpassword&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">];</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h4 id="databasemigrations2024_05_06_084113_create_tests_tablephp">database/migrations/2024_05_06_084113_create_tests_table.php</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Migrations\Migration</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Schema\Blueprint</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Support\Facades\Schema</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">return</span> <span style="color:#00a8c8">new</span> <span style="color:#00a8c8">class</span> <span style="color:#75af00">extends</span> <span style="color:#75af00">Migration</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     * Run the migrations.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">up</span><span style="color:#111">()</span><span style="color:#f92672">:</span> <span style="color:#75af00">void</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75af00">Schema</span><span style="color:#f92672">::</span><span style="color:#75af00">create</span><span style="color:#111">(</span><span style="color:#d88200">&#39;tests&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span> <span style="color:#111">(</span><span style="color:#75af00">Blueprint</span> <span style="color:#111">$table</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">id</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">timestamps</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">string</span><span style="color:#111">(</span><span style="color:#d88200">&#39;testname&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">string</span><span style="color:#111">(</span><span style="color:#d88200">&#39;testemail&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">integer</span><span style="color:#111">(</span><span style="color:#d88200">&#39;testnumber&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">string</span><span style="color:#111">(</span><span style="color:#d88200">&#39;testpassword&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     * Reverse the migrations.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">down</span><span style="color:#111">()</span><span style="color:#f92672">:</span> <span style="color:#75af00">void</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75af00">Schema</span><span style="color:#f92672">::</span><span style="color:#75af00">dropIfExists</span><span style="color:#111">(</span><span style="color:#d88200">&#39;tests&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">};</span>
+</span></span></code></pre></div><h4 id="databasefactoriestestfactoryphp">database/factories/TestFactory.php</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">namespace</span> <span style="color:#75af00">Database\Factories</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Eloquent\Factories\Factory</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#d88200">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200"> * @extends \Illuminate\Database\Eloquent\Factories\Factory&lt;\App\Models\Test&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">TestFactory</span> <span style="color:#00a8c8">extends</span> <span style="color:#75af00">Factory</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     * Define the model&#39;s default state.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     *
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     * @return array&lt;string, mixed&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">definition</span><span style="color:#111">()</span><span style="color:#f92672">:</span> <span style="color:#00a8c8">array</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">return</span> <span style="color:#111">[</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// &#39;testname&#39; =&gt; $this-&gt;faker-&gt;name,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#d88200">&#39;testname&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">$this</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">faker</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">randomElement</span><span style="color:#111">([</span><span style="color:#d88200">&#39;Mark&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Tom&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;Kevin&#39;</span><span style="color:#111">]),</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;testemail&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">$this</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">faker</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">numberBetween</span><span style="color:#111">(</span><span style="color:#ae81ff">1000</span><span style="color:#111">,</span> <span style="color:#ae81ff">9999</span><span style="color:#111">),</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;testnumber&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">$this</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">faker</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">numberBetween</span><span style="color:#111">(</span><span style="color:#ae81ff">1000</span><span style="color:#111">,</span> <span style="color:#ae81ff">9999</span><span style="color:#111">),</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;testpassword&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#75af00">bcrypt</span><span style="color:#111">(</span><span style="color:#d88200">&#39;password&#39;</span><span style="color:#111">),</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h2 id="seeder">Seeder</h2>
+<p>Om effectief dummy data in de database te steken gebruiken we seeders:
+<code>$ php artisan db:seed --class=DatabaseSeeder</code></p>
+<h4 id="databaseseedersdatabaseseederphp">database/seeders/DatabaseSeeder.php</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">namespace</span> <span style="color:#75af00">Database\Seeders</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">App\Models\Test</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">use</span> <span style="color:#75af00">App\Models\User</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Seeder</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">DatabaseSeeder</span> <span style="color:#00a8c8">extends</span> <span style="color:#75af00">Seeder</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     * Seed the application&#39;s database.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">run</span><span style="color:#111">()</span><span style="color:#f92672">:</span> <span style="color:#75af00">void</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Clear test table in database
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75af00">Test</span><span style="color:#f92672">::</span><span style="color:#75af00">truncate</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Call the TestSeeder
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#111">$this</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">call</span><span style="color:#111">(</span><span style="color:#75af00">TestSeeder</span><span style="color:#f92672">::</span><span style="color:#75af00">class</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Generate 10 test records using the factory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75af00">Test</span><span style="color:#f92672">::</span><span style="color:#75af00">factory</span><span style="color:#111">()</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">count</span><span style="color:#111">(</span><span style="color:#ae81ff">10</span><span style="color:#111">)</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">create</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h4 id="databaseseederstestseederphp">database/seeders/TestSeeder.php</h4>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">namespace</span> <span style="color:#75af00">Database\Seeders</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Seeder</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Support\Facades\DB</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Console\Seeds\WithoutModelEvents</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">TestSeeder</span> <span style="color:#00a8c8">extends</span> <span style="color:#75af00">Seeder</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#d88200">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     * Run the database seeds.
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">run</span><span style="color:#111">()</span><span style="color:#f92672">:</span> <span style="color:#75af00">void</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75af00">DB</span><span style="color:#f92672">::</span><span style="color:#75af00">table</span><span style="color:#111">(</span><span style="color:#d88200">&#39;tests&#39;</span><span style="color:#111">)</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">insert</span><span style="color:#111">([</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;testname&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#d88200">&#39;Test Name &#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;testemail&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#d88200">&#39;test@example.com&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;testnumber&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#75af00">rand</span><span style="color:#111">(</span><span style="color:#ae81ff">1000</span><span style="color:#111">,</span> <span style="color:#ae81ff">9999</span><span style="color:#111">),</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;testpassword&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#75af00">bcrypt</span><span style="color:#111">(</span><span style="color:#d88200">&#39;password&#39;</span><span style="color:#111">),</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;created_at&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#75af00">now</span><span style="color:#111">(),</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#d88200">&#39;updated_at&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#75af00">now</span><span style="color:#111">(),</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">]);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h2 id="de-public-files">De public files</h2>
+<p>Waar moet je de files plaatsen die beschikbaar moeten zijn aan de client-side?<br>
+-&gt; in de <code>public</code> folder</p>
+<pre tabindex="0"><code>public
+|-----&gt; assets
+      |-------&gt; styles.css
+      |-------&gt; script.js
+      |-------&gt; example.jpg
+</code></pre><p>Inside blade views:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;!</span><span style="color:#75af00">DOCTYPE</span> <span style="color:#75af00">html</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#75af00">html</span> <span style="color:#75af00">lang</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;en&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#75af00">head</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#75af00">title</span><span style="color:#f92672">&gt;</span><span style="color:#00a8c8">Public</span> <span style="color:#75af00">Example</span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">title</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#75af00">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text/css&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{ url(&#39;/assets/styles.css&#39;) }}&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">head</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#75af00">body</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#75af00">h1</span><span style="color:#f92672">&gt;</span><span style="color:#75af00">Example</span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">h1</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#75af00">img</span> <span style="color:#75af00">src</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;{{url(&#39;/assets/example.jpg&#39;)}}&#34;</span> <span style="color:#75af00">alt</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;image&#34;</span> <span style="color:#75af00">width</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;200px&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">body</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">html</span><span style="color:#f92672">&gt;</span>
 </span></span></code></pre></div>
 </article>
 
@@ -820,15 +1118,15 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1714989453"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1714989453"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1714989453"></script>
-    <script src="../../js/jquery.sticky.js?1714989453"></script>
-    <script src="../../js/featherlight.min.js?1714989453"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1714989453"></script>
-    <script src="../../js/learn.js?1714989453"></script>
-    <script src="../../js/hugo-learn.js?1714989453"></script>
-    <script src="../../js/mermaid.min.js?1714989453"></script>
+    <script src="../../js/clipboard.min.js?1715587477"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1715587477"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1715587477"></script>
+    <script src="../../js/jquery.sticky.js?1715587477"></script>
+    <script src="../../js/featherlight.min.js?1715587477"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1715587477"></script>
+    <script src="../../js/learn.js?1715587477"></script>
+    <script src="../../js/hugo-learn.js?1715587477"></script>
+    <script src="../../js/mermaid.min.js?1715587477"></script>
     <script>
     window.MathJax = {
       chtml: {
