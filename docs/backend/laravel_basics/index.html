@@ -12,22 +12,22 @@
     <title>Laravel: basics :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1715597178" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1715597178" rel="stylesheet">
-    <link href="../../css/hybrid.css?1715597178" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1715597178" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1715597178" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1715597178" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1715597178" rel="stylesheet">
-    <link href="../../css/theme.css?1715597178" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1715597178" rel="stylesheet">
-    <link href="../../css/devselector.css?1715597178" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1715597178" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1715597178" rel="stylesheet">
+    <link href="../../css/nucleus.css?1715859778" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1715859778" rel="stylesheet">
+    <link href="../../css/hybrid.css?1715859778" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1715859778" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1715859778" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1715859778" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1715859778" rel="stylesheet">
+    <link href="../../css/theme.css?1715859778" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1715859778" rel="stylesheet">
+    <link href="../../css/devselector.css?1715859778" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1715859778" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1715859778" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1715597178"></script>
-    <script src="../../js/devselector.js?1715597178"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1715859778"></script>
+    <script src="../../js/devselector.js?1715859778"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1715597178"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1715597178"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1715859778"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1715859778"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1715597178"></script>
+<script type="text/javascript" src="../../js/search.js?1715859778"></script>
 
     
   </div>
@@ -373,6 +373,61 @@
  
   
     
+    <li data-nav-id="/extra/" title="Extra" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../extra/">
+          Extra
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/extra/websecurity/" title="Security (enkele voorbeelden)" class="dd-item ">
+        <a href="../../extra/websecurity/">
+        Security (enkele voorbeelden)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/opdrachten/" title="Opdrachten" class="dd-item
         
         
@@ -481,7 +536,6 @@
       </ol>
     </li>
     <li><a href="#create-object-and-db-migration">Create object and db migration</a></li>
-    <li><a href="#blade-placeholdersvariables">.blade placeholders/variables</a></li>
   </ol>
 </nav></div>
 </div>
@@ -531,51 +585,49 @@
 </ul>
 <h2 id="install-laravel">Install Laravel</h2>
 <h5 id="edit-phpini-file">Edit php.ini file</h5>
-<p><strong>line 962</strong>
+<p><br><strong>line 962</strong>
 uncomment (delete semicolon in fromt) extention=zip
-<strong>line 930</strong>
+<br><strong>line 930</strong>
 uncomment extention=fileinfo
-<strong>line 942</strong>
+<br><strong>line 942</strong>
 uncomment extention=openssl
-<strong>line 944</strong>
+<br><strong>line 944</strong>
 uncomment extention=pdo_mysql</p>
 <h5 id="add-phpexe-to-path-variables-new-system-variable">Add php.exe to path variables (new system variable)</h5>
-<p>name: PHP
+<p>name: PHP <br>
 location: C:\xampp\php\php.exe</p>
 <h5 id="add-dependency-manager-composerhttpsgetcomposerorgdownload">Add dependency manager: <a href="https://getcomposer.org/download/">Composer</a></h5>
-<p>download .exe
+<p>download .exe <br>
 add to path: C:\ProgramData\ComposerSetup\bin</p>
 <h5 id="install-laravel-using-composer">Install Laravel using Composer</h5>
 <p><code>$ composer global require laravel/installer</code></p>
 <h5 id="reinstall-xampp-and-move-project-into-dashboard---laravel">Reinstall XAMPP and move project into Dashboard -&gt; Laravel</h5>
 <p>first delete all files inside the dashboard directory</p>
 <h5 id="create-laravel-project-in-your-project-folder">Create laravel project in your project folder</h5>
-<p><code>$ laravel new &lt;projectName&gt;</code>
-starterkit -&gt; none
-Pest -&gt; 0 (testing framework, PHPUnit is older)
+<p><code>$ laravel new &lt;projectName&gt;</code> <br>
+starterkit -&gt; none <br>
+Pest -&gt; 0 (testing framework, PHPUnit is older) <br>
 Git -&gt; no</p>
-<p>db -&gt; mysql (via XAMPP)
+<p>db -&gt; mysql (via XAMPP) <br>
 default database migrations -&gt; yes (make sure MySQL server is turned on in XAMPP)</p>
 <h5 id="front-page-is-in-publicindexphp">Front page is in public/index.php</h5>
 <h5 id="setup-database">Setup database</h5>
-<p>inside phpmyadmin -&gt; new database (give same name as laravel project &lsquo;-&rsquo; becomes &lsquo;_&rsquo;).
+<p>inside phpmyadmin -&gt; new database (give same name as laravel project &lsquo;-&rsquo; becomes &lsquo;_&rsquo;).<br>
 OR set name in <code>.env</code> file</p>
 <p>(<code>$ php artisan migrate</code>)</p>
 <p>creates tables that integrate with laravel !</p>
 <h5 id="start-webserver-without-apache-inside-project-folder">(Start webserver without apache: inside project folder)</h5>
 <p><code>$ php artisan serve</code></p>
 <h5 id="intro-into-laravel-todolist">Intro into Laravel TodoList</h5>
-<p>resources/views/welcome.blade.php
-routes/web.php
-public/index.php</p>
+<p>resources/views/welcome.blade.php <br>
+routes/web.php <br>
+public/index.php <br></p>
 <h2 id="create-object-and-db-migration">Create object and db migration</h2>
-<p><code>$ php artisan make:model &lt;modelName&gt; -m</code>
-<code>$ php artisan migrate</code>
-check migration in <code>/database/migrations/</code></p>
-<p>update migration so it interacts with table correctly (set correct model properties)
+<p><code>$ php artisan make:model &lt;modelName&gt; -m</code> <br>
+<code>$ php artisan migrate</code> <br>
+check migration in <code>/database/migrations/</code> <br></p>
+<p>update migration so it interacts with table correctly (set correct model properties) <br>
 model will be in <code>app/model</code></p>
-<h2 id="blade-placeholdersvariables">.blade placeholders/variables</h2>
-<p>&ldquo;{{ route(&lsquo;saveItem&rsquo;) }}&rdquo;</p>
 
 </article>
 
@@ -825,6 +877,38 @@ model will be in <code>app/model</code></p>
                     
 
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -850,15 +934,15 @@ model will be in <code>app/model</code></p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1715597178"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1715597178"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1715597178"></script>
-    <script src="../../js/jquery.sticky.js?1715597178"></script>
-    <script src="../../js/featherlight.min.js?1715597178"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1715597178"></script>
-    <script src="../../js/learn.js?1715597178"></script>
-    <script src="../../js/hugo-learn.js?1715597178"></script>
-    <script src="../../js/mermaid.min.js?1715597178"></script>
+    <script src="../../js/clipboard.min.js?1715859778"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1715859778"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1715859778"></script>
+    <script src="../../js/jquery.sticky.js?1715859778"></script>
+    <script src="../../js/featherlight.min.js?1715859778"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1715859778"></script>
+    <script src="../../js/learn.js?1715859778"></script>
+    <script src="../../js/hugo-learn.js?1715859778"></script>
+    <script src="../../js/mermaid.min.js?1715859778"></script>
     <script>
     window.MathJax = {
       chtml: {

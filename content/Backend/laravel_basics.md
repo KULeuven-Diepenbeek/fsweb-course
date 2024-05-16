@@ -18,21 +18,21 @@ draft: false
 
 ## Install Laravel
 ##### Edit php.ini file
-**line 962**
+<br>**line 962**
 uncomment (delete semicolon in fromt) extention=zip
-**line 930**
+<br>**line 930**
 uncomment extention=fileinfo
-**line 942**
+<br>**line 942**
 uncomment extention=openssl
-**line 944**
+<br>**line 944**
 uncomment extention=pdo_mysql
 
 ##### Add php.exe to path variables (new system variable)
-name: PHP
+name: PHP <br>
 location: C:\xampp\php\php.exe
 
 ##### Add dependency manager: [Composer](https://getcomposer.org/download/)
-download .exe
+download .exe <br>
 add to path: C:\ProgramData\ComposerSetup\bin
 
 ##### Install Laravel using Composer
@@ -42,18 +42,18 @@ add to path: C:\ProgramData\ComposerSetup\bin
 first delete all files inside the dashboard directory
 
 ##### Create laravel project in your project folder
-`$ laravel new <projectName>`
-starterkit -> none
-Pest -> 0 (testing framework, PHPUnit is older)
-Git -> no
+`$ laravel new <projectName>` <br>
+starterkit -> none <br>
+Pest -> 0 (testing framework, PHPUnit is older) <br>
+Git -> no 
 
-db -> mysql (via XAMPP)
-default database migrations -> yes (make sure MySQL server is turned on in XAMPP)
+db -> mysql (via XAMPP) <br>
+default database migrations -> yes (make sure MySQL server is turned on in XAMPP) 
 
 ##### Front page is in public/index.php
 
 ##### Setup database
-inside phpmyadmin -> new database (give same name as laravel project '-' becomes '_').
+inside phpmyadmin -> new database (give same name as laravel project '-' becomes '_').<br>
 OR set name in `.env` file
 
 (`$ php artisan migrate`)
@@ -64,17 +64,14 @@ creates tables that integrate with laravel !
 `$ php artisan serve`
 
 ##### Intro into Laravel TodoList
-resources/views/welcome.blade.php
-routes/web.php
-public/index.php
+resources/views/welcome.blade.php <br>
+routes/web.php <br>
+public/index.php <br>
 
 ## Create object and db migration
-`$ php artisan make:model <modelName> -m`
-`$ php artisan migrate`
-check migration in `/database/migrations/`
+`$ php artisan make:model <modelName> -m` <br>
+`$ php artisan migrate` <br>
+check migration in `/database/migrations/` <br>
 
-update migration so it interacts with table correctly (set correct model properties)
+update migration so it interacts with table correctly (set correct model properties) <br>
 model will be in `app/model`
-
-## .blade placeholders/variables
-"{{ route('saveItem') }}"
