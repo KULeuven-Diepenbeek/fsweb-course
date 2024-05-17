@@ -12,22 +12,22 @@
     <title>Laravel: code and commands :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1715859778" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1715859778" rel="stylesheet">
-    <link href="../../css/hybrid.css?1715859778" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1715859778" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1715859778" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1715859778" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1715859778" rel="stylesheet">
-    <link href="../../css/theme.css?1715859778" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1715859778" rel="stylesheet">
-    <link href="../../css/devselector.css?1715859778" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1715859778" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1715859778" rel="stylesheet">
+    <link href="../../css/nucleus.css?1715941407" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1715941407" rel="stylesheet">
+    <link href="../../css/hybrid.css?1715941407" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1715941407" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1715941407" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1715941407" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1715941407" rel="stylesheet">
+    <link href="../../css/theme.css?1715941407" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1715941407" rel="stylesheet">
+    <link href="../../css/devselector.css?1715941407" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1715941407" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1715941407" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1715859778"></script>
-    <script src="../../js/devselector.js?1715859778"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1715941407"></script>
+    <script src="../../js/devselector.js?1715941407"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1715859778"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1715859778"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1715941407"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1715941407"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1715859778"></script>
+<script type="text/javascript" src="../../js/search.js?1715941407"></script>
 
     
   </div>
@@ -910,9 +910,14 @@ Bovendien kan je een factory gebruiken om dummy data aan te brengen in de databa
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">body</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#75af00">html</span><span style="color:#f92672">&gt;</span>
 </span></span></code></pre></div><h2 id="laravel-sessionshttpslaravelcomdocs11xsession"><a href="https://laravel.com/docs/11.x/session">Laravel sessions</a></h2>
-<h2 id="error-handlinghttpslaravelcomdocs11xerrors"><a href="https://laravel.com/docs/11.x/errors">Error Handling</a></h2>
+<p>In de <code>config/sessions.php</code> kan je bepalen hoe sessionvariabelen opgeslagen moeten worden en bepaalde instellingen voor sessies wijzigen. Je kan bijvoorbeeld instellen hoe lang een sessie kan duren.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75af00">Session</span><span style="color:#f92672">::</span><span style="color:#75af00">put</span><span style="color:#111">(</span><span style="color:#d88200">&#39;variableName&#39;</span><span style="color:#111">,</span> <span style="color:#111">$value</span><span style="color:#111">);</span> <span style="color:#75715e">// To save variable in a session
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Session</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;variableName&#39;</span><span style="color:#111">);</span> <span style="color:#75715e">// To get a variable in a session
+</span></span></span></code></pre></div><h2 id="error-handlinghttpslaravelcomdocs11xerrors"><a href="https://laravel.com/docs/11.x/errors">Error Handling</a></h2>
+<p>zie link</p>
 <h2 id="logginghttpslaravelcomdocs11xlogging"><a href="https://laravel.com/docs/11.x/logging">Logging</a></h2>
-
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75af00">dd</span><span style="color:#111">(</span><span style="color:#111">$variable</span><span style="color:#111">);</span>
+</span></span></code></pre></div>
 </article>
 
 <footer class="footline">
@@ -1218,15 +1223,15 @@ Bovendien kan je een factory gebruiken om dummy data aan te brengen in de databa
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1715859778"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1715859778"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1715859778"></script>
-    <script src="../../js/jquery.sticky.js?1715859778"></script>
-    <script src="../../js/featherlight.min.js?1715859778"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1715859778"></script>
-    <script src="../../js/learn.js?1715859778"></script>
-    <script src="../../js/hugo-learn.js?1715859778"></script>
-    <script src="../../js/mermaid.min.js?1715859778"></script>
+    <script src="../../js/clipboard.min.js?1715941407"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1715941407"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1715941407"></script>
+    <script src="../../js/jquery.sticky.js?1715941407"></script>
+    <script src="../../js/featherlight.min.js?1715941407"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1715941407"></script>
+    <script src="../../js/learn.js?1715941407"></script>
+    <script src="../../js/hugo-learn.js?1715941407"></script>
+    <script src="../../js/mermaid.min.js?1715941407"></script>
     <script>
     window.MathJax = {
       chtml: {

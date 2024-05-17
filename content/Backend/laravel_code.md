@@ -371,7 +371,16 @@ Inside blade views:
 ```
 
 ## [Laravel sessions](https://laravel.com/docs/11.x/session)
+In de `config/sessions.php` kan je bepalen hoe sessionvariabelen opgeslagen moeten worden en bepaalde instellingen voor sessies wijzigen. Je kan bijvoorbeeld instellen hoe lang een sessie kan duren.
+```php
+Session::put('variableName', $value); // To save variable in a session
+Session::get('variableName'); // To get a variable in a session
+```
 
 ## [Error Handling](https://laravel.com/docs/11.x/errors)
+zie link
 
 ## [Logging](https://laravel.com/docs/11.x/logging)
+```php
+dd($variable);
+```
