@@ -6,7 +6,7 @@ baseurl = "https://kuleuven-diepenbeek.github.io/fsweb-course/"
 RelativeURLs=true
 CanonifyURLs=true
 
-theme = "hugo-theme-ku"
+theme = "hugo-theme-kul"
 publishDir = "docs"
 enableEmoji = true
 enableRobotsTXT = true
