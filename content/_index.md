@@ -6,7 +6,7 @@ author: Arne Duyver
 # Full Stack Web Development
 
 Academiejaar 2023---2024.
-
+(Testing changes pull)
 ---
 
 ## _Planning_
