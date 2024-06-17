@@ -7,8 +7,6 @@ author: Arne Duyver
 
 Academiejaar 2023---2024. (Testing 2)
 
----
-
 ## _Planning_
 
 | nr  | datum         | onderwerp                 |
