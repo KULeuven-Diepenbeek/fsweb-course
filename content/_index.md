@@ -5,7 +5,7 @@ author: Arne Duyver
 
 # Full Stack Web Development
 
-Academiejaar 2023---2024. (Testing 2)
+Academiejaar 2023---2024.
 
 ## _Planning_
 
