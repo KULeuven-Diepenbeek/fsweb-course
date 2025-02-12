@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opdrachten on Full Stack Web Development</title>
-    <link>https://kuleuven-diepenbeek.github.io/fsweb-course/opdrachten/</link>
+    <link>http://localhost:1313/fsweb-course/opdrachten/</link>
     <description>Recent content in Opdrachten on Full Stack Web Development</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>nl</language>
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</webMaster>
-    <atom:link href="https://kuleuven-diepenbeek.github.io/fsweb-course/opdrachten/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fsweb-course/opdrachten/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
