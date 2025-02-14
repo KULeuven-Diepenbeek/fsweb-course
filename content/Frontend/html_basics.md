@@ -384,6 +384,128 @@ Het eenvoudigste en ook meest gebruikte invoerelement is gewoon het één-regel 
 Bijvoorbeeld: `<input type="text" />` geeft <br>
 <input type="text" />
 
+**Checkbox**: <br>
+Hiermee bekom je een aanvink-vak. Belangrijk is dat je een attribuut value meegeeft zodat je in je Javascript kan weten welke waarde geselecteerd is. Wanneer je bovendien checked="checked" toevoegt, zal het vakje al van in het begin aangevinkt zijn. <br>
+Bijvoorbeeld: `<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" /> nieuwsbrief` geeft <br>
+<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" /> nieuwsbrief<br/>
+
+en `<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" checked="checked" /> nieuwsbrief` geeft <br>
+<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" checked="checked" /> nieuwsbrief
+
+**Radio**: <br>
+Bij de radio-button is het belangrijk dat je een radio-groep maakt, omdat radio-knoppen in een groep bij elkaar horen: uit die groep mag slechts één radio geselecteerd worden, net zoals je radio slechts op één zender tegelijk afgestemd kan zijn. Hiervoor moet je binnen de radio-groep als name dezelfde waarde opgeven. Anders wordt het beschouwd als een andere radio-groep.<br>
+Bijvoorbeeld: 
+```html
+StuBtu <input type="radio" name="zender" value="stubru" checked="checked" /> <br />
+Q-Music <input type="radio" name="zender" value="q" /> <br />
+MNM <input type="radio" name="zender" value="-mnm" /> <br />
+```
+geeft: <br><br>
+StuBtu <input type="radio" name="zender" value="stubru" checked="checked" /> <br />
+Q-Music <input type="radio" name="zender" value="q" /> <br />
+MNM <input type="radio" name="zender" value="-mnm" /> <br />
+
+**(De oude) Button en Submit**: <br>
+De types `button` en `submit` zien er in de browser hetzelfde uit, maar hebben een heel ander effect. Wanneer je op een `submit`-knop klikt, wordt de formulierinhoud doorgestuurd naar het script dat je in het action-attribuut van het form gedefinieerd hebt.
+
+Wanneer je op een `button`-knop klikt, wordt de event-handler uitgevoerd die bij deze knop hoort. Dit klinkt momenteel nog abstract, maar wordt duidelijk in het hoofdstuk Javascript waarin we leren hoe je zo’n event-handler kan definiëren.
+
+Bijvoorbeeld
+```html
+<input type="button" value="klik hierop" /> <br />
+<input type="submit" value="klik hierop" />
+```
+<input type="button" value="klik hierop" /> <br />
+<input type="submit" value="klik hierop" />
+
+**(De nieuwe) Button**: <br>
+De button uit de paragraaf hierboven had als groot nadeel dat het een _replaced element_ was. Technisch betekent dit dat je geen volwaardige tag hebt met een open- en een sluit-tag en daartussen html-code die **in** de tag staat. Visueel houdt het in dat je de browser de html-code vervangt door een standaard knop, maar dat je verder geen structuur kan geven aan de inhoud van de knop. Zo kan je bijvoorbeeld geen figuren op je knop zetten, terwijl dat toch wel zinvol is. CSS-experts kunnen weliswaar met niet al te veel moeite de vormgeving van een knop veranderen in een figuur, maar desondanks vond men het beter om een volwaardige button-tag toe te voegen. Tussen de open- en sluit-tag zet je dan datgene wat op de knop moet verschijnen.
+
+Naast de _name_ en _id_ is het belangrijkste attribuut van de button het _type_: dit is een van _button_, _submit_ en _reset_ met de voor de hand liggende betekenis.
+
+**Hidden**:<br>
+Het `hidden` input-element is een element dat niet zichtbaar gemaakt wordt in de browser. Het biedt de mogelijkheid om extra informatie door te geven die onzichtbaar is voor de gebruiker, bv. de datum waarop het formulier ingeladen is, informatie die we op een vorige pagina binnengehaald hebben of eender welke waarde die relevant is voor de formulierverwerking maar die de gebruiker niet zelf moet invullen. Dit wordt vooral handig wanneer we met php en webservices beginnen te werken.<br>
+Bijvoorbeeld: `<input type="hidden" name="geheim" value="317" />` geeft:<br>
+<input type="hidden" name="geheim" value="317" />
+
+**Text Area**:<br>
+De twee laatste invoerelementen die we zien zijn een uitzondering op de gewone inputelementen die _replaced elementen_ zijn. Hier gaat het om volwaardige tags. De `textarea` dient om tekst in te kunnen geven die **meer dan 1 regel** bevat. Met `<input type=”text"/>` konden we al wel tekst ingeven, maar altijd maar op een regel. Met textarea kan dit onbeperkt.<br>
+Bijvoorbeeld: `<textarea>typ hier tekst</textarea>` geeft: <br>
+<textarea>typ hier tekst</textarea>
+
+_Met CSS kunnen we de grootte en vormgeving van de textarea instellen_
+
+**Select en Option**:<br>
+Bijvoorbeeld: 
+```html
+<select id="ploeg">
+    <option value="Lierse">Lierse</option>
+    <option value="Genk">Genk</option>
+    <option value="Anderlecht">Anderlecht</option>
+</select>
+```
+<select id="ploeg">
+    <option value="Lierse">Lierse</option>
+    <option value="Genk">Genk</option>
+    <option value="Anderlecht">Anderlecht</option>
+</select>
+
+Zoals je kan afleiden uit het voorbeeld hierboven, heb je binnen je `select` een lijst met `option` tags nodig. Datgene wat tussen de option staat, verschijnt in het menu; datgene wat bij de `value` staat, komt terecht in het script dat het formulier verwerkt (bv. PHP).
+
+Aan de select kan je een attribuut `size` meegeven dat bepaalt hoe groot de niet-uitgeklapte lijst is, en wanneer je `multiple="multiple"` aanduidt, kan je via `Ctrl+klik` verschillende elementen tegelijk selecteren.
+
+Bijvoorbeeld: 
+```html
+<select id="ploeg" size="3" multiple="multiple">
+    <option value="Lierse">Lierse</option>
+    <option value="Genk" selected="selected">Genk</option>
+    <option value="Anderlecht" selected="selected">Anderlecht</option>
+</select>
+```
+<select id="ploeg" size="3" multiple="multiple">
+    <option value="Lierse">Lierse</option>
+    <option value="Genk" selected="selected">Genk</option>
+    <option value="Anderlecht" selected="selected">Anderlecht</option>
+</select>
+
+**Tabellen**:<br>
+Wanneer je gegevens in een tabel wil plaatsen, bijvoorbeeld de formulieren van hierboven of de stand in een voetbalcompetitie, moet je tabellen gebruiken. Hiervoor hebben we de tags `table`, `tr` en `td`, de afkortingen van _table_, _table row_ en _table data_. Merk dus op dat HTML vooral rijen ziet, terwijl wij eerder kolommen zien. Dat maakt het soms wat moeilijker om een tabel op te stellen, maar voor de rest is de structuur wel logisch:
+- Eerst maak je een tabel aan: `<table> ... </table>`
+- Binnen die tabel heb je verschillende rijen: `<tr> ... </tr>`
+    - Bovenaan kan je ook een rijhoofding zetten i.p.v. een gewone rij met `<th>`.
+- En in elke rij zijn er verschillende vakjes, wat telkens een `<td>...</td>` geeft.
+
+Bijvoorbeeld:
+```html
+<table> 
+    <tr> 
+        <td>Arne Duyver</td> 
+        <td>ICT </td> 
+        <td>Begijnendijk</td> 
+    </tr> 
+    <tr>            
+        <td>Mark Huybrechts</td> 
+        <td>Communicatie</td> 
+        <td>Bouwel</td> 
+    </tr> 
+</table>
+```
+geeft:
+<table> 
+    <tr> 
+        <td>Arne Duyver</td> 
+        <td>ICT </td> 
+        <td>Begijnendijk</td> 
+    </tr> 
+    <tr>            
+        <td>Mark Huybrechts</td> 
+        <td>Communicatie</td> 
+        <td>Bouwel</td> 
+    </tr> 
+</table>
+
+Tabellen zijn vooral interessant om formulieren te layouten. In de eerste kolom zet je dan de labels (de uitleg bij wat je moet invullen) en in de tweede kolom de invoervakken, zodat die verticaal mooi uitgelijnd zijn.
+
 ## Opdrachten
 1. Maak een HTML-bestand en noem het portfolio.html
 2. Geef de titel van je webpagina de naam "portfolio".
@@ -411,7 +533,14 @@ Bijvoorbeeld: `<input type="text" />` geeft <br>
 18. Maak footer aan waarmee je navigeert naar je 'contact' page van je website.
 19. Voeg in je head een link toe naar fa-icons zodat je die icoontjes kan gebruiken: 
 <br/>`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`
+
 20. Voeg aan je footer ook een link toe via een icoon naar je Github profiel en een icoon voor je linkedIn profiel (indien je dat hebt)
+
+<br>
+
+21. Maak een formulier waarin mensen zich kunnen inschrijven voor een nieuwsbrief.
+22. Maak een formulier om een bespreking van een optreden van een artiest in te vullen.
+23. Maak een formulier waarin je een pizza kan samenstellen.
 
 ## Test jezelf
 

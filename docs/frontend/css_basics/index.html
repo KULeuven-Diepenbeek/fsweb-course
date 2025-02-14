@@ -12,22 +12,22 @@
     <title>CSS :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1739525694" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1739525694" rel="stylesheet">
-    <link href="../../css/hybrid.css?1739525694" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1739525694" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1739525694" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1739525694" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1739525694" rel="stylesheet">
-    <link href="../../css/theme.css?1739525694" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1739525694" rel="stylesheet">
-    <link href="../../css/devselector.css?1739525694" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1739525694" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1739525694" rel="stylesheet">
+    <link href="../../css/nucleus.css?1739532916" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1739532916" rel="stylesheet">
+    <link href="../../css/hybrid.css?1739532916" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1739532916" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1739532916" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1739532916" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1739532916" rel="stylesheet">
+    <link href="../../css/theme.css?1739532916" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1739532916" rel="stylesheet">
+    <link href="../../css/devselector.css?1739532916" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1739532916" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1739532916" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1739525694"></script>
-    <script src="../../js/devselector.js?1739525694"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1739532916"></script>
+    <script src="../../js/devselector.js?1739532916"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1739525694"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1739525694"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1739532916"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1739532916"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1739525694"></script>
+<script type="text/javascript" src="../../%20js/search.js?1739532916"></script>
     
   </div>
 
@@ -144,27 +144,6 @@
 
 
 
-<li data-nav-id="/frontend/browsertools/" title="Browsertools" class="dd-item ">
-  <a href="../../frontend/browsertools/">
-    Browsertools
-    
-  </a>
-</li>
-
-
-
-
-    
-    
-    
-    
-
-
-
-
-
-
-
 <li data-nav-id="/frontend/html_basics/" title="HTML" class="dd-item ">
   <a href="../../frontend/html_basics/">
     HTML
@@ -189,6 +168,27 @@
 <li data-nav-id="/frontend/css_basics/" title="CSS" class="dd-item active">
   <a href="../../frontend/css_basics/">
     CSS
+    
+  </a>
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+<li data-nav-id="/frontend/extra/" title="Extra" class="dd-item ">
+  <a href="../../frontend/extra/">
+    Extra
     
   </a>
 </li>
@@ -429,10 +429,10 @@ Met inline CSS wordt de styling direct in de open-tag van een HTML-element gepla
 <ul>
 <li><strong>een element selector</strong> kan je alle HTML-elementen van een bepaald type selecteren en stylen. Bijvoorbeeld, de selector <code>p</code> selecteert alle paragraafelementen (<code>&lt;p&gt;</code>) op een webpagina.</li>
 <li><strong>een klasse selector</strong>: kan je all HTML-elementen van een bepaalde klasse selecteren en stylen. Bijvoorbeeld, de selector <code>.mijnKlasseNaam</code> selecteert alle elementen (<code>&lt;element class=&quot;mijnKlasseNaam&quot;&gt;</code>) op een webpagina.</li>
-<li><strong>een id selector</strong>: kan je het HTML-element met een bepaalde id selecteren en stylen. Bijvoorbeeld, de selector <code>r#mijnIdNaam</code> selecteert het element (<code>&lt;element id=&quot;mijnIdNaam&quot;&gt;</code>) op een webpagina.</li>
-<li><strong>een samengestelde/complexe selector</strong>: #TODO
+<li><strong>een id selector</strong>: kan je het HTML-element met een bepaalde id selecteren en stylen. Bijvoorbeeld, de selector <code>#mijnIdNaam</code> selecteert het element (<code>&lt;element id=&quot;mijnIdNaam&quot;&gt;</code>) op een webpagina.</li>
+<li><strong>een samengestelde/complexe selector</strong>: Je kan ook de verschillende manier van selecteren gaan samenvoegen. Ja kan bijvoorbeeld met volgende selector alle <code>&lt;p&gt;</code>-elementen selecteren die als klasse naam <code>mijnKlasse</code> hebben:<br><code>p.mijnKlasse</code>.<br> Of je kan alle <p>-elementen selecteren binnenin een <code>div</code> met klasse naam <code>mijnDivClass</code>:<br><code>div.mijnDivClass p</code>
 <ul>
-<li><strong>een attribuut selector</strong>:  en attributen ([type=&ldquo;text&rdquo;]).</li>
+<li><strong>een attribuut selector</strong>:  je kan dan ook nog dieper gaan selecteren op attributen (<code>[attribuut=&quot;waarde&quot;]</code>). Bijvoorbeeld, de selector die de <code>&lt;p&gt;</code>-elementen selecteert die als waarde <code>yes</code> van het attribuut <code>mijnAttribuut</code> hebben ziet er als volgt uit: <code>p[mijnAttribuut=yes]</code>.</li>
 </ul>
 </li>
 </ul>
@@ -832,22 +832,6 @@ Met inline CSS wordt de styling direct in de open-tag van een HTML-element gepla
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -860,9 +844,6 @@ Met inline CSS wordt de styling direct in de open-tag van een HTML-element gepla
             
         
                     
-            
-        
-                    
                         
             
             
@@ -870,6 +851,25 @@ Met inline CSS wordt de styling direct in de open-tag van een HTML-element gepla
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -910,7 +910,7 @@ Met inline CSS wordt de styling direct in de open-tag van een HTML-element gepla
 			<a class="nav nav-prev" href="../../frontend/html_basics/" title="HTML"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../opdrachten/" title="Opdrachten" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../frontend/extra/" title="Extra" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -920,15 +920,15 @@ Met inline CSS wordt de styling direct in de open-tag van een HTML-element gepla
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1739525694"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1739525694"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1739525694"></script>
-    <script src="../../js/jquery.sticky.js?1739525694"></script>
-    <script src="../../js/featherlight.min.js?1739525694"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1739525694"></script>
-    <script src="../../js/learn.js?1739525694"></script>
-    <script src="../../js/hugo-learn.js?1739525694"></script>
-    <script src="../../js/mermaid.min.js?1739525694"></script>
+    <script src="../../js/clipboard.min.js?1739532916"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1739532916"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1739532916"></script>
+    <script src="../../js/jquery.sticky.js?1739532916"></script>
+    <script src="../../js/featherlight.min.js?1739532916"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1739532916"></script>
+    <script src="../../js/learn.js?1739532916"></script>
+    <script src="../../js/hugo-learn.js?1739532916"></script>
+    <script src="../../js/mermaid.min.js?1739532916"></script>
     <script>
     window.MathJax = {
       chtml: {

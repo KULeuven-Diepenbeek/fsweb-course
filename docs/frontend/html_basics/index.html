@@ -12,22 +12,22 @@
     <title>HTML :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1739525694" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1739525694" rel="stylesheet">
-    <link href="../../css/hybrid.css?1739525694" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1739525694" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1739525694" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1739525694" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1739525694" rel="stylesheet">
-    <link href="../../css/theme.css?1739525694" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1739525694" rel="stylesheet">
-    <link href="../../css/devselector.css?1739525694" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1739525694" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1739525694" rel="stylesheet">
+    <link href="../../css/nucleus.css?1739534265" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1739534265" rel="stylesheet">
+    <link href="../../css/hybrid.css?1739534265" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1739534265" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1739534265" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1739534265" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1739534265" rel="stylesheet">
+    <link href="../../css/theme.css?1739534265" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1739534265" rel="stylesheet">
+    <link href="../../css/devselector.css?1739534265" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1739534265" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1739534265" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1739525694"></script>
-    <script src="../../js/devselector.js?1739525694"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1739534265"></script>
+    <script src="../../js/devselector.js?1739534265"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1739525694"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1739525694"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1739534265"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1739534265"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1739525694"></script>
+<script type="text/javascript" src="../../%20js/search.js?1739534265"></script>
     
   </div>
 
@@ -144,27 +144,6 @@
 
 
 
-<li data-nav-id="/frontend/browsertools/" title="Browsertools" class="dd-item ">
-  <a href="../../frontend/browsertools/">
-    Browsertools
-    
-  </a>
-</li>
-
-
-
-
-    
-    
-    
-    
-
-
-
-
-
-
-
 <li data-nav-id="/frontend/html_basics/" title="HTML" class="dd-item active">
   <a href="../../frontend/html_basics/">
     HTML
@@ -189,6 +168,27 @@
 <li data-nav-id="/frontend/css_basics/" title="CSS" class="dd-item ">
   <a href="../../frontend/css_basics/">
     CSS
+    
+  </a>
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+<li data-nav-id="/frontend/extra/" title="Extra" class="dd-item ">
+  <a href="../../frontend/extra/">
+    Extra
     
   </a>
 </li>
@@ -361,6 +361,11 @@
     <li><a href="#common-website-layouts">Common website layouts</a>
       <ol>
         <li><a href="#html-vs-html5">HTML vs HTML5</a></li>
+      </ol>
+    </li>
+    <li><a href="#formulieren">Formulieren</a>
+      <ol>
+        <li><a href="#formulieropbouw">Formulieropbouw</a></li>
       </ol>
     </li>
     <li><a href="#opdrachten">Opdrachten</a></li>
@@ -717,12 +722,142 @@ Je kan ook links (ankers) binnen je webpagina maken. Dan moet je het attribuut n
 <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
 In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek mogelijk te coderen om problemen in een later stadium te vermijden.</p></blockquote>
 <p>Aangezien HTML5 dus gewoon de nieuwere versie is van HTML gaan we dit gebruiken.</p>
+<h2 id="formulieren">Formulieren</h2>
+<p>Met de HTML die we tot nu toe gezien hebben, kan je wel informatieve pagina&rsquo;s maken, maar de bezoeker kan niks anders dan dingen bekijken en links aanklikken. Om reacties of andere gegevens op te vragen, heb je formulieren nodig. In dit stuk behandelen we de opmaak van formulieren, maar we kunnen de ingevoerde gegevens nog niet verwerken.</p>
+<h3 id="formulieropbouw">Formulieropbouw</h3>
+<p>Een formulier bestaat steeds uit een verzameling invoerelementen. Omdat er bovendien verschillende formulieren op één webpagina kunnen staan, moet je de bij elkaar horende formulierelementen groeperen onder een tag</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">form</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- verschillende formulierelementen --&gt;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">form</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>De <code>form</code>-tag heeft normaal ook nog de attributen <code>method</code>, <code>action</code> en <code>name</code>, maar binnen deze cursus gebruiken we die niet en laten we die dus achterwege. (De functionaliteit van die attributen gaan we zelf voorzien met behulp van JavaScript) Binnen de <code>form</code>-tag kunnen dan verschillende elementen komen. Dit zijn bijna allemaal &ldquo;replaced tags&rdquo;, dus zonder innerHTML en met een <code>/&gt;</code>-sluiting van de tag.</p>
+<p><strong>Attributen van de form</strong>: twee belangrijke, de <em>method</em> en de <em>action</em>.<br></p>
+<ul>
+<li>De <em>method</em> beschrijft op welke manier de gegevens doorgestuurd worden naar het script dat de formulierinhoud moet verwerken. Er zijn twee mogelijkheden:
+<ul>
+<li><strong>GET</strong>: hierbij worden de gegevens in de URL gecodeerd en wordt de formulierinhoud dus zichtbaar in de URL. Een ander belangrijk nadeel is dat de lengte van de data beperkt is.</li>
+<li><strong>POST</strong>: bij deze methode worden de gegevens in een envelope ingepakt en zo doorgegeven. De lengte is nu in principe onbeperkt. Deze methode wordt het meeste gebruikt.</li>
+</ul>
+</li>
+<li>De <strong>action</strong> bevat de URL van het script dat het formulier zal moeten verwerken. Dit script kan in eender welke taal geschreven zijn, maar heel dikwijls is dit PHP. Wanneer je geen action-attribuut definieert, wordt het formulier naar de huidige pagina doorgestuurd. Zolang je puur in HTML werkt, geeft dit de indruk dat het formulier gereset wordt.</li>
+</ul>
+<p><strong>Text</strong>: <br>
+Het eenvoudigste en ook meest gebruikte invoerelement is gewoon het één-regel lange tekstvak. De code hiervoor is <code>&lt;input type=&quot;text&quot; /&gt;</code>. De belangrijkste attributen zijn – naast het <code>id</code> – de <code>size</code> en de <code>maxlength</code>, die respectievelijk het aantal zichtbare letters bevatten en het maximaal aantal letters dat ingegeven kan worden. Je kan ook het type meegeven zoals onder andere: <code>email</code>, <code>password</code>, <code>number</code> &hellip; <br>
+Bijvoorbeeld: <code>&lt;input type=&quot;text&quot; /&gt;</code> geeft <br>
+<input type="text" /></p>
+<p><strong>Checkbox</strong>: <br>
+Hiermee bekom je een aanvink-vak. Belangrijk is dat je een attribuut value meegeeft zodat je in je Javascript kan weten welke waarde geselecteerd is. Wanneer je bovendien checked=&ldquo;checked&rdquo; toevoegt, zal het vakje al van in het begin aangevinkt zijn. <br>
+Bijvoorbeeld: <code>&lt;input type=&quot;checkbox&quot; id=&quot;nieuwsbrief&quot; value=&quot;nieuwsbrief&quot; /&gt; nieuwsbrief</code> geeft <br>
+<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" /> nieuwsbrief<br/></p>
+<p>en <code>&lt;input type=&quot;checkbox&quot; id=&quot;nieuwsbrief&quot; value=&quot;nieuwsbrief&quot; checked=&quot;checked&quot; /&gt; nieuwsbrief</code> geeft <br>
+<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" checked="checked" /> nieuwsbrief</p>
+<p><strong>Radio</strong>: <br>
+Bij de radio-button is het belangrijk dat je een radio-groep maakt, omdat radio-knoppen in een groep bij elkaar horen: uit die groep mag slechts één radio geselecteerd worden, net zoals je radio slechts op één zender tegelijk afgestemd kan zijn. Hiervoor moet je binnen de radio-groep als name dezelfde waarde opgeven. Anders wordt het beschouwd als een andere radio-groep.<br>
+Bijvoorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>StuBtu <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;radio&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;zender&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stubru&#34;</span> <span style="color:#75af00">checked</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;checked&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
+</span></span><span style="display:flex;"><span>Q-Music <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;radio&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;zender&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;q&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
+</span></span><span style="display:flex;"><span>MNM <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;radio&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;zender&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;-mnm&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
+</span></span></code></pre></div><p>geeft: <br><br>
+StuBtu <input type="radio" name="zender" value="stubru" checked="checked" /> <br />
+Q-Music <input type="radio" name="zender" value="q" /> <br />
+MNM <input type="radio" name="zender" value="-mnm" /> <br /></p>
+<p><strong>(De oude) Button en Submit</strong>: <br>
+De types <code>button</code> en <code>submit</code> zien er in de browser hetzelfde uit, maar hebben een heel ander effect. Wanneer je op een <code>submit</code>-knop klikt, wordt de formulierinhoud doorgestuurd naar het script dat je in het action-attribuut van het form gedefinieerd hebt.</p>
+<p>Wanneer je op een <code>button</code>-knop klikt, wordt de event-handler uitgevoerd die bij deze knop hoort. Dit klinkt momenteel nog abstract, maar wordt duidelijk in het hoofdstuk Javascript waarin we leren hoe je zo’n event-handler kan definiëren.</p>
+<p>Bijvoorbeeld</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;klik hierop&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;submit&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;klik hierop&#34;</span> <span style="color:#111">/&gt;</span>
+</span></span></code></pre></div><p><input type="button" value="klik hierop" /> <br />
+<input type="submit" value="klik hierop" /></p>
+<p><strong>(De nieuwe) Button</strong>: <br>
+De button uit de paragraaf hierboven had als groot nadeel dat het een <em>replaced element</em> was. Technisch betekent dit dat je geen volwaardige tag hebt met een open- en een sluit-tag en daartussen html-code die <strong>in</strong> de tag staat. Visueel houdt het in dat je de browser de html-code vervangt door een standaard knop, maar dat je verder geen structuur kan geven aan de inhoud van de knop. Zo kan je bijvoorbeeld geen figuren op je knop zetten, terwijl dat toch wel zinvol is. CSS-experts kunnen weliswaar met niet al te veel moeite de vormgeving van een knop veranderen in een figuur, maar desondanks vond men het beter om een volwaardige button-tag toe te voegen. Tussen de open- en sluit-tag zet je dan datgene wat op de knop moet verschijnen.</p>
+<p>Naast de <em>name</em> en <em>id</em> is het belangrijkste attribuut van de button het <em>type</em>: dit is een van <em>button</em>, <em>submit</em> en <em>reset</em> met de voor de hand liggende betekenis.</p>
+<p><strong>Hidden</strong>:<br>
+Het <code>hidden</code> input-element is een element dat niet zichtbaar gemaakt wordt in de browser. Het biedt de mogelijkheid om extra informatie door te geven die onzichtbaar is voor de gebruiker, bv. de datum waarop het formulier ingeladen is, informatie die we op een vorige pagina binnengehaald hebben of eender welke waarde die relevant is voor de formulierverwerking maar die de gebruiker niet zelf moet invullen. Dit wordt vooral handig wanneer we met php en webservices beginnen te werken.<br>
+Bijvoorbeeld: <code>&lt;input type=&quot;hidden&quot; name=&quot;geheim&quot; value=&quot;317&quot; /&gt;</code> geeft:<br>
+<input type="hidden" name="geheim" value="317" /></p>
+<p><strong>Text Area</strong>:<br>
+De twee laatste invoerelementen die we zien zijn een uitzondering op de gewone inputelementen die <em>replaced elementen</em> zijn. Hier gaat het om volwaardige tags. De <code>textarea</code> dient om tekst in te kunnen geven die <strong>meer dan 1 regel</strong> bevat. Met <code>&lt;input type=”text&quot;/&gt;</code> konden we al wel tekst ingeven, maar altijd maar op een regel. Met textarea kan dit onbeperkt.<br>
+Bijvoorbeeld: <code>&lt;textarea&gt;typ hier tekst&lt;/textarea&gt;</code> geeft: <br></p>
+<textarea>typ hier tekst</textarea>
+<p><em>Met CSS kunnen we de grootte en vormgeving van de textarea instellen</em></p>
+<p><strong>Select en Option</strong>:<br>
+Bijvoorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">select</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;ploeg&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Lierse&#34;</span><span style="color:#111">&gt;</span>Lierse<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Genk&#34;</span><span style="color:#111">&gt;</span>Genk<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Anderlecht&#34;</span><span style="color:#111">&gt;</span>Anderlecht<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">select</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><select id="ploeg">
+    <option value="Lierse">Lierse</option>
+    <option value="Genk">Genk</option>
+    <option value="Anderlecht">Anderlecht</option>
+</select>
+<p>Zoals je kan afleiden uit het voorbeeld hierboven, heb je binnen je <code>select</code> een lijst met <code>option</code> tags nodig. Datgene wat tussen de option staat, verschijnt in het menu; datgene wat bij de <code>value</code> staat, komt terecht in het script dat het formulier verwerkt (bv. PHP).</p>
+<p>Aan de select kan je een attribuut <code>size</code> meegeven dat bepaalt hoe groot de niet-uitgeklapte lijst is, en wanneer je <code>multiple=&quot;multiple&quot;</code> aanduidt, kan je via <code>Ctrl+klik</code> verschillende elementen tegelijk selecteren.</p>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">select</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;ploeg&#34;</span> <span style="color:#75af00">size</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;3&#34;</span> <span style="color:#75af00">multiple</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;multiple&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Lierse&#34;</span><span style="color:#111">&gt;</span>Lierse<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Genk&#34;</span> <span style="color:#75af00">selected</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;selected&#34;</span><span style="color:#111">&gt;</span>Genk<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Anderlecht&#34;</span> <span style="color:#75af00">selected</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;selected&#34;</span><span style="color:#111">&gt;</span>Anderlecht<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">select</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><select id="ploeg" size="3" multiple="multiple">
+    <option value="Lierse">Lierse</option>
+    <option value="Genk" selected="selected">Genk</option>
+    <option value="Anderlecht" selected="selected">Anderlecht</option>
+</select>
+<p><strong>Tabellen</strong>:<br>
+Wanneer je gegevens in een tabel wil plaatsen, bijvoorbeeld de formulieren van hierboven of de stand in een voetbalcompetitie, moet je tabellen gebruiken. Hiervoor hebben we de tags <code>table</code>, <code>tr</code> en <code>td</code>, de afkortingen van <em>table</em>, <em>table row</em> en <em>table data</em>. Merk dus op dat HTML vooral rijen ziet, terwijl wij eerder kolommen zien. Dat maakt het soms wat moeilijker om een tabel op te stellen, maar voor de rest is de structuur wel logisch:</p>
+<ul>
+<li>Eerst maak je een tabel aan: <code>&lt;table&gt; ... &lt;/table&gt;</code></li>
+<li>Binnen die tabel heb je verschillende rijen: <code>&lt;tr&gt; ... &lt;/tr&gt;</code>
+<ul>
+<li>Bovenaan kan je ook een rijhoofding zetten i.p.v. een gewone rij met <code>&lt;th&gt;</code>.</li>
+</ul>
+</li>
+<li>En in elke rij zijn er verschillende vakjes, wat telkens een <code>&lt;td&gt;...&lt;/td&gt;</code> geeft.</li>
+</ul>
+<p>Bijvoorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">table</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">tr</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Arne Duyver<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>ICT <span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Begijnendijk<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">tr</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">tr</span><span style="color:#111">&gt;</span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Mark Huybrechts<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Communicatie<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Bouwel<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">tr</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">table</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>geeft:</p>
+<table> 
+    <tr> 
+        <td>Arne Duyver</td> 
+        <td>ICT </td> 
+        <td>Begijnendijk</td> 
+    </tr> 
+    <tr>            
+        <td>Mark Huybrechts</td> 
+        <td>Communicatie</td> 
+        <td>Bouwel</td> 
+    </tr> 
+</table>
+<p>Tabellen zijn vooral interessant om formulieren te layouten. In de eerste kolom zet je dan de labels (de uitleg bij wat je moet invullen) en in de tweede kolom de invoervakken, zodat die verticaal mooi uitgelijnd zijn.</p>
 <h2 id="opdrachten">Opdrachten</h2>
 <ol>
-<li>Maak een HTML-bestand en noem het portfolio.html</li>
-<li>Geef de titel van je webpagina de naam &ldquo;portfolio&rdquo;.</li>
-<li>Voeg jezelf toe als auteur van de webpagina</li>
-<li>Gebruik het header element om de onderstaande structuur aan te brengen aan je webpagina.
+<li>
+<p>Maak een HTML-bestand en noem het portfolio.html</p>
+</li>
+<li>
+<p>Geef de titel van je webpagina de naam &ldquo;portfolio&rdquo;.</p>
+</li>
+<li>
+<p>Voeg jezelf toe als auteur van de webpagina</p>
+</li>
+<li>
+<p>Gebruik het header element om de onderstaande structuur aan te brengen aan je webpagina.</p>
 <ul>
 <li>Expertise</li>
 <li>Over mij</li>
@@ -731,23 +866,64 @@ In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek m
 <li>Contact</li>
 </ul>
 </li>
-<li>Gebruik de relevante html elementen om het volgende toe te voegen aan je webpagina: voeg boven de header expertise een welkomstbericht toe. (Voor inspiratie voor het tekstje kan je ChatGPT gebruiken, de vormgeving doe je ZELF). Emphasize een aantal inspirerende woorden door ze in het vetgedrukt/schuin te zetten.</li>
-<li>Voeg ook een mooie afbeelding toe die je online ophaalt. Gebruik hiervoor het &lsquo;figure&rsquo; element en voeg een caption toe</li>
-<li>Plaats de welkomsttekst binnenin een div en geef die div de klasse naam &lsquo;welcometext&rsquo;.</li>
-<li>Geef in de Expertise sectie een lijst waarin je je eigen vaardigheden in de verf zet. (je kan ook inspiratie opdoen op andere portfolio websites).</li>
-<li>Plaats in de Expertise sectie ook een link naar de sectie Technische vaardigheden en CV</li>
-<li>Plaats in de &lsquo;Over mij&rsquo; je favoriete quote van je lievelingsfilm/-boek in de Over mij sectie. Gebruik hier het juiste element voor.</li>
-<li>Geef ook wat meer informatie over jezelf en plaats minstens één belangrijke zin in een span en geef die de id &lsquo;important-sentence&rsquo;.</li>
-<li>Plaats hier ook een afbeelding (de afbeelding moet je lokaal hebben staan)</li>
-<li>Maak onder de sectie &lsquo;Mijn projecten&rsquo; subsecties voor alle projecten die je al eens gemaakt hebt. Bijvoorbeeld je project van ELSY van het eerste jaar, je PES project, eigen andere projecten …</li>
-<li>Onder technische vaardigheden maak je een tabel met je verschillende opleidingen in (naam opleiding, startjaar, eindjaar). Voeg ook een lijst met beheerste talen toe en link hier ergens naar  volgende webpagina: <a href="https://detaalbrigade.nl/taalniveaus/">https://detaalbrigade.nl/taalniveaus/</a></li>
-<li>Breng wat meer structuur aan in je teksten met divs, paragrafen en line breaks. Voeg ook eens wat symbolen via hun html-code toe waar nuttig. Gebruik verschillende achtergrond kleurtjes om te bekijken hoe de verschillende structuren werken (doe dit ook voor je span).</li>
-<li>Gebruik inputs boxen, knoppen, checkboxen, … om een contactformulier aan te maken. Je vindt hier ontelbare voorbeelden van op het internet.</li>
-<li>Neem nu je &lsquo;Contact&rsquo; sectie en plaats die in een nieuw bestand genaamd &lsquo;contact.html&rsquo; en plaats deze in de subfolder genaamd &lsquo;contact&rsquo;.</li>
-<li>Maak footer aan waarmee je navigeert naar je &lsquo;contact&rsquo; page van je website.</li>
-<li>Voeg in je head een link toe naar fa-icons zodat je die icoontjes kan gebruiken:
-<br/><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css&quot;&gt;</code></li>
-<li>Voeg aan je footer ook een link toe via een icoon naar je Github profiel en een icoon voor je linkedIn profiel (indien je dat hebt)</li>
+<li>
+<p>Gebruik de relevante html elementen om het volgende toe te voegen aan je webpagina: voeg boven de header expertise een welkomstbericht toe. (Voor inspiratie voor het tekstje kan je ChatGPT gebruiken, de vormgeving doe je ZELF). Emphasize een aantal inspirerende woorden door ze in het vetgedrukt/schuin te zetten.</p>
+</li>
+<li>
+<p>Voeg ook een mooie afbeelding toe die je online ophaalt. Gebruik hiervoor het &lsquo;figure&rsquo; element en voeg een caption toe</p>
+</li>
+<li>
+<p>Plaats de welkomsttekst binnenin een div en geef die div de klasse naam &lsquo;welcometext&rsquo;.</p>
+</li>
+<li>
+<p>Geef in de Expertise sectie een lijst waarin je je eigen vaardigheden in de verf zet. (je kan ook inspiratie opdoen op andere portfolio websites).</p>
+</li>
+<li>
+<p>Plaats in de Expertise sectie ook een link naar de sectie Technische vaardigheden en CV</p>
+</li>
+<li>
+<p>Plaats in de &lsquo;Over mij&rsquo; je favoriete quote van je lievelingsfilm/-boek in de Over mij sectie. Gebruik hier het juiste element voor.</p>
+</li>
+<li>
+<p>Geef ook wat meer informatie over jezelf en plaats minstens één belangrijke zin in een span en geef die de id &lsquo;important-sentence&rsquo;.</p>
+</li>
+<li>
+<p>Plaats hier ook een afbeelding (de afbeelding moet je lokaal hebben staan)</p>
+</li>
+<li>
+<p>Maak onder de sectie &lsquo;Mijn projecten&rsquo; subsecties voor alle projecten die je al eens gemaakt hebt. Bijvoorbeeld je project van ELSY van het eerste jaar, je PES project, eigen andere projecten …</p>
+</li>
+<li>
+<p>Onder technische vaardigheden maak je een tabel met je verschillende opleidingen in (naam opleiding, startjaar, eindjaar). Voeg ook een lijst met beheerste talen toe en link hier ergens naar  volgende webpagina: <a href="https://detaalbrigade.nl/taalniveaus/">https://detaalbrigade.nl/taalniveaus/</a></p>
+</li>
+<li>
+<p>Breng wat meer structuur aan in je teksten met divs, paragrafen en line breaks. Voeg ook eens wat symbolen via hun html-code toe waar nuttig. Gebruik verschillende achtergrond kleurtjes om te bekijken hoe de verschillende structuren werken (doe dit ook voor je span).</p>
+</li>
+<li>
+<p>Gebruik inputs boxen, knoppen, checkboxen, … om een contactformulier aan te maken. Je vindt hier ontelbare voorbeelden van op het internet.</p>
+</li>
+<li>
+<p>Neem nu je &lsquo;Contact&rsquo; sectie en plaats die in een nieuw bestand genaamd &lsquo;contact.html&rsquo; en plaats deze in de subfolder genaamd &lsquo;contact&rsquo;.</p>
+<ul>
+<li>Maak een gepast formulier aan voor deze webpagina.</li>
+</ul>
+</li>
+<li>
+<p>Maak footer aan waarmee je navigeert naar je &lsquo;contact&rsquo; page van je website.</p>
+</li>
+<li>
+<p>Voeg in je head een link toe naar fa-icons zodat je die icoontjes kan gebruiken:
+<br/><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css&quot;&gt;</code></p>
+</li>
+<li>
+<p>Voeg aan je footer ook een link toe via een icoon naar je Github profiel en een icoon voor je linkedIn profiel (indien je dat hebt)</p>
+</li>
+</ol>
+<br>
+<ol start="21">
+<li>Maak een formulier waarin mensen zich kunnen inschrijven voor een nieuwsbrief.</li>
+<li>Maak een formulier om een bespreking van een optreden van een artiest in te vullen.</li>
+<li>Maak een formulier waarin je een pizza kan samenstellen.</li>
 </ol>
 <h2 id="test-jezelf">Test jezelf</h2>
 <p>Klik <a href="https://www.w3schools.com/html/html_quiz.asp">hier</a> om jezelf te testen met de online HTML quiz van w3schools. Of klik <a href="https://www.w3schools.com/html/html_exercises.asp">hier</a> voor wat extra oefeningen.</p>
@@ -822,25 +998,6 @@ In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek m
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -860,6 +1017,22 @@ In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek m
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -916,7 +1089,7 @@ In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek m
 	 
 	 
 		
-			<a class="nav nav-prev" href="../../frontend/browsertools/" title="Browsertools"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="../../frontend/" title="Frontend"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="../../frontend/css_basics/" title="CSS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -929,15 +1102,15 @@ In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek m
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1739525694"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1739525694"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1739525694"></script>
-    <script src="../../js/jquery.sticky.js?1739525694"></script>
-    <script src="../../js/featherlight.min.js?1739525694"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1739525694"></script>
-    <script src="../../js/learn.js?1739525694"></script>
-    <script src="../../js/hugo-learn.js?1739525694"></script>
-    <script src="../../js/mermaid.min.js?1739525694"></script>
+    <script src="../../js/clipboard.min.js?1739534265"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1739534265"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1739534265"></script>
+    <script src="../../js/jquery.sticky.js?1739534265"></script>
+    <script src="../../js/featherlight.min.js?1739534265"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1739534265"></script>
+    <script src="../../js/learn.js?1739534265"></script>
+    <script src="../../js/hugo-learn.js?1739534265"></script>
+    <script src="../../js/mermaid.min.js?1739534265"></script>
     <script>
     window.MathJax = {
       chtml: {
