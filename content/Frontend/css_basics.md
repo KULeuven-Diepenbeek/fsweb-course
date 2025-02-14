@@ -60,9 +60,9 @@ Een CSS-rule (CSS-regel) bestaat steeds uit een **selector** en één of meerder
 Een selector is een patroon dat wordt gebruikt om HTML-elementen te selecteren die je wilt stylen. Je kan op verschillende manieren elementen selecteren, met behulp van:
 - **een element selector** kan je alle HTML-elementen van een bepaald type selecteren en stylen. Bijvoorbeeld, de selector `p` selecteert alle paragraafelementen (`<p>`) op een webpagina. 
 - **een klasse selector**: kan je all HTML-elementen van een bepaalde klasse selecteren en stylen. Bijvoorbeeld, de selector `.mijnKlasseNaam` selecteert alle elementen (`<element class="mijnKlasseNaam">`) op een webpagina.
-- **een id selector**: kan je het HTML-element met een bepaalde id selecteren en stylen. Bijvoorbeeld, de selector `r#mijnIdNaam` selecteert het element (`<element id="mijnIdNaam">`) op een webpagina.
-- **een samengestelde/complexe selector**: #TODO
-  - **een attribuut selector**:  en attributen ([type="text"]).
+- **een id selector**: kan je het HTML-element met een bepaalde id selecteren en stylen. Bijvoorbeeld, de selector `#mijnIdNaam` selecteert het element (`<element id="mijnIdNaam">`) op een webpagina.
+- **een samengestelde/complexe selector**: Je kan ook de verschillende manier van selecteren gaan samenvoegen. Ja kan bijvoorbeeld met volgende selector alle `<p>`-elementen selecteren die als klasse naam `mijnKlasse` hebben:<br>`p.mijnKlasse`.<br> Of je kan alle <p>-elementen selecteren binnenin een `div` met klasse naam `mijnDivClass`:<br>`div.mijnDivClass p`
+  - **een attribuut selector**:  je kan dan ook nog dieper gaan selecteren op attributen (`[attribuut="waarde"]`). Bijvoorbeeld, de selector die de `<p>`-elementen selecteert die als waarde `yes` van het attribuut `mijnAttribuut` hebben ziet er als volgt uit: `p[mijnAttribuut=yes]`.
  
 
 ```css

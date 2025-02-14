@@ -8,7 +8,16 @@ draft: false
 _bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain_</br>
 _bron 2: [W3Schools](https://www.w3schools.com/html/default.asp)_
 
-<!-- ## Webbrowser tools #TODO -->
+## Webbrowser developer tools
+
+De developer tools in webbrowsers zijn krachtige hulpmiddelen die web developers helpen bij het **bouwen, testen en debuggen** van websites. Deze tools zijn ingebouwd in de meeste moderne browsers, zoals Google Chrome, Mozilla Firefox (Firebug), Microsoft Edge en Safari.
+- **HTML en CSS-structuur inspecteren (en bewerken)**: Met de _Elements_ of _Inspector_ tab kun je de DOM (Document Object Model) van een pagina bekijken, elementen selecteren en hun stijlen aanpassen. Dit is bijzonder handig voor het snel testen van CSS-aanpassingen en het identificeren van problemen met de layout of styling van een pagina. 
+- **debuggen van JavaScript-code**: De _Console_ tab stelt je in staat om JavaScript-commando's uit te voeren, foutmeldingen te bekijken en logberichten te inspecteren. De _Sources_ tab biedt een volledige debugger waarmee je door je code kunt stappen, breakpoints kunt instellen en de waarden van variabelen kunt controleren. Dit maakt het veel eenvoudiger om fouten in je code op te sporen en op te lossen.
+- **Network**: Hiermee kan je het netwerkverkeer van je webpagina monitoren. Je kunt zien welke bestanden worden geladen, hoe lang dit duurt en of er fouten optreden bij het laden van resources. Dit is essentieel voor het optimaliseren van de prestaties van je website en het identificeren van eventuele problemen met serververzoeken.
+- **het geheugen inspecteren**: de _Memory_ tab helpt je bij het opsporen van memory leaks en inefficiënties het bekijken van opgeslagen cookies en andere storage.
+- **testen van de toegankelijkheid en responsiviteit** van je website. Met de _Accessibility_ tab kun je controleren of je website voldoet aan toegankelijkheidsrichtlijnen, terwijl de _Device Mode_ je in staat stelt om je website te testen op verschillende schermgroottes en apparaten. Dit helpt je om ervoor te zorgen dat je website voor iedereen toegankelijk en gebruiksvriendelijk is, ongeacht het apparaat dat ze gebruiken.
+- **Performance**: Daarnaast bieden de ontwikkelaarstools ook hulpmiddelen voor het analyseren van de prestaties van je webpagina. Dit stelt je in staat om de laadtijd en rendering van je pagina te meten bijvoorbeeld.
+.
 
 ## Web development met VSCode
 Lijst van handige VSCode extensies voor web development:

@@ -357,6 +357,33 @@ Merk op dat in het HTML5 voorbeeld geen "/" heeft voor het sluitende groter dan 
 
 Aangezien HTML5 dus gewoon de nieuwere versie is van HTML gaan we dit gebruiken.
 
+## Formulieren
+
+Met de HTML die we tot nu toe gezien hebben, kan je wel informatieve pagina's maken, maar de bezoeker kan niks anders dan dingen bekijken en links aanklikken. Om reacties of andere gegevens op te vragen, heb je formulieren nodig. In dit stuk behandelen we de opmaak van formulieren, maar we kunnen de ingevoerde gegevens nog niet verwerken.
+
+### Formulieropbouw
+
+Een formulier bestaat steeds uit een verzameling invoerelementen. Omdat er bovendien verschillende formulieren op één webpagina kunnen staan, moet je de bij elkaar horende formulierelementen groeperen onder een tag
+```html
+...
+<form> 
+    <!-- verschillende formulierelementen --> 
+</form>
+...
+```
+De `form`-tag heeft normaal ook nog de attributen `method`, `action` en `name`, maar binnen deze cursus gebruiken we die niet en laten we die dus achterwege. (De functionaliteit van die attributen gaan we zelf voorzien met behulp van JavaScript) Binnen de `form`-tag kunnen dan verschillende elementen komen. Dit zijn bijna allemaal "replaced tags", dus zonder innerHTML en met een `/>`-sluiting van de tag.
+
+**Attributen van de form**: twee belangrijke, de _method_ en de _action_.<br>
+- De _method_ beschrijft op welke manier de gegevens doorgestuurd worden naar het script dat de formulierinhoud moet verwerken. Er zijn twee mogelijkheden:
+    - **GET**: hierbij worden de gegevens in de URL gecodeerd en wordt de formulierinhoud dus zichtbaar in de URL. Een ander belangrijk nadeel is dat de lengte van de data beperkt is.
+    - **POST**: bij deze methode worden de gegevens in een envelope ingepakt en zo doorgegeven. De lengte is nu in principe onbeperkt. Deze methode wordt het meeste gebruikt.
+- De **action** bevat de URL van het script dat het formulier zal moeten verwerken. Dit script kan in eender welke taal geschreven zijn, maar heel dikwijls is dit PHP. Wanneer je geen action-attribuut definieert, wordt het formulier naar de huidige pagina doorgestuurd. Zolang je puur in HTML werkt, geeft dit de indruk dat het formulier gereset wordt.
+
+**Text**: <br>
+Het eenvoudigste en ook meest gebruikte invoerelement is gewoon het één-regel lange tekstvak. De code hiervoor is `<input type="text" />`. De belangrijkste attributen zijn – naast het `id` – de `size` en de `maxlength`, die respectievelijk het aantal zichtbare letters bevatten en het maximaal aantal letters dat ingegeven kan worden. Je kan ook het type meegeven zoals onder andere: `email`, `password`, `number` ... <br>
+Bijvoorbeeld: `<input type="text" />` geeft <br>
+<input type="text" />
+
 ## Opdrachten
 1. Maak een HTML-bestand en noem het portfolio.html
 2. Geef de titel van je webpagina de naam "portfolio".
@@ -380,6 +407,7 @@ Aangezien HTML5 dus gewoon de nieuwere versie is van HTML gaan we dit gebruiken.
 15. Breng wat meer structuur aan in je teksten met divs, paragrafen en line breaks. Voeg ook eens wat symbolen via hun html-code toe waar nuttig. Gebruik verschillende achtergrond kleurtjes om te bekijken hoe de verschillende structuren werken (doe dit ook voor je span).
 16. Gebruik inputs boxen, knoppen, checkboxen, … om een contactformulier aan te maken. Je vindt hier ontelbare voorbeelden van op het internet. 
 17. Neem nu je 'Contact' sectie en plaats die in een nieuw bestand genaamd 'contact.html' en plaats deze in de subfolder genaamd 'contact'.
+    - Maak een gepast formulier aan voor deze webpagina. 
 18. Maak footer aan waarmee je navigeert naar je 'contact' page van je website.
 19. Voeg in je head een link toe naar fa-icons zodat je die icoontjes kan gebruiken: 
 <br/>`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`
