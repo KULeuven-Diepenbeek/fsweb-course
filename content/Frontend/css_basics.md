@@ -53,7 +53,7 @@ Met een goede code-editor krijg je vaak hints over welke css-properties en corre
 De plaats van het definiëren van de CSS-code is dus een afweging tussen de specificiteit, leesbaarheid, onderhoudbaarheid en herbruikbaarheid van de code
 
 ### Syntax 
-Een CSS-rule (CSS-regel) bestaat steeds uit een **selector** en één of meerdere **declaraties**. De declaraties moeten tussen accolades geplaatst worden: `{` en `}`. Elke declaratie bestaat op zijn beurt uit een **property** en een geschikte **value**.
+Een CSS-rule (CSS-regel) bestaat steeds uit een **selector** en één of meerdere **declaraties**. De declaraties moeten tussen accolades geplaatst worden: `{` en `}`. Elke declaratie bestaat op zijn beurt uit een **property** gevolgd door een `:`, een geschikte **value** en wordt afgesloten met een `;`.
 <img src="/img/css_syntax.png" alt="drawing" style="max-height: 10rem;"/>
 
 ### Selectors, Pseudo-classes en Pseudo-elements
@@ -61,10 +61,9 @@ Een selector is een patroon dat wordt gebruikt om HTML-elementen te selecteren d
 - **een element selector** kan je alle HTML-elementen van een bepaald type selecteren en stylen. Bijvoorbeeld, de selector `p` selecteert alle paragraafelementen (`<p>`) op een webpagina. 
 - **een klasse selector**: kan je all HTML-elementen van een bepaalde klasse selecteren en stylen. Bijvoorbeeld, de selector `.mijnKlasseNaam` selecteert alle elementen (`<element class="mijnKlasseNaam">`) op een webpagina.
 - **een id selector**: kan je het HTML-element met een bepaalde id selecteren en stylen. Bijvoorbeeld, de selector `#mijnIdNaam` selecteert het element (`<element id="mijnIdNaam">`) op een webpagina.
-- **een samengestelde/complexe selector**: Je kan ook de verschillende manier van selecteren gaan samenvoegen. Ja kan bijvoorbeeld met volgende selector alle `<p>`-elementen selecteren die als klasse naam `mijnKlasse` hebben:<br>`p.mijnKlasse`.<br> Of je kan alle <p>-elementen selecteren binnenin een `div` met klasse naam `mijnDivClass`:<br>`div.mijnDivClass p`
+- **een samengestelde/complexe selector**: bv. `li.belangrijk`. Dit betekent dat elke `li` met als klasse `belangrijk` de bijhorende vormgeving moet krijgen, en de andere `li`’s niet, evenmin als de elementen van klasse belangrijk die géén `li` zijn. Wanneer je een spatie laat tussen de combinatie, bv. `p .belangrijk`, betekent dit "met daarbinnen", dus elk element met klasse belangrijk binnen een `p` krijgt de vormgeving, maar andere elementen binnen `p` niet, evenmin als elementen met klasse belangrijk die niet binnen `p` staan.
   - **een attribuut selector**:  je kan dan ook nog dieper gaan selecteren op attributen (`[attribuut="waarde"]`). Bijvoorbeeld, de selector die de `<p>`-elementen selecteert die als waarde `yes` van het attribuut `mijnAttribuut` hebben ziet er als volgt uit: `p[mijnAttribuut=yes]`.
  
-
 ```css
 elementName {...;}
 .className {...;}
