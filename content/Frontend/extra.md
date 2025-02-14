@@ -2,13 +2,25 @@
 title: "Extra"
 weight: 6
 author: Arne Duyver
-draft: true
+draft: false
 ---
 
 _bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain_</br>
 _bron 2: [W3Schools](https://www.w3schools.com/html/default.asp)_
 
-## Extra tips and tricks
+<!-- ## Webbrowser tools #TODO -->
+
+## Web development met VSCode
+Lijst van handige VSCode extensies voor web development:
+- HTML CSS Support
+- HTML Boilerplate
+- HTML Snippets
+- Live Server (Five Server)
+- HTML Format
+- JavaScript (ES6) code snippets
+- IntelliSense for CSS class names in HTML
+
+<!-- ## Extra tips and tricks
 
 1. Alles is een Box in HTML (Box-model). In de mozilla firefox browser kan je live veranderingen aanbrengen aan.
 <img src="/img/margin_padding.png" alt="drawing" style="max-height: 10rem;"/>
@@ -41,4 +53,4 @@ Bestudeer grondig de webpagina die gegenereerd wordt door intellij wanneer je te
 
 1. Doe de [HTML exercises](https://www.w3schools.com/html/exercise.asp) op w3schools.com
 2. Doe de [CSS exercises](https://www.w3schools.com/css/exercise.asp) op w3schools.com
-3. Doe de [JavaScript exercises](https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1) op w3schools.com
+3. Doe de [JavaScript exercises](https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1) op w3schools.com -->

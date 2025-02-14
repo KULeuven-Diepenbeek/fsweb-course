@@ -12,22 +12,22 @@
     <title>CSS :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1739360457" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1739360457" rel="stylesheet">
-    <link href="../../css/hybrid.css?1739360457" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1739360457" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1739360457" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1739360457" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1739360457" rel="stylesheet">
-    <link href="../../css/theme.css?1739360457" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1739360457" rel="stylesheet">
-    <link href="../../css/devselector.css?1739360457" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1739360457" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1739360457" rel="stylesheet">
+    <link href="../../css/nucleus.css?1739525694" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1739525694" rel="stylesheet">
+    <link href="../../css/hybrid.css?1739525694" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1739525694" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1739525694" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1739525694" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1739525694" rel="stylesheet">
+    <link href="../../css/theme.css?1739525694" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1739525694" rel="stylesheet">
+    <link href="../../css/devselector.css?1739525694" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1739525694" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1739525694" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1739360457"></script>
-    <script src="../../js/devselector.js?1739360457"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1739525694"></script>
+    <script src="../../js/devselector.js?1739525694"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1739360457"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1739360457"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1739525694"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1739525694"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1739360457"></script>
+<script type="text/javascript" src="../../%20js/search.js?1739525694"></script>
     
   </div>
 
@@ -132,6 +132,27 @@
     
     
     
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+<li data-nav-id="/frontend/browsertools/" title="Browsertools" class="dd-item ">
+  <a href="../../frontend/browsertools/">
+    Browsertools
+    
+  </a>
+</li>
+
+
+
 
     
     
@@ -203,6 +224,37 @@
     
   </a>
   
+  
+  <ul>
+    
+    
+    
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+<li data-nav-id="/opdrachten/project-2324/" title="Project opdracht 2024-2025" class="dd-item ">
+  <a href="../../opdrachten/project-2324/">
+    Project opdracht 2024-2025
+    
+  </a>
+</li>
+
+
+
+
+    
+    
+    
+  </ul>
   
 </li>
 
@@ -306,6 +358,8 @@
       </ol>
     </li>
     <li><a href="#opdrachten">Opdrachten</a></li>
+    <li><a href="#libraries-en-cdn">Libraries en CDN</a></li>
+    <li><a href="#bootstrap">Bootstrap</a></li>
   </ol>
 </nav></div>
 </div>
@@ -335,38 +389,53 @@
 
 
 <article class='content'>
-<p><em>bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain</em></br>
-<em>bron 2: <a href="https://www.w3schools.com/html/default.asp">W3Schools</a></em></p>
+<p><em>bron 1: HTML, CSS, Bootstrap &amp; Blade. Vormgeving in Laravel. Cursus: Cloud Computing &amp; Toepassingen - 2020/2021 - Kris Aerts</em></br>
+<em>bron 2: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain</em></br>
+<em>bron 3: <a href="https://www.w3schools.com/html/default.asp">W3Schools</a></em></p>
 <h2 id="cascading-style-sheet">Cascading Style Sheet</h2>
-<p>HTML alleen maakt een website niet visueel aantrekkelijk. CSS is
-verantwoordelijk voor dit deel. Met CSS-regels kun je ontwerpen hoe de
-afzonderlijke componenten die je eerder in HTML hebt gedefinieerd, moeten worden weergegeven.
-worden weergegeven. Je kan CSS dus gebruiken om het ontwerp en de lay-out van
-een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, randen, achtergrondkleuren, kleurverlopen enzovoort definiëren, randen, achtergrondkleuren, kleurverlopen, enzovoort.</p>
+<p>HTML alleen maakt een website niet visueel aantrekkelijk. CSS is dan nodig voor de vormgeving. Met CSS-regels kun je ontwerpen hoe de afzonderlijke componenten die je eerder in HTML hebt gedefinieerd, moeten worden weergegeven. Je kan CSS dus gebruiken om het ontwerp en de lay-out van een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, randen, achtergrondkleuren, kleurverlopen enzovoort definiëren.</p>
+<p>Vooraleer we dit doen en de algemene regels bespreken, willen we wel vermelden dat we slechts een beperkt deel van CSS zien. Het doel van deze cursus is enkel individuele pagina’s toch wat vormgeving te kunnen geven zodat we op zijn minst wat accenten kunnen leggen en de verschillende onderdelen van een webpagina kunnen positioneren. We gaan geen professioneel ogende sites maken met complexe layoutschema’s of uitgebreide websites met uitgebreide navigatie. Daarom mag en zal onze portie CSS relatief beperkt blijven.</p>
 <h3 id="css-definiëren-op-verschillende-niveaus">CSS definiëren op verschillende niveaus</h3>
-<ul>
-<li>Aparte file</li>
-</ul>
+<p>CSS kan op verschillende manieren worden gedefinieerd: in een apart <code>CSS</code>-bestand, in de <code>&lt;head&gt;</code> van je HTML-document, of inline in de open-tag van een <code>HTML</code>-element. Elk van deze methoden heeft zijn eigen voor- en nadelen, afhankelijk van de situatie en het doel van de styling.</p>
+<p><strong>Een apart CSS bestand</strong><br>
+Het gebruik van een apart CSS-bestand is de meest gebruikelijke en aanbevolen methode. Dit zorgt voor een <em>duidelijke scheiding tussen de structuur (HTML) en de opmaak (CSS)</em>, wat de <em>leesbaarheid</em> en <em>onderhoudbaarheid</em> van de code bevordert. Bovendien kunnen meerdere HTML-pagina&rsquo;s dezelfde CSS-bestand gebruiken, wat consistentie in de styling garandeert en de laadtijd van de website kan verbeteren door caching.
+<br>Je gebruikt hiervoor het <code>&lt;link\&gt;</code>-element in de <code>head</code> van je HTML-bestand. Als <code>href</code>-attribuut geef je het pad naar je <code>.css</code>-bestand mee:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;mystyle.css&#34;</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
-</span></span></code></pre></div><ul>
-<li>In html &lt;style&gt; element</li>
-</ul>
+</span></span></code></pre></div><p><strong>In het HTML-element <code>&lt;style&gt;</code> in de <code>head</code> van je HTML-bestand</strong><br>
+Het definiëren van CSS in de <code>&lt;head&gt;</code> van een HTML-document, ook wel interne of embedded CSS genoemd, kan handig zijn voor <em>kleinere projecten</em> of wanneer <em>specifieke stijlen alleen voor een enkele pagina gelden</em>. Dit kan echter de leesbaarheid van de HTML-code verminderen en maakt het moeilijker om stijlen te hergebruiken op andere pagina&rsquo;s.</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">style</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>      /*Write your CSS code here*/
 </span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">style</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
-</span></span></code></pre></div><ul>
-<li>Inline</li>
-</ul>
+</span></span></code></pre></div><p><em>Met <code>/*</code> en <code>*/</code> kan je commentaar schrijven bij je CSS-code. Bv. <code>/* Dit is een CSS comment*/</code></em></p>
+<p><strong>Inline CSS: het <code>style</code>-attribuut</strong><br>
+Met inline CSS wordt de styling direct in de open-tag van een HTML-element geplaatst. Dat kan nuttig zijn voor <em>snelle, eenmalige aanpassingen</em> of voor het toepassen van <em>unieke stijlen op specifieke elementen</em>. Deze methode wordt echter over het algemeen afgeraden omdat het de HTML-code rommelig maakt en de scheiding tussen structuur en opmaak vervaagt. Bovendien is inline CSS moeilijker te onderhouden en te updaten.</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">htmlElement</span> <span style="color:#75af00">style</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;property1:value1 ; property2:value2;&#34;</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>  ...
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">htmlElement</span><span style="color:#111">&gt;</span>
-</span></span></code></pre></div><h3 id="syntax">Syntax</h3>
-<img src="../../img/css_syntax.png" alt="drawing" style="max-height: 10rem;"/>
+</span></span></code></pre></div>
+<div class="notices info" ><p>Met een goede code-editor krijg je vaak hints over welke css-properties en corresponderende values allemaal mogelijk zijn. Dat versnelt de productie significant.</p>
+</div>
+
+<p>De plaats van het definiëren van de CSS-code is dus een afweging tussen de specificiteit, leesbaarheid, onderhoudbaarheid en herbruikbaarheid van de code</p>
+<h3 id="syntax">Syntax</h3>
+<p>Een CSS-rule (CSS-regel) bestaat steeds uit een <strong>selector</strong> en één of meerdere <strong>declaraties</strong>. De declaraties moeten tussen accolades geplaatst worden: <code>{</code> en <code>}</code>. Elke declaratie bestaat op zijn beurt uit een <strong>property</strong> en een geschikte <strong>value</strong>.
+<img src="../../img/css_syntax.png" alt="drawing" style="max-height: 10rem;"/></p>
 <h3 id="selectors-pseudo-classes-en-pseudo-elements">Selectors, Pseudo-classes en Pseudo-elements</h3>
+<p>Een selector is een patroon dat wordt gebruikt om HTML-elementen te selecteren die je wilt stylen. Je kan op verschillende manieren elementen selecteren, met behulp van:</p>
+<ul>
+<li><strong>een element selector</strong> kan je alle HTML-elementen van een bepaald type selecteren en stylen. Bijvoorbeeld, de selector <code>p</code> selecteert alle paragraafelementen (<code>&lt;p&gt;</code>) op een webpagina.</li>
+<li><strong>een klasse selector</strong>: kan je all HTML-elementen van een bepaalde klasse selecteren en stylen. Bijvoorbeeld, de selector <code>.mijnKlasseNaam</code> selecteert alle elementen (<code>&lt;element class=&quot;mijnKlasseNaam&quot;&gt;</code>) op een webpagina.</li>
+<li><strong>een id selector</strong>: kan je het HTML-element met een bepaalde id selecteren en stylen. Bijvoorbeeld, de selector <code>r#mijnIdNaam</code> selecteert het element (<code>&lt;element id=&quot;mijnIdNaam&quot;&gt;</code>) op een webpagina.</li>
+<li><strong>een samengestelde/complexe selector</strong>: #TODO
+<ul>
+<li><strong>een attribuut selector</strong>:  en attributen ([type=&ldquo;text&rdquo;]).</li>
+</ul>
+</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">elementName</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">.</span><span style="color:#75af00">className</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">#</span><span style="color:#111">idName</span> <span style="color:#111">{</span><span style="color:#960050;background-color:#1e0010">...</span><span style="color:#111">;}</span>
@@ -615,7 +684,7 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
 </span></span></code></pre></div><h2 id="opdrachten">Opdrachten</h2>
 <ol>
 <li>Maak je footer fixed onderaan de pagina</li>
-<li>Voeg een afbeelding van jezelf (of) een stockfoto toe aan je over mij sectie en zorg ervoor dat de afbeelding steeds richts staat</li>
+<li>Voeg een afbeelding van jezelf (of) een stockfoto toe aan je over mij sectie en zorg ervoor dat de afbeelding steeds rechts staat</li>
 <li>Maak een nav sectie die 2 anchor elementen heeft: 1 voor de home page en een voor de contact page.</li>
 <li>Gebruik volgende <a href="https://www.w3schools.com/css/css_navbar.asp">bron</a> om je nav sectie te stijlen zodat je een verticale navigatie sectie hebt aan de linkerkant van je pagina die 100% van de hoogte in beslag neemt.</li>
 <li>Gebruik een input checkbox die je gefixed houd in de linkerboven hoek. Zorg ervoor dat je navigatie sectie verborgen wordt wanneer de checkbox niet is aangevinkt en getoond wordt wanneer je de checkbox aanduidt.</li>
@@ -626,6 +695,53 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
 <li>Gebruik icons in plaats van tekst in je navigation sectie.</li>
 <li>Geef je creativiteit de vrije loop om je site zo mooi mogelijk te maken.</li>
 </ol>
+<h2 id="libraries-en-cdn">Libraries en CDN</h2>
+<p>Je kunt <strong>libraries</strong> zoals CSS-frameworks toevoegen aan je websitecode om je ontwikkelproces te versnellen en consistente, professionele ontwerpen te creëren. Dit doe je door de benodigde bestanden te downloaden en lokaal op te slaan, waarna je ze via <code>&lt;link&gt;</code>-tags in de <code>&lt;head&gt;</code> van je HTML-document opneemt. Bijvoorbeeld, voor Bootstrap, een populaire CSS-library, zou je een link naar het gedownloade CSS-bestand toevoegen:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;path/to/bootstrap.min.css&#34;</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>Een eenvoudigere manier om libraries toe te voegen is via een <strong>Content Delivery Network (CDN)</strong>. CDNs hosten de bestanden van de library op servers over de hele wereld, waardoor je website sneller kan laden doordat de bestanden van een server dichtbij de gebruiker worden opgehaald. Om een library via een CDN toe te voegen, hoef je alleen maar een <code>&lt;link&gt;</code>-tag met de URL van de CDN op te nemen in je HTML-document. Voor Bootstrap zou dit er als volgt uitzien:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">link</span> <span style="color:#75af00">rel</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stylesheet&#34;</span> <span style="color:#75af00">href</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css&#34;</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>Het gebruik van een CDN heeft als voordeel dat je geen bestanden lokaal hoeft op te slaan en te beheren, en dat de laadtijd van je website kan verbeteren door de geografische spreiding van de CDN-servers.</p>
+<h2 id="bootstrap">Bootstrap</h2>
+<p>Met het beperkte stuk HTML en CSS dat we hierboven hebben behandeld, kun je functionele HTML-pagina&rsquo;s maken die met CSS worden gestyled. Veel ingenieurs zijn echter niet altijd bedreven in het creëren van aantrekkelijke layouts. Daarom kan het een goed idee zijn om gebruik te maken van kant-en-klare layouts en deze aan te passen naar je eigen smaak. Omdat er veel vraag is naar dergelijke oplossingen, zijn er verschillende frameworks ontwikkeld waarmee je de layout van webpagina&rsquo;s kunt instellen. Wij richten ons hier op Bootstrap, een simpel en beginnersvriendelijk framework voor responsive designs.</p>
+<p>Bootstrap werkt door een verzameling van CSS- en JavaScript-componenten te voorzien die je kunt gebruiken om je webpagina&rsquo;s snel te stylen en functionaliteit toe te voegen via class names.</p>
+<ol>
+<li>Voeg Bootstrap via CDN of link naar gedownloade bestanden toe aan je HTML-bestand.</li>
+<li>Bootstrap biedt een breed scala aan vooraf ontworpen componenten zoals knoppen, formulieren, navigatiebalken en kaarten. Je kunt deze componenten eenvoudig in je HTML-code opnemen door de juiste <strong>Bootstrap-classes</strong> toe te voegen.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;container mt-5&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Bootstrap-knop --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;btn btn-primary&#34;</span><span style="color:#111">&gt;</span>Klik hier<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><ol start="3">
+<li>Bootstrap heeft een krachtig <strong>grid-systeem</strong> waarmee je de layout van je pagina kunt structureren. Het grid-systeem is gebaseerd op <strong>rows</strong> en <strong>columns</strong>, en maakt het eenvoudig om responsieve layouts te creëren die zich aanpassen aan verschillende schermgroottes.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;container mt-5&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;row&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-md-4&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;p-3 border bg-light&#34;</span><span style="color:#111">&gt;</span>Kolom 1<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-md-4&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;p-3 border bg-light&#34;</span><span style="color:#111">&gt;</span>Kolom 2<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;col-md-4&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;p-3 border bg-light&#34;</span><span style="color:#111">&gt;</span>Kolom 3<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div>
+<div class="notices info" ><p>Hoewel Bootstrap veel standaardstijlen biedt, kun je deze altijd aanpassen door je <strong>eigen CSS</strong> toe te voegen of de bestaande Bootstrap-klassen te <strong>overschrijven</strong>.</p>
+</div>
+
+<p>Een aantal handige links:</p>
+<ul>
+<li><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap documentatie</a></li>
+<li><a href="https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp">w3schools tutorial</a></li>
+<li><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-get-started.php">tutorialrepublic bootstrap</a></li>
+</ul>
 
 </article>
 
@@ -716,6 +832,22 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -746,6 +878,22 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -772,15 +920,15 @@ een webpagina te definiëren. Je kan bijvoorbeeld tekstkleuren, tekstgroottes, r
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1739360458"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1739360458"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1739360458"></script>
-    <script src="../../js/jquery.sticky.js?1739360458"></script>
-    <script src="../../js/featherlight.min.js?1739360458"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1739360458"></script>
-    <script src="../../js/learn.js?1739360458"></script>
-    <script src="../../js/hugo-learn.js?1739360458"></script>
-    <script src="../../js/mermaid.min.js?1739360458"></script>
+    <script src="../../js/clipboard.min.js?1739525694"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1739525694"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1739525694"></script>
+    <script src="../../js/jquery.sticky.js?1739525694"></script>
+    <script src="../../js/featherlight.min.js?1739525694"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1739525694"></script>
+    <script src="../../js/learn.js?1739525694"></script>
+    <script src="../../js/hugo-learn.js?1739525694"></script>
+    <script src="../../js/mermaid.min.js?1739525694"></script>
     <script>
     window.MathJax = {
       chtml: {

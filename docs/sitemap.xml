@@ -2,8 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/fsweb-course/frontend/html_basics/</loc>
-    <lastmod>2024-03-07T14:21:29+01:00</lastmod>
+    <loc>http://localhost:1313/fsweb-course/frontend/browsertools/</loc>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/introductie/</loc>
     <lastmod>2024-02-14T13:41:28+01:00</lastmod>
@@ -11,17 +10,22 @@
     <loc>http://localhost:1313/fsweb-course/backend/php_basics/</loc>
     <lastmod>2024-04-24T14:40:40+02:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/fsweb-course/extra/webdevelopment_vscode/</loc>
+  </url><url>
+    <loc>http://localhost:1313/fsweb-course/frontend/</loc>
+    <lastmod>2025-02-12T13:54:16+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fsweb-course/frontend/html_basics/</loc>
+    <lastmod>2025-02-12T13:44:42+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fsweb-course/backend/laravel_basics/</loc>
+    <lastmod>2024-05-16T13:43:20+02:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/fsweb-course/extra/websecurity/</loc>
     <lastmod>2024-05-16T13:43:20+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/frontend/css_basics/</loc>
     <lastmod>2024-02-29T15:34:21+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/fsweb-course/frontend/</loc>
-    <lastmod>2024-02-14T13:41:59+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/fsweb-course/backend/laravel_basics/</loc>
-    <lastmod>2024-05-16T13:43:20+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/backend/laravel_code/</loc>
     <lastmod>2024-05-17T12:23:51+02:00</lastmod>
@@ -31,6 +35,9 @@
   </url><url>
     <loc>http://localhost:1313/fsweb-course/</loc>
     <lastmod>2025-02-12T12:21:52+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fsweb-course/opdrachten/project-2324/</loc>
+    <lastmod>2024-04-22T09:29:27+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/tags/</loc>
   </url>

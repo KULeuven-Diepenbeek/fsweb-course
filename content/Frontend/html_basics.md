@@ -122,6 +122,10 @@ Enkele interessante zijn voor ampersand (`&amp;` &amp;), euro (`&euro;` &euro;),
 
 Via volgende link vind je een volledige lijst terug: [https://www.freeformatter.com/html-entities.html](https://www.freeformatter.com/html-entities.html)
 
+<!-- ## HTML Forms #TODO -->
+
+
+
 ### List of useful elements
 <details open>
 <summary><i><b>Klik hier om de code te zien/verbergen</b></i>🔽</summary>
