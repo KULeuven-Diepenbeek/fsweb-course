@@ -12,22 +12,22 @@
     <title>HTML :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1739534265" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1739534265" rel="stylesheet">
-    <link href="../../css/hybrid.css?1739534265" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1739534265" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1739534265" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1739534265" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1739534265" rel="stylesheet">
-    <link href="../../css/theme.css?1739534265" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1739534265" rel="stylesheet">
-    <link href="../../css/devselector.css?1739534265" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1739534265" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1739534265" rel="stylesheet">
+    <link href="../../css/nucleus.css?1739884577" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1739884577" rel="stylesheet">
+    <link href="../../css/hybrid.css?1739884577" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1739884577" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1739884577" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1739884577" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1739884577" rel="stylesheet">
+    <link href="../../css/theme.css?1739884577" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1739884577" rel="stylesheet">
+    <link href="../../css/devselector.css?1739884577" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1739884577" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1739884577" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1739534265"></script>
-    <script src="../../js/devselector.js?1739534265"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1739884577"></script>
+    <script src="../../js/devselector.js?1739884577"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1739534265"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1739534265"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1739884577"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1739884577"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1739534265"></script>
+<script type="text/javascript" src="../../%20js/search.js?1739884577"></script>
     
   </div>
 
@@ -225,37 +225,6 @@
   </a>
   
   
-  <ul>
-    
-    
-    
-
-    
-    
-    
-    
-
-
-
-
-
-
-
-<li data-nav-id="/opdrachten/project-2324/" title="Project opdracht 2024-2025" class="dd-item ">
-  <a href="../../opdrachten/project-2324/">
-    Project opdracht 2024-2025
-    
-  </a>
-</li>
-
-
-
-
-    
-    
-    
-  </ul>
-  
 </li>
 
 
@@ -271,7 +240,7 @@
       <ul>
         
         <li>
-          <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2024&amp;i=4891"><i class='fa fa-university'></i> Studiegids</a>
+          <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2025&amp;i=4891"><i class='fa fa-university'></i> Studiegids</a>
         </li>
         
         <li>
@@ -725,126 +694,126 @@ In het algemeen is het wel een goede strategie om je HTML bestand zo specifiek m
 <h2 id="formulieren">Formulieren</h2>
 <p>Met de HTML die we tot nu toe gezien hebben, kan je wel informatieve pagina&rsquo;s maken, maar de bezoeker kan niks anders dan dingen bekijken en links aanklikken. Om reacties of andere gegevens op te vragen, heb je formulieren nodig. In dit stuk behandelen we de opmaak van formulieren, maar we kunnen de ingevoerde gegevens nog niet verwerken.</p>
 <h3 id="formulieropbouw">Formulieropbouw</h3>
-<p>Een formulier bestaat steeds uit een verzameling invoerelementen. Omdat er bovendien verschillende formulieren op één webpagina kunnen staan, moet je de bij elkaar horende formulierelementen groeperen onder een tag</p>
+<p>Een formulier bestaat steeds uit een verzameling <code>input</code>-elementen. Omdat er verschillende formulieren op één webpagina kunnen staan, moet je de bij elkaar horende formulierelementen groeperen onder een <code>form</code>-tag:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">form</span><span style="color:#111">&gt;</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- verschillende formulierelementen --&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- different form elements --&gt;</span> 
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">form</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span>...
-</span></span></code></pre></div><p>De <code>form</code>-tag heeft normaal ook nog de attributen <code>method</code>, <code>action</code> en <code>name</code>, maar binnen deze cursus gebruiken we die niet en laten we die dus achterwege. (De functionaliteit van die attributen gaan we zelf voorzien met behulp van JavaScript) Binnen de <code>form</code>-tag kunnen dan verschillende elementen komen. Dit zijn bijna allemaal &ldquo;replaced tags&rdquo;, dus zonder innerHTML en met een <code>/&gt;</code>-sluiting van de tag.</p>
+</span></span></code></pre></div><p>De <code>form</code>-tag heeft normaal ook nog de attributen <code>method</code>, <code>action</code> en <code>name</code>. De elementen binnenin de <code>form</code> zijn bijna allemaal &ldquo;replaced tags&rdquo;, dus zonder innerHTML en met een <code>/&gt;</code>-sluiting van de tag.</p>
 <p><strong>Attributen van de form</strong>: twee belangrijke, de <em>method</em> en de <em>action</em>.<br></p>
 <ul>
 <li>De <em>method</em> beschrijft op welke manier de gegevens doorgestuurd worden naar het script dat de formulierinhoud moet verwerken. Er zijn twee mogelijkheden:
 <ul>
 <li><strong>GET</strong>: hierbij worden de gegevens in de URL gecodeerd en wordt de formulierinhoud dus zichtbaar in de URL. Een ander belangrijk nadeel is dat de lengte van de data beperkt is.</li>
-<li><strong>POST</strong>: bij deze methode worden de gegevens in een envelope ingepakt en zo doorgegeven. De lengte is nu in principe onbeperkt. Deze methode wordt het meeste gebruikt.</li>
+<li><strong>POST</strong>: bij deze methode worden de gegevens in een body ingepakt en zo doorgegeven. De lengte is nu nagenoeg onbeperkt. Deze methode wordt het meeste gebruikt.</li>
 </ul>
 </li>
-<li>De <strong>action</strong> bevat de URL van het script dat het formulier zal moeten verwerken. Dit script kan in eender welke taal geschreven zijn, maar heel dikwijls is dit PHP. Wanneer je geen action-attribuut definieert, wordt het formulier naar de huidige pagina doorgestuurd. Zolang je puur in HTML werkt, geeft dit de indruk dat het formulier gereset wordt.</li>
+<li>De <em>action</em> bevat de URL van het script dat het formulier zal moeten verwerken. Wanneer je geen action-attribuut definieert, wordt het formulier naar de huidige pagina doorgestuurd. Zolang je puur in HTML werkt, geeft dit de indruk dat het formulier gereset wordt.</li>
 </ul>
 <p><strong>Text</strong>: <br>
-Het eenvoudigste en ook meest gebruikte invoerelement is gewoon het één-regel lange tekstvak. De code hiervoor is <code>&lt;input type=&quot;text&quot; /&gt;</code>. De belangrijkste attributen zijn – naast het <code>id</code> – de <code>size</code> en de <code>maxlength</code>, die respectievelijk het aantal zichtbare letters bevatten en het maximaal aantal letters dat ingegeven kan worden. Je kan ook het type meegeven zoals onder andere: <code>email</code>, <code>password</code>, <code>number</code> &hellip; <br>
+Het eenvoudigste en ook meest gebruikte invoerelement is het één-regel tekstvak. De code hiervoor is <code>&lt;input type=&quot;text&quot; /&gt;</code>. De belangrijkste attributen zijn, naast de <code>id</code>, de <code>size</code> en de <code>maxlength</code>, die respectievelijk het aantal zichtbare letters bevatten en het maximaal aantal letters dat ingegeven kan worden. Je kan ook het type meegeven zoals onder andere: <code>email</code>, <code>password</code>, <code>number</code> &hellip; <br>
 Bijvoorbeeld: <code>&lt;input type=&quot;text&quot; /&gt;</code> geeft <br>
 <input type="text" /></p>
 <p><strong>Checkbox</strong>: <br>
-Hiermee bekom je een aanvink-vak. Belangrijk is dat je een attribuut value meegeeft zodat je in je Javascript kan weten welke waarde geselecteerd is. Wanneer je bovendien checked=&ldquo;checked&rdquo; toevoegt, zal het vakje al van in het begin aangevinkt zijn. <br>
-Bijvoorbeeld: <code>&lt;input type=&quot;checkbox&quot; id=&quot;nieuwsbrief&quot; value=&quot;nieuwsbrief&quot; /&gt; nieuwsbrief</code> geeft <br>
-<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" /> nieuwsbrief<br/></p>
-<p>en <code>&lt;input type=&quot;checkbox&quot; id=&quot;nieuwsbrief&quot; value=&quot;nieuwsbrief&quot; checked=&quot;checked&quot; /&gt; nieuwsbrief</code> geeft <br>
-<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" checked="checked" /> nieuwsbrief</p>
+Belangrijk is dat je een attribuut <code>value</code> definieert zodat je in je JavaScript kan achterhalen welke waarde geselecteerd is. Wanneer je bovendien <code>checked=&quot;checked&quot;</code> toevoegt, zal het vakje vanaf het inladen van de pagina aangevinkt zijn. <br>
+Bijvoorbeeld: <code>&lt;input type=&quot;checkbox&quot; id=&quot;item&quot; value=&quot;checkvalue&quot; /&gt; check me</code> geeft <br>
+<input type="checkbox" id="item" value="checkvalue" /> check me<br/></p>
+<p>en <code>&lt;input type=&quot;checkbox&quot; id=&quot;item&quot; value=&quot;checkvalue&quot; checked=&quot;checked&quot; /&gt; I am checked</code> geeft <br>
+<input type="checkbox" id="item" value="checkvalue" checked="checked" /> I am checked</p>
 <p><strong>Radio</strong>: <br>
-Bij de radio-button is het belangrijk dat je een radio-groep maakt, omdat radio-knoppen in een groep bij elkaar horen: uit die groep mag slechts één radio geselecteerd worden, net zoals je radio slechts op één zender tegelijk afgestemd kan zijn. Hiervoor moet je binnen de radio-groep als name dezelfde waarde opgeven. Anders wordt het beschouwd als een andere radio-groep.<br>
+Bij de radio-button is het belangrijk dat je een radio-groep maakt m.b.v. het attribuut <code>name</code>, omdat radio-knoppen uit een groep bij elkaar horen en uit die groep mag slechts één radio element geselecteerd worden. Hiervoor moet je binnen de radio-groep bij elk element de <code>name</code> dezelfde waarde geven. Anders wordt het beschouwd als een andere radio-groep.<br>
 Bijvoorbeeld:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>StuBtu <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;radio&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;zender&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;stubru&#34;</span> <span style="color:#75af00">checked</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;checked&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
-</span></span><span style="display:flex;"><span>Q-Music <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;radio&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;zender&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;q&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
-</span></span><span style="display:flex;"><span>MNM <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;radio&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;zender&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;-mnm&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Klara <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;radio&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;station&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;klara&#34;</span> <span style="color:#75af00">checked</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;checked&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
+</span></span><span style="display:flex;"><span>Q-Music <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;radio&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;station&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;q&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
+</span></span><span style="display:flex;"><span>MNM <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;radio&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;station&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;-mnm&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
 </span></span></code></pre></div><p>geeft: <br><br>
-StuBtu <input type="radio" name="zender" value="stubru" checked="checked" /> <br />
-Q-Music <input type="radio" name="zender" value="q" /> <br />
-MNM <input type="radio" name="zender" value="-mnm" /> <br /></p>
+Klara <input type="radio" name="station" value="klara" checked="checked" /> <br />
+Q-Music <input type="radio" name="station" value="q" /> <br />
+MNM <input type="radio" name="station" value="-mnm" /> <br /></p>
 <p><strong>(De oude) Button en Submit</strong>: <br>
-De types <code>button</code> en <code>submit</code> zien er in de browser hetzelfde uit, maar hebben een heel ander effect. Wanneer je op een <code>submit</code>-knop klikt, wordt de formulierinhoud doorgestuurd naar het script dat je in het action-attribuut van het form gedefinieerd hebt.</p>
-<p>Wanneer je op een <code>button</code>-knop klikt, wordt de event-handler uitgevoerd die bij deze knop hoort. Dit klinkt momenteel nog abstract, maar wordt duidelijk in het hoofdstuk Javascript waarin we leren hoe je zo’n event-handler kan definiëren.</p>
+De types <code>button</code> en <code>submit</code> zien er in de browser hetzelfde uit, maar hebben een heel ander effect. Wanneer je op een <code>submit</code>-knop klikt, wordt de formulierinhoud doorgestuurd naar het script dat je in het <code>action</code>-attribuut van de form gedefinieerd hebt.</p>
+<p>Wanneer je op een <code>button</code>-knop klikt, wordt de event-handler (JavaScript) uitgevoerd die bij deze knop hoort. (Hier komen we later op terug in het cursusdeel rond JavaScript)</p>
 <p>Bijvoorbeeld</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;klik hierop&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;submit&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;klik hierop&#34;</span> <span style="color:#111">/&gt;</span>
-</span></span></code></pre></div><p><input type="button" value="klik hierop" /> <br />
-<input type="submit" value="klik hierop" /></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Click me&#34;</span> <span style="color:#111">/&gt;</span> <span style="color:#111">&lt;</span><span style="color:#f92672">br</span> <span style="color:#111">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;submit&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Submit me&#34;</span> <span style="color:#111">/&gt;</span>
+</span></span></code></pre></div><p><input type="button" value="Click me" /> <br />
+<input type="submit" value="Submit me" /></p>
 <p><strong>(De nieuwe) Button</strong>: <br>
-De button uit de paragraaf hierboven had als groot nadeel dat het een <em>replaced element</em> was. Technisch betekent dit dat je geen volwaardige tag hebt met een open- en een sluit-tag en daartussen html-code die <strong>in</strong> de tag staat. Visueel houdt het in dat je de browser de html-code vervangt door een standaard knop, maar dat je verder geen structuur kan geven aan de inhoud van de knop. Zo kan je bijvoorbeeld geen figuren op je knop zetten, terwijl dat toch wel zinvol is. CSS-experts kunnen weliswaar met niet al te veel moeite de vormgeving van een knop veranderen in een figuur, maar desondanks vond men het beter om een volwaardige button-tag toe te voegen. Tussen de open- en sluit-tag zet je dan datgene wat op de knop moet verschijnen.</p>
-<p>Naast de <em>name</em> en <em>id</em> is het belangrijkste attribuut van de button het <em>type</em>: dit is een van <em>button</em>, <em>submit</em> en <em>reset</em> met de voor de hand liggende betekenis.</p>
+De button uit de paragraaf hierboven had als groot nadeel dat het een <em>replaced element</em> was. Technisch betekent dit dat je geen volwaardige tag hebt met een open- en een sluit-tag en daartussen html-code die <strong>in</strong> de tag staat. Visueel houdt het in dat je de browser de html-code vervangt door een standaard knop, maar dat je verder geen structuur kan geven aan de inhoud van de knop. Zo kan je bijvoorbeeld geen figuren op je knop zetten. Daarom vond men het nodig om een volwaardige button-tag toe te voegen (ook al kan je hetzelfde bereiken met de replaced element button en wat specifieke CSS code). Tussen de open- en sluit-tag zet je nu wat op de knop moet verschijnen.</p>
+<p>Naast de <em>name</em> en <em>id</em> is het belangrijkste attribuut van de button het <em>type</em>: <em>button</em>, <em>submit</em> en <em>reset</em>.</p>
 <p><strong>Hidden</strong>:<br>
-Het <code>hidden</code> input-element is een element dat niet zichtbaar gemaakt wordt in de browser. Het biedt de mogelijkheid om extra informatie door te geven die onzichtbaar is voor de gebruiker, bv. de datum waarop het formulier ingeladen is, informatie die we op een vorige pagina binnengehaald hebben of eender welke waarde die relevant is voor de formulierverwerking maar die de gebruiker niet zelf moet invullen. Dit wordt vooral handig wanneer we met php en webservices beginnen te werken.<br>
+Het <code>hidden</code> input-element is een element dat niet zichtbaar gemaakt wordt in de browser. Het biedt de mogelijkheid om extra informatie door te geven die onzichtbaar is voor de gebruiker, bv. informatie die we op een vorige pagina binnengehaald hebben of eender welke waarde die relevant is voor de formulierverwerking maar die de gebruiker niet zelf moet invullen.<br>
 Bijvoorbeeld: <code>&lt;input type=&quot;hidden&quot; name=&quot;geheim&quot; value=&quot;317&quot; /&gt;</code> geeft:<br>
 <input type="hidden" name="geheim" value="317" /></p>
 <p><strong>Text Area</strong>:<br>
-De twee laatste invoerelementen die we zien zijn een uitzondering op de gewone inputelementen die <em>replaced elementen</em> zijn. Hier gaat het om volwaardige tags. De <code>textarea</code> dient om tekst in te kunnen geven die <strong>meer dan 1 regel</strong> bevat. Met <code>&lt;input type=”text&quot;/&gt;</code> konden we al wel tekst ingeven, maar altijd maar op een regel. Met textarea kan dit onbeperkt.<br>
+De volgende invoerelementen zijn een uitzondering omdat het geen <em>replaced elementen</em> zijn. Hier gaat het om volwaardige tags. De <code>textarea</code> dient om tekst in te kunnen geven die <strong>meer dan 1 regel</strong> bevat. Met <code>&lt;input type=”text&quot;/&gt;</code> konden we al wel tekst ingeven, maar slechts op één regel. Met textarea kan dit onbeperkt.<br>
 Bijvoorbeeld: <code>&lt;textarea&gt;typ hier tekst&lt;/textarea&gt;</code> geeft: <br></p>
 <textarea>typ hier tekst</textarea>
 <p><em>Met CSS kunnen we de grootte en vormgeving van de textarea instellen</em></p>
 <p><strong>Select en Option</strong>:<br>
 Bijvoorbeeld:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">select</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;ploeg&#34;</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Lierse&#34;</span><span style="color:#111">&gt;</span>Lierse<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Genk&#34;</span><span style="color:#111">&gt;</span>Genk<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Anderlecht&#34;</span><span style="color:#111">&gt;</span>Anderlecht<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">select</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;station&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;klara&#34;</span><span style="color:#111">&gt;</span>Klara<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;qmusic&#34;</span><span style="color:#111">&gt;</span>Qmusic<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;mnm&#34;</span><span style="color:#111">&gt;</span>MNM<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">select</span><span style="color:#111">&gt;</span>
-</span></span></code></pre></div><select id="ploeg">
-    <option value="Lierse">Lierse</option>
-    <option value="Genk">Genk</option>
-    <option value="Anderlecht">Anderlecht</option>
+</span></span></code></pre></div><select id="station">
+    <option value="klara">Klara</option>
+    <option value="qmusic">Qmusic</option>
+    <option value="mnm">MNM</option>
 </select>
-<p>Zoals je kan afleiden uit het voorbeeld hierboven, heb je binnen je <code>select</code> een lijst met <code>option</code> tags nodig. Datgene wat tussen de option staat, verschijnt in het menu; datgene wat bij de <code>value</code> staat, komt terecht in het script dat het formulier verwerkt (bv. PHP).</p>
+<p>Hier schrijf je dus binnen je <code>select</code> een lijst met <code>option</code> tags. Wat tussen de <code>option</code> staat, verschijnt in het menu en datgene wat bij de <code>value</code> staat, komt terecht in het script dat het formulier verwerkt.</p>
 <p>Aan de select kan je een attribuut <code>size</code> meegeven dat bepaalt hoe groot de niet-uitgeklapte lijst is, en wanneer je <code>multiple=&quot;multiple&quot;</code> aanduidt, kan je via <code>Ctrl+klik</code> verschillende elementen tegelijk selecteren.</p>
 <p>Bijvoorbeeld:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">select</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;ploeg&#34;</span> <span style="color:#75af00">size</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;3&#34;</span> <span style="color:#75af00">multiple</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;multiple&#34;</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Lierse&#34;</span><span style="color:#111">&gt;</span>Lierse<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Genk&#34;</span> <span style="color:#75af00">selected</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;selected&#34;</span><span style="color:#111">&gt;</span>Genk<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Anderlecht&#34;</span> <span style="color:#75af00">selected</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;selected&#34;</span><span style="color:#111">&gt;</span>Anderlecht<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">select</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;station&#34;</span> <span style="color:#75af00">size</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;3&#34;</span> <span style="color:#75af00">multiple</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;multiple&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;klara&#34;</span><span style="color:#111">&gt;</span>Klara<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;qmusic&#34;</span> <span style="color:#75af00">selected</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;selected&#34;</span><span style="color:#111">&gt;</span>Qmusic<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">option</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;mnm&#34;</span> <span style="color:#75af00">selected</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;selected&#34;</span><span style="color:#111">&gt;</span>MNM<span style="color:#111">&lt;/</span><span style="color:#f92672">option</span><span style="color:#111">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">select</span><span style="color:#111">&gt;</span>
-</span></span></code></pre></div><select id="ploeg" size="3" multiple="multiple">
-    <option value="Lierse">Lierse</option>
-    <option value="Genk" selected="selected">Genk</option>
-    <option value="Anderlecht" selected="selected">Anderlecht</option>
+</span></span></code></pre></div><select id="station" size="3" multiple="multiple">
+    <option value="klara">Klara</option>
+    <option value="qmusic" selected="selected">Qmusic</option>
+    <option value="mnm" selected="selected">MNM</option>
 </select>
 <p><strong>Tabellen</strong>:<br>
-Wanneer je gegevens in een tabel wil plaatsen, bijvoorbeeld de formulieren van hierboven of de stand in een voetbalcompetitie, moet je tabellen gebruiken. Hiervoor hebben we de tags <code>table</code>, <code>tr</code> en <code>td</code>, de afkortingen van <em>table</em>, <em>table row</em> en <em>table data</em>. Merk dus op dat HTML vooral rijen ziet, terwijl wij eerder kolommen zien. Dat maakt het soms wat moeilijker om een tabel op te stellen, maar voor de rest is de structuur wel logisch:</p>
+Wanneer je gegevens in een tabel wil plaatsen, moet je tabellen gebruiken. Hiervoor bestaan de tags <code>table</code>, <code>tr</code> en <code>td</code>, de afkortingen van <em>table</em>, <em>table row</em> en <em>table data</em>. Merk op dat HTML vooral rijen ziet, terwijl wij eerder kolommen zien. Dat maakt het soms moeilijker om een tabel op te stellen, de structuur blijft wel logisch:</p>
 <ul>
 <li>Eerst maak je een tabel aan: <code>&lt;table&gt; ... &lt;/table&gt;</code></li>
-<li>Binnen die tabel heb je verschillende rijen: <code>&lt;tr&gt; ... &lt;/tr&gt;</code>
+<li>Binnen die tabel definieer je verschillende rijen: <code>&lt;tr&gt; ... &lt;/tr&gt;</code>
 <ul>
-<li>Bovenaan kan je ook een rijhoofding zetten i.p.v. een gewone rij met <code>&lt;th&gt;</code>.</li>
+<li>Bovenaan kan je ook een hoofding plaatsen met <code>&lt;th&gt;</code> i.p.v. een gewone rij.</li>
 </ul>
 </li>
-<li>En in elke rij zijn er verschillende vakjes, wat telkens een <code>&lt;td&gt;...&lt;/td&gt;</code> geeft.</li>
+<li>En in elke rij kan je verschillende vakjes definiëren met <code>&lt;td&gt;...&lt;/td&gt;</code>.</li>
 </ul>
 <p>Bijvoorbeeld:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">table</span><span style="color:#111">&gt;</span> 
 </span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">tr</span><span style="color:#111">&gt;</span> 
 </span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Arne Duyver<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
-</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>ICT <span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
-</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Begijnendijk<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Informatica <span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Tessenderlo<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
 </span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">tr</span><span style="color:#111">&gt;</span> 
 </span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">tr</span><span style="color:#111">&gt;</span>            
 </span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Mark Huybrechts<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
-</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Communicatie<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
-</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Bouwel<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Elektromechanica<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span>Schoten<span style="color:#111">&lt;/</span><span style="color:#f92672">td</span><span style="color:#111">&gt;</span> 
 </span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">tr</span><span style="color:#111">&gt;</span> 
 </span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">table</span><span style="color:#111">&gt;</span>
 </span></span></code></pre></div><p>geeft:</p>
 <table> 
     <tr> 
         <td>Arne Duyver</td> 
-        <td>ICT </td> 
-        <td>Begijnendijk</td> 
+        <td>Informatica </td> 
+        <td>Tessenderlo</td> 
     </tr> 
     <tr>            
         <td>Mark Huybrechts</td> 
-        <td>Communicatie</td> 
-        <td>Bouwel</td> 
+        <td>Elektromechanica</td> 
+        <td>Schoten</td> 
     </tr> 
 </table>
-<p>Tabellen zijn vooral interessant om formulieren te layouten. In de eerste kolom zet je dan de labels (de uitleg bij wat je moet invullen) en in de tweede kolom de invoervakken, zodat die verticaal mooi uitgelijnd zijn.</p>
+<p>Tabellen zijn vooral interessant om formulieren te een layout te geven. In de eerste kolom zet je dan de labels (de uitleg bij wat je moet invullen) en in de tweede kolom de inputs, zodat die verticaal uitgelijnd zijn.</p>
 <h2 id="opdrachten">Opdrachten</h2>
 <ol>
 <li>
@@ -916,14 +885,18 @@ Wanneer je gegevens in een tabel wil plaatsen, bijvoorbeeld de formulieren van h
 <br/><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css&quot;&gt;</code></p>
 </li>
 <li>
-<p>Voeg aan je footer ook een link toe via een icoon naar je Github profiel en een icoon voor je linkedIn profiel (indien je dat hebt)</p>
+<p>Voeg aan je footer ook een link toe via een icoon naar je Github profiel en een icoon voor je linkedIn profiel (indien je dat hebt)
+<br></p>
 </li>
-</ol>
-<br>
-<ol start="21">
-<li>Maak een formulier waarin mensen zich kunnen inschrijven voor een nieuwsbrief.</li>
-<li>Maak een formulier om een bespreking van een optreden van een artiest in te vullen.</li>
-<li>Maak een formulier waarin je een pizza kan samenstellen.</li>
+<li>
+<p>Maak een formulier waarin mensen zich kunnen inschrijven voor een nieuwsbrief.</p>
+</li>
+<li>
+<p>Maak een formulier om een bespreking van een optreden van een artiest in te vullen.</p>
+</li>
+<li>
+<p>Maak een formulier waarin je een pizza kan samenstellen.</p>
+</li>
 </ol>
 <h2 id="test-jezelf">Test jezelf</h2>
 <p>Klik <a href="https://www.w3schools.com/html/html_quiz.asp">hier</a> om jezelf te testen met de online HTML quiz van w3schools. Of klik <a href="https://www.w3schools.com/html/html_exercises.asp">hier</a> voor wat extra oefeningen.</p>
@@ -1061,22 +1034,6 @@ Wanneer je gegevens in een tabel wil plaatsen, bijvoorbeeld de formulieren van h
                     
 
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1102,15 +1059,15 @@ Wanneer je gegevens in een tabel wil plaatsen, bijvoorbeeld de formulieren van h
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1739534265"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1739534265"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1739534265"></script>
-    <script src="../../js/jquery.sticky.js?1739534265"></script>
-    <script src="../../js/featherlight.min.js?1739534265"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1739534265"></script>
-    <script src="../../js/learn.js?1739534265"></script>
-    <script src="../../js/hugo-learn.js?1739534265"></script>
-    <script src="../../js/mermaid.min.js?1739534265"></script>
+    <script src="../../js/clipboard.min.js?1739884577"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1739884577"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1739884577"></script>
+    <script src="../../js/jquery.sticky.js?1739884577"></script>
+    <script src="../../js/featherlight.min.js?1739884577"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1739884577"></script>
+    <script src="../../js/learn.js?1739884577"></script>
+    <script src="../../js/hugo-learn.js?1739884577"></script>
+    <script src="../../js/mermaid.min.js?1739884577"></script>
     <script>
     window.MathJax = {
       chtml: {

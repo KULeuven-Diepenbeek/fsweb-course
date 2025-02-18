@@ -363,73 +363,73 @@ Met de HTML die we tot nu toe gezien hebben, kan je wel informatieve pagina's ma
 
 ### Formulieropbouw
 
-Een formulier bestaat steeds uit een verzameling invoerelementen. Omdat er bovendien verschillende formulieren op één webpagina kunnen staan, moet je de bij elkaar horende formulierelementen groeperen onder een tag
+Een formulier bestaat steeds uit een verzameling `input`-elementen. Omdat er verschillende formulieren op één webpagina kunnen staan, moet je de bij elkaar horende formulierelementen groeperen onder een `form`-tag:
 ```html
 ...
 <form> 
-    <!-- verschillende formulierelementen --> 
+    <!-- different form elements --> 
 </form>
 ...
 ```
-De `form`-tag heeft normaal ook nog de attributen `method`, `action` en `name`, maar binnen deze cursus gebruiken we die niet en laten we die dus achterwege. (De functionaliteit van die attributen gaan we zelf voorzien met behulp van JavaScript) Binnen de `form`-tag kunnen dan verschillende elementen komen. Dit zijn bijna allemaal "replaced tags", dus zonder innerHTML en met een `/>`-sluiting van de tag.
+De `form`-tag heeft normaal ook nog de attributen `method`, `action` en `name`. De elementen binnenin de `form` zijn bijna allemaal "replaced tags", dus zonder innerHTML en met een `/>`-sluiting van de tag.
 
 **Attributen van de form**: twee belangrijke, de _method_ en de _action_.<br>
 - De _method_ beschrijft op welke manier de gegevens doorgestuurd worden naar het script dat de formulierinhoud moet verwerken. Er zijn twee mogelijkheden:
     - **GET**: hierbij worden de gegevens in de URL gecodeerd en wordt de formulierinhoud dus zichtbaar in de URL. Een ander belangrijk nadeel is dat de lengte van de data beperkt is.
-    - **POST**: bij deze methode worden de gegevens in een envelope ingepakt en zo doorgegeven. De lengte is nu in principe onbeperkt. Deze methode wordt het meeste gebruikt.
-- De **action** bevat de URL van het script dat het formulier zal moeten verwerken. Dit script kan in eender welke taal geschreven zijn, maar heel dikwijls is dit PHP. Wanneer je geen action-attribuut definieert, wordt het formulier naar de huidige pagina doorgestuurd. Zolang je puur in HTML werkt, geeft dit de indruk dat het formulier gereset wordt.
+    - **POST**: bij deze methode worden de gegevens in een body ingepakt en zo doorgegeven. De lengte is nu nagenoeg onbeperkt. Deze methode wordt het meeste gebruikt.
+- De _action_ bevat de URL van het script dat het formulier zal moeten verwerken. Wanneer je geen action-attribuut definieert, wordt het formulier naar de huidige pagina doorgestuurd. Zolang je puur in HTML werkt, geeft dit de indruk dat het formulier gereset wordt.
 
 **Text**: <br>
-Het eenvoudigste en ook meest gebruikte invoerelement is gewoon het één-regel lange tekstvak. De code hiervoor is `<input type="text" />`. De belangrijkste attributen zijn – naast het `id` – de `size` en de `maxlength`, die respectievelijk het aantal zichtbare letters bevatten en het maximaal aantal letters dat ingegeven kan worden. Je kan ook het type meegeven zoals onder andere: `email`, `password`, `number` ... <br>
+Het eenvoudigste en ook meest gebruikte invoerelement is het één-regel tekstvak. De code hiervoor is `<input type="text" />`. De belangrijkste attributen zijn, naast de `id`, de `size` en de `maxlength`, die respectievelijk het aantal zichtbare letters bevatten en het maximaal aantal letters dat ingegeven kan worden. Je kan ook het type meegeven zoals onder andere: `email`, `password`, `number` ... <br>
 Bijvoorbeeld: `<input type="text" />` geeft <br>
 <input type="text" />
 
 **Checkbox**: <br>
-Hiermee bekom je een aanvink-vak. Belangrijk is dat je een attribuut value meegeeft zodat je in je Javascript kan weten welke waarde geselecteerd is. Wanneer je bovendien checked="checked" toevoegt, zal het vakje al van in het begin aangevinkt zijn. <br>
-Bijvoorbeeld: `<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" /> nieuwsbrief` geeft <br>
-<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" /> nieuwsbrief<br/>
+Belangrijk is dat je een attribuut `value` definieert zodat je in je JavaScript kan achterhalen welke waarde geselecteerd is. Wanneer je bovendien `checked="checked"` toevoegt, zal het vakje vanaf het inladen van de pagina aangevinkt zijn. <br>
+Bijvoorbeeld: `<input type="checkbox" id="item" value="checkvalue" /> check me` geeft <br>
+<input type="checkbox" id="item" value="checkvalue" /> check me<br/>
 
-en `<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" checked="checked" /> nieuwsbrief` geeft <br>
-<input type="checkbox" id="nieuwsbrief" value="nieuwsbrief" checked="checked" /> nieuwsbrief
+en `<input type="checkbox" id="item" value="checkvalue" checked="checked" /> I am checked` geeft <br>
+<input type="checkbox" id="item" value="checkvalue" checked="checked" /> I am checked
 
 **Radio**: <br>
-Bij de radio-button is het belangrijk dat je een radio-groep maakt, omdat radio-knoppen in een groep bij elkaar horen: uit die groep mag slechts één radio geselecteerd worden, net zoals je radio slechts op één zender tegelijk afgestemd kan zijn. Hiervoor moet je binnen de radio-groep als name dezelfde waarde opgeven. Anders wordt het beschouwd als een andere radio-groep.<br>
+Bij de radio-button is het belangrijk dat je een radio-groep maakt m.b.v. het attribuut `name`, omdat radio-knoppen uit een groep bij elkaar horen en uit die groep mag slechts één radio element geselecteerd worden. Hiervoor moet je binnen de radio-groep bij elk element de `name` dezelfde waarde geven. Anders wordt het beschouwd als een andere radio-groep.<br>
 Bijvoorbeeld: 
 ```html
-StuBtu <input type="radio" name="zender" value="stubru" checked="checked" /> <br />
-Q-Music <input type="radio" name="zender" value="q" /> <br />
-MNM <input type="radio" name="zender" value="-mnm" /> <br />
+Klara <input type="radio" name="station" value="klara" checked="checked" /> <br />
+Q-Music <input type="radio" name="station" value="q" /> <br />
+MNM <input type="radio" name="station" value="-mnm" /> <br />
 ```
 geeft: <br><br>
-StuBtu <input type="radio" name="zender" value="stubru" checked="checked" /> <br />
-Q-Music <input type="radio" name="zender" value="q" /> <br />
-MNM <input type="radio" name="zender" value="-mnm" /> <br />
+Klara <input type="radio" name="station" value="klara" checked="checked" /> <br />
+Q-Music <input type="radio" name="station" value="q" /> <br />
+MNM <input type="radio" name="station" value="-mnm" /> <br />
 
 **(De oude) Button en Submit**: <br>
-De types `button` en `submit` zien er in de browser hetzelfde uit, maar hebben een heel ander effect. Wanneer je op een `submit`-knop klikt, wordt de formulierinhoud doorgestuurd naar het script dat je in het action-attribuut van het form gedefinieerd hebt.
+De types `button` en `submit` zien er in de browser hetzelfde uit, maar hebben een heel ander effect. Wanneer je op een `submit`-knop klikt, wordt de formulierinhoud doorgestuurd naar het script dat je in het `action`-attribuut van de form gedefinieerd hebt.
 
-Wanneer je op een `button`-knop klikt, wordt de event-handler uitgevoerd die bij deze knop hoort. Dit klinkt momenteel nog abstract, maar wordt duidelijk in het hoofdstuk Javascript waarin we leren hoe je zo’n event-handler kan definiëren.
+Wanneer je op een `button`-knop klikt, wordt de event-handler (JavaScript) uitgevoerd die bij deze knop hoort. (Hier komen we later op terug in het cursusdeel rond JavaScript)
 
 Bijvoorbeeld
 ```html
-<input type="button" value="klik hierop" /> <br />
-<input type="submit" value="klik hierop" />
+<input type="button" value="Click me" /> <br />
+<input type="submit" value="Submit me" />
 ```
-<input type="button" value="klik hierop" /> <br />
-<input type="submit" value="klik hierop" />
+<input type="button" value="Click me" /> <br />
+<input type="submit" value="Submit me" />
 
 **(De nieuwe) Button**: <br>
-De button uit de paragraaf hierboven had als groot nadeel dat het een _replaced element_ was. Technisch betekent dit dat je geen volwaardige tag hebt met een open- en een sluit-tag en daartussen html-code die **in** de tag staat. Visueel houdt het in dat je de browser de html-code vervangt door een standaard knop, maar dat je verder geen structuur kan geven aan de inhoud van de knop. Zo kan je bijvoorbeeld geen figuren op je knop zetten, terwijl dat toch wel zinvol is. CSS-experts kunnen weliswaar met niet al te veel moeite de vormgeving van een knop veranderen in een figuur, maar desondanks vond men het beter om een volwaardige button-tag toe te voegen. Tussen de open- en sluit-tag zet je dan datgene wat op de knop moet verschijnen.
+De button uit de paragraaf hierboven had als groot nadeel dat het een _replaced element_ was. Technisch betekent dit dat je geen volwaardige tag hebt met een open- en een sluit-tag en daartussen html-code die **in** de tag staat. Visueel houdt het in dat je de browser de html-code vervangt door een standaard knop, maar dat je verder geen structuur kan geven aan de inhoud van de knop. Zo kan je bijvoorbeeld geen figuren op je knop zetten. Daarom vond men het nodig om een volwaardige button-tag toe te voegen (ook al kan je hetzelfde bereiken met de replaced element button en wat specifieke CSS code). Tussen de open- en sluit-tag zet je nu wat op de knop moet verschijnen.
 
-Naast de _name_ en _id_ is het belangrijkste attribuut van de button het _type_: dit is een van _button_, _submit_ en _reset_ met de voor de hand liggende betekenis.
+Naast de _name_ en _id_ is het belangrijkste attribuut van de button het _type_: _button_, _submit_ en _reset_.
 
 **Hidden**:<br>
-Het `hidden` input-element is een element dat niet zichtbaar gemaakt wordt in de browser. Het biedt de mogelijkheid om extra informatie door te geven die onzichtbaar is voor de gebruiker, bv. de datum waarop het formulier ingeladen is, informatie die we op een vorige pagina binnengehaald hebben of eender welke waarde die relevant is voor de formulierverwerking maar die de gebruiker niet zelf moet invullen. Dit wordt vooral handig wanneer we met php en webservices beginnen te werken.<br>
+Het `hidden` input-element is een element dat niet zichtbaar gemaakt wordt in de browser. Het biedt de mogelijkheid om extra informatie door te geven die onzichtbaar is voor de gebruiker, bv. informatie die we op een vorige pagina binnengehaald hebben of eender welke waarde die relevant is voor de formulierverwerking maar die de gebruiker niet zelf moet invullen.<br>
 Bijvoorbeeld: `<input type="hidden" name="geheim" value="317" />` geeft:<br>
 <input type="hidden" name="geheim" value="317" />
 
 **Text Area**:<br>
-De twee laatste invoerelementen die we zien zijn een uitzondering op de gewone inputelementen die _replaced elementen_ zijn. Hier gaat het om volwaardige tags. De `textarea` dient om tekst in te kunnen geven die **meer dan 1 regel** bevat. Met `<input type=”text"/>` konden we al wel tekst ingeven, maar altijd maar op een regel. Met textarea kan dit onbeperkt.<br>
+De volgende invoerelementen zijn een uitzondering omdat het geen _replaced elementen_ zijn. Hier gaat het om volwaardige tags. De `textarea` dient om tekst in te kunnen geven die **meer dan 1 regel** bevat. Met `<input type=”text"/>` konden we al wel tekst ingeven, maar slechts op één regel. Met textarea kan dit onbeperkt.<br>
 Bijvoorbeeld: `<textarea>typ hier tekst</textarea>` geeft: <br>
 <textarea>typ hier tekst</textarea>
 
@@ -438,55 +438,55 @@ _Met CSS kunnen we de grootte en vormgeving van de textarea instellen_
 **Select en Option**:<br>
 Bijvoorbeeld: 
 ```html
-<select id="ploeg">
-    <option value="Lierse">Lierse</option>
-    <option value="Genk">Genk</option>
-    <option value="Anderlecht">Anderlecht</option>
+<select id="station">
+    <option value="klara">Klara</option>
+    <option value="qmusic">Qmusic</option>
+    <option value="mnm">MNM</option>
 </select>
 ```
-<select id="ploeg">
-    <option value="Lierse">Lierse</option>
-    <option value="Genk">Genk</option>
-    <option value="Anderlecht">Anderlecht</option>
+<select id="station">
+    <option value="klara">Klara</option>
+    <option value="qmusic">Qmusic</option>
+    <option value="mnm">MNM</option>
 </select>
 
-Zoals je kan afleiden uit het voorbeeld hierboven, heb je binnen je `select` een lijst met `option` tags nodig. Datgene wat tussen de option staat, verschijnt in het menu; datgene wat bij de `value` staat, komt terecht in het script dat het formulier verwerkt (bv. PHP).
+Hier schrijf je dus binnen je `select` een lijst met `option` tags. Wat tussen de `option` staat, verschijnt in het menu en datgene wat bij de `value` staat, komt terecht in het script dat het formulier verwerkt.
 
 Aan de select kan je een attribuut `size` meegeven dat bepaalt hoe groot de niet-uitgeklapte lijst is, en wanneer je `multiple="multiple"` aanduidt, kan je via `Ctrl+klik` verschillende elementen tegelijk selecteren.
 
 Bijvoorbeeld: 
 ```html
-<select id="ploeg" size="3" multiple="multiple">
-    <option value="Lierse">Lierse</option>
-    <option value="Genk" selected="selected">Genk</option>
-    <option value="Anderlecht" selected="selected">Anderlecht</option>
+<select id="station" size="3" multiple="multiple">
+    <option value="klara">Klara</option>
+    <option value="qmusic" selected="selected">Qmusic</option>
+    <option value="mnm" selected="selected">MNM</option>
 </select>
 ```
-<select id="ploeg" size="3" multiple="multiple">
-    <option value="Lierse">Lierse</option>
-    <option value="Genk" selected="selected">Genk</option>
-    <option value="Anderlecht" selected="selected">Anderlecht</option>
+<select id="station" size="3" multiple="multiple">
+    <option value="klara">Klara</option>
+    <option value="qmusic" selected="selected">Qmusic</option>
+    <option value="mnm" selected="selected">MNM</option>
 </select>
 
 **Tabellen**:<br>
-Wanneer je gegevens in een tabel wil plaatsen, bijvoorbeeld de formulieren van hierboven of de stand in een voetbalcompetitie, moet je tabellen gebruiken. Hiervoor hebben we de tags `table`, `tr` en `td`, de afkortingen van _table_, _table row_ en _table data_. Merk dus op dat HTML vooral rijen ziet, terwijl wij eerder kolommen zien. Dat maakt het soms wat moeilijker om een tabel op te stellen, maar voor de rest is de structuur wel logisch:
+Wanneer je gegevens in een tabel wil plaatsen, moet je tabellen gebruiken. Hiervoor bestaan de tags `table`, `tr` en `td`, de afkortingen van _table_, _table row_ en _table data_. Merk op dat HTML vooral rijen ziet, terwijl wij eerder kolommen zien. Dat maakt het soms moeilijker om een tabel op te stellen, de structuur blijft wel logisch:
 - Eerst maak je een tabel aan: `<table> ... </table>`
-- Binnen die tabel heb je verschillende rijen: `<tr> ... </tr>`
-    - Bovenaan kan je ook een rijhoofding zetten i.p.v. een gewone rij met `<th>`.
-- En in elke rij zijn er verschillende vakjes, wat telkens een `<td>...</td>` geeft.
+- Binnen die tabel definieer je verschillende rijen: `<tr> ... </tr>`
+    - Bovenaan kan je ook een hoofding plaatsen met `<th>` i.p.v. een gewone rij.
+- En in elke rij kan je verschillende vakjes definiëren met `<td>...</td>`.
 
 Bijvoorbeeld:
 ```html
 <table> 
     <tr> 
         <td>Arne Duyver</td> 
-        <td>ICT </td> 
-        <td>Begijnendijk</td> 
+        <td>Informatica </td> 
+        <td>Tessenderlo</td> 
     </tr> 
     <tr>            
         <td>Mark Huybrechts</td> 
-        <td>Communicatie</td> 
-        <td>Bouwel</td> 
+        <td>Elektromechanica</td> 
+        <td>Schoten</td> 
     </tr> 
 </table>
 ```
@@ -494,17 +494,17 @@ geeft:
 <table> 
     <tr> 
         <td>Arne Duyver</td> 
-        <td>ICT </td> 
-        <td>Begijnendijk</td> 
+        <td>Informatica </td> 
+        <td>Tessenderlo</td> 
     </tr> 
     <tr>            
         <td>Mark Huybrechts</td> 
-        <td>Communicatie</td> 
-        <td>Bouwel</td> 
+        <td>Elektromechanica</td> 
+        <td>Schoten</td> 
     </tr> 
 </table>
 
-Tabellen zijn vooral interessant om formulieren te layouten. In de eerste kolom zet je dan de labels (de uitleg bij wat je moet invullen) en in de tweede kolom de invoervakken, zodat die verticaal mooi uitgelijnd zijn.
+Tabellen zijn vooral interessant om formulieren te een layout te geven. In de eerste kolom zet je dan de labels (de uitleg bij wat je moet invullen) en in de tweede kolom de inputs, zodat die verticaal uitgelijnd zijn.
 
 ## Opdrachten
 1. Maak een HTML-bestand en noem het portfolio.html
@@ -535,7 +535,6 @@ Tabellen zijn vooral interessant om formulieren te layouten. In de eerste kolom 
 <br/>`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">`
 
 20. Voeg aan je footer ook een link toe via een icoon naar je Github profiel en een icoon voor je linkedIn profiel (indien je dat hebt)
-
 <br>
 
 21. Maak een formulier waarin mensen zich kunnen inschrijven voor een nieuwsbrief.

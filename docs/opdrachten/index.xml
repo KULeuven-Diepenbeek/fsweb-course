@@ -9,12 +9,5 @@
     <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</managingEditor>
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</webMaster>
     <atom:link href="http://localhost:1313/fsweb-course/opdrachten/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Project opdracht 2024-2025</title>
-      <link>http://localhost:1313/fsweb-course/opdrachten/project-2324/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
-      <guid>http://localhost:1313/fsweb-course/opdrachten/project-2324/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;LET OP: deze informatie is nog niet volledig. Er wordt tijdig meegedeeld wanneer de finale versie van de projectopdracht klaar is en deze zal hier geüpdatet worden en op Toledo geplaatst worden. Op Toledo komt het officiële opdrachten document.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;projecteisen-het-is-een-individueel-project&#34;&gt;Projecteisen: Het is een individueel project&lt;/h2&gt;&#xA;&lt;p&gt;Het spreekt voor zich dat het project van &amp;ldquo;Full Stack Web Development&amp;rdquo; uit het maken van een website bestaat. Het concept achter de website mag je zelf kiezen, maar omdat &amp;rsquo;een website&amp;rsquo; vaag is, gelden volgende &lt;strong&gt;minimumvereisten&lt;/strong&gt;:&lt;/p&gt;</description>
-    </item>
   </channel>
 </rss>

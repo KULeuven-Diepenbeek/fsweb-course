@@ -364,6 +364,10 @@ img {
 10. Gebruik icons in plaats van tekst in je navigation sectie.
 11. Geef je creativiteit de vrije loop om je site zo mooi mogelijk te maken.
 
+## Test jezelf
+
+Klik [hier](https://www.w3schools.com/css/css_quiz.asp) om jezelf te testen met de online HTML quiz van w3schools. Of klik [hier](https://www.w3schools.com/css/css_exercises.asp) voor wat extra oefeningen.
+
 ## Libraries en CDN
 Je kunt **libraries** zoals CSS-frameworks toevoegen aan je websitecode om je ontwikkelproces te versnellen en consistente, professionele ontwerpen te creëren. Dit doe je door de benodigde bestanden te downloaden en lokaal op te slaan, waarna je ze via `<link>`-tags in de `<head>` van je HTML-document opneemt. Bijvoorbeeld, voor Bootstrap, een populaire CSS-library, zou je een link naar het gedownloade CSS-bestand toevoegen:
 ```html
