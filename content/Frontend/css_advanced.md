@@ -149,6 +149,14 @@ Voor de transition-timing-function zijn er een aantal mogelijkheden. (**In de de
 - **`ease-in-out`** - specifies a transition effect with a slow start and end
 - **`cubic-bezier(n,n,n,n)`** - lets you define your own values in a cubic-bezier function
 
+_Je kan transitions voor meerdere elementen definiëren door ze te splitsen met een `<;>`: bv._ 
+```css
+/* multiple transitions */
+div {
+  transition: width 2s linear 1s, padding-top 1s ease-out;
+}
+```
+
 ## Animations
 
 Met **CSS-animations** laat je een element geleidelijk veranderen van de ene stijl naar de andere. Je kunt zoveel CSS-properties wijzigen als je wil, zo vaak je wil. 

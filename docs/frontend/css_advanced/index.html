@@ -12,22 +12,22 @@
     <title>Advanced CSS :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1739953659" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1739953659" rel="stylesheet">
-    <link href="../../css/hybrid.css?1739953659" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1739953659" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1739953659" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1739953659" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1739953659" rel="stylesheet">
-    <link href="../../css/theme.css?1739953659" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1739953659" rel="stylesheet">
-    <link href="../../css/devselector.css?1739953659" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1739953659" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1739953659" rel="stylesheet">
+    <link href="../../css/nucleus.css?1739959645" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1739959645" rel="stylesheet">
+    <link href="../../css/hybrid.css?1739959645" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1739959645" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1739959645" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1739959645" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1739959645" rel="stylesheet">
+    <link href="../../css/theme.css?1739959645" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1739959645" rel="stylesheet">
+    <link href="../../css/devselector.css?1739959645" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1739959645" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1739959645" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1739953659"></script>
-    <script src="../../js/devselector.js?1739953659"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1739959645"></script>
+    <script src="../../js/devselector.js?1739959645"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1739953659"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1739953659"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1739959645"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1739959645"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1739953659"></script>
+<script type="text/javascript" src="../../%20js/search.js?1739959645"></script>
     
   </div>
 
@@ -189,6 +189,27 @@
 <li data-nav-id="/frontend/css_advanced/" title="Advanced CSS" class="dd-item active">
   <a href="../../frontend/css_advanced/">
     Advanced CSS
+    
+  </a>
+</li>
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+<li data-nav-id="/frontend/responsive_design/" title="Responsive Design" class="dd-item ">
+  <a href="../../frontend/responsive_design/">
+    Responsive Design
     
   </a>
 </li>
@@ -503,7 +524,12 @@ We bespreken de volgende overgang properties:</p>
 <li><strong><code>ease-in-out</code></strong> - specifies a transition effect with a slow start and end</li>
 <li><strong><code>cubic-bezier(n,n,n,n)</code></strong> - lets you define your own values in a cubic-bezier function</li>
 </ul>
-<h2 id="animations">Animations</h2>
+<p><em>Je kan transitions voor meerdere elementen definiëren door ze te splitsen met een <code>&lt;;&gt;</code>: bv.</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#75715e">/* multiple transitions */</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">transition</span><span style="color:#111">:</span> <span style="color:#00a8c8">width</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">s</span> <span style="color:#00a8c8">linear</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">s</span><span style="color:#111">,</span> <span style="color:#00a8c8">padding-top</span> <span style="color:#ae81ff">1</span><span style="color:#00a8c8">s</span> <span style="color:#00a8c8">ease-out</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h2 id="animations">Animations</h2>
 <p>Met <strong>CSS-animations</strong> laat je een element geleidelijk veranderen van de ene stijl naar de andere. Je kunt zoveel CSS-properties wijzigen als je wil, zo vaak je wil.
 We bespreken de volgende animation properties:</p>
 <ul>
@@ -768,6 +794,22 @@ Keyframes geven aan welke stijlen het element op bepaalde momenten zal hebben.</
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -799,7 +841,7 @@ Keyframes geven aan welke stijlen het element op bepaalde momenten zal hebben.</
 			<a class="nav nav-prev" href="../../frontend/css_basics/" title="CSS"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../frontend/extra/" title="Extra" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../frontend/responsive_design/" title="Responsive Design" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -809,15 +851,15 @@ Keyframes geven aan welke stijlen het element op bepaalde momenten zal hebben.</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1739953659"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1739953659"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1739953659"></script>
-    <script src="../../js/jquery.sticky.js?1739953659"></script>
-    <script src="../../js/featherlight.min.js?1739953659"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1739953659"></script>
-    <script src="../../js/learn.js?1739953659"></script>
-    <script src="../../js/hugo-learn.js?1739953659"></script>
-    <script src="../../js/mermaid.min.js?1739953659"></script>
+    <script src="../../js/clipboard.min.js?1739959645"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1739959645"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1739959645"></script>
+    <script src="../../js/jquery.sticky.js?1739959645"></script>
+    <script src="../../js/featherlight.min.js?1739959645"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1739959645"></script>
+    <script src="../../js/learn.js?1739959645"></script>
+    <script src="../../js/hugo-learn.js?1739959645"></script>
+    <script src="../../js/mermaid.min.js?1739959645"></script>
     <script>
     window.MathJax = {
       chtml: {
