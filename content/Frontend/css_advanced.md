@@ -299,5 +299,7 @@ Dit zien we in het deel rond JavaScript.
 
 **Exercise 9, 10, 11, 12, 13, 14, 15**: Er worden 7 `transitions` of `animations` getoond. Je hebt ongeveer 15 minuten om de voorbeelden zo goed mogelijk te evenaren. Daarna wordt de oplossing overlopen. (De exacte pixel afstanden worden niet verwacht, het is voldoende wanneer de transitie gelijkaardig is).
 
+_De oplossingen vind je [hier](/files/excercises-advancedCSS.zip)_
+
 ### Portfolio website
 Fleur nu je eigen portfolio website op door wat transitions en animaties toe te voegen waar nuttig.

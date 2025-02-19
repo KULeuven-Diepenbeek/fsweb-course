@@ -187,7 +187,10 @@ JavaScript is sterk geëvolueerd en wordt nu niet alleen gebruikt voor single pa
 
 Een nieuwe en veelbelovende toevoeging aan het JavaScript-ecosysteem is **Svelte, samen met SvelteKit**. Svelte is een modern framework dat compileert naar **uiterst efficiënte JavaScript**, wat resulteert in snellere en kleinere applicaties. SvelteKit biedt een complete oplossing voor het bouwen van webapplicaties, inclusief **server-side rendering** en statische sitegeneratie, waardoor ontwikkelaars nog meer flexibiliteit en kracht krijgen bij het bouwen van moderne webapplicaties.
 
-_Svelte + Sveltekit = Fast Fun Flexible [9](https://svelte.dev/blog/sveltekit-2)_
+<figure>
+    <img src="/img/sveltekit.png" style="max-height: 15rem;"/>
+    <figcaption>Svelte + Svelte kit = Fast Fun Flexible <a href="https://svelte.dev/blog/sveltekit-2">9</a></figcation>
+</figure>
 
 ## Termen uitgelegd
 

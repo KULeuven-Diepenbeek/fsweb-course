@@ -1,0 +1,193 @@
+@import url('animations.css');
+
+html {
+  margin-left: 10%;
+}
+
+/* Exercise 1 */
+#container1 {}
+
+#object1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  transition-delay: 1s;
+  /* transition: width 2s; */
+}
+
+#object1:hover {
+  width: 300px;
+}
+
+/* Exercise 2 */
+#container2 {
+  height: auto;
+  background-color: blue;
+}
+
+#object2 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 1s linear;
+}
+
+#object2:focus {
+  width: 300px;
+  height: 50px;
+}
+
+/* Exercise 3 */
+#container3 {}
+
+#object3 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: background-color 2s;
+}
+
+#object3:hover {
+  background-color: blue;
+}
+
+/* Exercise 4 */
+#container4 {}
+
+#object4 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: opacity 2s;
+}
+
+#object4:hover {
+  opacity: 0.2;
+}
+
+/* SEE IMPORT TOP */
+/* Exercise 5: see html */
+#object5 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+/* Exercise 6: see html */
+#object6 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+/* Exercise 7: see html */
+#object7 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+/* Exercise 8: see html */
+#object8 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+/* Exercise 9 */
+#container9 {
+  height: auto;
+  background-color: blue;
+}
+
+#object9 {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+/* Exercise 10 */
+#object10 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+  transform-origin: center;
+}
+
+#object10:hover {
+  width: 300px;
+}
+
+/* Exercise 11 */
+@keyframes chanceColor {
+  from {
+    background-color: red;
+  }
+
+  to {
+    background-color: yellow;
+  }
+}
+
+#object11 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation-name: chanceColor;
+  animation-duration: 10s;
+  animation-direction: alternate-reverse;
+}
+
+/* Exercise 12 */
+#container12 {
+  height: auto;
+  background-color: blue;
+  transition: transform 3s;
+}
+
+#object12 {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+#container12:hover {
+  transform: scale(0.8);
+}
+
+/* Exercise 13 */
+#container13 {}
+
+#object13 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 1s cubic-bezier(0.7, -0.97, 0.21, 1.59);
+}
+
+#object13:hover {
+  width: 200px;
+}
+
+/* Exercise 14 */
+/* html */
+
+/* Exercise 15 */
+
+#container15 {
+  height: 200px;
+}
+
+h3[value*="test15"] {
+  /* width: 100px; */
+  background-color: blue;
+  transition: font-size 3s;
+}
+
+h3[value*="test15"]:hover {
+  font-size: 4rem
+}
