@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/fsweb-course/frontend/html_basics/</loc>
-    <lastmod>2025-02-14T12:57:56+01:00</lastmod>
+    <lastmod>2025-02-18T15:37:45+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/introductie/</loc>
     <lastmod>2024-02-14T13:41:28+01:00</lastmod>
@@ -12,7 +12,7 @@
     <lastmod>2024-04-24T14:40:40+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/frontend/css_basics/</loc>
-    <lastmod>2025-02-14T13:31:04+01:00</lastmod>
+    <lastmod>2025-02-18T15:37:45+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/frontend/</loc>
     <lastmod>2025-02-12T13:54:16+01:00</lastmod>
@@ -23,16 +23,20 @@
     <loc>http://localhost:1313/fsweb-course/extra/websecurity/</loc>
     <lastmod>2025-02-14T10:46:06+01:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/fsweb-course/frontend/css_advanced/</loc>
+    <lastmod>2025-02-12T12:21:52+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/fsweb-course/backend/laravel_code/</loc>
     <lastmod>2024-05-17T12:23:51+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/opdracht/</loc>
+    <lastmod>2025-02-18T15:37:45+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/frontend/extra/</loc>
     <lastmod>2025-02-14T12:35:03+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/</loc>
-    <lastmod>2025-02-12T12:21:52+01:00</lastmod>
+    <lastmod>2025-02-18T15:37:45+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/tags/</loc>
   </url>

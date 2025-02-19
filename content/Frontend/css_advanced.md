@@ -1,8 +1,8 @@
 ---
 title: "Advanced CSS"
-weight: 4
+weight: 3
 author: Arne Duyver
-draft: true
+draft: false
 ---
 
 _bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain_</br>
@@ -19,18 +19,49 @@ Je css code spreiden over meerdere stylesheets is mogelijk door in je `main.css`
 **Moet helemaal in het begin van je CSS-file staan**
 
 ## Transformations
-Met CSS-transformaties kun je elementen verplaatsen, roteren, schalen en scheef trekken. Volgende 2D-transformaties zijn beschikbaar:
-- `translate()`
-- `rotate()`
-- `scaleX()`
-- `scaleY()`
-- `scale()`
-- `skewX()`
-- `skewY()`
-- `skew()`
-- `matrix()`
+**CSS-transformations** zijn krachtige tools die developers in staat stellen om HTML-elementen visueel te manipuleren zonder hun oorspronkelijke structuur te veranderen. Met CSS-transformations kunnen elementen worden verplaatst, gedraaid, geschaald en scheefgetrokken, waardoor dynamische en interactieve ontwerpen mogelijk worden. 
 
-Examples:
+Deze transformaties worden toegepast met de `transform`-property en kunnen meerdere transformaties combineren voor complexe effecten. Bijvoorbeeld, een element kan tegelijkertijd worden verplaatst en gedraaid, wat zorgt voor vloeiende animaties en visuele aantrekkingskracht.
+
+Met CSS-transformaties kun je elementen dus verplaatsen, roteren, schalen en scheef trekken. Volgende 2D-transformaties zijn beschikbaar:
+- `translate()`: Verplaatst een element van zijn huidige positie.
+```css
+transform: translate(50px, 100px); /* Verplaatst het element 50px naar rechts en 100px naar beneden */
+```
+- `rotate()`: Draait een element rond een vast punt.
+```css
+transform: rotate(45deg); /* Draait het element 45 graden met de klok mee */
+```
+- `scaleX()`: Schaal een element horizontaal.
+```css
+transform: scaleX(1.5); /* Vergroot de breedte van het element met 50% */
+```
+- `scaleY()`: Schaal een element verticaal.
+```css
+transform: scaleY(0.5); /* Verkleint de hoogte van het element met 50% */
+```
+- `scale()`: Schaal een element zowel horizontaal als verticaal.
+```css
+transform: scale(2); /* Verdubbelt de grootte van het element in beide richtingen */
+```
+- `skewX()`: Scheeftrekken van een element langs de X-as.
+```css
+transform: skewX(30deg); /* Scheeftrekt het element 30 graden langs de X-as */
+```
+- `skewY()`: Scheeftrekken van een element langs de Y-as.
+```css
+transform: skewY(20deg); /* Scheeftrekt het element 20 graden langs de Y-as */
+```
+- `skew()`: Scheeftrekken van een element langs zowel de X- als de Y-as.
+```css
+transform: skew(30deg, 20deg); /* Scheeftrekt het element 30 graden langs de X-as en 20 graden langs de Y-as */
+```
+- `matrix()`: Combineert meerdere transformaties in één.
+```css
+transform: matrix(1, 0.5, -0.5, 1, 100, 50); /* Voert een combinatie van translaties, rotaties, schalingen en scheeftrekkingen uit */
+```
+
+Extra Examples:
 ```css
 div {
   transform: translate(50px, 100px);
@@ -49,15 +80,26 @@ div {
 ### Matrix
 De methode `matrix()` combineert alle 2D-transformatiemethoden in één. De `matrix()` methode neemt zes parameters, die wiskundige functies bevatten, waarmee je elementen kunt roteren, schalen, verplaatsen (vertalen) en schuin houden.
 
-De parameters zijn als volgt: `matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`
+De parameters zijn als volgt: `matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)`
 ```css
 div{
-  transform: matrix(1, -0.3, 0, 1, 0, 0);
+  transform: matrix(1, 0.5, -0.5, 1, 100, 50);
 }
 ```
+De `matrix(1, 0.5, -0.5, 1, 100, 50)`-transformatie voert een combinatie van schalen, scheeftrekken en verplaatsen uit op een element. Hier is wat elke parameter doet:
+- _scaleX (1)_: Schaal de breedte van het element met een factor van 1 (geen verandering).
+- _skewY (0.5)_: Scheeftrek het element langs de Y-as met een hoek van ongeveer 26,57 graden (0.5 radian).
+- _skewX (-0.5)_: Scheeftrek het element langs de X-as met een hoek van ongeveer -26,57 graden (-0.5 radian).
+- _scaleY (1)_: Schaal de hoogte van het element met een factor van 1 (geen verandering).
+- _translateX (100)_: Verplaats het element 100 pixels naar rechts.
+- _translateY (50)_: Verplaats het element 50 pixels naar beneden.
+
+_Net zoals het werken met andere CSS-code is "doing it yourself" de boodschap om meer feeling te krijgen._
 
 ## Transitions
-Met **CSS-transitions** kun je de waarden van eigenschappen soepel veranderen gedurende een bepaalde tijd.
+**CSS-transitions** zijn een manier om geleidelijke veranderingen in de stijl van een element te creëren wanneer een eigenschap wijzigt. Ze maken het mogelijk om animaties te maken die soepel en visueel aantrekkelijk zijn, _zonder dat er complexe JavaScript nodig is_. Met transitions kun je specificeren **welke eigenschappen** moeten veranderen, de **duur van de verandering**, de **timing-functie** (zoals lineair of versneld) en **eventuele vertragingen**. Bijvoorbeeld, je kunt een knop laten veranderen van kleur wanneer de muis eroverheen beweegt, of een afbeelding laten vergroten wanneer deze wordt aangeklikt. 
+
+Met andere woorden kan je **CSS-transitions** kun je de waarden van eigenschappen soepel veranderen gedurende een bepaalde tijd.
 We bespreken de volgende overgang properties:
 - `transition`
 - `transition-property`
@@ -65,8 +107,8 @@ We bespreken de volgende overgang properties:
 - `transition-timing-function`
 - `transition-delay`
 
-Om een transition effect te maken, moet je twee dingen specificeren:
-1. de CSS-property waaraan u een effect wilt toevoegen
+Om een transition effect te maken, moet je minstens twee dingen specificeren:
+1. de CSS-property waaraan je een effect wilt toevoegen
 2. de duur van het effect
 _Opmerking: Als het onderdeel duur niet wordt opgegeven, heeft de overgang geen effect, omdat de standaardwaarde 0 is._
 
@@ -205,9 +247,29 @@ Je gebruikt **dubbele klasse** notaties ter bescherming:
 .animatie.fade-in {
     animation: fadeIn 0.5s ease-in forwards;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 ```
 
+Dit biedt verschillende voordelen:
+1. **Specifieke Stijlen Toepassen**: Door dubbele klassen te gebruiken, kun je zeer specifieke stijlen toepassen op elementen. Dit helpt bij het verfijnen van je CSS en voorkomt conflicten tussen stijlen.
+2. **Herbruikbaarheid van CSS**: Je kunt algemene stijlen in één klasse definiëren en specifieke animaties of effecten in een andere. Dit maakt je CSS herbruikbaarder en gemakkelijker te onderhouden.
+3. **Bescherming tegen Stijlconflicten**: Door specifieke combinaties van klassen te gebruiken, verminder je de kans op stijlconflicten. Dit is vooral handig in grotere projecten met veel CSS.
+
 ### Animation play state
+Door gebruik te maken van de `animation-play-state` property kun je eenvoudig animaties pauzeren en hervatten. De mogelijke values zijn: 
+- `paused`: De animatie stopt op het huidige frame
+- `running`: De animatie wordt afgespeeld.
+- `initial`: De animatie keert terug naar de standaardwaarde 'running'.
+- `inherit`: De animatie neemt de waarde over van het bovenliggende element.
+
 ```css
 div:hover {
   animation-play-state: paused; /*running, initial, inherit*/
@@ -215,6 +277,7 @@ div:hover {
 ```
 
 ### Animatie klasse dynamisch toevoegen met JavaScript
+Dit zien we in het deel rond JavaScript.
 <!-- TODO -->
 
 <!-- TODO in responsive
@@ -228,7 +291,7 @@ div:hover {
 ## Frameworks
 ## Templates -->
 
-## [Opdrachten](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student/tree/CSS-advanced-exercises)
+## Opdrachten
 
 **Exercise 1, 2, 3, 4**: Er worden drie `transitions` getoond. Je hebt ongeveer 8 minuten om de transities zo goed mogelijk te evenaren. Daarna wordt de oplossing overlopen. (De exacte pixel afstanden worden niet verwacht, het is voldoende wanneer de transitie gelijkaardig is).
 
