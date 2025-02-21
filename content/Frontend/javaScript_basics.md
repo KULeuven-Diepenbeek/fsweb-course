@@ -486,3 +486,6 @@ TODO - Recreeer de voorbeelden van mijn p5js library.
 
 TODO - Maak een website met een creative coding touch. -->
 
+## Test jezelf
+
+Klik [hier](https://www.w3schools.com/js/js_quiz.asp) om jezelf te testen met de online JS quiz van w3schools. Of klik [hier](https://www.w3schools.com/js/js_exercises.asp) voor wat extra oefeningen.
