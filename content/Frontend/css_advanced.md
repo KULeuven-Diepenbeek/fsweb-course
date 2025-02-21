@@ -175,6 +175,8 @@ We bespreken de volgende animation properties:
 Om CSS-animations te gebruiken, moet je eerst een aantal keyframes opgeven voor de animatie.
 Keyframes geven aan welke stijlen het element op bepaalde momenten zal hebben.
 
+Je kan ook meerdere keyframes meegeven zodat je meerdere states tussen de animation hebt. Deze tussenstates geef je dan aan met percentages, `%`.
+
 ```css
 /* The animation code */
 @keyframes example {
@@ -200,7 +202,7 @@ div {
   animation-delay: 2s;                
   animation-iteration-count: infinite;
   animation-direction: alternate;     /*normal, reverse, alternate, alternate-reverse*/
-  animation-fill-mode: forwards;      /*none, forwards, basckwards, both*/ 
+  animation-fill-mode: forwards;      /*none, forwards, backwards, both*/ 
 }
 
 /* Shorthand */
@@ -227,11 +229,24 @@ div {
 **CSS-animations** definiëren complexe bewegingen met keyframes, zoals `rotate` of `fade`, terwijl **CSS-transitions** soepele veranderingen maken in elementeigenschappen, zoals grootte of kleur, tijdens gebeurtenissen zoals `hover`. Animaties gebruiken keyframes en kunnen oneindig herhalen, terwijl overgangen optreden bij eigenschapsveranderingen en meer geschikt zijn voor subtiele effecten. Beiden voegen interactiviteit en aantrekkelijkheid toe aan webpagina's, maar hebben verschillende toepassingen.
 
 ### Animation utility classes en dubbele classes
-Je gebruikt **`animation utility classes`** om de relatie tussen animatie en element te ontkoppelen en voor herbruikbaarheid.
+Je gebruikt **`animation utility classes`** om de relatie tussen animatie en element te ontkoppelen en voor herbruikbaarheid. Je kan op die manier ook verschillende animatie eigenschappen opsplitsen in verschillende klassen en dan via de juiste klassenamen snel gaan combineren in je html.
 
 ```css
 .fade-in {
-    animation: fadeIn 0.5s ease-in forwards;
+    animation-name: fadeIn;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate.animate--infinite {
+  animation-iteration-count: infinite;
+}
+
+.animate.animate--delay-1s {
+  animation-delay: 1s;
 }
 
 @keyframes fadeIn {
@@ -247,6 +262,12 @@ Je gebruikt **`animation utility classes`** om de relatie tussen animatie en ele
   0%, 50%, 100%   {opacity: 1;}
   25%, 75%  {opacity: 0.5;}
 }
+```
+met HTML
+```html
+<div class="animate fade-in animate--delay-1s">
+  ...
+</div>
 ```
 
 Je gebruikt **dubbele klasse** notaties ter bescherming:

@@ -114,8 +114,6 @@ Later werden modules binnen de webserver zelf populairder, zoals PHP en ASP, die
 
 Daarnaast zijn er taalafhankelijke servers ontwikkeld die specifiek zijn ontworpen voor bepaalde programmeertalen. Voorbeelden hiervan zijn Tomcat voor Java, Flask voor Python en Laravel voor PHP. Deze servers bieden geoptimaliseerde omgevingen voor het uitvoeren van applicaties geschreven in hun respectieve talen, wat de ontwikkeling en het onderhoud van webapplicaties vereenvoudigt.
 
-TODO Applicatie-Server, XAMPP, PHP (lightweight, server side), 
-
 ## Een Full Stack met XAMPP
 XAMPP is een gratis en open-source cross-platform full stack webserver oplossing, ontwikkeld door Apache Friends. Het is een acroniem dat staat voor **Cross-Platform, Apache, MySQL, PHP, en Perl**. XAMPP biedt een eenvoudige manier om een lokale webserver op te zetten op je eigen computer, wat ideaal is voor het ontwikkelen en testen van webapplicaties voordat ze naar een live server worden verplaatst.[6](https://www.apachefriends.org/index.html), [7](https://sourceforge.net/projects/xampp/)
 

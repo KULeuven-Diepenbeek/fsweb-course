@@ -49,9 +49,20 @@ enableGitInfo = true
     disableInlineCopyToClipBoard = true
     ordersectionsby = "weight"
 
+[mediaTypes]
+[mediaTypes."application/print"]
+suffixes = ["print"]
+
+[outputFormats]
+[outputFormats.print]
+mediaType = "application/print"
+baseName = "print"
+
 # see https://learn.netlify.com/en/basics/configuration/
 [outputs]
-home = [ "HTML", "RSS", "JSON"]
+home = [ "HTML", "RSS", "JSON", "PRINT"]
+page = ['html', 'rss', 'print']
+section = ['html', 'rss', 'print'] 
 
 [params.author]
   name = "Arne Duyver"
