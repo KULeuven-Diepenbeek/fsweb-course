@@ -12,22 +12,22 @@
     <title>Responsive Design :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1740518952" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1740518952" rel="stylesheet">
-    <link href="../../css/hybrid.css?1740518952" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1740518952" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1740518952" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1740518952" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1740518952" rel="stylesheet">
-    <link href="../../css/theme.css?1740518952" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1740518952" rel="stylesheet">
-    <link href="../../css/devselector.css?1740518952" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1740518952" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1740518952" rel="stylesheet">
+    <link href="../../css/nucleus.css?1740563744" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1740563744" rel="stylesheet">
+    <link href="../../css/hybrid.css?1740563744" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1740563744" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1740563744" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1740563744" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1740563744" rel="stylesheet">
+    <link href="../../css/theme.css?1740563744" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1740563744" rel="stylesheet">
+    <link href="../../css/devselector.css?1740563744" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1740563744" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1740563744" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1740518952"></script>
-    <script src="../../js/devselector.js?1740518952"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1740563744"></script>
+    <script src="../../js/devselector.js?1740563744"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1740518952"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1740518952"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1740563744"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1740563744"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1740518952"></script>
+<script type="text/javascript" src="../../%20js/search.js?1740563744"></script>
     
   </div>
 
@@ -389,6 +389,7 @@
         <li><a href="#ch">ch</a></li>
       </ol>
     </li>
+    <li><a href="#viewport">Viewport</a></li>
     <li><a href="#media-queries">Media Queries</a>
       <ol>
         <li><a href="#extra-media-queries">Extra media queries</a></li>
@@ -841,308 +842,304 @@ Bijvoorbeeld:</p>
 </span></span></code></pre></div></p>
 </details>
 <!-- EXSOL -->
-<!--<details closed>
+<details closed>
 <summary><i><b><span style="color: #03C03C;">Solution:</span> Klik hier om de code te zien/verbergen</b></i>🔽</summary>
 <p>
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flexbox and Grid Exercises</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    .exercise {
-      margin-bottom: 20px;
-      padding: 10px;
-      border: 2px dashed gray;
-    }
-
-    .solution {
-      display: none;
-      margin-top: 10px;
-    }
-
-    /* Flex Center Exercise */
-    .flex-center-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 200px;
-      border: 2px solid black;
-    }
-
-    .flex-center-box {
-      padding: 10px;
-      background-color: lightblue;
-    }
-
-    /* Grid Left Half Exercise */
-    .grid-half-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      height: 200px;
-      border: 2px solid black;
-    }
-
-    .grid-half-item {
-      background-color: lightgreen;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Flex Space Between Exercise */
-    .flex-space-between-container {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-      border: 2px solid black;
-    }
-
-    .flex-space-between-box {
-      padding: 10px;
-      background-color: lightblue;
-    }
-
-    /* Flex Column Exercise */
-    .flex-column-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: 2px solid black;
-      height: 200px;
-    }
-
-    .flex-column-box {
-      padding: 10px;
-      background-color: lightblue;
-      margin: 5px;
-    }
-
-    /* Grid Three Columns Exercise */
-    .grid-three-columns-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      padding: 10px;
-      border: 2px solid black;
-    }
-
-    .grid-three-columns-item {
-      background-color: lightgreen;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Grid Auto Rows Exercise */
-    .grid-auto-rows-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: minmax(100px, auto);
-      gap: 10px;
-      border: 2px solid black;
-      padding: 10px;
-    }
-
-    .grid-auto-rows-item {
-      background-color: lightgreen;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .grid-auto-rows-item-large {
-      grid-column: span 2;
-      background-color: lightcoral;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Flex Wrap Exercise (New) */
-    .flex-wrap-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      border: 2px solid black;
-      padding: 10px;
-    }
-
-    .flex-wrap-box {
-      padding: 10px;
-      background-color: lightblue;
-      width: 150px;
-      text-align: center;
-    }
-
-    /* Grid Named Areas Exercise (New) */
-    .grid-named-areas-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 100px 100px;
-      grid-template-areas: "header header" "sidebar content";
-      gap: 10px;
-      border: 2px solid black;
-      padding: 10px;
-    }
-
-    .grid-header {
-      grid-area: header;
-      background-color: lightyellow;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-
-    .grid-sidebar {
-      grid-area: sidebar;
-      background-color: lightpink;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-
-    .grid-content {
-      grid-area: content;
-      background-color: lightgray;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>Flexbox and Grid Exercises</h1>
-
-  Flex Center Exercise
-  <div class="exercise">
-    <p>Exercise: Center this div using Flexbox.</p>
-    <button onclick="toggleSolution('flex-center')">Show Solution</button>
-    <div id="flex-center" class="solution">
-      <div class="flex-center-container">
-        <div class="flex-center-box">This div is centered using Flexbox.</div>
-      </div>
-    </div>
-  </div>
-
-  Grid Left Half Exercise
-  <div class="exercise">
-    <p>Exercise: This div needs to cover the left half of the width of the screen using Grid.</p>
-    <button onclick="toggleSolution('grid-half')">Show Solution</button>
-    <div id="grid-half" class="solution">
-      <div class="grid-half-container">
-        <div class="grid-half-item">This div covers the left half using Grid.</div>
-        <div></div>
-      </div>
-    </div>
-  </div>
-
-  Flex Space Between Exercise
-  <div class="exercise">
-    <p>Exercise: Distribute elements evenly using Flexbox.</p>
-    <button onclick="toggleSolution('flex-space-between')">Show Solution</button>
-    <div id="flex-space-between" class="solution">
-      <div class="flex-space-between-container">
-        <div class="flex-space-between-box">Left</div>
-        <div class="flex-space-between-box">Right</div>
-      </div>
-    </div>
-  </div>
-
-  Flex Column Exercise
-  <div class="exercise">
-    <p>Exercise: Arrange elements in a vertical column using Flexbox.</p>
-    <button onclick="toggleSolution('flex-column')">Show Solution</button>
-    <div id="flex-column" class="solution">
-      <div class="flex-column-container">
-        <div class="flex-column-box">Item 1</div>
-        <div class="flex-column-box">Item 2</div>
-      </div>
-    </div>
-  </div>
-
-  Grid Three Columns Exercise
-  <div class="exercise">
-    <p>Exercise: Create a three-column layout using Grid.</p>
-    <button onclick="toggleSolution('grid-three-columns')">Show Solution</button>
-    <div id="grid-three-columns" class="solution">
-      <div class="grid-three-columns-container">
-        <div class="grid-three-columns-item">Column 1</div>
-        <div class="grid-three-columns-item">Column 2</div>
-        <div class="grid-three-columns-item">Column 3</div>
-      </div>
-    </div>
-  </div>
-
-  Grid Auto Rows Exercise
-  <div class="exercise">
-    <p>Exercise: Create a dynamic grid with auto-sized rows.</p>
-    <button onclick="toggleSolution('grid-auto-rows')">Show Solution</button>
-    <div id="grid-auto-rows" class="solution">
-      <div class="grid-auto-rows-container">
-        <div class="grid-auto-rows-item">Item 1</div>
-        <div class="grid-auto-rows-item">Item 2</div>
-        <div class="grid-auto-rows-item-large">Item spanning two columns</div>
-        <div class="grid-auto-rows-item">Item 3</div>
-        <div class="grid-auto-rows-item">Item 4</div>
-      </div>
-    </div>
-  </div>
-
-  Flex Wrap Exercise
-  <div class="exercise">
-    <p>Exercise: Use Flexbox to wrap child elements when overflowing.</p>
-    <button onclick="toggleSolution('flex-wrap')">Show Solution</button>
-    <div id="flex-wrap" class="solution">
-      <div class="flex-wrap-container">
-        <div class="flex-wrap-box">Box 1: This box will wrap</div>
-        <div class="flex-wrap-box">Box 2: This box will wrap</div>
-        <div class="flex-wrap-box">Box 3: This box will wrap</div>
-        <div class="flex-wrap-box">Box 4: This box will wrap</div>
-        <div class="flex-wrap-box">Box 5: This box will wrap</div>
-        <div class="flex-wrap-box">Box 6: This box will wrap</div>
-      </div>
-    </div>
-  </div>
-
-  Grid Named Areas Exercise
-  <div class="exercise">
-    <p>Exercise: Use Grid named areas to position elements.</p>
-    <button onclick="toggleSolution('grid-named-areas')">Show Solution</button>
-    <div id="grid-named-areas" class="solution">
-      <div class="grid-named-areas-container">
-        <div class="grid-header">Header: Positioned using Grid named areas</div>
-        <div class="grid-sidebar">Sidebar: Positioned using Grid named areas</div>
-        <div class="grid-content">Content: Positioned using Grid named areas</div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function toggleSolution(id) {
-      var solution = document.getElementById(id);
-      solution.style.display = solution.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
-</body>
-
-</html>
-```
-
-</p>
-</details>-->
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">html</span> <span style="color:#75af00">lang</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;en&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">meta</span> <span style="color:#75af00">charset</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;UTF-8&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">meta</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;viewport&#34;</span> <span style="color:#75af00">content</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">title</span><span style="color:#111">&gt;</span>Flexbox and Grid Exercises<span style="color:#111">&lt;/</span><span style="color:#f92672">title</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">style</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">body</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">font-family</span><span style="color:#111">:</span> <span style="color:#111">Arial</span><span style="color:#111">,</span> <span style="color:#00a8c8">sans-serif</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">exercise</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">margin-bottom</span><span style="color:#111">:</span> <span style="color:#ae81ff">20</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">dashed</span> <span style="color:#00a8c8">gray</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">solution</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">none</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">margin-top</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Flex Center Exercise */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">flex-center-container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">height</span><span style="color:#111">:</span> <span style="color:#ae81ff">200</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">flex-center-box</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightblue</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Grid Left Half Exercise */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-half-container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">grid</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-template-columns</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">fr</span> <span style="color:#ae81ff">1</span><span style="color:#111">fr</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">height</span><span style="color:#111">:</span> <span style="color:#ae81ff">200</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-half-item</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightgreen</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Flex Space Between Exercise */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">flex-space-between-container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">space-between</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">flex-space-between-box</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightblue</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Flex Column Exercise */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">flex-column-container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">flex-direction</span><span style="color:#111">:</span> <span style="color:#00a8c8">column</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">height</span><span style="color:#111">:</span> <span style="color:#ae81ff">200</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">flex-column-box</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightblue</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">margin</span><span style="color:#111">:</span> <span style="color:#ae81ff">5</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Grid Three Columns Exercise */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-three-columns-container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">grid</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-template-columns</span><span style="color:#111">:</span> <span style="color:#75af00">repeat</span><span style="color:#111">(</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span> <span style="color:#ae81ff">1</span><span style="color:#111">fr</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">gap</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-three-columns-item</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightgreen</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Grid Auto Rows Exercise */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-auto-rows-container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">grid</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-template-columns</span><span style="color:#111">:</span> <span style="color:#75af00">repeat</span><span style="color:#111">(</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span> <span style="color:#ae81ff">1</span><span style="color:#111">fr</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-auto-rows</span><span style="color:#111">:</span> <span style="color:#75af00">minmax</span><span style="color:#111">(</span><span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">,</span> <span style="color:#00a8c8">auto</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">gap</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-auto-rows-item</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightgreen</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-auto-rows-item-large</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-column</span><span style="color:#111">:</span> <span style="color:#111">span</span> <span style="color:#ae81ff">2</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightcoral</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Flex Wrap Exercise (New) */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">flex-wrap-container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">flex-wrap</span><span style="color:#111">:</span> <span style="color:#00a8c8">wrap</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">gap</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">flex-wrap-box</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightblue</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">width</span><span style="color:#111">:</span> <span style="color:#ae81ff">150</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">text-align</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* Grid Named Areas Exercise (New) */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-named-areas-container</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">grid</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-template-columns</span><span style="color:#111">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">fr</span> <span style="color:#ae81ff">1</span><span style="color:#111">fr</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-template-rows</span><span style="color:#111">:</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span> <span style="color:#ae81ff">100</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-template-areas</span><span style="color:#111">:</span> <span style="color:#d88200">&#34;header header&#34;</span> <span style="color:#d88200">&#34;sidebar content&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">gap</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">border</span><span style="color:#111">:</span> <span style="color:#ae81ff">2</span><span style="color:#00a8c8">px</span> <span style="color:#00a8c8">solid</span> <span style="color:#00a8c8">black</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-header</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-area</span><span style="color:#111">:</span> <span style="color:#111">header</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightyellow</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-sidebar</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-area</span><span style="color:#111">:</span> <span style="color:#111">sidebar</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightpink</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">grid-content</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">grid-area</span><span style="color:#111">:</span> <span style="color:#00a8c8">content</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">background-color</span><span style="color:#111">:</span> <span style="color:#00a8c8">lightgray</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">display</span><span style="color:#111">:</span> <span style="color:#00a8c8">flex</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">align-items</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">justify-content</span><span style="color:#111">:</span> <span style="color:#00a8c8">center</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">padding</span><span style="color:#111">:</span> <span style="color:#ae81ff">10</span><span style="color:#00a8c8">px</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">style</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>Flexbox and Grid Exercises<span style="color:#111">&lt;/</span><span style="color:#f92672">h1</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Flex Center Exercise
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;exercise&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>Exercise: Center this div using Flexbox.<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;toggleSolution(&#39;flex-center&#39;)&#34;</span><span style="color:#111">&gt;</span>Show Solution<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-center&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;solution&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-center-container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-center-box&#34;</span><span style="color:#111">&gt;</span>This div is centered using Flexbox.<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Grid Left Half Exercise
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;exercise&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>Exercise: This div needs to cover the left half of the width of the screen using Grid.<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;toggleSolution(&#39;grid-half&#39;)&#34;</span><span style="color:#111">&gt;</span>Show Solution<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-half&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;solution&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-half-container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-half-item&#34;</span><span style="color:#111">&gt;</span>This div covers the left half using Grid.<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Flex Space Between Exercise
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;exercise&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>Exercise: Distribute elements evenly using Flexbox.<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;toggleSolution(&#39;flex-space-between&#39;)&#34;</span><span style="color:#111">&gt;</span>Show Solution<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-space-between&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;solution&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-space-between-container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-space-between-box&#34;</span><span style="color:#111">&gt;</span>Left<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-space-between-box&#34;</span><span style="color:#111">&gt;</span>Right<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Flex Column Exercise
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;exercise&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>Exercise: Arrange elements in a vertical column using Flexbox.<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;toggleSolution(&#39;flex-column&#39;)&#34;</span><span style="color:#111">&gt;</span>Show Solution<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-column&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;solution&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-column-container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-column-box&#34;</span><span style="color:#111">&gt;</span>Item 1<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-column-box&#34;</span><span style="color:#111">&gt;</span>Item 2<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Grid Three Columns Exercise
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;exercise&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>Exercise: Create a three-column layout using Grid.<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;toggleSolution(&#39;grid-three-columns&#39;)&#34;</span><span style="color:#111">&gt;</span>Show Solution<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-three-columns&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;solution&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-three-columns-container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-three-columns-item&#34;</span><span style="color:#111">&gt;</span>Column 1<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-three-columns-item&#34;</span><span style="color:#111">&gt;</span>Column 2<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-three-columns-item&#34;</span><span style="color:#111">&gt;</span>Column 3<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Grid Auto Rows Exercise
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;exercise&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>Exercise: Create a dynamic grid with auto-sized rows.<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;toggleSolution(&#39;grid-auto-rows&#39;)&#34;</span><span style="color:#111">&gt;</span>Show Solution<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-auto-rows&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;solution&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-auto-rows-container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-auto-rows-item&#34;</span><span style="color:#111">&gt;</span>Item 1<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-auto-rows-item&#34;</span><span style="color:#111">&gt;</span>Item 2<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-auto-rows-item-large&#34;</span><span style="color:#111">&gt;</span>Item spanning two columns<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-auto-rows-item&#34;</span><span style="color:#111">&gt;</span>Item 3<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-auto-rows-item&#34;</span><span style="color:#111">&gt;</span>Item 4<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Flex Wrap Exercise
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;exercise&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>Exercise: Use Flexbox to wrap child elements when overflowing.<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;toggleSolution(&#39;flex-wrap&#39;)&#34;</span><span style="color:#111">&gt;</span>Show Solution<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-wrap&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;solution&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-wrap-container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-wrap-box&#34;</span><span style="color:#111">&gt;</span>Box 1: This box will wrap<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-wrap-box&#34;</span><span style="color:#111">&gt;</span>Box 2: This box will wrap<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-wrap-box&#34;</span><span style="color:#111">&gt;</span>Box 3: This box will wrap<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-wrap-box&#34;</span><span style="color:#111">&gt;</span>Box 4: This box will wrap<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-wrap-box&#34;</span><span style="color:#111">&gt;</span>Box 5: This box will wrap<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;flex-wrap-box&#34;</span><span style="color:#111">&gt;</span>Box 6: This box will wrap<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Grid Named Areas Exercise
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;exercise&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>Exercise: Use Grid named areas to position elements.<span style="color:#111">&lt;/</span><span style="color:#f92672">p</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;toggleSolution(&#39;grid-named-areas&#39;)&#34;</span><span style="color:#111">&gt;</span>Show Solution<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-named-areas&#34;</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;solution&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-named-areas-container&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-header&#34;</span><span style="color:#111">&gt;</span>Header: Positioned using Grid named areas<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-sidebar&#34;</span><span style="color:#111">&gt;</span>Sidebar: Positioned using Grid named areas<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">class</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grid-content&#34;</span><span style="color:#111">&gt;</span>Content: Positioned using Grid named areas<span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">function</span> <span style="color:#75af00">toggleSolution</span><span style="color:#111">(</span><span style="color:#75af00">id</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">var</span> <span style="color:#75af00">solution</span> <span style="color:#f92672">=</span> <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">getElementById</span><span style="color:#111">(</span><span style="color:#75af00">id</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75af00">solution</span><span style="color:#111">.</span><span style="color:#75af00">style</span><span style="color:#111">.</span><span style="color:#75af00">display</span> <span style="color:#f92672">=</span> <span style="color:#75af00">solution</span><span style="color:#111">.</span><span style="color:#75af00">style</span><span style="color:#111">.</span><span style="color:#75af00">display</span> <span style="color:#f92672">===</span> <span style="color:#d88200">&#39;none&#39;</span> <span style="color:#f92672">?</span> <span style="color:#d88200">&#39;block&#39;</span> <span style="color:#f92672">:</span> <span style="color:#d88200">&#39;none&#39;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div></p>
+</details>
 <h2 id="lets-talk-about-units">Let&rsquo;s talk about Units</h2>
 <p>Zoals al eerder vermeld bestaan er verschillende soorten units in HTML/CSS, maar waarvoor gebruik je welke unit nu het beste? Hieronder vind je een aantal tips.</p>
 <p>Maar eerst volgt er nog een kleine uitleg over de abstracte unit <strong>pixel</strong> of <code>px</code>. Er bestaat namelijk wel wat verwarring op het internet over wat hoe groot <code>1px</code> juist is. Allereerst is het de kleinste unit die je kan gebruiken, maar hoe groot is het juist. We gaan geen exacte meting meegeven maar vertellen je wel waarvoor de pixel dient. De pixelgrootte is verschillend voor verschillende schremgrootten en met goede reden. De grootte van de pixel heeft te maken met de aangeraden kijkafstand ten opzichte van het scherm. De pixel unit zorgt er namelijk voor dat <code>10px</code> op een klein scherm er even groot zou moeten uitzien als <code>10px</code> op een groot scherm wanneer je rekening houd met de kijkafstand tot de twee schermen. In werkelijkheid is <code>10px</code> op het grote scherm groter, maar als je op de correcte afstand van het scherm zit zouden de groottes overeen moeten komen. Dit maakt de <strong>pixel</strong> de ideale basis unit voor je design.</p>
@@ -1164,7 +1161,21 @@ Bijvoorbeeld:</p>
 <p>Een laatste unit die je voor een specifiek geval kan gebruiken is de <code>ch</code> (of character width) unit. Een bepaalde design filosofie stelt dat het een good practice is om textcontainers niet breder te maken dan 60 karakters. Door de styling <code>max-width: 60ch;</code> toe te passen, wordt automatisch deze good practice toegepast.</p>
 <p><strong>99% van de tijd zal je dus enkel met de hierboven vermelde units werken</strong></p>
 <p><em>Voorbeeld zie <a href="#demo-4-units">demo 4</a></em></p>
+<h2 id="viewport">Viewport</h2>
+<blockquote>
+<p>To create a responsive website, add the following <meta> tag to all your web pages:</p></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">meta</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;viewport&#34;</span> <span style="color:#75af00">content</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>Deze tag zorgt ervoor dat de viewport, het gebied waarin webinhoud wordt weergegeven, zich aanpast aan de breedte van het apparaat waarop de website wordt bekeken. Door width=device-width in te stellen, wordt de breedte van de viewport gelijk aan de breedte van het apparaat, wat betekent dat de website correct wordt geschaald op verschillende schermformaten, van smartphones tot desktops. De initial-scale=1.0 zorgt ervoor dat de inhoud niet wordt ingezoomd of uitgezoomd bij het laden van de pagina.</p>
+<p>Hier is een voorbeeld van een webpagina zonder de viewport-metatag en dezelfde webpagina met de viewport-metatag:</p>
+<figure>
+  <div style="display: flex; justify-content: space-around; align-items: center;">
+    <img src="https://www.w3schools.com/css/img_viewport1.png" style="max-width: 99%; border: 2px solid black;"/>
+    <img src="https://www.w3schools.com/css/img_viewport2.png" style="max-width: 99%; border: 2px solid black;"/>
+  </div>
+  <figcaption>Zonder viewport-metatag (links), met viewport-metatag (rechts) <a href="https://www.w3schools.com/html/html_responsive.asp">bron</a></figcation>
+</figure>
 <h2 id="media-queries">Media Queries</h2>
+<p>Media queries in CSS zijn een krachtige tool waarmee je de stijl van een website kunt aanpassen aan verschillende schermgroottes en apparaattypen. Ze maken het mogelijk om specifieke <strong>CSS-regels toe te passen afhankelijk van de eigenschappen van het apparaat</strong>, zoals de breedte, hoogte, resolutie en oriëntatie van het scherm. Dit is essentieel voor responsive webdesign, waarbij een website er goed uitziet en functioneert op zowel desktops, tablets als smartphones. Door media queries te gebruiken, kun je bijvoorbeeld een andere lay-out toepassen voor mobiele apparaten dan voor grotere schermen, waardoor de gebruikerservaring op elk apparaat geoptimaliseerd wordt.</p>
 <figure>
 <img src="../../img/mediaQuery_syntax.jpg" alt="drawing" style="height:auto;"/>
 <figcaption>Media query syntax <a href="https://dev.to/codewithtee/css-media-queries-16mj">bron</a></figcation>
@@ -2324,15 +2335,15 @@ END TODO -->
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1740518952"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1740518952"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1740518952"></script>
-    <script src="../../js/jquery.sticky.js?1740518952"></script>
-    <script src="../../js/featherlight.min.js?1740518952"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1740518952"></script>
-    <script src="../../js/learn.js?1740518952"></script>
-    <script src="../../js/hugo-learn.js?1740518952"></script>
-    <script src="../../js/mermaid.min.js?1740518952"></script>
+    <script src="../../js/clipboard.min.js?1740563744"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1740563744"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1740563744"></script>
+    <script src="../../js/jquery.sticky.js?1740563744"></script>
+    <script src="../../js/featherlight.min.js?1740563744"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1740563744"></script>
+    <script src="../../js/learn.js?1740563744"></script>
+    <script src="../../js/hugo-learn.js?1740563744"></script>
+    <script src="../../js/mermaid.min.js?1740563744"></script>
     <script>
     window.MathJax = {
       chtml: {

@@ -423,7 +423,7 @@ Hieronder vind je een HTML-bestand inclusief CSS en JavaScript code voor de oefe
 </details>
 
 <!-- EXSOL -->
-<!--<details closed>
+<details closed>
 <summary><i><b><span style="color: #03C03C;">Solution:</span> Klik hier om de code te zien/verbergen</b></i>🔽</summary>
 <p>
 
@@ -724,7 +724,7 @@ Hieronder vind je een HTML-bestand inclusief CSS en JavaScript code voor de oefe
 ```
 
 </p>
-</details>-->
+</details>
 
 ## Let's talk about Units
 Zoals al eerder vermeld bestaan er verschillende soorten units in HTML/CSS, maar waarvoor gebruik je welke unit nu het beste? Hieronder vind je een aantal tips. 
@@ -756,7 +756,26 @@ Een laatste unit die je voor een specifiek geval kan gebruiken is de `ch` (of ch
 
 _Voorbeeld zie [demo 4](#demo-4-units)_
 
+## Viewport
+
+> To create a responsive website, add the following <meta> tag to all your web pages:
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+Deze tag zorgt ervoor dat de viewport, het gebied waarin webinhoud wordt weergegeven, zich aanpast aan de breedte van het apparaat waarop de website wordt bekeken. Door width=device-width in te stellen, wordt de breedte van de viewport gelijk aan de breedte van het apparaat, wat betekent dat de website correct wordt geschaald op verschillende schermformaten, van smartphones tot desktops. De initial-scale=1.0 zorgt ervoor dat de inhoud niet wordt ingezoomd of uitgezoomd bij het laden van de pagina.
+
+Hier is een voorbeeld van een webpagina zonder de viewport-metatag en dezelfde webpagina met de viewport-metatag:
+<figure>
+  <div style="display: flex; justify-content: space-around; align-items: center;">
+    <img src="https://www.w3schools.com/css/img_viewport1.png" style="max-width: 99%; border: 2px solid black;"/>
+    <img src="https://www.w3schools.com/css/img_viewport2.png" style="max-width: 99%; border: 2px solid black;"/>
+  </div>
+  <figcaption>Zonder viewport-metatag (links), met viewport-metatag (rechts) <a href="https://www.w3schools.com/html/html_responsive.asp">bron</a></figcation>
+</figure>
+
 ## Media Queries
+
+Media queries in CSS zijn een krachtige tool waarmee je de stijl van een website kunt aanpassen aan verschillende schermgroottes en apparaattypen. Ze maken het mogelijk om specifieke **CSS-regels toe te passen afhankelijk van de eigenschappen van het apparaat**, zoals de breedte, hoogte, resolutie en oriëntatie van het scherm. Dit is essentieel voor responsive webdesign, waarbij een website er goed uitziet en functioneert op zowel desktops, tablets als smartphones. Door media queries te gebruiken, kun je bijvoorbeeld een andere lay-out toepassen voor mobiele apparaten dan voor grotere schermen, waardoor de gebruikerservaring op elk apparaat geoptimaliseerd wordt.
 
 <figure>
 <img src="/img/mediaQuery_syntax.jpg" alt="drawing" style="height:auto;"/>
