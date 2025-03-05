@@ -878,19 +878,20 @@ Bekende voorbeelden van zo een design tools zijn: [Figma](https://www.figma.com/
 - Zet de `flex-wrap` property op `wrap`, wanneer je een flexbox gebruikt.
 - Vermijd media-queries waar mogelijk. (uitzondering bv. echt grote layout wijzigingen voor andere schermtypes)
 
-<!-- TODO ## Easy dark mode example the right way
+## Easy dark mode example the right way
 Een goede manier om een darkmode toe te voegen aan je website is gebruik te maken van CSS-variabelen voor je kleurenpallet. Dit is echter niet voldoende aangezien sommige HTML-elementen dan nog niet de correcte styling hebben. Hiervoor moeten we dus ook de color-scheme zelf aanpassen.
+
 ```html
 html {
   color-scheme: dark light;
 }
 ```
 
-_Voorbeeld zie [demo 7](#demo-3-light-dark-theme)_ -->
+_Voorbeeld zie [demo 7](#demo-3-light-dark-theme)_
 
-<!-- TODO ## Simple interactive design example
+## Simple interactive design example
 
-_Voorbeeld zie [demo 8](#demo-8-interactive-example)_ -->
+_Voorbeeld zie [demo 8](#demo-8-interactive-example)_
 
 ## [Opdrachten](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student/)
 
@@ -1502,7 +1503,6 @@ In de demo staat voor het gemak alle HTML, CSS en eventuele JavaScript in één 
 </p>
 </details>
 
-<!-- TODO 
 #### Demo 7: light dark theme
 <details closed>
 <summary><i><b> Klik hier om de code te zien/verbergen</b></i>🔽</summary>
@@ -1791,5 +1791,3 @@ In de demo staat voor het gemak alle HTML, CSS en eventuele JavaScript in één 
 
 </p>
 </details>
-
-END TODO -->

@@ -29,6 +29,32 @@ Lijst van handige VSCode extensies voor web development:
 - JavaScript (ES6) code snippets
 - IntelliSense for CSS class names in HTML
 
+## Je Eigen Webpagina Hosten op GitHub Pages
+
+Je kunt je eigen webpagina eenvoudig hosten op **GitHub Pages** door een repository aan te maken en je HTML-, CSS- en JavaScript-bestanden daarin te plaatsen. Volg deze stappen om je site live te zetten:
+
+1. Maak een GitHub-repository aan
+Ga naar [GitHub](https://github.com), log in en maak een nieuwe repository aan. Je kunt ervoor kiezen om de repository openbaar of privé te maken (let op: GitHub Pages werkt alleen voor privé-repositories met een betaald plan).
+
+2. Upload je websitebestanden
+Voeg je HTML-, CSS- en andere benodigde bestanden toe aan de repository. Dit kan via de GitHub-interface of door de bestanden lokaal te committen en te pushen met Git.
+
+3. Activeer GitHub Pages
+  - Ga naar de repository-instellingen (**Settings**).
+  - Scroll naar het gedeelte **Pages**.
+  - Kies de juiste bron (meestal de **main** of **master** branch).
+  - Selecteer eventueel een specifieke map zoals `/docs` als je bestanden daar staan.
+
+4. Publiceer en bekijk je site
+Nadat je GitHub Pages hebt ingeschakeld, genereert GitHub een URL voor je website, meestal in de vorm van:
+
+
+Na enkele minuten is je site live!
+
+### Extra: Frameworks en Geavanceerde Opties
+Voor een eenvoudige site hoef je alleen een `index.html` in de root van je repository te plaatsen. Wil je een geavanceerdere site? Dan kun je frameworks zoals **Jekyll** of **Hugo** gebruiken, die GitHub Pages direct ondersteunt.
+
+
 <!-- ## Extra tips and tricks
 
 1. Alles is een Box in HTML (Box-model). In de mozilla firefox browser kan je live veranderingen aanbrengen aan.

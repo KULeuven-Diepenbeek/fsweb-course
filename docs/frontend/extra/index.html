@@ -12,22 +12,22 @@
     <title>Extra :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1740694095" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1740694095" rel="stylesheet">
-    <link href="../../css/hybrid.css?1740694095" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1740694095" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1740694095" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1740694095" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1740694095" rel="stylesheet">
-    <link href="../../css/theme.css?1740694095" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1740694095" rel="stylesheet">
-    <link href="../../css/devselector.css?1740694095" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1740694095" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1740694095" rel="stylesheet">
+    <link href="../../css/nucleus.css?1741195947" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1741195947" rel="stylesheet">
+    <link href="../../css/hybrid.css?1741195947" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1741195947" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1741195947" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1741195947" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1741195947" rel="stylesheet">
+    <link href="../../css/theme.css?1741195947" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1741195947" rel="stylesheet">
+    <link href="../../css/devselector.css?1741195947" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1741195947" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1741195947" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1740694095"></script>
-    <script src="../../js/devselector.js?1740694095"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1741195947"></script>
+    <script src="../../js/devselector.js?1741195947"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1740694095"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1740694095"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1741195947"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1741195947"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1740694095"></script>
+<script type="text/javascript" src="../../%20js/search.js?1741195947"></script>
     
   </div>
 
@@ -396,6 +396,11 @@
   <ol>
     <li><a href="#webbrowser-developer-tools">Webbrowser developer tools</a></li>
     <li><a href="#web-development-met-vscode">Web development met VSCode</a></li>
+    <li><a href="#je-eigen-webpagina-hosten-op-github-pages">Je Eigen Webpagina Hosten op GitHub Pages</a>
+      <ol>
+        <li><a href="#extra-frameworks-en-geavanceerde-opties">Extra: Frameworks en Geavanceerde Opties</a></li>
+      </ol>
+    </li>
   </ol>
 </nav></div>
 </div>
@@ -449,6 +454,34 @@
 <li>JavaScript (ES6) code snippets</li>
 <li>IntelliSense for CSS class names in HTML</li>
 </ul>
+<h2 id="je-eigen-webpagina-hosten-op-github-pages">Je Eigen Webpagina Hosten op GitHub Pages</h2>
+<p>Je kunt je eigen webpagina eenvoudig hosten op <strong>GitHub Pages</strong> door een repository aan te maken en je HTML-, CSS- en JavaScript-bestanden daarin te plaatsen. Volg deze stappen om je site live te zetten:</p>
+<ol>
+<li>
+<p>Maak een GitHub-repository aan
+Ga naar <a href="https://github.com">GitHub</a>, log in en maak een nieuwe repository aan. Je kunt ervoor kiezen om de repository openbaar of privé te maken (let op: GitHub Pages werkt alleen voor privé-repositories met een betaald plan).</p>
+</li>
+<li>
+<p>Upload je websitebestanden
+Voeg je HTML-, CSS- en andere benodigde bestanden toe aan de repository. Dit kan via de GitHub-interface of door de bestanden lokaal te committen en te pushen met Git.</p>
+</li>
+<li>
+<p>Activeer GitHub Pages</p>
+</li>
+</ol>
+<ul>
+<li>Ga naar de repository-instellingen (<strong>Settings</strong>).</li>
+<li>Scroll naar het gedeelte <strong>Pages</strong>.</li>
+<li>Kies de juiste bron (meestal de <strong>main</strong> of <strong>master</strong> branch).</li>
+<li>Selecteer eventueel een specifieke map zoals <code>/docs</code> als je bestanden daar staan.</li>
+</ul>
+<ol start="4">
+<li>Publiceer en bekijk je site
+Nadat je GitHub Pages hebt ingeschakeld, genereert GitHub een URL voor je website, meestal in de vorm van:</li>
+</ol>
+<p>Na enkele minuten is je site live!</p>
+<h3 id="extra-frameworks-en-geavanceerde-opties">Extra: Frameworks en Geavanceerde Opties</h3>
+<p>Voor een eenvoudige site hoef je alleen een <code>index.html</code> in de root van je repository te plaatsen. Wil je een geavanceerdere site? Dan kun je frameworks zoals <strong>Jekyll</strong> of <strong>Hugo</strong> gebruiken, die GitHub Pages direct ondersteunt.</p>
 <!-- ## Extra tips and tricks
 
 1. Alles is een Box in HTML (Box-model). In de mozilla firefox browser kan je live veranderingen aanbrengen aan.
@@ -708,15 +741,15 @@ Bestudeer grondig de webpagina die gegenereerd wordt door intellij wanneer je te
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1740694095"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1740694095"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1740694095"></script>
-    <script src="../../js/jquery.sticky.js?1740694095"></script>
-    <script src="../../js/featherlight.min.js?1740694095"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1740694095"></script>
-    <script src="../../js/learn.js?1740694095"></script>
-    <script src="../../js/hugo-learn.js?1740694095"></script>
-    <script src="../../js/mermaid.min.js?1740694095"></script>
+    <script src="../../js/clipboard.min.js?1741195947"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1741195947"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1741195947"></script>
+    <script src="../../js/jquery.sticky.js?1741195947"></script>
+    <script src="../../js/featherlight.min.js?1741195947"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1741195947"></script>
+    <script src="../../js/learn.js?1741195947"></script>
+    <script src="../../js/hugo-learn.js?1741195947"></script>
+    <script src="../../js/mermaid.min.js?1741195947"></script>
     <script>
     window.MathJax = {
       chtml: {
