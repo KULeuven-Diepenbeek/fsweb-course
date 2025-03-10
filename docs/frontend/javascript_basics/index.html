@@ -12,22 +12,22 @@
     <title>JavaScript :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1741598424" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1741598424" rel="stylesheet">
-    <link href="../../css/hybrid.css?1741598424" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1741598424" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1741598424" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1741598424" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1741598424" rel="stylesheet">
-    <link href="../../css/theme.css?1741598424" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1741598424" rel="stylesheet">
-    <link href="../../css/devselector.css?1741598424" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1741598424" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1741598424" rel="stylesheet">
+    <link href="../../css/nucleus.css?1741603464" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1741603464" rel="stylesheet">
+    <link href="../../css/hybrid.css?1741603464" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1741603464" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1741603464" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1741603464" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1741603464" rel="stylesheet">
+    <link href="../../css/theme.css?1741603464" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1741603464" rel="stylesheet">
+    <link href="../../css/devselector.css?1741603464" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1741603464" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1741603464" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1741598424"></script>
-    <script src="../../js/devselector.js?1741598424"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1741603464"></script>
+    <script src="../../js/devselector.js?1741603464"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1741598424"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1741598424"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1741603464"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1741603464"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1741598424"></script>
+<script type="text/javascript" src="../../%20js/search.js?1741603464"></script>
     
   </div>
 
@@ -490,6 +490,24 @@
       </ol>
     </li>
     <li><a href="#content-wegschrijven-naar-localstorage-of-sessionstorage">Content wegschrijven naar localstorage of sessionstorage</a></li>
+    <li><a href="#synchroon-vs-asynchroon">Synchroon vs Asynchroon</a>
+      <ol>
+        <li><a href="#rest-met-javascript--ajax">REST met Javascript ≈ Ajax</a>
+          <ol>
+            <li><a href="#basisprincipe--request--response-opvangen-via-call-back-functie">Basisprincipe = request + response opvangen via call back functie</a></li>
+            <li><a href="#een-request-versturen">Een request versturen</a></li>
+            <li><a href="#controleren-of-de-reponse-ok-is">Controleren of de reponse OK is</a></li>
+            <li><a href="#de-response-converteren-naar-het-juiste-formaat">De response converteren naar het juiste formaat</a></li>
+            <li><a href="#een-aparte-functie-om-de-json-te-verwerken">Een aparte functie om de JSON te verwerken</a></li>
+            <li><a href="#fouten-opvangen-via-catch">Fouten opvangen via catch</a></li>
+            <li><a href="#get-parameters-toevoegen">Get-Parameters toevoegen</a></li>
+            <li><a href="#post-parameters-toevoegen">Post-Parameters toevoegen</a></li>
+          </ol>
+        </li>
+        <li><a href="#csrf-en-cors">CSRF en CORS</a></li>
+        <li><a href="#extra-voorbeelden-op-de-async-functions-promises-await--fetch-from-apis">Extra voorbeelden op de async functions, promises, await &amp; fetch from api&rsquo;s</a></li>
+      </ol>
+    </li>
     <li><a href="#opdrachten-reeks-1">Opdrachten reeks 1</a></li>
     <li><a href="#test-jezelf">Test jezelf</a></li>
   </ol>
@@ -840,44 +858,214 @@ Om JS te dwingen de tekst als een getal te beschouwen, moet je de functie <code>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//idem voor sessionStorage.
 </span></span></span></code></pre></div><p><em>Vergeet je objecten dus niet te <code>JSON.stringify</code>-en om ze op te slaan en te <code>parse</code>-n om ze van text terug om te zetten naar waardige JS objecten.</em></p>
-<!-- TODO ### Async functions, promises, await & fetch from api's
-Soms wil je dingen opvragen of kan het een tijd duren voordat een functie een return geeft. Om te voorkomen dat je gedurende die tijd niet kan interageren met de website, moet je gebruik maken `async` functions. Ergens in je functie gebruik je dan het woord `await` zodat de rest van je funtie verder gaat wanneer je een return waarde hebt ontvangen. Tijdens het wachten kan dan andere code uitgevoerd worden.
-
-```javascript
-function resolveAfter2Seconds() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve('resolved');
-    }, 2000);
-  });
-}
-
-async function asyncCall() {
-  console.log('calling');
-  const result = await resolveAfter2Seconds();
-  console.log(result);
-  // Expected output: "resolved"
-}
-
-asyncCall();
-```
-
-Een voorbeeld waarvoor je vaak de `async function` gebruikt is bij het gebruik van api's om data op te halen/weg te schrijven:
-```javascript
-async function cuteDogPicture() {
-  fetch('https://dog.ceo/api/breeds/image/random')
-    .then((response) => {           // Parameter 'response' refers to the return of the function above this (fetch)
-      return response.json();
-    })
-    .then((myContent) => {          // Parameter 'myContent' refers to the return of the function above this
-      document.innerHTML = "<img src='" + myContent['message'] + "'/>";
-    });
-}
-
-window.addEventListener("click", () => { cuteDogPicture() });
-```
--->
-<h2 id="opdrachten-reeks-1">Opdrachten reeks 1</h2>
+<h2 id="synchroon-vs-asynchroon">Synchroon vs Asynchroon</h2>
+<p>In het <strong>synchrone</strong> model stuur je <strong>een request voor een nieuwe pagina</strong> (via een link, een URL of een formulier) en vervangt de binnenkomende response de hele pagina. De server kan tijdens de uitvoering van zijn script (andere) webservices synchroon oproepen. De responses voor die requests moeten helemaal binnen zijn vooral het script verder gaat en op het einde de nieuwe pagina terug geeft. Dit systeem zie je hieronder:</p>
+<figure>
+    <img src="../../img/voorbeeldsynchroon.png" style="max-height: 15rem;"/>
+    <figcaption>Voorbeeld Synchroon [<a href="https://www.researchgate.net/figure/Structure-of-Synchronous-Communication-in-Conventional-Webpage-Browsers_fig3_294783579">bron</a>]</figcation>
+</figure>
+<p>Dit werkt goed voor een aantal toepassingen, zoals telefonie, maar voor de hedendaagse, veeleisende internetgebruiker is het asynchrone model véél gepaster. Hierbij wordt de request verstuurd en wacht de client niet op het antwoord van de server vooraleer verder te gaan. Ondertussen wacht er op de achtergrond een call-back tot de request terug is.</p>
+<figure>
+    <img src="../../img/synchroonvsasynchroon.png" style="max-height: 15rem;"/>
+    <figcaption>Voorbeelden Synchroon vs Asynchroon</figcation>
+</figure>
+<p>In het <strong>asynchrone</strong> model stuur je dus <strong>een request voor nieuwe data</strong> event-gebaseerd via Javascript: de gebruiker klikt op een knop, selecteert tekst, beweegt over een figuur, &hellip; en als gevolg daarvan gaan we een request sturen. We wachten echter <strong>niet</strong> tot de response helemaal binnen is vooraleer de gebruiker nieuwe acties mag ondernemen, maar zorgen er voor dat de gebruiker verder kan blijven werken en bijkomende requests kan sturen. Het binnenkomen van de responses kan nu in een andere volgorde gebeuren dan het versturen van de request omdat de ene request meer tijd nodig kan hebben dan de andere.</p>
+<figure>
+    <img src="../../img/voorbeeldasynchroon.png" style="max-height: 15rem;"/>
+    <figcaption>Voorbeeld Asynchroon [<a href="https://www.researchgate.net/figure/Structure-of-Asynchronous-Communication-in-AJAX-Webpage_fig4_294783579">bron</a>]</figcation>
+</figure>
+<p>Een response die binnenkomt, zal er nu voor zorgen dat slechts een deel van de pagina aangepast wordt, bijvoorbeeld door tekst toe te voegen aan een <code>&lt;div&gt;</code>, door een formulierveld inhoud te geven, door menu-opties te veranderen, door bepaalde blokken van kleuren te veranderen, &hellip; Hiervoor moeten we zowel de inhoud als de vormgeving van HTML-elementen op de huidige pagina kunnen veranderen. Hoe we dat laatste stuk doen, hebben we hierboven al verteld, maar de asynchrone communicatie met de server moeten we nog bespreken. Dit proces zie je hierboven. In deze voorbeeldfiguur komen de verschillende antwoorden nog in dezelfde volgorde binnen als de requests verstuurd zijn, maar het kan perfect zijn dat de eerste response pas binnenkomt als de response op de derde request al lang binnen is. We hebben dan een volledig <strong>asynchroon</strong> model.</p>
+<p>Het grote voordeel van het asynchrone model is dat je veel directere interactie met de gebruiker kan krijgen. Het nadeel is dat het iets moeilijker is om te implementeren en dat je een extra technologie nodig hebt. Dat je hiervoor Javascript nodig hebt, zal je al wel doorhebben, want anders zouden we dit niet bespreken in het hoofdstuk Javascript. Concreet praten we dan over <strong>Ajax</strong>, wat meestal in combinatie met REST gebruikt wordt.</p>
+<h3 id="rest-met-javascript--ajax">REST met Javascript ≈ Ajax</h3>
+<p>De volgende stap is om de HTML-elementen te wijzigen, niet alleen maar op basis van vaste code of formulierinvoer, maar op basis van externe webpagina&rsquo;s/webservices. Hiervoor moeten we dus een (asynchroon) request kunnen sturen, en <strong>wanneer we de response ontvangen</strong> deze verwerken of rechtstreeks in een div plaatsen. Omdat de request dikwijls als XML terug komt, heb je 3 technologieën die samenkomen: Asynchroon, Javascript en XML. Dit wordt afgekort tot Ajax met de A van Asynchroon, de JA van Javascript en de X van XML. Tot enkele jaren geleden had je gespecialiseerde bibliotheken nodig zoals Prototype of jQuery om dit in verschillende browers op dezelfde manier te kunnen doen, maar nu kan dit gemakkelijk met fetch de bijhorende Promises en de functionele programmeerstijl.</p>
+<h4 id="basisprincipe--request--response-opvangen-via-call-back-functie">Basisprincipe = request + response opvangen via call back functie</h4>
+<p>In zijn meest eenvoudige vorm ga je een webpagina opvragen door rechtstreeks zijn URL op te geven en plaatsen we de response rechtstreeks in een div. Deze vorm klinkt heel simplistisch, maar wordt toch heel veel gebruikt omdat je in die URL heel gemakkelijk GET-parameters mee kan geven. En wanneer de webservice direct HTML terug geeft, kan je die zonder problemen in een div plakken.</p>
+<p>Het moeilijke is echter dat je die response asynchroon wil opvangen. Hiervoor moet je een <code>call back</code> functie definiëren die opgeroepen wordt (&ldquo;call&rdquo;) wanneer de response terug komt (&ldquo;back&rdquo;). Voor de komst van <code>fetch</code> had je hiervoor redelijk veel boilerplate-code nodig en stond de callback redelijk ver van de oproep. Met fetch wordt het allemaal veel compacter. Hieronder overlopen we in kleine stappen het hele proces tot en met het opvangen van fouten.</p>
+<h4 id="een-request-versturen">Een request versturen</h4>
+<p>De request versturen is extreem eenvoudig: gebruik de <code>fetch</code>-functie met als enige parameter de URL van de service. Hieronder vind je een een minimalistisch voorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text/javascript&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">function</span> <span style="color:#75af00">fetchDemo</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;feedback&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;input&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;fetchDemo()&#34;</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span><span style="color:#111">&gt;</span>fetch<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>Wanneer je dit uitprobeert in je favoriete browser zie je niets omdat we nog een call-back gedefinieerd hebben. Als je echter de ontwikkelaaropties activeert en je bij het netwerkverkeer gaat kijken, kan je echter zien dat er een request verstuurd is.</p>
+<figure>
+    <img src="../../img/fetchnetworkcall.png" style="max-height: 15rem;"/>
+</figure>
+<p>Je kan de request dan openklikken en de response bekijken, bijvoorbeeld als volgt:</p>
+<figure>
+    <img src="../../img/fetchnetworkresponse.png" style="max-height: 15rem;"/>
+</figure>
+<h4 id="controleren-of-de-reponse-ok-is">Controleren of de reponse OK is</h4>
+<p>Met dergelijke request kunnen verschillende dingen mis gaan: het kan zijn dat de URL niet bestaat, dat je verkeerde argumenten meegeeft, dat je niet de juiste rechten hebt, &hellip; Het is dan ook zaak eerst te controleren of de response ok is. Hiervoor ga je een eerste call-back definiëren. Hiervoor gebruik je de <code>then</code>-handler. De eerste then-handler neemt <strong>als argument de response</strong> en kan ofwel dat argument helemaal consumeren; ofwel een nieuwe Response terug geven. In de eerste versie hieronder geven we niks meer terug, maar vanaf de volgende sectie geven we een nieuwe response terug om zo het werk beter te verdelen.</p>
+<p>De then-handler verwacht een functie-expressie: dit is ofwel een verwijzing naar een bestaande functie (gewoon de naam van de functie) ofwel een <code>lambda-expressie</code>. In Javascript heeft zo’n lamba-expressie de vorm parameter <code>=&gt; return-waarde</code>. Zo is <code>x =&gt; x * 2</code> een functie in de vorm van een lambda-expressie die zijn parameter verdubbelt. Je mag ook verschillende statements samenzetten achter de <code>=&gt;</code>, maar dan moet je die in een blok met accolades zetten en expliciet return gebruiken wanneer je iets wil terug geven.</p>
+<p>In de eerste versie gebruiken we een lambda-expressie die de response in een alert plaatst.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">fetchDemo</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">response</span> <span style="color:#111">=&gt;</span> <span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#75af00">response</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><figure>
+    <img src="../../img/fetchresponse-example.png" style="max-height: 5rem;"/>
+</figure>
+<p>Je ziet duidelijk in je alert dat je een object van het type Response terug krijgt uit de fetch. Met <code>console.log(response)</code> kan je het volledige object in de console bekijken.</p>
+<figure>
+    <img src="../../img/responseobject.png" style="max-height: 15rem;"/>
+</figure>
+<p>Om te controleren of de response in orde is, moeten we de ok eigenschap opvragen met voor de hand liggende betekenis. De then-handler wordt dan als volgt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">fetchDemo</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">response</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">ok</span><span style="color:#111">)</span> <span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Alles ok&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span> <span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Niet ok&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h4 id="de-response-converteren-naar-het-juiste-formaat">De response converteren naar het juiste formaat</h4>
+<p>Herinner je dat de laatste letter van de afkorting Ajax verwijst naar XML, maar dat er in de praktijk veel meer JSON wordt gebruikt. XML wordt hierbij als gewone tekst beschouwd, terwijl er voor JSON extra verwerking voorzien is. Bij JSON heb je immers een reeks velden met telkens een waarde. Door de response als JSON te verwerken bekom je dan een object met als data members de velden in de JSON-tekst. Om dit te faciliteren heeft men in fetch voor objecten van het type <code>Respons</code>e een methode <code>.text()</code> die de zuivere tekst-waarde terug geeft; of beter gezegd een <strong>Promise</strong> met als parameter een zuivere tekst; en een methode <code>.json()</code> die een <strong>Promise</strong> terug geeft met als parameter een JSON-object.</p>
+<p>Omdat we in de Response van hierboven konden zien dat de service of <code>https://jsonplaceholder.typicode.com/posts/1</code> een JSON terug geeft, gebruiken we de <code>.json()</code>-methode.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">fetchDemo</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">response</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">ok</span><span style="color:#111">)</span> <span style="color:#00a8c8">return</span> <span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">json</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span> <span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Niet ok&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">})</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">json</span> <span style="color:#111">=&gt;</span> <span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">json</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h4 id="een-aparte-functie-om-de-json-te-verwerken">Een aparte functie om de JSON te verwerken</h4>
+<p>Om de JSON verwerken, schrijf je best een aparte functie zodat je aparte verantwoordelijkheden mooi in aparte functies steekt. In het voorbeeld hieronder hebben we een (lege) functie <code>showData</code> gemaakt en die opgeroepen i.p.v. de <code>alert(json)</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">fetchDemo</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">response</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">ok</span><span style="color:#111">)</span> <span style="color:#00a8c8">return</span> <span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">json</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span> <span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Niet ok&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">})</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">json</span> <span style="color:#111">=&gt;</span> <span style="color:#75af00">showData</span><span style="color:#111">(</span><span style="color:#75af00">json</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">showData</span><span style="color:#111">(</span><span style="color:#75af00">json</span><span style="color:#111">){</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>Dat is correct, maar het kan compacter door i.p.v. <code>json =&gt; showData(json)</code> gewoon de verwijzing naar de functie te vermelden. Dat zie je hieronder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">fetchDemo</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">response</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">ok</span><span style="color:#111">)</span> <span style="color:#00a8c8">return</span> <span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">json</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span> <span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Niet ok&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">})</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">showData</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">showData</span><span style="color:#111">(</span><span style="color:#75af00">json</span><span style="color:#111">){</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>Om de functie showData nuttig in te vullen gebruiken we de querySelector, de eigenschap .innerHTML en de data members van het JSON-object. Bijkomend hebben we ook nog de stijl van de div aangepast.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">showData</span><span style="color:#111">(</span><span style="color:#75af00">json</span><span style="color:#111">){</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">json</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">let</span> <span style="color:#75af00">fb</span> <span style="color:#f92672">=</span> <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">querySelector</span><span style="color:#111">(</span><span style="color:#d88200">&#39;#feedback&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fb</span><span style="color:#111">.</span><span style="color:#75af00">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#75af00">json</span><span style="color:#111">.</span><span style="color:#75af00">title</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fb</span><span style="color:#111">.</span><span style="color:#75af00">style</span><span style="color:#111">.</span><span style="color:#75af00">backgroundColor</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;#ae8&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h4 id="fouten-opvangen-via-catch">Fouten opvangen via catch</h4>
+<p>Het kan nog een tikkeltje beter: net als in Java kan je fouten opvangen via een try-catch-achtige structuur. Hiervoor moet je natuurlijk wel eerst een gepaste Exception gooien voor je die kan opvangen. Zo’n Exception gooi je door een Response.reject terug te geven met als parameter een passende foutmelding, bijvoorbeeld: <code>return Promise.reject(&quot;Wrong address&quot;);</code><br />
+Het opvangen van de exception doe je door een .catch toe te voegen aan de ketting van handlers, bijvoorbeeld als volgt: <code>.catch(err =&gt; alert(err));</code><br />
+Samen wordt dit als volgt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">fetchDemo</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#34;https://jsonplaceholder.typicode.com/posts/1&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">response</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">ok</span><span style="color:#111">)</span> <span style="color:#00a8c8">return</span> <span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">json</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">else</span> <span style="color:#00a8c8">return</span> <span style="color:#111">Promise</span><span style="color:#111">.</span><span style="color:#75af00">reject</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Wrong address&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">})</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">showData</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">.</span><span style="color:#00a8c8">catch</span><span style="color:#111">(</span><span style="color:#75af00">err</span> <span style="color:#111">=&gt;</span> <span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#75af00">err</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h4 id="get-parameters-toevoegen">Get-Parameters toevoegen</h4>
+<p>In het voorbeeld hierboven zag je dat de laatste parameter van de GET-request <code>1</code> was (het laatste achter de <code>/</code> elke <code>/</code> staat voor een parameter die je meegeeft. In bovenstaand voorbeeld vragen we dus de <code>/posts</code> op van de api en daarvan de eerste <code>/1</code>). Wanneer je dit getal niet hard wil coderen, maar laten afhangen van de waarde die de gebruiker in een tekstvak invult, kan je op eenvoudige wijze met de querySelector het desbetreffende input-veld ophalen, met <code>.value</code> de waarde van het veld ophalen en dan een URL genereren.</p>
+<h4 id="post-parameters-toevoegen">Post-Parameters toevoegen</h4>
+<p>Soms gebruik je geen GET-request om dingen op te vragen (hierbij staat alle info in de url), maar gebruik je een POST-request, hierbij moet je extra info dan in de Post-parameters toevoegen. Dit is een tikkeltje moeilijker. De functie fetch krijgt nu als tweede parameter een object met daarin minstens 3 velden:</p>
+<ul>
+<li><strong>method</strong>: om te kunnen zeggen dat we de gegevens met POST versturen</li>
+<li><strong>headers</strong>: om het formaat te beschrijven waarin we de gegevens versturen. JSON is hierbij het gemakkelijkste.</li>
+<li><strong>body</strong>: om de gegevens te versturen. Dit is een tikkeltje moeilijker omdat we eerst een gewoon object moeten maken, en dan dat object omzetten in JSON. Dat laatste kan je met <code>JSON.stringify(jsonObject)</code>.</li>
+</ul>
+<p>Op <a href="https://css-tricks.com/using-fetch/">https://css-tricks.com/using-fetch/</a> vind je hiervan volgend voorbeeld:</p>
+<figure>
+    <img src="../../img/postparams.png" style="max-height: 15rem;"/>
+</figure>
+<p>Een voorbeeld voor onze eigen demo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">fetchDemo</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#39;https://jsonplaceholder.typicode.com/posts&#39;</span><span style="color:#111">,</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">method</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;POST&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">body</span><span style="color:#f92672">:</span> <span style="color:#75af00">JSON</span><span style="color:#111">.</span><span style="color:#75af00">stringify</span><span style="color:#111">({</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75af00">title</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;My post for FSWEB&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75af00">body</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;My super great post about what I learned during the FSWEB courses.&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75af00">userId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">headers</span><span style="color:#f92672">:</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#d88200">&#39;Content-type&#39;</span><span style="color:#f92672">:</span> <span style="color:#d88200">&#39;application/json; charset=UTF-8&#39;</span><span style="color:#111">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">response</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">ok</span><span style="color:#111">)</span> <span style="color:#00a8c8">return</span> <span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">json</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#00a8c8">else</span> <span style="color:#00a8c8">return</span> <span style="color:#111">Promise</span><span style="color:#111">.</span><span style="color:#75af00">reject</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Wrong address&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">})</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">(</span><span style="color:#75af00">showData</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">.</span><span style="color:#00a8c8">catch</span><span style="color:#111">(</span><span style="color:#75af00">err</span> <span style="color:#111">=&gt;</span> <span style="color:#75af00">alert</span><span style="color:#111">(</span><span style="color:#75af00">err</span><span style="color:#111">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><h3 id="csrf-en-cors">CSRF en CORS</h3>
+<p>In de beginjaren van het internet heerste er een zeer open filosofie: iedereen mocht probleemloos elkaars services gebruiken. Omdat er echt ook minder betrouwbare sujetten op het internet vertoeven, kwam men snel in de problemen: malafide lieden misbruikten andermans services voor eigen geldgewin en/of om mensen af te zetten of te hacken. Dit concept noemt men <strong>Cross Site Request Forgery</strong>, of afgekort CSRF: een valse of ongewenste request op je site.</p>
+<p>Tegenwoordig is het standaard ingesteld dat services niet vanop andere computers opgeroepen kunnen worden. Laravel is hier zelfs nog extra streng in, want niemand, ook je eigen site niet, kan een POST-service van Laravel oproepen tenzij je het csrf-token meegeeft. Dat is veilig, maar tegelijk ook restrictief: het hele concept van Service Oriented Architectures vervalt dan. Gelukkig kan je dat dus ook terug open zetten. Dit noemt men dan <strong>Cross-Origin Resource Sharing</strong> of afgekort CORS. Je kan met CORS specifieke IP-adressen toegang geven of ook iedereen toegang geven, maar dat is dikwijls toch weer een tikkeltje te vrij. Daarom voorzien de meeste service-aanbieders nog een extra authenticatie, maar daar komen we laten op terug.</p>
+<p>Het is afhankelijk van de programmeertaal waarin de service geschreven is, hoe je die CORS wordt open gezet.</p>
+<h3 id="extra-voorbeelden-op-de-async-functions-promises-await--fetch-from-apis">Extra voorbeelden op de async functions, promises, await &amp; fetch from api&rsquo;s</h3>
+<p>Soms wil je dingen opvragen of kan het een tijd duren voordat een functie een return geeft. Om te voorkomen dat je gedurende die tijd niet kan interageren met de website, moet je gebruik maken van de <code>async</code> functions. Ergens in je functie gebruik je dan het woord <code>await</code> zodat de rest van je functie wacht en pas verder gaat wanneer je een return waarde hebt ontvangen. Tijdens het wachten kan dan andere code uitgevoerd worden.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">resolveAfter2Seconds</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#00a8c8">new</span> <span style="color:#111">Promise</span><span style="color:#111">((</span><span style="color:#75af00">resolve</span><span style="color:#111">)</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75af00">setTimeout</span><span style="color:#111">(()</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75af00">resolve</span><span style="color:#111">(</span><span style="color:#d88200">&#39;resolved&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">},</span> <span style="color:#ae81ff">2000</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">async</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">asyncCall</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#d88200">&#39;calling&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">const</span> <span style="color:#75af00">result</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">await</span> <span style="color:#75af00">resolveAfter2Seconds</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75af00">console</span><span style="color:#111">.</span><span style="color:#75af00">log</span><span style="color:#111">(</span><span style="color:#75af00">result</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Expected output: &#34;resolved&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// MET: &lt;button onclick=&#34;asyncCall()&#34; type=&#34;button&#34;&gt;async call&lt;/button&gt;
+</span></span></span></code></pre></div><p>Een voorbeeld waarvoor je vaak de <code>async function</code> gebruikt is bij het gebruik van api&rsquo;s om data op te halen/weg te schrijven zoals hierboven al uitgebreid aangehaald:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">script</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text/javascript&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">async</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">cuteDogPicture</span><span style="color:#111">()</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75af00">fetch</span><span style="color:#111">(</span><span style="color:#d88200">&#39;https://dog.ceo/api/breeds/image/random&#39;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">((</span><span style="color:#75af00">response</span><span style="color:#111">)</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>           <span style="color:#75715e">// Parameter &#39;response&#39; refers to the return of the function above this (fetch)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          <span style="color:#00a8c8">return</span> <span style="color:#75af00">response</span><span style="color:#111">.</span><span style="color:#75af00">json</span><span style="color:#111">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">})</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">.</span><span style="color:#75af00">then</span><span style="color:#111">((</span><span style="color:#75af00">myContent</span><span style="color:#111">)</span> <span style="color:#111">=&gt;</span> <span style="color:#111">{</span>          <span style="color:#75715e">// Parameter &#39;myContent&#39; refers to the return of the function above this
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          <span style="color:#00a8c8">let</span> <span style="color:#75af00">fb</span> <span style="color:#f92672">=</span> <span style="color:#111">document</span><span style="color:#111">.</span><span style="color:#75af00">querySelector</span><span style="color:#111">(</span><span style="color:#d88200">&#39;#feedback&#39;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75af00">fb</span><span style="color:#111">.</span><span style="color:#75af00">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;&lt;img src=&#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#75af00">myContent</span><span style="color:#111">[</span><span style="color:#d88200">&#39;message&#39;</span><span style="color:#111">]</span> <span style="color:#f92672">+</span> <span style="color:#d88200">&#34;&#39;/&gt;&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">});</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">script</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;feedback&#34;</span><span style="color:#111">&gt;&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;</span><span style="color:#f92672">div</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;input&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">button</span> <span style="color:#75af00">onclick</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;cuteDogPicture()&#34;</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;button&#34;</span><span style="color:#111">&gt;</span>fetch<span style="color:#111">&lt;/</span><span style="color:#f92672">button</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">&lt;/</span><span style="color:#f92672">div</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><h2 id="opdrachten-reeks-1">Opdrachten reeks 1</h2>
 <ul>
 <li>Breid onderstaand voorbeeld, waar we de invoer in een tekstvak in een alert laten verschijnen, uit tot een formulier met twee velden: een voor de tekst en een voor kleur. Wanneer de gebruiker op de knop klikt, moet de tekst in een tweede div verschijnen met als achtergrondkleur de kleur die gebruiker ingegeven had.</li>
 </ul>
@@ -892,7 +1080,12 @@ window.addEventListener("click", () => { cuteDogPicture() });
 </ul>
 <br />
 <ul>
-<li>Voeg op minstens 2 plaatsen JavaScript toe aan je portfolio website. Ten eerste zorg je ervoor dat wanneer mensen op de &lsquo;submit&rsquo;-knop drukken in je contactenformulier dat je de data van de inputvelden op een correcte manier in een object variabele opslaat. Sla daarna de data op in je <code>sessionStorage</code> door gebruik te maken van JSON. Zorg er ook voor dat wanneer je je contactformulier opent het formulier al is ingevuld met de laatst opgeslagen gegevens indien ze bestaan.</li>
+<li>
+<p>Voeg op minstens 2 plaatsen JavaScript toe aan je portfolio website. Ten eerste zorg je ervoor dat wanneer mensen op de &lsquo;submit&rsquo;-knop drukken in je contactenformulier dat je de data van de inputvelden op een correcte manier in een object variabele opslaat. Sla daarna de data op in je <code>sessionStorage</code> door gebruik te maken van JSON. Zorg er ook voor dat wanneer je je contactformulier opent het formulier al is ingevuld met de laatst opgeslagen gegevens indien ze bestaan.</p>
+</li>
+<li>
+<p>Zoek een interessante API die je kan oproepen met AJAX en kan gebruiken in je website. Maak het zo dat je verschillende oproepen kan doen op basis van de input van de gebruiker.</p>
+</li>
 </ul>
 <h2 id="test-jezelf">Test jezelf</h2>
 <p>Klik <a href="https://www.w3schools.com/js/js_quiz.asp">hier</a> om jezelf te testen met de online JS quiz van w3schools. Of klik <a href="https://www.w3schools.com/js/js_exercises.asp">hier</a> voor wat extra oefeningen.</p>
@@ -1154,15 +1347,15 @@ window.addEventListener("click", () => { cuteDogPicture() });
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1741598424"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1741598424"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1741598424"></script>
-    <script src="../../js/jquery.sticky.js?1741598424"></script>
-    <script src="../../js/featherlight.min.js?1741598424"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1741598424"></script>
-    <script src="../../js/learn.js?1741598424"></script>
-    <script src="../../js/hugo-learn.js?1741598424"></script>
-    <script src="../../js/mermaid.min.js?1741598424"></script>
+    <script src="../../js/clipboard.min.js?1741603464"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1741603464"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1741603464"></script>
+    <script src="../../js/jquery.sticky.js?1741603464"></script>
+    <script src="../../js/featherlight.min.js?1741603464"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1741603464"></script>
+    <script src="../../js/learn.js?1741603464"></script>
+    <script src="../../js/hugo-learn.js?1741603464"></script>
+    <script src="../../js/mermaid.min.js?1741603464"></script>
     <script>
     window.MathJax = {
       chtml: {

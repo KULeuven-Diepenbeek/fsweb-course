@@ -421,8 +421,226 @@ var retrievedTestObject = JSON.parse(retrievedObject);
 
 _Vergeet je objecten dus niet te `JSON.stringify`-en om ze op te slaan en te `parse`-n om ze van text terug om te zetten naar waardige JS objecten._
 
-<!-- TODO ### Async functions, promises, await & fetch from api's
-Soms wil je dingen opvragen of kan het een tijd duren voordat een functie een return geeft. Om te voorkomen dat je gedurende die tijd niet kan interageren met de website, moet je gebruik maken `async` functions. Ergens in je functie gebruik je dan het woord `await` zodat de rest van je funtie verder gaat wanneer je een return waarde hebt ontvangen. Tijdens het wachten kan dan andere code uitgevoerd worden.
+## Synchroon vs Asynchroon
+
+In het **synchrone** model stuur je **een request voor een nieuwe pagina** (via een link, een URL of een formulier) en vervangt de binnenkomende response de hele pagina. De server kan tijdens de uitvoering van zijn script (andere) webservices synchroon oproepen. De responses voor die requests moeten helemaal binnen zijn vooral het script verder gaat en op het einde de nieuwe pagina terug geeft. Dit systeem zie je hieronder:
+
+<figure>
+    <img src="/img/voorbeeldsynchroon.png" style="max-height: 15rem;"/>
+    <figcaption>Voorbeeld Synchroon [<a href="https://www.researchgate.net/figure/Structure-of-Synchronous-Communication-in-Conventional-Webpage-Browsers_fig3_294783579">bron</a>]</figcation>
+</figure>
+
+Dit werkt goed voor een aantal toepassingen, zoals telefonie, maar voor de hedendaagse, veeleisende internetgebruiker is het asynchrone model véél gepaster. Hierbij wordt de request verstuurd en wacht de client niet op het antwoord van de server vooraleer verder te gaan. Ondertussen wacht er op de achtergrond een call-back tot de request terug is.
+
+<figure>
+    <img src="/img/synchroonvsasynchroon.png" style="max-height: 15rem;"/>
+    <figcaption>Voorbeelden Synchroon vs Asynchroon</figcation>
+</figure>
+
+In het **asynchrone** model stuur je dus **een request voor nieuwe data** event-gebaseerd via Javascript: de gebruiker klikt op een knop, selecteert tekst, beweegt over een figuur, ... en als gevolg daarvan gaan we een request sturen. We wachten echter **niet** tot de response helemaal binnen is vooraleer de gebruiker nieuwe acties mag ondernemen, maar zorgen er voor dat de gebruiker verder kan blijven werken en bijkomende requests kan sturen. Het binnenkomen van de responses kan nu in een andere volgorde gebeuren dan het versturen van de request omdat de ene request meer tijd nodig kan hebben dan de andere.
+
+<figure>
+    <img src="/img/voorbeeldasynchroon.png" style="max-height: 15rem;"/>
+    <figcaption>Voorbeeld Asynchroon [<a href="https://www.researchgate.net/figure/Structure-of-Asynchronous-Communication-in-AJAX-Webpage_fig4_294783579">bron</a>]</figcation>
+</figure>
+
+Een response die binnenkomt, zal er nu voor zorgen dat slechts een deel van de pagina aangepast wordt, bijvoorbeeld door tekst toe te voegen aan een `<div>`, door een formulierveld inhoud te geven, door menu-opties te veranderen, door bepaalde blokken van kleuren te veranderen, ... Hiervoor moeten we zowel de inhoud als de vormgeving van HTML-elementen op de huidige pagina kunnen veranderen. Hoe we dat laatste stuk doen, hebben we hierboven al verteld, maar de asynchrone communicatie met de server moeten we nog bespreken. Dit proces zie je hierboven. In deze voorbeeldfiguur komen de verschillende antwoorden nog in dezelfde volgorde binnen als de requests verstuurd zijn, maar het kan perfect zijn dat de eerste response pas binnenkomt als de response op de derde request al lang binnen is. We hebben dan een volledig **asynchroon** model.
+
+Het grote voordeel van het asynchrone model is dat je veel directere interactie met de gebruiker kan krijgen. Het nadeel is dat het iets moeilijker is om te implementeren en dat je een extra technologie nodig hebt. Dat je hiervoor Javascript nodig hebt, zal je al wel doorhebben, want anders zouden we dit niet bespreken in het hoofdstuk Javascript. Concreet praten we dan over **Ajax**, wat meestal in combinatie met REST gebruikt wordt.
+
+### REST met Javascript ≈ Ajax
+De volgende stap is om de HTML-elementen te wijzigen, niet alleen maar op basis van vaste code of formulierinvoer, maar op basis van externe webpagina's/webservices. Hiervoor moeten we dus een (asynchroon) request kunnen sturen, en **wanneer we de response ontvangen** deze verwerken of rechtstreeks in een div plaatsen. Omdat de request dikwijls als XML terug komt, heb je 3 technologieën die samenkomen: Asynchroon, Javascript en XML. Dit wordt afgekort tot Ajax met de A van Asynchroon, de JA van Javascript en de X van XML. Tot enkele jaren geleden had je gespecialiseerde bibliotheken nodig zoals Prototype of jQuery om dit in verschillende browers op dezelfde manier te kunnen doen, maar nu kan dit gemakkelijk met fetch de bijhorende Promises en de functionele programmeerstijl.
+
+#### Basisprincipe = request + response opvangen via call back functie
+
+In zijn meest eenvoudige vorm ga je een webpagina opvragen door rechtstreeks zijn URL op te geven en plaatsen we de response rechtstreeks in een div. Deze vorm klinkt heel simplistisch, maar wordt toch heel veel gebruikt omdat je in die URL heel gemakkelijk GET-parameters mee kan geven. En wanneer de webservice direct HTML terug geeft, kan je die zonder problemen in een div plakken.
+
+Het moeilijke is echter dat je die response asynchroon wil opvangen. Hiervoor moet je een `call back` functie definiëren die opgeroepen wordt ("call") wanneer de response terug komt ("back"). Voor de komst van `fetch` had je hiervoor redelijk veel boilerplate-code nodig en stond de callback redelijk ver van de oproep. Met fetch wordt het allemaal veel compacter. Hieronder overlopen we in kleine stappen het hele proces tot en met het opvangen van fouten.
+
+#### Een request versturen
+De request versturen is extreem eenvoudig: gebruik de `fetch`-functie met als enige parameter de URL van de service. Hieronder vind je een een minimalistisch voorbeeld:
+
+```html
+<html>
+  <head>
+    <script type="text/javascript">
+      function fetchDemo() {
+        fetch("https://jsonplaceholder.typicode.com/posts/1");
+      }
+    </script>
+    <body>
+      <div id="feedback"></div>
+      <div id="input">
+        <button onclick="fetchDemo()" type="button">fetch</button>
+      </div> 
+    </body>
+  </head>
+</html>
+```
+Wanneer je dit uitprobeert in je favoriete browser zie je niets omdat we nog een call-back gedefinieerd hebben. Als je echter de ontwikkelaaropties activeert en je bij het netwerkverkeer gaat kijken, kan je echter zien dat er een request verstuurd is.
+
+<figure>
+    <img src="/img/fetchnetworkcall.png" style="max-height: 15rem;"/>
+</figure>
+
+Je kan de request dan openklikken en de response bekijken, bijvoorbeeld als volgt:
+
+<figure>
+    <img src="/img/fetchnetworkresponse.png" style="max-height: 15rem;"/>
+</figure>
+
+#### Controleren of de reponse OK is
+Met dergelijke request kunnen verschillende dingen mis gaan: het kan zijn dat de URL niet bestaat, dat je verkeerde argumenten meegeeft, dat je niet de juiste rechten hebt, ... Het is dan ook zaak eerst te controleren of de response ok is. Hiervoor ga je een eerste call-back definiëren. Hiervoor gebruik je de `then`-handler. De eerste then-handler neemt **als argument de response** en kan ofwel dat argument helemaal consumeren; ofwel een nieuwe Response terug geven. In de eerste versie hieronder geven we niks meer terug, maar vanaf de volgende sectie geven we een nieuwe response terug om zo het werk beter te verdelen.
+
+De then-handler verwacht een functie-expressie: dit is ofwel een verwijzing naar een bestaande functie (gewoon de naam van de functie) ofwel een `lambda-expressie`. In Javascript heeft zo’n lamba-expressie de vorm parameter `=> return-waarde`. Zo is `x => x * 2` een functie in de vorm van een lambda-expressie die zijn parameter verdubbelt. Je mag ook verschillende statements samenzetten achter de `=>`, maar dan moet je die in een blok met accolades zetten en expliciet return gebruiken wanneer je iets wil terug geven.
+
+In de eerste versie gebruiken we een lambda-expressie die de response in een alert plaatst.
+
+```javascript
+function fetchDemo() {
+  fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => alert(response));
+}
+```
+<figure>
+    <img src="/img/fetchresponse-example.png" style="max-height: 5rem;"/>
+</figure>
+
+Je ziet duidelijk in je alert dat je een object van het type Response terug krijgt uit de fetch. Met `console.log(response)` kan je het volledige object in de console bekijken.
+
+<figure>
+    <img src="/img/responseobject.png" style="max-height: 15rem;"/>
+</figure>
+
+Om te controleren of de response in orde is, moeten we de ok eigenschap opvragen met voor de hand liggende betekenis. De then-handler wordt dan als volgt:
+
+```javascript
+function fetchDemo() {
+  fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => {
+    if (response.ok) alert("Alles ok");
+    else alert("Niet ok");
+  });
+}
+```
+
+#### De response converteren naar het juiste formaat
+Herinner je dat de laatste letter van de afkorting Ajax verwijst naar XML, maar dat er in de praktijk veel meer JSON wordt gebruikt. XML wordt hierbij als gewone tekst beschouwd, terwijl er voor JSON extra verwerking voorzien is. Bij JSON heb je immers een reeks velden met telkens een waarde. Door de response als JSON te verwerken bekom je dan een object met als data members de velden in de JSON-tekst. Om dit te faciliteren heeft men in fetch voor objecten van het type `Respons`e een methode `.text()` die de zuivere tekst-waarde terug geeft; of beter gezegd een **Promise** met als parameter een zuivere tekst; en een methode `.json()` die een **Promise** terug geeft met als parameter een JSON-object.
+
+Omdat we in de Response van hierboven konden zien dat de service of `https://jsonplaceholder.typicode.com/posts/1` een JSON terug geeft, gebruiken we de `.json()`-methode.
+
+```javascript
+function fetchDemo() {
+  fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => {
+    if (response.ok) return response.json();
+    else alert("Niet ok");
+  })
+  .then(json => console.log(json));
+}
+```
+
+#### Een aparte functie om de JSON te verwerken
+Om de JSON verwerken, schrijf je best een aparte functie zodat je aparte verantwoordelijkheden mooi in aparte functies steekt. In het voorbeeld hieronder hebben we een (lege) functie `showData` gemaakt en die opgeroepen i.p.v. de `alert(json)`.
+```javascript
+function fetchDemo() {
+  fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => {
+    if (response.ok) return response.json();
+    else alert("Niet ok");
+  })
+  .then(json => showData(json));
+}
+function showData(json){
+
+}
+```
+Dat is correct, maar het kan compacter door i.p.v. `json => showData(json)` gewoon de verwijzing naar de functie te vermelden. Dat zie je hieronder:
+```javascript
+function fetchDemo() {
+  fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => {
+    if (response.ok) return response.json();
+    else alert("Niet ok");
+  })
+  .then(showData);
+}
+function showData(json){
+
+}
+```
+Om de functie showData nuttig in te vullen gebruiken we de querySelector, de eigenschap .innerHTML en de data members van het JSON-object. Bijkomend hebben we ook nog de stijl van de div aangepast.
+```javascript
+function showData(json){
+  console.log(json);
+  let fb = document.querySelector('#feedback');
+  fb.innerHTML = json.title;
+  fb.style.backgroundColor = "#ae8";
+}
+```
+
+#### Fouten opvangen via catch
+Het kan nog een tikkeltje beter: net als in Java kan je fouten opvangen via een try-catch-achtige structuur. Hiervoor moet je natuurlijk wel eerst een gepaste Exception gooien voor je die kan opvangen. Zo’n Exception gooi je door een Response.reject terug te geven met als parameter een passende foutmelding, bijvoorbeeld: `return Promise.reject("Wrong address");`<br />
+Het opvangen van de exception doe je door een .catch toe te voegen aan de ketting van handlers, bijvoorbeeld als volgt: `.catch(err => alert(err));`<br />
+Samen wordt dit als volgt:
+```javascript
+function fetchDemo() {
+  fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => {
+    if (response.ok) return response.json();
+    else return Promise.reject("Wrong address");
+  })
+  .then(showData)
+  .catch(err => alert(err));
+}
+```
+#### Get-Parameters toevoegen
+In het voorbeeld hierboven zag je dat de laatste parameter van de GET-request `1` was (het laatste achter de `/` elke `/` staat voor een parameter die je meegeeft. In bovenstaand voorbeeld vragen we dus de `/posts` op van de api en daarvan de eerste `/1`). Wanneer je dit getal niet hard wil coderen, maar laten afhangen van de waarde die de gebruiker in een tekstvak invult, kan je op eenvoudige wijze met de querySelector het desbetreffende input-veld ophalen, met `.value` de waarde van het veld ophalen en dan een URL genereren.
+
+#### Post-Parameters toevoegen
+Soms gebruik je geen GET-request om dingen op te vragen (hierbij staat alle info in de url), maar gebruik je een POST-request, hierbij moet je extra info dan in de Post-parameters toevoegen. Dit is een tikkeltje moeilijker. De functie fetch krijgt nu als tweede parameter een object met daarin minstens 3 velden:
+- **method**: om te kunnen zeggen dat we de gegevens met POST versturen 
+- **headers**: om het formaat te beschrijven waarin we de gegevens versturen. JSON is hierbij het gemakkelijkste. 
+- **body**: om de gegevens te versturen. Dit is een tikkeltje moeilijker omdat we eerst een gewoon object moeten maken, en dan dat object omzetten in JSON. Dat laatste kan je met `JSON.stringify(jsonObject)`.
+
+Op [https://css-tricks.com/using-fetch/](https://css-tricks.com/using-fetch/) vind je hiervan volgend voorbeeld:
+
+<figure>
+    <img src="/img/postparams.png" style="max-height: 15rem;"/>
+</figure>
+
+Een voorbeeld voor onze eigen demo: 
+```javascript
+function fetchDemo() {
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+      title: 'My post for FSWEB',
+      body: 'My super great post about what I learned during the FSWEB courses.',
+      userId: 1,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+    .then(response => {
+      if (response.ok) return response.json();
+      else return Promise.reject("Wrong address");
+    })
+    .then(showData)
+    .catch(err => alert(err));
+}
+```
+
+### CSRF en CORS
+In de beginjaren van het internet heerste er een zeer open filosofie: iedereen mocht probleemloos elkaars services gebruiken. Omdat er echt ook minder betrouwbare sujetten op het internet vertoeven, kwam men snel in de problemen: malafide lieden misbruikten andermans services voor eigen geldgewin en/of om mensen af te zetten of te hacken. Dit concept noemt men **Cross Site Request Forgery**, of afgekort CSRF: een valse of ongewenste request op je site.
+
+Tegenwoordig is het standaard ingesteld dat services niet vanop andere computers opgeroepen kunnen worden. Laravel is hier zelfs nog extra streng in, want niemand, ook je eigen site niet, kan een POST-service van Laravel oproepen tenzij je het csrf-token meegeeft. Dat is veilig, maar tegelijk ook restrictief: het hele concept van Service Oriented Architectures vervalt dan. Gelukkig kan je dat dus ook terug open zetten. Dit noemt men dan **Cross-Origin Resource Sharing** of afgekort CORS. Je kan met CORS specifieke IP-adressen toegang geven of ook iedereen toegang geven, maar dat is dikwijls toch weer een tikkeltje te vrij. Daarom voorzien de meeste service-aanbieders nog een extra authenticatie, maar daar komen we laten op terug.
+
+Het is afhankelijk van de programmeertaal waarin de service geschreven is, hoe je die CORS wordt open gezet.
+
+### Extra voorbeelden op de async functions, promises, await & fetch from api's
+Soms wil je dingen opvragen of kan het een tijd duren voordat een functie een return geeft. Om te voorkomen dat je gedurende die tijd niet kan interageren met de website, moet je gebruik maken van de `async` functions. Ergens in je functie gebruik je dan het woord `await` zodat de rest van je functie wacht en pas verder gaat wanneer je een return waarde hebt ontvangen. Tijdens het wachten kan dan andere code uitgevoerd worden.
 
 ```javascript
 function resolveAfter2Seconds() {
@@ -440,24 +658,37 @@ async function asyncCall() {
   // Expected output: "resolved"
 }
 
-asyncCall();
+// MET: <button onclick="asyncCall()" type="button">async call</button>
 ```
 
-Een voorbeeld waarvoor je vaak de `async function` gebruikt is bij het gebruik van api's om data op te halen/weg te schrijven:
-```javascript
-async function cuteDogPicture() {
-  fetch('https://dog.ceo/api/breeds/image/random')
-    .then((response) => {           // Parameter 'response' refers to the return of the function above this (fetch)
-      return response.json();
-    })
-    .then((myContent) => {          // Parameter 'myContent' refers to the return of the function above this
-      document.innerHTML = "<img src='" + myContent['message'] + "'/>";
-    });
-}
+Een voorbeeld waarvoor je vaak de `async function` gebruikt is bij het gebruik van api's om data op te halen/weg te schrijven zoals hierboven al uitgebreid aangehaald:
+```html
+<html>
+<head>
+  <script type="text/javascript">
+    async function cuteDogPicture() {
+      fetch('https://dog.ceo/api/breeds/image/random')
+        .then((response) => {           // Parameter 'response' refers to the return of the function above this (fetch)
+          return response.json();
+        })
+        .then((myContent) => {          // Parameter 'myContent' refers to the return of the function above this
+          let fb = document.querySelector('#feedback');
+          fb.innerHTML = "<img src='" + myContent['message'] + "'/>";
+        });
+    }
+  </script>
 
-window.addEventListener("click", () => { cuteDogPicture() });
+<body>
+  <div id="feedback"></div>
+  <div id="input">
+    <button onclick="cuteDogPicture()" type="button">fetch</button>
+  </div>
+</body>
+</head>
+
+</html>
 ```
--->
+
 
 ## Opdrachten reeks 1
 - Breid onderstaand voorbeeld, waar we de invoer in een tekstvak in een alert laten verschijnen, uit tot een formulier met twee velden: een voor de tekst en een voor kleur. Wanneer de gebruiker op de knop klikt, moet de tekst in een tweede div verschijnen met als achtergrondkleur de kleur die gebruiker ingegeven had. 
@@ -474,6 +705,8 @@ function toonInvoer() {
 <br />
 
 - Voeg op minstens 2 plaatsen JavaScript toe aan je portfolio website. Ten eerste zorg je ervoor dat wanneer mensen op de 'submit'-knop drukken in je contactenformulier dat je de data van de inputvelden op een correcte manier in een object variabele opslaat. Sla daarna de data op in je `sessionStorage` door gebruik te maken van JSON. Zorg er ook voor dat wanneer je je contactformulier opent het formulier al is ingevuld met de laatst opgeslagen gegevens indien ze bestaan.
+
+- Zoek een interessante API die je kan oproepen met AJAX en kan gebruiken in je website. Maak het zo dat je verschillende oproepen kan doen op basis van de input van de gebruiker.
 
 
 ## Test jezelf
