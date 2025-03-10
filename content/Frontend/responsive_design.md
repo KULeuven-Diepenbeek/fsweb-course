@@ -889,9 +889,13 @@ html {
 
 _Voorbeeld zie [demo 7](#demo-3-light-dark-theme)_
 
-## Simple interactive design example
+## Simple interactive design examples
 
-_Voorbeeld zie [demo 8](#demo-8-interactive-example)_
+- _Voorbeeld van een sliding menu met pure CSS zie [demo 8](#demo-8-interactive-example)_
+- _Voorbeeld van een hamburger menu met pure CSS zie [demo 9](#demo-9-hamburger-menu)_
+- _Voorbeeld van een hamburger menu met bootstrap zie [demo 10](#demo-10-hamburger-menu-bootstrap)_
+
+
 
 ## [Opdrachten](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student/)
 
@@ -1786,6 +1790,257 @@ In de demo staat voor het gemak alle HTML, CSS en eventuele JavaScript in één 
     </p>
   </main>
 
+</html>
+```
+
+</p>
+</details>
+
+#### Demo 9: Hamburger menu
+
+<details closed>
+<summary><i><b> Klik hier om de code te zien/verbergen</b></i>🔽</summary>
+<p>
+
+In de demo staat voor het gemak alle HTML, CSS en eventuele JavaScript in één HTML-bestand.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      /* Zorgt ervoor dat default padding en border worden meegerekend met breedte en hoogte */
+    }
+
+    * {
+      margin: 0;
+      /* Zorgt ervoor dat elk element default geen margin heeft */
+      padding: 0;
+      /* Zorgt ervoor dat elk element default geen padding heeft */
+    }
+
+    :root {
+      --header-height: 8vh;
+      --menu-width: 128px;
+      --menu-animation-time: 250ms ease-in-out;
+      --bar-width: 42px;
+      --bar-height: 8px;
+      --bar-gap: 4px;
+      --hamburger-height: calc(3 * var(--bar-height) + 2* var(--bar-gap))
+    }
+
+    header {
+      background-color: red;
+      width: 100%;
+      display: flex;
+      position: fixed;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      top: 0;
+      left: 0;
+      height: var(--header-height);
+    }
+
+    header #hamburger-menu {
+      --x-width: calc(var(--hamburger-height) * 1.41421356237);
+      padding: 0.4em;
+      display: flex;
+      flex-direction: column;
+      gap: var(--bar-gap);
+    }
+
+    header #hamburger-menu::before,
+    header #hamburger-menu::after,
+    header #hamburger-menu #hamburger-btn {
+      content: "";
+      background-color: blueviolet;
+      width: var(--bar-width);
+      height: var(--bar-height);
+      border-radius: 9999999px;
+      transform-origin: left center;
+      transition: opacity var(--menu-animation-time), width var(--menu-animation-time), rotate var(--menu-animation-time);
+    }
+
+    #hamburger-btn {
+      appearance: none;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      cursor: pointer;
+    }
+
+    #hamburger-btn:checked {
+      opacity: 0;
+      width: 0px;
+      z-index: 1;
+    }
+
+    #hamburger-menu:has(input:checked)::before {
+      rotate: 45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    #hamburger-menu:has(input:checked)::after {
+      rotate: -45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / 2);
+    }
+
+
+    header h1 {
+      flex: 1;
+      text-align: center;
+    }
+
+
+    aside {
+      background-color: pink;
+      position: fixed;
+      top: var(--header-height);
+      left: 0;
+      width: var(--menu-width);
+      padding: 12px;
+      height: calc(100vh - var(--header-height));
+      /* transform: translateX(calc(-1 * var(--menu-width))); */
+      translate: -100% 0;
+      transition: translate var(--menu-animation-time);
+    }
+
+    aside nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header:has(#hamburger-btn:checked) aside {
+      translate: 0 0;
+    }
+
+    main {
+      margin-top: var(--header-height);
+      height: 150vh;
+      padding: 18px;
+    }
+
+    footer {
+      background-color: blue;
+      width: 100%;
+      height: 12vh;
+      padding: 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="hamburger-menu">
+      <input id="hamburger-btn" type="checkbox"></input>
+    </div>
+    <aside id="sidemenu">
+      <nav>
+        <a href="#">home</a>
+        <a href="#footer">footer</a>
+        <a href="https://www.google.com">vragen?</a>
+      </nav>
+    </aside>
+    <h1 id="title">
+      Mijn coole website
+    </h1>
+  </header>
+
+  <main>
+    Commodo aliqua in sunt mollit sint esse dolore quis. Aliqua nulla ad culpa officia sunt ea aute ex labore. Cillum Lorem eu in non est proident
+    quis ea tempor et cillum commodo amet officia. Reprehenderit sit duis pariatur fugiat culpa reprehenderit cillum nisi nulla quis anim eiusmod. In
+    sunt ullamco Lorem est. Quis labore consectetur pariatur veniam non sit reprehenderit tempor.
+  </main>
+
+  <footer id="footer">
+    my footer
+  </footer>
+
+
+
+</body>
+
+</html>
+```
+
+</p>
+</details>
+
+#### Demo 10: Hamburger menu bootstrap
+
+<details closed>
+<summary><i><b> Klik hier om de code te zien/verbergen</b></i>🔽</summary>
+<p>
+
+In de demo staat voor het gemak alle HTML, CSS en eventuele JavaScript in één HTML-bestand.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mijn coole website</title>
+  <!-- Bootstrap CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar met offcanvas menu -->
+  <nav class="navbar navbar-light bg-danger fixed-top">
+    <div class="container-fluid">
+      <!-- Offcanvas toggler (hamburger) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Centraal geplaatste titel -->
+      <a class="navbar-brand mx-auto" href="#">Mijn coole website</a>
+    </div>
+  </nav>
+
+  <!-- Offcanvas menu (zijbalk) -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="nav flex-column">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#footer">Footer</a>
+        <a class="nav-link" href="https://www.google.com">Vragen?</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main class="container mt-5 pt-5">
+    <p>
+      Commodo aliqua in sunt mollit sint esse dolore quis. Aliqua nulla ad culpa officia sunt ea aute ex labore. Cillum Lorem eu in non est proident
+      quis ea tempor et cillum commodo amet officia. Reprehenderit sit duis pariatur fugiat culpa reprehenderit cillum nisi nulla quis anim eiusmod. In
+      sunt ullamco Lorem est. Quis labore consectetur pariatur veniam non sit reprehenderit tempor.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="bg-primary text-white text-center py-4 mt-auto">
+    My footer
+  </footer>
+
+  <!-- Bootstrap JS Bundle via CDN (inclusief Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
 ```
 

@@ -2,7 +2,7 @@
 title: "Security (enkele voorbeelden)"
 weight: 2
 author: Arne Duyver
-draft: false
+draft: true
 ---
 
 Hieronder worden een aantal bekend cyberaanvallen besproken, hoe ze werken en hoe je je website er kan tegen beschermen.

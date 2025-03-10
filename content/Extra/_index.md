@@ -3,7 +3,7 @@ title: "Extra"
 chapter: true
 weight: 4
 author: Arne Duyver
-draft: true
+draft: false
 ---
 
 _Zie menu_

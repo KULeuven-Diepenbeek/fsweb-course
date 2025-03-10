@@ -10,11 +10,11 @@
     <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</webMaster>
     <atom:link href="http://localhost:1313/fsweb-course/extra/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Security (enkele voorbeelden)</title>
-      <link>http://localhost:1313/fsweb-course/extra/websecurity/</link>
+      <title>Web development tools</title>
+      <link>http://localhost:1313/fsweb-course/extra/webdevelopmenttools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Arne Duyver)</author>
-      <guid>http://localhost:1313/fsweb-course/extra/websecurity/</guid>
-      <description>&lt;p&gt;Hieronder worden een aantal bekend cyberaanvallen besproken, hoe ze werken en hoe je je website er kan tegen beschermen.&lt;/p&gt;&#xA;&lt;h2 id=&#34;html-injection-attacks&#34;&gt;HTML injection attacks&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Probleem: Je HTML-code bevat een inputveld en die input gebruik je terug om als HTML code gepersonaliseerde content te tonen.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Situatie&lt;/em&gt;: De gebruiker begint HTML-code te schrijven in de input velden. Bijvoorbeeld &lt;code&gt;&amp;lt;script&amp;gt;database.connect; console.log(db.alleWachtwoorden)&amp;lt;/script&amp;gt;&lt;/code&gt; &lt;br/&gt;&#xA;&lt;em&gt;Thread level&lt;/em&gt;: ZEER HOOG &lt;br/&gt;&#xA;&lt;em&gt;Oplossing&lt;/em&gt;: Wanneer je input van de gebruiker terug wil gebruiken als HTML-code, strip de input dan eerst van HTML-tags. (In PHP bestaat hier een voorgemaakte methode voor, maar je kan dit ook in JavaScript doen bijvoorbeeld)&lt;/p&gt;</description>
+      <guid>http://localhost:1313/fsweb-course/extra/webdevelopmenttools/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;i class=&#34;fa fa-info&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&#xA;Er bestaan een zeer grote range aan tools die ontwikkeld zijn om het leven van een web developer makkelijker te maken. Het kan echter zeer verwarrend zijn om tijdens de leerfase steeds verschillende tools te horen omdat er ook gewoon zoveel zijn en je ook nog niet weet wat soort tools er allemaal zijn en wat ze allemaal doen. Zo bestaan er tools zoals volledige &lt;strong&gt;frameworks&lt;/strong&gt; die je helpen een volledige stack op te zetten of gewoon simpele &lt;strong&gt;libraries&lt;/strong&gt; die één aspect versnellen en/of versimpelen voor de developer. Daarom lijsten we hieronder al een reeks populaire tools op zodat je ten minste ongeveer weet wat ze doen wanneer je ze tegenkomt.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

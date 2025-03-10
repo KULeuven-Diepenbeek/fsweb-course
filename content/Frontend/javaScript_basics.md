@@ -402,7 +402,7 @@ Voor het tweede probleem gebruiken we de `parseInt` van hierboven, doen een bewe
 Wanneer je met CSS je stijlen in `classes` hebt ingedeeld kan je ook rechtstreeks de property **`className`** van het HTML-element gebruiken. Dan kan je in één keer een heel nieuwe stijl of animaties toekennen aan een specifiek HTML-element, bv.<br />
 `document.getElementById('par').className = "red";`
 
-### Content wegschrijven naar localstorage of sessionstorage
+## Content wegschrijven naar localstorage of sessionstorage
 Je kan met JavaScript ook data opslaan in je browser. Dit is steeds een **`key-value` pair** waarbij beide waarde `Strings` zijn. Wegschrijven naar `localStorage` behoudt de data tussen sessies (sluiten en heropenen van de webpagina). Wegschrijven naar `sessionStorage` behoudt de data tussen sessies **NIET**. Maak gebruik van `JSON` om gemakkelijk data objecten op te slaan:
 ```javascript
 //Het op te slagen object in JSON formaat
@@ -420,22 +420,6 @@ var retrievedTestObject = JSON.parse(retrievedObject);
 ```
 
 _Vergeet je objecten dus niet te `JSON.stringify`-en om ze op te slaan en te `parse`-n om ze van text terug om te zetten naar waardige JS objecten._
-
-## Opdrachten reeks 1
-- Breid onderstaand voorbeeld, waar we de invoer in een tekstvak in een alert laten verschijnen, uit tot een formulier met twee velden: een voor de tekst en een voor kleur. Wanneer de gebruiker op de knop klikt, moet de tekst in een tweede div verschijnen met als achtergrondkleur de kleur die gebruiker ingegeven had. 
-```javascript
-// met invoer een html-input element van het type `text`, met als `id` "tekst"
-function toonInvoer() { 
-  var invoer = document.getElementById("tekst").value; 
-  alert(invoer); 
-}
-```
-- Maak een opteller in HTML en JavaScript: een simpel formulier met 2 tekstvakken waar men een getal moet invullen en een div waar je de uitkomst in zet. 
-- Maak een quizje met drie meerkeuzevragen. Als men op het foute antwoord klikt, moet dat antwoord een rode achtergrond krijgen. Klikt men op het juiste antwoord, dan moet dit een groene achtergrond krijgen.
-
-<br />
-
-- Voeg op minstens 2 plaatsen JavaScript toe aan je portfolio website. Ten eerste zorg je ervoor dat wanneer mensen op de 'submit'-knop drukken in je contactenformulier dat je de data van de inputvelden op een correcte manier in een object variabele opslaat. Sla daarna de data op in je `sessionStorage` door gebruik te maken van JSON. Zorg er ook voor dat wanneer je je contactformulier opent het formulier al is ingevuld met de laatst opgeslagen gegevens indien ze bestaan.
 
 <!-- TODO ### Async functions, promises, await & fetch from api's
 Soms wil je dingen opvragen of kan het een tijd duren voordat een functie een return geeft. Om te voorkomen dat je gedurende die tijd niet kan interageren met de website, moet je gebruik maken `async` functions. Ergens in je functie gebruik je dan het woord `await` zodat de rest van je funtie verder gaat wanneer je een return waarde hebt ontvangen. Tijdens het wachten kan dan andere code uitgevoerd worden.
@@ -473,18 +457,24 @@ async function cuteDogPicture() {
 
 window.addEventListener("click", () => { cuteDogPicture() });
 ```
-
-## TODO Canvas met [p5.js](https://editor.p5js.org/) 
-
-## TODO creative coding
 -->
 
-<!-- ## Opdrachten reeks 2 
-TODO - Voeg verder op home-pagina nog een extra sectie toe genaamd 'Interactie met p5.js'. Gebruik de modules van de p5.js library om een canvas te tekenen en een leuke creatieve interactie te creëren met de bezoekers van je website. Doe dit bijvoorbeeld door een kleine animatie te starten die verandert op basis van de muis positie.  
+## Opdrachten reeks 1
+- Breid onderstaand voorbeeld, waar we de invoer in een tekstvak in een alert laten verschijnen, uit tot een formulier met twee velden: een voor de tekst en een voor kleur. Wanneer de gebruiker op de knop klikt, moet de tekst in een tweede div verschijnen met als achtergrondkleur de kleur die gebruiker ingegeven had. 
+```javascript
+// met invoer een html-input element van het type `text`, met als `id` "tekst"
+function toonInvoer() { 
+  var invoer = document.getElementById("tekst").value; 
+  alert(invoer); 
+}
+```
+- Maak een opteller in HTML en JavaScript: een simpel formulier met 2 tekstvakken waar men een getal moet invullen en een div waar je de uitkomst in zet. 
+- Maak een quizje met drie meerkeuzevragen. Als men op het foute antwoord klikt, moet dat antwoord een rode achtergrond krijgen. Klikt men op het juiste antwoord, dan moet dit een groene achtergrond krijgen.
 
-TODO - Recreeer de voorbeelden van mijn p5js library. 
+<br />
 
-TODO - Maak een website met een creative coding touch. -->
+- Voeg op minstens 2 plaatsen JavaScript toe aan je portfolio website. Ten eerste zorg je ervoor dat wanneer mensen op de 'submit'-knop drukken in je contactenformulier dat je de data van de inputvelden op een correcte manier in een object variabele opslaat. Sla daarna de data op in je `sessionStorage` door gebruik te maken van JSON. Zorg er ook voor dat wanneer je je contactformulier opent het formulier al is ingevuld met de laatst opgeslagen gegevens indien ze bestaan.
+
 
 ## Test jezelf
 
