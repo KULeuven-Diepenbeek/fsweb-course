@@ -24,8 +24,8 @@ Academiejaar 2024---2025.
 | 06  | vr 28-02-2025 | More JavaScript + Creative coding (p5) | 
 | 07  | vr 07-03-2025 | Example application + Frontend practice|
 | 08  | ma 10-03-2025 | Overview of languages and frameworks   |
-| 09  | wo 12-03-2025 | PHP basics                             |
-| 10  | vr 14-03-2025 | PHP deel 2                             |
+| 09  | wo 12-03-2025 | PHP basics + form handling             |
+| 10  | vr 14-03-2025 | PHP Object Oriented Programming        |
 | 11  | wo 19-03-2025 | The XAMPP stack                        |
 | 12  | vr 21-03-2025 | Laravel: routes, blade and components  |
 | 13  | wo 26-03-2025 | Laravel: MVC                           |

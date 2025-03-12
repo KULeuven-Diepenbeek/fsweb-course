@@ -424,14 +424,37 @@ Sommige vooraf gedefinieerde variabelen in PHP zijn "Superglobals", wat betekent
 
 _We gaan hier verder nog een aantal van bespreken._
 
-### PHP Forms
-
-
 ## Opdrachten
 1. Overloop de PHP [Tutorials](https://www.w3schools.com/php/default.asp) op W3Schools. 
 2. Maak op W3Schools.com de [exercises](https://www.w3schools.com/php/php_exercises.asp) rond php (Je mag advanced php overslaan).
 3. Maak op W3Schools de PHP [Quiz](https://www.w3schools.com/php/php_quiz.asp). (Sommige antwoorden hebben we nog niet gezien, maar 90% wel)
-4. Gebruik een HTML form, POST-method en PHP om een rekenmachine webpagina te maken.
+4. Een lijst met kleine oefeningen om je PHP skills te testen:
+- Schrijf een functie die de discriminant van een tweedegraads veelterm berekend en voer wat testjes uit om te zien of je oplossing klopt
+- Schrijf een functie met parameters aantal minuten en aantal seconden dat iemand nodig had om 1 km afstand af te leggen en bereken de snelheid per uur.
+- Schrijf een functie dat een getal als parameter krijgt en afdrukt of de sinus van het getal groter is dan de cosinus of omgekeerd.
+- Schrijf een functie die drie parameters neemt: twee functies (f en g) en een waarde (x) en die een boolean teruggeeft die vertelt of f en g commutatief zijn in x. De functie moet dus teruggeven of f(g(x)) == g(f(x)).
+- Maak een lijst met de getallen 2, 4, 6 en eentje met de getallen 1, 3, 5, 7 en vergelijk som, product, gemiddelde en mediaan van beide lijsten. Tel de twee lijsten van hierboven bij elkaar op als dit lukt. Maak een lijst met de getallen 4, 2, 1 en eentje met de getallen 1, 2, 4. Tel beide bij elkaar op en bereken van het resultaat het cumulatief product.
+- Schrijf een functie die drie parameters neemt: Een ondergrens voor een bereik (inbegrepen in het bereik), Een bovengrens voor een bereik (niet inbegrepen, zoals bij de range), Een getal. De functie moet een lijst terug geven met alle getallen in het bereik die een veelvoud zijn van het getal.
+
+### PHP Forms
+<!--
+Voorbeeld formulier:
+```html
+<html>
+<body>
+
+<form action="welcome.php" method="POST">
+Name: <input type="text" name="name"><br>
+E-mail: <input type="text" name="email"><br>
+<input type="submit">
+</form>
+
+</body>
+</html>
+``` -->
+
+## Opdrachten
+1. Gebruik een HTML form, POST-method en PHP om een rekenmachine webpagina te maken.
 
 <!-- ## [Connect to database + security demos](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student)
 
