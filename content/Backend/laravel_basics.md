@@ -2,7 +2,7 @@
 title: "Laravel: basics"
 weight: 2
 author: Arne Duyver
-draft: false
+draft: true
 ---
 
 # Laravel

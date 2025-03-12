@@ -2,7 +2,7 @@
 title: "Laravel: code and commands"
 weight: 3
 author: Arne Duyver
-draft: false
+draft: true
 ---
 
 ## Important commandline commands
