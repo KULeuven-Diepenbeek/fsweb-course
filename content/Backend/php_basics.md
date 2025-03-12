@@ -429,32 +429,105 @@ _We gaan hier verder nog een aantal van bespreken._
 2. Maak op W3Schools.com de [exercises](https://www.w3schools.com/php/php_exercises.asp) rond php (Je mag advanced php overslaan).
 3. Maak op W3Schools de PHP [Quiz](https://www.w3schools.com/php/php_quiz.asp). (Sommige antwoorden hebben we nog niet gezien, maar 90% wel)
 4. Een lijst met kleine oefeningen om je PHP skills te testen:
-- Schrijf een functie die de discriminant van een tweedegraads veelterm berekend en voer wat testjes uit om te zien of je oplossing klopt
-- Schrijf een functie met parameters aantal minuten en aantal seconden dat iemand nodig had om 1 km afstand af te leggen en bereken de snelheid per uur.
-- Schrijf een functie dat een getal als parameter krijgt en afdrukt of de sinus van het getal groter is dan de cosinus of omgekeerd.
-- Schrijf een functie die drie parameters neemt: twee functies (f en g) en een waarde (x) en die een boolean teruggeeft die vertelt of f en g commutatief zijn in x. De functie moet dus teruggeven of f(g(x)) == g(f(x)).
-- Maak een lijst met de getallen 2, 4, 6 en eentje met de getallen 1, 3, 5, 7 en vergelijk som, product, gemiddelde en mediaan van beide lijsten. Tel de twee lijsten van hierboven bij elkaar op als dit lukt. Maak een lijst met de getallen 4, 2, 1 en eentje met de getallen 1, 2, 4. Tel beide bij elkaar op en bereken van het resultaat het cumulatief product.
-- Schrijf een functie die drie parameters neemt: Een ondergrens voor een bereik (inbegrepen in het bereik), Een bovengrens voor een bereik (niet inbegrepen, zoals bij de range), Een getal. De functie moet een lijst terug geven met alle getallen in het bereik die een veelvoud zijn van het getal.
+  - Schrijf een functie die de discriminant van een tweedegraads veelterm berekend en voer wat testjes uit om te zien of je oplossing klopt
+  - Schrijf een functie met parameters aantal minuten en aantal seconden dat iemand nodig had om 1 km afstand af te leggen en bereken de snelheid per uur.
+  - Schrijf een functie dat een getal als parameter krijgt en afdrukt of de sinus van het getal groter is dan de cosinus of omgekeerd.
+  - Schrijf een functie die drie parameters neemt: twee functies (f en g) en een waarde (x) en die een boolean teruggeeft die vertelt of f en g commutatief zijn in x. De functie moet dus teruggeven of f(g(x)) == g(f(x)).
+  - Maak een lijst met de getallen 2, 4, 6 en eentje met de getallen 1, 3, 5, 7 en vergelijk som, product, gemiddelde en mediaan van beide lijsten. Tel de twee lijsten van hierboven bij elkaar op als dit lukt. Maak een lijst met de getallen 4, 2, 1 en eentje met de getallen 1, 2, 4. Tel beide bij elkaar op en bereken van het resultaat het cumulatief product.
+  - Schrijf een functie die drie parameters neemt: Een ondergrens voor een bereik (inbegrepen in het bereik), Een bovengrens voor een bereik (niet inbegrepen, zoals bij de range), Een getal. De functie moet een lijst terug geven met alle getallen in het bereik die een veelvoud zijn van het getal.
+5. Bedenk zelf even waarom je niet op een simpele manier input van de gebruiker kan opvragen en verwerken in PHP, door bijvoorbeeld een input field uit te lezen.
 
 ### PHP Forms
-<!--
-Voorbeeld formulier:
+
+PHP is een server-side programmeertaal. Dit betekent dat de PHP-code op de server wordt uitgevoerd **voordat** de output (HTML) naar de gebruiker wordt gestuurd. Hierdoor is het niet mogelijk om tijdens de uitvoering van een PHP-script direct interactief input van de gebruiker op te vragen, zoals je dat wellicht in een command-line applicatie zou doen. 
+
+Daarnaast werkt het web via het HTTP-protocol, waarbij er een duidelijke scheiding is tussen de verzoeken van de gebruiker en de antwoorden van de server. Er is geen doorlopende verbinding waarin je interactief input kunt verwerken tijdens de uitvoering van je code.
+
+#### Waarom gebruiken we HTML Forms?
+
+Om toch gebruikersinput te verkrijgen, maken we gebruik van HTML formulieren. Hierbij verloopt de interactie in twee stappen:
+
+1. **De inputpagina:** De gebruiker vult een HTML-formulier in op een webpagina.
+2. **De verwerkende pagina:** Na het verzenden van het formulier wordt een PHP-script aangeroepen (bijvoorbeeld via de `POST` of `GET` methode) dat de ingevoerde data verwerkt.
+
+## Voorbeeld: HTML Formulier en PHP Verwerking
+
+**HTML Formulier (`index.html`)**
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Gebruikersinput</title>
+</head>
 <body>
-
-<form action="welcome.php" method="POST">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
-<input type="submit">
-</form>
-
+    <form action="verwerk.php" method="post">
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam">
+        <br>
+        <input type="submit" value="Verzenden">
+    </form>
 </body>
 </html>
-``` -->
+```
+
+In dit voorbeeld wordt een formulier gepresenteerd waarin de gebruiker zijn naam kan invullen. Het formulier stuurt de data via de `POST` methode naar het php script `verwerk.php`.
+
+**PHP Script (`verwerk.php`)**
+```php
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Zorgt voor een veilige verwerking van de gebruikersinput
+    $naam = $_POST["naam"];
+    echo "Hallo, " . $naam . "!";
+} else {
+    echo "Geen gegevens ontvangen.";
+}
+?>
+```
+
+Je kan from submission ook laten redirecten naar de eigen pagina met `action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"`
+
+### De PHP superglobals $_GET en $_POST
+
+In bovenstaande voorbeeld kan je zien dat de naam opgevraagd wordt door de globale variabele `$_POST` te gebruiken. Dit is een speciale variabele waar alle info ingestoken wordt van een POST-request wanneer die pagina opgeroepen werd op die manier. Op gelijkaardige manier kan je de superglobal `$_GET` gebruiken.
+
+Zowel GET en POST maken een array maken (bijv. Array (key1 => waarde1, key2 => waarde2, key3 => waarde3, ...)). Deze array bevat key/value pairs, waarbij de keys de `name` van de form control elements zijn en values de input van de gebruiker of de waarde van `value`.
+
+Via een simpele if-statement zoals hierboven te zien is kunnen we opvragen wat de methode was waarmee het PHP-script werd opgeroepen zo kunnen we in een script meerdere soorten calls opvangen en verwerken.
+
+### Security: Form validation
+
+Security is zeer belangrijk in PHP omdat je anders kwetsbaar zal zijn voor simpele aanvallen die je hele website op stelten kan zetten. Een voorbeeld hiervan is de **Cross-Site Scripting attack** (XSS) waarbij je eigen HTML/PHP code doorgeeft met een input en zo dus je eigen code kan laten runnen op de host server (WAT ABSOLUUT NO DONE IS). Daarom gaan we elke waarde die we van een gebruiker uitlezen eerst preprocessen met de functie `htmlspecialchars()` om alle HTML-tags te laten processen als text en niet als code.
+
+Vaak willen we ook nog onnodige tekens strippen (extra witruimte, tab, newline) van de gebruikers input, dit kan je doen met de `trim()`-functie.
+
+Backslashes willen we meestal ook niet dus kunnen we verwijderen met `stripslashes()`.
+
+Deze drie dingen zouden we dan op de volgende manier kunnen combineren om simpel en snel alle data te valideren. Bijvoorbeeld:
+```php
+// define variables and set to empty values
+$name = $email = $website = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["name"]);
+  $email = test_input($_POST["email"]);
+  $website = test_input($_POST["website"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+```
+
+Verdere form validation zoals required fields of checken of een email adres klopt, kan je in de HTML-code zelf steken via de properties van het `input`-element: `required` en `type=email` bijvoorbeeld, maar dit kan ook in de backend. En op beide plaatsen is zelfs nog beter want een gebruiker kan altijd met de frontend gaan prutsen (bijvoorbeeld het `required` attribuut toch verwijderen en dan posten wat ook een valid POST-request zal opleveren maar als je PHP code hier wel een waarde required zal je een error krijgen). Meer info over hoe je die form validation in PHP best aanpakt, vind je [hier](https://www.w3schools.com/php/php_form_required.asp)
 
 ## Opdrachten
-1. Gebruik een HTML form, POST-method en PHP om een rekenmachine webpagina te maken.
+1. Pas de functies uit de voorgaande opgaven aan zodat de parameters in een form worden opgevraagd en dan het correct antwoord teruggeven.
+2. Gebruik een HTML form, POST-method en PHP om een rekenmachine webpagina te maken. (layout en concrete werking mag je zelf kiezen)
 
 <!-- ## [Connect to database + security demos](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student)
 
