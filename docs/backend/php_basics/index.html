@@ -12,22 +12,22 @@
     <title>PHP: Hypertext Preprocessing :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1741765110" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1741765110" rel="stylesheet">
-    <link href="../../css/hybrid.css?1741765110" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1741765110" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1741765110" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1741765110" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1741765110" rel="stylesheet">
-    <link href="../../css/theme.css?1741765110" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1741765110" rel="stylesheet">
-    <link href="../../css/devselector.css?1741765110" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1741765110" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1741765110" rel="stylesheet">
+    <link href="../../css/nucleus.css?1741773889" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1741773889" rel="stylesheet">
+    <link href="../../css/hybrid.css?1741773889" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1741773889" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1741773889" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1741773889" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1741773889" rel="stylesheet">
+    <link href="../../css/theme.css?1741773889" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1741773889" rel="stylesheet">
+    <link href="../../css/devselector.css?1741773889" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1741773889" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1741773889" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1741765110"></script>
-    <script src="../../js/devselector.js?1741765110"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1741773889"></script>
+    <script src="../../js/devselector.js?1741773889"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1741765110"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1741765110"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1741773889"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1741773889"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1741765110"></script>
+<script type="text/javascript" src="../../%20js/search.js?1741773889"></script>
     
   </div>
 
@@ -526,10 +526,24 @@
             <li><a href="#super-globals">Super Globals</a></li>
           </ol>
         </li>
-        <li><a href="#php-forms">PHP Forms</a></li>
       </ol>
     </li>
-    <li><a href="#opdrachten">Opdrachten</a></li>
+    <li><a href="#opdrachten">Opdrachten</a>
+      <ol>
+        <li><a href="#php-forms">PHP Forms</a>
+          <ol>
+            <li><a href="#waarom-gebruiken-we-html-forms">Waarom gebruiken we HTML Forms?</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#voorbeeld-html-formulier-en-php-verwerking">Voorbeeld: HTML Formulier en PHP Verwerking</a>
+      <ol>
+        <li><a href="#de-php-superglobals-_get-en-_post">De PHP superglobals $_GET en $_POST</a></li>
+        <li><a href="#security-form-validation">Security: Form validation</a></li>
+      </ol>
+    </li>
+    <li><a href="#opdrachten-1">Opdrachten</a></li>
   </ol>
 </nav></div>
 </div>
@@ -915,13 +929,91 @@ Please check out our PHP reference for a complete overview of the <a href="https
 <p>Sommige vooraf gedefinieerde variabelen in PHP zijn &ldquo;Superglobals&rdquo;, wat betekent dat ze altijd toegankelijk zijn, ongeacht de scope - en je kan ze oproepen vanuit elke functie, klasse of bestand zonder iets speciaals te hoeven doen.</p>
 <p><code>$GLOBALS</code>, <code>$_SERVER</code>, <code>$_REQUEST</code>, <code>$_POST</code>, <code>$_GET</code>, <code>$_FILES</code>, <code>$_ENV</code>, <code>$_COOKIE</code>, <code>$_SESSION</code></p>
 <p><em>We gaan hier verder nog een aantal van bespreken.</em></p>
-<h3 id="php-forms">PHP Forms</h3>
 <h2 id="opdrachten">Opdrachten</h2>
 <ol>
 <li>Overloop de PHP <a href="https://www.w3schools.com/php/default.asp">Tutorials</a> op W3Schools.</li>
 <li>Maak op W3Schools.com de <a href="https://www.w3schools.com/php/php_exercises.asp">exercises</a> rond php (Je mag advanced php overslaan).</li>
 <li>Maak op W3Schools de PHP <a href="https://www.w3schools.com/php/php_quiz.asp">Quiz</a>. (Sommige antwoorden hebben we nog niet gezien, maar 90% wel)</li>
-<li>Gebruik een HTML form, POST-method en PHP om een rekenmachine webpagina te maken.</li>
+<li>Een lijst met kleine oefeningen om je PHP skills te testen:</li>
+</ol>
+<ul>
+<li>Schrijf een functie die de discriminant van een tweedegraads veelterm berekend en voer wat testjes uit om te zien of je oplossing klopt</li>
+<li>Schrijf een functie met parameters aantal minuten en aantal seconden dat iemand nodig had om 1 km afstand af te leggen en bereken de snelheid per uur.</li>
+<li>Schrijf een functie dat een getal als parameter krijgt en afdrukt of de sinus van het getal groter is dan de cosinus of omgekeerd.</li>
+<li>Schrijf een functie die drie parameters neemt: twee functies (f en g) en een waarde (x) en die een boolean teruggeeft die vertelt of f en g commutatief zijn in x. De functie moet dus teruggeven of f(g(x)) == g(f(x)).</li>
+<li>Maak een lijst met de getallen 2, 4, 6 en eentje met de getallen 1, 3, 5, 7 en vergelijk som, product, gemiddelde en mediaan van beide lijsten. Tel de twee lijsten van hierboven bij elkaar op als dit lukt. Maak een lijst met de getallen 4, 2, 1 en eentje met de getallen 1, 2, 4. Tel beide bij elkaar op en bereken van het resultaat het cumulatief product.</li>
+<li>Schrijf een functie die drie parameters neemt: Een ondergrens voor een bereik (inbegrepen in het bereik), Een bovengrens voor een bereik (niet inbegrepen, zoals bij de range), Een getal. De functie moet een lijst terug geven met alle getallen in het bereik die een veelvoud zijn van het getal.</li>
+</ul>
+<ol start="5">
+<li>Bedenk zelf even waarom je niet op een simpele manier input van de gebruiker kan opvragen en verwerken in PHP, door bijvoorbeeld een input field uit te lezen.</li>
+</ol>
+<h3 id="php-forms">PHP Forms</h3>
+<p>PHP is een server-side programmeertaal. Dit betekent dat de PHP-code op de server wordt uitgevoerd <strong>voordat</strong> de output (HTML) naar de gebruiker wordt gestuurd. Hierdoor is het niet mogelijk om tijdens de uitvoering van een PHP-script direct interactief input van de gebruiker op te vragen, zoals je dat wellicht in een command-line applicatie zou doen.</p>
+<p>Daarnaast werkt het web via het HTTP-protocol, waarbij er een duidelijke scheiding is tussen de verzoeken van de gebruiker en de antwoorden van de server. Er is geen doorlopende verbinding waarin je interactief input kunt verwerken tijdens de uitvoering van je code.</p>
+<h4 id="waarom-gebruiken-we-html-forms">Waarom gebruiken we HTML Forms?</h4>
+<p>Om toch gebruikersinput te verkrijgen, maken we gebruik van HTML formulieren. Hierbij verloopt de interactie in twee stappen:</p>
+<ol>
+<li><strong>De inputpagina:</strong> De gebruiker vult een HTML-formulier in op een webpagina.</li>
+<li><strong>De verwerkende pagina:</strong> Na het verzenden van het formulier wordt een PHP-script aangeroepen (bijvoorbeeld via de <code>POST</code> of <code>GET</code> methode) dat de ingevoerde data verwerkt.</li>
+</ol>
+<h2 id="voorbeeld-html-formulier-en-php-verwerking">Voorbeeld: HTML Formulier en PHP Verwerking</h2>
+<p><strong>HTML Formulier (<code>index.html</code>)</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">html</span> <span style="color:#75af00">lang</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;nl&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">meta</span> <span style="color:#75af00">charset</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;UTF-8&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">title</span><span style="color:#111">&gt;</span>Gebruikersinput<span style="color:#111">&lt;/</span><span style="color:#f92672">title</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">head</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;</span><span style="color:#f92672">form</span> <span style="color:#75af00">action</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;verwerk.php&#34;</span> <span style="color:#75af00">method</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;post&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">label</span> <span style="color:#75af00">for</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;naam&#34;</span><span style="color:#111">&gt;</span>Naam:<span style="color:#111">&lt;/</span><span style="color:#f92672">label</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;text&#34;</span> <span style="color:#75af00">id</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;naam&#34;</span> <span style="color:#75af00">name</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;naam&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">br</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">&lt;</span><span style="color:#f92672">input</span> <span style="color:#75af00">type</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;submit&#34;</span> <span style="color:#75af00">value</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Verzenden&#34;</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">&lt;/</span><span style="color:#f92672">form</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">body</span><span style="color:#111">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">&lt;/</span><span style="color:#f92672">html</span><span style="color:#111">&gt;</span>
+</span></span></code></pre></div><p>In dit voorbeeld wordt een formulier gepresenteerd waarin de gebruiker zijn naam kan invullen. Het formulier stuurt de data via de <code>POST</code> methode naar het php script <code>verwerk.php</code>.</p>
+<p><strong>PHP Script (<code>verwerk.php</code>)</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">$_SERVER</span><span style="color:#111">[</span><span style="color:#d88200">&#34;REQUEST_METHOD&#34;</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;POST&#34;</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Zorgt voor een veilige verwerking van de gebruikersinput
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#111">$naam</span> <span style="color:#f92672">=</span> <span style="color:#111">$_POST</span><span style="color:#111">[</span><span style="color:#d88200">&#34;naam&#34;</span><span style="color:#111">];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">echo</span> <span style="color:#d88200">&#34;Hallo, &#34;</span> <span style="color:#f92672">.</span> <span style="color:#111">$naam</span> <span style="color:#f92672">.</span> <span style="color:#d88200">&#34;!&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span> <span style="color:#00a8c8">else</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">echo</span> <span style="color:#d88200">&#34;Geen gegevens ontvangen.&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>Je kan from submission ook laten redirecten naar de eigen pagina met <code>action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&quot;PHP_SELF&quot;]);?&gt;&quot;</code></p>
+<h3 id="de-php-superglobals-_get-en-_post">De PHP superglobals $_GET en $_POST</h3>
+<p>In bovenstaande voorbeeld kan je zien dat de naam opgevraagd wordt door de globale variabele <code>$_POST</code> te gebruiken. Dit is een speciale variabele waar alle info ingestoken wordt van een POST-request wanneer die pagina opgeroepen werd op die manier. Op gelijkaardige manier kan je de superglobal <code>$_GET</code> gebruiken.</p>
+<p>Zowel GET en POST maken een array maken (bijv. Array (key1 =&gt; waarde1, key2 =&gt; waarde2, key3 =&gt; waarde3, &hellip;)). Deze array bevat key/value pairs, waarbij de keys de <code>name</code> van de form control elements zijn en values de input van de gebruiker of de waarde van <code>value</code>.</p>
+<p>Via een simpele if-statement zoals hierboven te zien is kunnen we opvragen wat de methode was waarmee het PHP-script werd opgeroepen zo kunnen we in een script meerdere soorten calls opvangen en verwerken.</p>
+<h3 id="security-form-validation">Security: Form validation</h3>
+<p>Security is zeer belangrijk in PHP omdat je anders kwetsbaar zal zijn voor simpele aanvallen die je hele website op stelten kan zetten. Een voorbeeld hiervan is de <strong>Cross-Site Scripting attack</strong> (XSS) waarbij je eigen HTML/PHP code doorgeeft met een input en zo dus je eigen code kan laten runnen op de host server (WAT ABSOLUUT NO DONE IS). Daarom gaan we elke waarde die we van een gebruiker uitlezen eerst preprocessen met de functie <code>htmlspecialchars()</code> om alle HTML-tags te laten processen als text en niet als code.</p>
+<p>Vaak willen we ook nog onnodige tekens strippen (extra witruimte, tab, newline) van de gebruikers input, dit kan je doen met de <code>trim()</code>-functie.</p>
+<p>Backslashes willen we meestal ook niet dus kunnen we verwijderen met <code>stripslashes()</code>.</p>
+<p>Deze drie dingen zouden we dan op de volgende manier kunnen combineren om simpel en snel alle data te valideren. Bijvoorbeeld:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// define variables and set to empty values
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">$name</span> <span style="color:#f92672">=</span> <span style="color:#111">$email</span> <span style="color:#f92672">=</span> <span style="color:#111">$website</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">$_SERVER</span><span style="color:#111">[</span><span style="color:#d88200">&#34;REQUEST_METHOD&#34;</span><span style="color:#111">]</span> <span style="color:#f92672">==</span> <span style="color:#d88200">&#34;POST&#34;</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">$name</span> <span style="color:#f92672">=</span> <span style="color:#75af00">test_input</span><span style="color:#111">(</span><span style="color:#111">$_POST</span><span style="color:#111">[</span><span style="color:#d88200">&#34;name&#34;</span><span style="color:#111">]);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">$email</span> <span style="color:#f92672">=</span> <span style="color:#75af00">test_input</span><span style="color:#111">(</span><span style="color:#111">$_POST</span><span style="color:#111">[</span><span style="color:#d88200">&#34;email&#34;</span><span style="color:#111">]);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">$website</span> <span style="color:#f92672">=</span> <span style="color:#75af00">test_input</span><span style="color:#111">(</span><span style="color:#111">$_POST</span><span style="color:#111">[</span><span style="color:#d88200">&#34;website&#34;</span><span style="color:#111">]);</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">function</span> <span style="color:#75af00">test_input</span><span style="color:#111">(</span><span style="color:#111">$data</span><span style="color:#111">)</span> <span style="color:#111">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">$data</span> <span style="color:#f92672">=</span> <span style="color:#75af00">trim</span><span style="color:#111">(</span><span style="color:#111">$data</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">$data</span> <span style="color:#f92672">=</span> <span style="color:#75af00">stripslashes</span><span style="color:#111">(</span><span style="color:#111">$data</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">$data</span> <span style="color:#f92672">=</span> <span style="color:#75af00">htmlspecialchars</span><span style="color:#111">(</span><span style="color:#111">$data</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#00a8c8">return</span> <span style="color:#111">$data</span><span style="color:#111">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
+</span></span></code></pre></div><p>Verdere form validation zoals required fields of checken of een email adres klopt, kan je in de HTML-code zelf steken via de properties van het <code>input</code>-element: <code>required</code> en <code>type=email</code> bijvoorbeeld, maar dit kan ook in de backend. En op beide plaatsen is zelfs nog beter want een gebruiker kan altijd met de frontend gaan prutsen (bijvoorbeeld het <code>required</code> attribuut toch verwijderen en dan posten wat ook een valid POST-request zal opleveren maar als je PHP code hier wel een waarde required zal je een error krijgen). Meer info over hoe je die form validation in PHP best aanpakt, vind je <a href="https://www.w3schools.com/php/php_form_required.asp">hier</a></p>
+<h2 id="opdrachten-1">Opdrachten</h2>
+<ol>
+<li>Pas de functies uit de voorgaande opgaven aan zodat de parameters in een form worden opgevraagd en dan het correct antwoord teruggeven.</li>
+<li>Gebruik een HTML form, POST-method en PHP om een rekenmachine webpagina te maken. (layout en concrete werking mag je zelf kiezen)</li>
 </ol>
 <!-- ## [Connect to database + security demos](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student)
 
@@ -1213,15 +1305,15 @@ Please check out our PHP reference for a complete overview of the <a href="https
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1741765110"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1741765110"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1741765110"></script>
-    <script src="../../js/jquery.sticky.js?1741765110"></script>
-    <script src="../../js/featherlight.min.js?1741765110"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1741765110"></script>
-    <script src="../../js/learn.js?1741765110"></script>
-    <script src="../../js/hugo-learn.js?1741765110"></script>
-    <script src="../../js/mermaid.min.js?1741765110"></script>
+    <script src="../../js/clipboard.min.js?1741773889"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1741773889"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1741773889"></script>
+    <script src="../../js/jquery.sticky.js?1741773889"></script>
+    <script src="../../js/featherlight.min.js?1741773889"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1741773889"></script>
+    <script src="../../js/learn.js?1741773889"></script>
+    <script src="../../js/hugo-learn.js?1741773889"></script>
+    <script src="../../js/mermaid.min.js?1741773889"></script>
     <script>
     window.MathJax = {
       chtml: {

@@ -528,8 +528,3 @@ Verdere form validation zoals required fields of checken of een email adres klop
 ## Opdrachten
 1. Pas de functies uit de voorgaande opgaven aan zodat de parameters in een form worden opgevraagd en dan het correct antwoord teruggeven.
 2. Gebruik een HTML form, POST-method en PHP om een rekenmachine webpagina te maken. (layout en concrete werking mag je zelf kiezen)
-
-<!-- ## [Connect to database + security demos](https://github.com/KULeuven-Diepenbeek/fsweb-demos-exercises-student)
-
-## Opdrachten
-1. Maak een volledig werkende signup, signin website die gebruik maakt van session-storage om bij te houden welke gebruiker is ingelogd. Zorg voor login, logout, change pwd. Zorg ervoor dat wachtwoorden veilig opgslagen worden in de database. De index.php moet je automatisch redirecten naar de login/signup page als je er nog geen gebruiker ingelogd is. -->
