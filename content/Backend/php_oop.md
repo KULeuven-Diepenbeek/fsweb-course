@@ -34,7 +34,7 @@ class Fruit {
   function set_name($name) {
     $this->name = $name;
   }
-  function get_name() {
+  function get_name() : string {
     return $this->name;
   }
 
@@ -148,7 +148,7 @@ class Strawberry2 extends Fruit2 {
 Je kan de folders in bovenstaande link kopiëren naar je map `xampp/htdocs/dashboard/` en dan onderstaande links gebruiken om de demo's zelf te testen.
 
 3. [Basic store in database](http://localhost/dashboard/backend_php-demo3/)
-5. [Search in database](http://localhost/dashboard/backend_php-demo5/) 
+4. [Search in database](http://localhost/dashboard/backend_php-demo4/) 
 6. [Sessions](http://localhost/dashboard/backend_php-demo6/) 
 7. [Session security](http://localhost/dashboard/backend_php-demo7/) 
 8. [Password security](http://localhost/dashboard/backend_php-demo8/)
