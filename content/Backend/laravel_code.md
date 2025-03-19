@@ -1,6 +1,6 @@
 ---
 title: "Laravel: code and commands"
-weight: 3
+weight: 5
 author: Arne Duyver
 draft: true
 ---

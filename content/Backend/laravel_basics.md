@@ -1,11 +1,10 @@
 ---
 title: "Laravel: basics"
-weight: 2
+weight: 4
 author: Arne Duyver
-draft: true
+draft: false
 ---
 
-# Laravel
 ## Why Laravel?
 - framework -> templates
   - faster
@@ -38,9 +37,6 @@ add to path: C:\ProgramData\ComposerSetup\bin
 ##### Install Laravel using Composer
 `$ composer global require laravel/installer`
 
-##### Reinstall XAMPP and move project into Dashboard -> Laravel
-first delete all files inside the dashboard directory
-
 ##### Create laravel project in your project folder
 `$ laravel new <projectName>` <br>
 starterkit -> none <br>
@@ -68,10 +64,10 @@ resources/views/welcome.blade.php <br>
 routes/web.php <br>
 public/index.php <br>
 
-## Create object and db migration
+<!-- ## Create object and db migration
 `$ php artisan make:model <modelName> -m` <br>
 `$ php artisan migrate` <br>
 check migration in `/database/migrations/` <br>
 
 update migration so it interacts with table correctly (set correct model properties) <br>
-model will be in `app/model`
+model will be in `app/model` -->
