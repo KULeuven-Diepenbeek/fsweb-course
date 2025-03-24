@@ -203,26 +203,34 @@ Je kan op drie verschillende manieren data "loggen" in Laravel:
 - `var_dump($variabelenaam)`: een droge printout met minimale informatie over het type en de waarde van de variabele.
 - `dump($variabelenaam)`: een mooier geformatteerde printout van de variabel waarmee je het hele object kan inspecteren.
 - `dd($variabelenaam)`: een printout zoals `dump()` maar verdere uitvoering van PHP-code wordt gehalt. Dit kan handig zijn wanneer verdere PHP code een error oproept in Laravel.
+<!-- TODO
+### Components
 
-<!-- ##### Setup database
+
+## Laravel MVC en Database
+
+### Database
 inside phpmyadmin -> new database (give same name as laravel project '-' becomes '_').<br>
 OR set name in `.env` file
 
 (`$ php artisan migrate`)
 
-creates tables that integrate with laravel ! -->
+creates tables that integrate with laravel ! 
 
+### Models and Controllers
+`$ php artisan make:model <modelName> -m`
 
+### Migration tables
 
-<!-- ##### Intro into Laravel TodoList
-resources/views/welcome.blade.php <br>
-routes/web.php <br>
-public/index.php <br> -->
+### Factory
 
-<!-- ## Create object and db migration
-`$ php artisan make:model <modelName> -m` <br>
-`$ php artisan migrate` <br>
-check migration in `/database/migrations/` <br>
+### Seeders
 
-update migration so it interacts with table correctly (set correct model properties) <br>
-model will be in `app/model` -->
+### Api routes
+
+## Putting it all together: simple CRUD application TennisVlaanderen + pictures opslaan
+
+### CORS -->
+
+<!-- Other page: session management, authentication, tokens and cookies + Security + casus uitwerken-->
+
