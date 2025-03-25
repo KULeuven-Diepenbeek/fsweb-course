@@ -12,22 +12,22 @@
     <title>Laravel: basics :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1742571736" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1742571736" rel="stylesheet">
-    <link href="../../css/hybrid.css?1742571736" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1742571736" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1742571736" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1742571736" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1742571736" rel="stylesheet">
-    <link href="../../css/theme.css?1742571736" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1742571736" rel="stylesheet">
-    <link href="../../css/devselector.css?1742571736" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1742571736" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1742571736" rel="stylesheet">
+    <link href="../../css/nucleus.css?1742822390" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1742822390" rel="stylesheet">
+    <link href="../../css/hybrid.css?1742822390" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1742822390" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1742822390" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1742822390" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1742822390" rel="stylesheet">
+    <link href="../../css/theme.css?1742822390" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1742822390" rel="stylesheet">
+    <link href="../../css/devselector.css?1742822390" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1742822390" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1742822390" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1742571736"></script>
-    <script src="../../js/devselector.js?1742571736"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1742822390"></script>
+    <script src="../../js/devselector.js?1742822390"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,8 +65,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../%20js/lunr.min.js?1742571736"></script>
-<script type="text/javascript" src="../../%20js/auto-complete.js?1742571736"></script>
+<script type="text/javascript" src="../../%20js/lunr.min.js?1742822390"></script>
+<script type="text/javascript" src="../../%20js/auto-complete.js?1742822390"></script>
 <script type="text/javascript">
     { { if hugo.IsMultilingual } }
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
@@ -74,7 +74,7 @@
     var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     { { end } }
 </script>
-<script type="text/javascript" src="../../%20js/search.js?1742571736"></script>
+<script type="text/javascript" src="../../%20js/search.js?1742822390"></script>
     
   </div>
 
@@ -794,24 +794,35 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
 <li><code>dump($variabelenaam)</code>: een mooier geformatteerde printout van de variabel waarmee je het hele object kan inspecteren.</li>
 <li><code>dd($variabelenaam)</code>: een printout zoals <code>dump()</code> maar verdere uitvoering van PHP-code wordt gehalt. Dit kan handig zijn wanneer verdere PHP code een error oproept in Laravel.</li>
 </ul>
-<!-- ##### Setup database
+<!-- TODO
+### Components
+
+
+## Laravel MVC en Database
+
+### Database
 inside phpmyadmin -> new database (give same name as laravel project '-' becomes '_').<br>
 OR set name in `.env` file
 
 (`$ php artisan migrate`)
 
-creates tables that integrate with laravel ! -->
-<!-- ##### Intro into Laravel TodoList
-resources/views/welcome.blade.php <br>
-routes/web.php <br>
-public/index.php <br> -->
-<!-- ## Create object and db migration
-`$ php artisan make:model <modelName> -m` <br>
-`$ php artisan migrate` <br>
-check migration in `/database/migrations/` <br>
+creates tables that integrate with laravel ! 
 
-update migration so it interacts with table correctly (set correct model properties) <br>
-model will be in `app/model` -->
+### Models and Controllers
+`$ php artisan make:model <modelName> -m`
+
+### Migration tables
+
+### Factory
+
+### Seeders
+
+### Api routes
+
+## Putting it all together: simple CRUD application TennisVlaanderen + pictures opslaan
+
+### CORS -->
+<!-- Other page: session management, authentication, tokens and cookies + Security + casus uitwerken-->
 
 </article>
 
@@ -1150,19 +1161,19 @@ model will be in `app/model` -->
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1742571736"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1742571736"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1742571736"></script>
-    <script src="../../js/jquery.sticky.js?1742571736"></script>
-    <script src="../../js/featherlight.min.js?1742571736"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1742571736"></script>
-    <script src="../../js/learn.js?1742571736"></script>
-    <script src="../../js/hugo-learn.js?1742571736"></script>
-    <script src="../../js/mermaid.min.js?1742571736"></script>
+    <script src="../../js/clipboard.min.js?1742822390"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1742822390"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1742822390"></script>
+    <script src="../../js/jquery.sticky.js?1742822390"></script>
+    <script src="../../js/featherlight.min.js?1742822390"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1742822390"></script>
+    <script src="../../js/learn.js?1742822390"></script>
+    <script src="../../js/hugo-learn.js?1742822390"></script>
+    <script src="../../js/mermaid.min.js?1742822390"></script>
     <script>
     window.MathJax = {
       chtml: {
-        scale: 2,                      
+        scale: 1,                      
         minScale: .5,                  
         matchFontHeight: true,         
         mtextInheritFont: false,       
