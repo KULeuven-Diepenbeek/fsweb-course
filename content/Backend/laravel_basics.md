@@ -241,7 +241,7 @@ Bijvoorbeeld:
 @include('components.alert', ['type' => 'success', 'message' => 'Operation completed!'])
 ```
 
-In Laravel kan je echter ook specifieke components aanmaken gecombineerd met een PHP Model voor de logica en dan op een zeer beknopte manier gebruiken in je project. Een voorbeeld hiervan kan een mooi gestylede button zijn. Dit gaan we hier echter niet  
+In Laravel kan je echter ook specifieke components aanmaken gecombineerd met een PHP Model voor de logica en dan op een zeer beknopte manier gebruiken in je project. Een voorbeeld hiervan kan een mooi gestylede button zijn. Dit gaan we hier echter niet verder bespreken maar je kan wel in [de documentatie](https://laravel.com/docs/12.x/blade#components) een kijkje nemen voor meer info.
 
 ### dump(), var_dump() en dd()
 Je kan op drie verschillende manieren data "loggen" in Laravel:
@@ -399,6 +399,10 @@ return new class extends Migration
 ```
 
 **BELANGRIJIK** voer `php artisan migrate` uit om de wijzigingen te synchroniseren met de database!
+
+{{% notice note %}}
+Met het commando: `php artisan migrate:rollback` kan je de `down` functies van je migration tables oproepen die in de meeste gevallen een `drop table if exists` gaan doen.
+{{% /notice %}}
 
 Je kan nu studenten createn, readen, updaten en deleten (C-R-U-D)  met onderstaande PHP code:
 ```php
