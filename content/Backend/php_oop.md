@@ -1,5 +1,5 @@
 ---
-title: "Object Oriented Programming in PHP"
+title: "OOP in PHP"
 weight: 2
 author: Arne Duyver
 draft: false
@@ -9,7 +9,7 @@ _bron 1: Responsive Web Design with HTML5 and CSS - 4th edition - Ben Frain_</br
 _bron 2: [W3Schools](https://www.w3schools.com/php/default.asp)_
 
 
-## [OOP in PHP](https://www.w3schools.com/php/php_oop_classes_objects.asp)
+## [Object Oriented Programming in PHP](https://www.w3schools.com/php/php_oop_classes_objects.asp)
 
 ```php
 <?php
