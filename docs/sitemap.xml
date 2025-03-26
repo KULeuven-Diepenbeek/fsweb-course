@@ -2,60 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/fsweb-course/frontend/html_basics/</loc>
+    <loc>http://localhost:54288/fsweb-course/frontend/html_basics/</loc>
     <lastmod>2025-02-18T15:37:45+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/introductie/</loc>
+    <loc>http://localhost:54288/fsweb-course/introductie/</loc>
     <lastmod>2025-02-21T02:20:33+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/backend/php_basics/</loc>
+    <loc>http://localhost:54288/fsweb-course/backend/php_basics/</loc>
     <lastmod>2025-03-14T01:47:14+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/extra/webdevelopmenttools/</loc>
+    <loc>http://localhost:54288/fsweb-course/extra/webdevelopmenttools/</loc>
     <lastmod>2025-03-10T10:20:57+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/frontend/css_basics/</loc>
+    <loc>http://localhost:54288/fsweb-course/frontend/css_basics/</loc>
     <lastmod>2025-02-18T15:37:45+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/frontend/</loc>
+    <loc>http://localhost:54288/fsweb-course/frontend/</loc>
     <lastmod>2025-02-12T13:54:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/backend/php_oop/</loc>
+    <loc>http://localhost:54288/fsweb-course/backend/php_oop/</loc>
     <lastmod>2025-03-14T12:44:04+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/extra/websecurity/</loc>
+    <loc>http://localhost:54288/fsweb-course/extra/websecurity/</loc>
     <lastmod>2025-03-14T01:47:14+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/frontend/css_advanced/</loc>
+    <loc>http://localhost:54288/fsweb-course/frontend/css_advanced/</loc>
     <lastmod>2025-02-21T02:20:33+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/backend/</loc>
+    <loc>http://localhost:54288/fsweb-course/backend/</loc>
     <lastmod>2025-03-21T16:43:36+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/frontend/javascript_basics/</loc>
+    <loc>http://localhost:54288/fsweb-course/frontend/javascript_basics/</loc>
     <lastmod>2025-03-10T11:45:07+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/extra/</loc>
+    <loc>http://localhost:54288/fsweb-course/extra/</loc>
     <lastmod>2025-03-10T10:20:57+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/backend/laravel_basics/</loc>
+    <loc>http://localhost:54288/fsweb-course/backend/laravel_basics/</loc>
     <lastmod>2025-03-24T14:02:22+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/opdracht/</loc>
+    <loc>http://localhost:54288/fsweb-course/opdracht/</loc>
     <lastmod>2025-02-18T15:37:45+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/frontend/responsive_design/</loc>
+    <loc>http://localhost:54288/fsweb-course/frontend/responsive_design/</loc>
     <lastmod>2025-03-10T10:20:57+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/frontend/creative_coding/</loc>
+    <loc>http://localhost:54288/fsweb-course/frontend/creative_coding/</loc>
     <lastmod>2025-02-27T23:31:53+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/frontend/extra/</loc>
+    <loc>http://localhost:54288/fsweb-course/frontend/extra/</loc>
     <lastmod>2025-03-05T18:32:52+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/</loc>
+    <loc>http://localhost:54288/fsweb-course/</loc>
     <lastmod>2025-03-14T12:44:04+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/fsweb-course/tags/</loc>
+    <loc>http://localhost:54288/fsweb-course/tags/</loc>
   </url>
 </urlset>

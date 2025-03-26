@@ -15,7 +15,16 @@ draft: false
   - built-in security features
   - automatic integration with database
 
+## Handige VSCode plugins voor Laravel
+
+- [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+- [Laravel Blade Snippets](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-blade)
+- [Laravel Extension Pack](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-extension-pack)
+
 ## Install Laravel
+
+**_De documentatie waar je met al je vragen terecht kan is [hier](https://laravel.com/docs/12.x/readme)_**
+
 ##### Edit php.ini file
 <br>**line 962**
 uncomment (delete semicolon in fromt) extention=zip
@@ -81,8 +90,26 @@ Laravel maakt voor jou al een heel deel files en folders aan. Enkele van de bela
 
 ![laravel-projectstructure](/img/laravel-projectstructure.png)
 
+**Kort overzicht belangrijke folders**
+- `app` folder: Application logic
+  - `Http` folder: behandelt http-requests met behulp van `Controllers` en `Models`
+  - `Models` folder: denk aan modellen in Java
+- `database` folder: Alles te doen met de database
+  - `factories` folder: Hierin worden files geschreven waarmee je dummy modellen kan aanmaken als PHP objecten
+  - `migrations` folder: Hierin komen de files die bepalen hoe je `Models` omgezet moeten worden naar database tables
+  - `seeders` folder: Hierin worden files geschreven waarmee je de database tabellen kan vullen met dummy data.
+- `public` folder: Alle files die publicly accessible moeten zijn in onze website zoals `javascript`, `css`, `images`
+- `resources` folder: Hier komen alle resources in zoals css-files en js-files, maar **let op**: in deze map gaat het over css en js code die nog door andere programma's zoals Tailwind of TypeScript gecompileerd moeten worden naar client-side code. Die code wordt dan gecompileerd naar vanilla css en js files die in je `public`-folder terecht komen!
+  - `views` folder: Alle `.blade.php` (alle HTML) files komen hierin, je kan ook met subfolders werken
+- `routes` folder: Hierin gaan we al onze endpoints definiëren. Dit is dus hoofdzakelijk server side code.
+  - `web.php`: website endpoints die je kan bezoeken 
+  - `api.php`: alle HTTP-requests handelen zoals GET, POST, DELETE ...
+- `storage` folder: alle log files komen hierin. Niet zo belangrijk voorlopig.
+- `tests` folder: alle testen, gaan we niet dieper op in.
+- `.env` file: hierin moeten we de gegevens van onze database connectie correct invullen, en kunnen we andere omgevingsvariabelen declareren.
+
 #### Routes: web.php
-Zoals hierboven vermeld moeten alle routes/endpoints die beschikbaar moeten zijn voor de eindgebruiker hier gedefinieerd worden. Om beveiligingsredenen kan je in de nieuwste versies van Laravel enkel `http-GET` endpoints definiëren. Je maakt een functie aan die dan de gewenste HTML code returned, dit kan in de vorm van een html-string zijn of in de vorm van een volledige `.blade.php` view. Je kan endpoints ook een specifieke naam meegeven met `->name('denaam')` zodat je met `{{ route('denaam') }}` een verwijzing kan maken naar dat endpoint in een `<a>`-element bijvoorbeeld:
+Zoals hierboven vermeld moeten alle routes/endpoints die beschikbaar moeten zijn voor de eindgebruiker hier gedefinieerd worden. Om beveiligingsredenen moet je `@csrf` vermelden in je form, anders zal je een `419 Page Expired: CSRF token missing or invalid` error krijgen. Je maakt een functie aan die dan de gewenste HTML code returned, dit kan in de vorm van een html-string zijn of in de vorm van een volledige `.blade.php` view. Je kan endpoints ook een specifieke naam meegeven met `->name('denaam')` zodat je met `{{ route('denaam') }}` een verwijzing kan maken naar dat endpoint in een `<a>`-element bijvoorbeeld:
 ```php
 <?php
 
@@ -198,35 +225,259 @@ Verder kan je nog veel meer doen met die blade files zoals, `if-else` statements
 </html>
 ```
 
+#### Components
+
+Je kan verschillende (korte) `.blade.php` code genereren die als custom snippets dienen binnenin je andere views zoals bijvoorbeeld een `blogpost.blade.php` bevat alle code om een een soort kaartje aan te maken met de blogpost titel, text en auteur. Je kan zo verschillende snippets als `Components` (bouwblokken) waarmee je dan grotere webpagina's kan opbouwen. Meestal groeperen we die components onder een subfolder genaamd `components` in de views folder. 
+
+Bijvoorbeeld:
+```php
+// Component
+{{-- resources/views/components/alert.blade.php --}}
+<div class="alert alert-{{ $type }}">
+  {{ $message }}
+</div>
+
+// Usage
+@include('components.alert', ['type' => 'success', 'message' => 'Operation completed!'])
+```
+
+In Laravel kan je echter ook specifieke components aanmaken gecombineerd met een PHP Model voor de logica en dan op een zeer beknopte manier gebruiken in je project. Een voorbeeld hiervan kan een mooi gestylede button zijn. Dit gaan we hier echter niet  
+
 ### dump(), var_dump() en dd()
 Je kan op drie verschillende manieren data "loggen" in Laravel:
 - `var_dump($variabelenaam)`: een droge printout met minimale informatie over het type en de waarde van de variabele.
 - `dump($variabelenaam)`: een mooier geformatteerde printout van de variabel waarmee je het hele object kan inspecteren.
 - `dd($variabelenaam)`: een printout zoals `dump()` maar verdere uitvoering van PHP-code wordt gehalt. Dit kan handig zijn wanneer verdere PHP code een error oproept in Laravel.
-<!-- TODO
-### Components
-
 
 ## Laravel MVC en Database
 
+Je zal je wellicht nog herinneren dat we in het vak Software Ontwerp in Java er op gehamerd werd dat we een goede architecture willen gebruiken voor onze applicaties om ze meer leesbaar, onderhoudbaar, schaalbaar, ... te maken. In Java gebruikten we het **Model-View-Controller** (MVC) principe waarbij de logica van onze applicatie gedefinieerd stond in Modellen, wat de gebruiker te zien krijgt gedefinieerd stond in de Views en de interactie van de gebruiker met de modellen nooit rechtstreeks gebeurde maar altijd via een Controller die dan ook voor een update van de views ging zorgen. We hebben geluk want deze architectuur zit nu ook al sterk verweven in het Laravel framework. De Views (`.blade.php`) hebben we hierboven al besproken en nu gaan we verder met de Controller (`PHP class`). Hierna zullen we het over de Modellen (`PHP class`) hebben aangezien we het tegelijk over database integratie moeten hebben, aangezien Model creation en database migration sterk verweven zijn in Laravel.
+
+### Controllers
+
+In webapplicaties gemaakt met PHP gaat de interactie met de gebruiker voornamelijk via HTTP-requests verlopen. De logica van wat er juist bij welke request moet gebeuren gaan we nu organiseren in aparte Controller klassen. Een controller is meestal gekoppeld aan een Model, maar je kan echter ook een standalone controller maken in Laravel met het volgende commando: `php artisan make:controller TestController`
+
+Er wordt een `TestController.php`-klasse aangemaakt in de `app/Http/controllers`-directory, met al de correcte boilerplate code. Hieronder zie je een voorbeeld van de implementatie van deze TestController die een GET-request behandelt waar enkel een `naam`-parameter is meegegeven:
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class TestController extends Controller
+{
+    public function handleNameRequest(Request $request)
+    {
+        $name = $request->query("name");
+        dump($request);
+        return view('hi', ['name_example' => $name]);
+    }
+}
+```
+
+Om deze functionaliteit te gebruiken in onze `web.php`, waar we nu dus **geen logica gaan schrijven maar enkel de requests gaan forwarden naar de juiste controller functie**, moeten we de controller klasse importeren en gebruiken op de volgende manier:
+```php
+<?php
+
+use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\TestController;
+
+Route::get('/process-form-controller', [TestController::class, 'handleNameRequest']);
+
+
+// ZONDER CONTROLLER
+Route::get('/process-form', function (Request $request) {
+    $name = $request->query("name");
+    dump($request);
+    return view('hi', ['name_example' => $name]);
+});
+
+```
+
 ### Database
-inside phpmyadmin -> new database (give same name as laravel project '-' becomes '_').<br>
-OR set name in `.env` file
 
-(`$ php artisan migrate`)
+**_Zorg ervoor dat je MySQL database van XAMPP aanstaat_**
 
-creates tables that integrate with laravel ! 
+We hebben bij het aanmaken van ons Laravel project al aangeduid dat we een database willen connecteren. Er wordt dan ook specifiek voor dat Laravel project een database gecreëerd in je database onder `laravel -> project_naam`. Indien je gewenst kan je ook eerst zelf deze database aanmaken. We gaan zo dadelijk ook nog zien hoe je eventueel een andere database kan koppelen. 
 
-### Models and Controllers
-`$ php artisan make:model <modelName> -m`
+Alle info om een correcte verbinding te maken wordt opgeslagen in de `.env`-file. Krijg je een error, dan moet je dus kijken of alle instellingen voor jouw database hier correct ingevuld zijn. De waarden die hier staan worden gebruikt in de `config/database.php` file. Hieronder vind je een voorbeeld:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=database_naam
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Door de `DB_DATABASE=` variabele dus een andere waarde te geven kan je connecteren met een andere database. 
+
+Om je connectie met de database te testen kan je `php artisan migrate:status` gebruiken. Dit geeft een error als er een probleem is.
+
+Heb je een wijziging aangebracht aan de instellingen van je database in de .env file of heb je migration tables gewijzigd, verwijderd of toegevoegd? Gebruik dan `php artisan migrate` om die wijzigingen te synchroniseren met de database.
+
+### Models
+Nu gaan we een model aanmaken in Laravel. Aangezien de link tussen modellen en de database zo groot is gaan we bijna altijd ook onmiddellijk een migration table mee laten genereren met de `-m` flag. (Migration tables zijn files waarin we uitleggen hoe de link tussen het model en de database tabel moet gelegd worden. Hierover meer hieronder):
+```bash
+php artisan make:model <modelName> -m
+```
+
+Er wordt een model klasse aangemaakt in `app/Models` en een bijhorende migration file in `database/migrations`.
+
+We geven hieronder een voorbeeld voor een `Student` model dat we al verder uitgewerkt hebben met de juiste datamembers:
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Student extends Model
+{
+    // Define the primary key (studnr instead of default 'id')
+    protected $primaryKey = 'studnr';
+
+    // Fields that can be mass-assigned
+    protected $fillable = [
+        'voornaam',
+        'naam',
+        'goedBezig',
+    ];
+
+    // Cast 'goedBezig' to boolean
+    protected $casts = [
+        'goedBezig' => 'boolean',
+    ];
+}
+```
+
+**Merk op dat we in het model al rekening houden met hoe de modellen opgeslagen worden in de database:**
+- We geven de attributen mee maar specificeren hun rol binnen de tabel ook zo wordt de `studnr` de `$primaryKey`.
+- Andere attributen/kolommen geven we op onder `$fillable`
+- Databases zoals MySQL slaan booleans op als integers (0/1) of true/false (afhankelijk van de driver). Door `$casts = ['goedBezig' => 'boolean'];` te gebruiken verzekeren we dat de waar geconverteerd wordt naar een PHP boolean bij het ophalen uit de database en de waarde als een integer wordt opgeslagen in de database.
+
+Merk op dat je hier geen info vind over bijvoorbeeld het type van `naam` en `voornaam`. Dit is allemaal gespecificeerd binnenin de `migration table`
 
 ### Migration tables
+De migration table die bij voorgaande voorbeeld hoort hebben we aangevuld om te passen bij het `Student` model en ziet er als volgt uit:
+```php
+<?php
 
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up()
+    {
+        Schema::create('students', function (Blueprint $table) {
+            // Custom primary key (studnr) as auto-incrementing integer
+            $table->integer('studnr')->autoIncrement()->primary();
+            
+            // voornaam (string, NOT NULL)
+            $table->string('voornaam')->nullable(false);
+            
+            // achternaam (string, nullable)
+            $table->string('achternaam')->nullable();
+            
+            // goedBezig (boolean with default value)
+            $table->boolean('goedBezig')->default(false);
+            
+            // Timestamps (created_at and updated_at)
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('students');
+    }
+};
+```
+
+**BELANGRIJIK** voer `php artisan migrate` uit om de wijzigingen te synchroniseren met de database!
+
+Je kan nu studenten createn, readen, updaten en deleten (C-R-U-D)  met onderstaande PHP code:
+```php
+// Create student
+$student = Student::create([
+    'voornaam' => 'John',
+    'achternaam' => 'Doe',
+    'goedBezig' => true,
+]);
+
+// Read: Query students
+$students = Student::where('goedBezig', true)->get();
+
+// Update student
+  //$data (bv. ['voornaam' => 'Jan', 'goedBezig' => false])
+  // Zoek de student
+$student = Student::find($studnr);
+  // Update de velden
+$student->update($data);
+
+// Delete student
+  // Zoek de student
+$student = Student::find($studnr);
+  // Verwijderen
+$student->delete();
+```
+
+**_Nog veel meer info over migration tables vind je in de [documentatie](https://laravel.com/docs/12.x/migrations#migration-structure)!_**
+
+### Api routes: Controller
+Wanneer we bijvoorbeeld achtergrond logica willen laten draaien zonder noodzakelijk de view aan te passen worden dit meestal api-endpoints genoemd (Application Programming Interface) Die endpoints die we hiervoor aanspreken steken we dan meestal in een `api.web` file in de `routes` folder. Je kan de endpoints dan bereiken via `/api/endpoint`. In het algemeen:
+- `web.php` voor web forms, Blade views en stateful interactions.
+- `api.php` voor stateless API endpoints.
+
+{{% notice important %}}
+Om de api.php file te laten genereren en alle instellingen correct te zetten moet je `php artisan install:api` gebruiken.
+
+Bovendien kan je met `php artisan route:list` bekijken welke endpoints allemaal beschikbaar zijn voor je Laravel webapplicatie
+{{% /notice %}}
+
+Zo kunnen we voor het studenten voorbeeld een `/studenten` endpoint hebben met formulieren om studenten aan te maken, op te vragen, te updaten en te deleten. De route `/studenten` komt dan in de `web.php` te staan aangezien deze de view teruggeeft met de verschillende forms, maar de endpoints die door de forms opgeroepen worden, zitten dan in de `api.php` bv. `/api/create_student`, `/api/get_students`, `/api/update_student`, `/api/delete_student`
+
+Aangezien je dus vaak acties wil uitvoeren op de modellen heb je vaak een controller om die acties uit te voeren. De controller heeft dan een naamgeving in de aard van `ModelnaamController`. Je kan nu rechtstreeks bij het aanmaken van een model ook nog een leeg controller skeleton voor dat model laten genereren met de `-c` flag:
+```bash
+php artisan make:model ModelNaam -mc
+```
+
+{{% notice note %}}
+Je kan zelfs nog meer heavy lifting over laten aan Laravel/artisan door de `-cr` flag te gebruiken wat een `Resource Controller`-klasse aanmaakt waar ook al boilerplate code voor CRUD methoden aanwezig zijn.
+{{% /notice %}}
+
+#### Een simpele CRUD application
+
+Een voorbeeld van hoe de api.php en Controller kunnen samenwerken vind je hieronder:
+- Routes
+```php
+// Send a student object to a controller method
+use App\Http\Controllers\StudentController;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/students/{student}', [StudentController::class, 'show']);
+```
+- Controller
+```php
+public function show(Student $student)
+{
+  // De $student wordt automatisch opgehaald op basis van studnr
+  dd(response()->json($student));
+}
+```
+
+##### Oefening 
+Maak de nodige views, controllers, modellen, migration tables en routes aan om het voorbeeld van een CRUD aan te maken voor de gedemonstreerde `Student`-klasse in Laravel
+
+
+<!-- TODO
 ### Factory
 
 ### Seeders
-
-### Api routes
 
 ## Putting it all together: simple CRUD application TennisVlaanderen + pictures opslaan
 
