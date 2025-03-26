@@ -121,7 +121,7 @@ Route::get('/', function () {
 
 Route::get('/test', function () {
     return "<h1>Test</h1>";
-});->name("denaam");
+})->name("denaam");
 ```
 
 Je kan ook verschillende parameters opvangen die via GET-requests meegestuurd kunnen worden. Hieronder vind je twee voorbeeld van twee verschillende manieren waarmee je info kan opvangen uit de request. In de eerste methode krijg je de info rechtstreeks uit de URL en in de tweede methode haal je de parameters uit de GET-request zelf. Hiervoor heb je wel een import van de library `Illuminate/Http/Request` nodig.
