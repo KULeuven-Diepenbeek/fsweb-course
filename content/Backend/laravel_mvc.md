@@ -369,7 +369,7 @@ Op die manier moet je maar één seeder klasse activeren om je hele applicatie v
 
 We tonen dit aan de hand van volgend project dat je [hier](/files/laravel-dbrelations.zip) kan terugvinden als zip bestand.
 
-**Belangrijk** is nu wel dat je niet alle migrations tegelijk uitvoert maar via de `--path=database/migrations/name.php` flag een na een de correcte migrations uitvoert zodat je geen problemen krijgt met de _Foreign Key Constraints_. In dit project dus eerst Opleiding en Vak, daarna Student en als laatste student_vak.
+**Belangrijk** is nu wel dat je niet alle migrations tegelijk uitvoert maar via de `--path=database/migrations/name.php` flag één na één de correcte migrations uitvoert zodat je geen problemen krijgt met de _Foreign Key Constraints_. In dit project dus eerst Opleiding en Vak, daarna Student en als laatste student_vak.
 
 De relaties die hier dus belangrijk zijn:
 - is de one-to-many relation tussen Opleiding en Student
