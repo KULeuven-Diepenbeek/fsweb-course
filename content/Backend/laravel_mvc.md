@@ -365,5 +365,19 @@ public function run()
 Op die manier moet je maar één seeder klasse activeren om je hele applicatie van dummy data te voorzien.
 
 
-<!-- ## Database met relaties -->
+## Database met relaties
+
+We tonen dit aan de hand van volgend project dat je [hier](/files/laravel-dbrelations.zip) kan terugvinden als zip bestand.
+
+**Belangrijk** is nu wel dat je niet alle migrations tegelijk uitvoert maar via de `--path=database/migrations/name.php` flag een na een de correcte migrations uitvoert zodat je geen problemen krijgt met de _Foreign Key Constraints_. In dit project dus eerst Opleiding en Vak, daarna Student en als laatste student_vak.
+
+De relaties die hier dus belangrijk zijn:
+- is de one-to-many relation tussen Opleiding en Student
+- en de many-to-many relation tussen Vak en Student
+
+Bekijk het project om erachter te komen hoe je dit correct weergeeft in de corresponderende Models, Migration tables, Factories en Seeders.
+
+{{% notice info %}}
+De manier waarop je hier werk met de Object to Table mapping komt heel sterk overeen met dezelfde tool die we hiervoor in Java kunnen gebruiken JPA/Hibernate, wat we in de cursus _Databases_ nog te zien gaan krijgen.
+{{% /notice %}}
 
