@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/fsweb-course/livereload.js?mindelay=10&amp;v=2&amp;port=54288&amp;path=fsweb-course/livereload" data-no-instant defer></script>
+  <head><script src="/fsweb-course/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=fsweb-course/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.143.1">
@@ -12,22 +12,22 @@
     <title>Laravel: basics :: Full Stack Web Development</title>
 
     
-    <link href="../../css/nucleus.css?1742992144" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1742992144" rel="stylesheet">
-    <link href="../../css/hybrid.css?1742992144" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1742992144" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1742992144" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1742992144" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1742992144" rel="stylesheet">
-    <link href="../../css/theme.css?1742992144" rel="stylesheet">
-    <link href="../../css/autonumbering.css?1742992144" rel="stylesheet">
-    <link href="../../css/devselector.css?1742992144" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1742992144" rel="stylesheet">
-    <link href="../../css/theme-kul.css?1742992144" rel="stylesheet">
+    <link href="../../css/nucleus.css?1743086664" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1743086664" rel="stylesheet">
+    <link href="../../css/hybrid.css?1743086664" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1743086664" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1743086664" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1743086664" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1743086664" rel="stylesheet">
+    <link href="../../css/theme.css?1743086664" rel="stylesheet">
+    <link href="../../css/autonumbering.css?1743086664" rel="stylesheet">
+    <link href="../../css/devselector.css?1743086664" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1743086664" rel="stylesheet">
+    <link href="../../css/theme-kul.css?1743086664" rel="stylesheet">
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1742992144"></script>
-    <script src="../../js/devselector.js?1742992144"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1743086664"></script>
+    <script src="../../js/devselector.js?1743086664"></script>
     <script id="MathJax-script" async
             src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -65,14 +65,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1742992144"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1742992144"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1743086664"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1743086664"></script>
 <script type="text/javascript">
     
-        var baseurl = "http:\/\/localhost:54288\/fsweb-course\/";
+        var baseurl = "http:\/\/localhost:1313\/fsweb-course\/";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1742992144"></script>
+<script type="text/javascript" src="../../js/search.js?1743086664"></script>
 
     
   </div>
@@ -269,6 +269,27 @@
  
   
     
+      <li data-nav-id="/frontend/database/" title="Database in de frontend" class="dd-item ">
+        <a href="../../frontend/database/">
+        Database in de frontend
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
       <li data-nav-id="/frontend/extra/" title="Extra" class="dd-item ">
         <a href="../../frontend/extra/">
         Extra
@@ -369,6 +390,27 @@
       <li data-nav-id="/backend/laravel_basics/" title="Laravel: basics" class="dd-item active">
         <a href="../../backend/laravel_basics/">
         Laravel: basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/backend/laravel_mvc/" title="Laravel: MVC en Database" class="dd-item ">
+        <a href="../../backend/laravel_mvc/">
+        Laravel: MVC en Database
         
         </a>
     </li>
@@ -607,19 +649,6 @@
         <li><a href="#dump-var_dump-en-dd">dump(), var_dump() en dd()</a></li>
       </ol>
     </li>
-    <li><a href="#laravel-mvc-en-database">Laravel MVC en Database</a>
-      <ol>
-        <li><a href="#controllers">Controllers</a></li>
-        <li><a href="#database">Database</a></li>
-        <li><a href="#models">Models</a></li>
-        <li><a href="#migration-tables">Migration tables</a></li>
-        <li><a href="#api-routes-controller">Api routes: Controller</a>
-          <ol>
-            <li><a href="#een-simpele-crud-application">Een simpele CRUD application</a></li>
-          </ol>
-        </li>
-      </ol>
-    </li>
   </ol>
 </nav></div>
 </div>
@@ -775,7 +804,7 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/test&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span> <span style="color:#111">()</span> <span style="color:#111">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;&lt;h1&gt;Test&lt;/h1&gt;&#34;</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">});</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">name</span><span style="color:#111">(</span><span style="color:#d88200">&#34;denaam&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#111">})</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">name</span><span style="color:#111">(</span><span style="color:#d88200">&#34;denaam&#34;</span><span style="color:#111">);</span>
 </span></span></code></pre></div><p>Je kan ook verschillende parameters opvangen die via GET-requests meegestuurd kunnen worden. Hieronder vind je twee voorbeeld van twee verschillende manieren waarmee je info kan opvangen uit de request. In de eerste methode krijg je de info rechtstreeks uit de URL en in de tweede methode haal je de parameters uit de GET-request zelf. Hiervoor heb je wel een import van de library <code>Illuminate/Http/Request</code> nodig.</p>
 <ul>
 <li>Voorbeeld 1:</li>
@@ -789,7 +818,7 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Http\Request</span><span style="color:#111">;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/test2&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span> <span style="color:#111">(</span><span style="color:#75af00">Request</span> <span style="color:#111">$request</span><span style="color:#111">)</span> <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">$request</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">query</span><span style="color:#111">(</span><span style="color:#d88200">&#34;name&#34;</span><span style="color:#111">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#111">$request</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#34;name&#34;</span><span style="color:#111">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#111">});</span>
 </span></span></code></pre></div><p>Verder kan je ook data doorgeven aan blade views die dan gebruikt kan worden in de balde.php met <code>{{ $mijndata }}</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/test3&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span> <span style="color:#111">()</span> <span style="color:#111">{</span>
@@ -828,6 +857,8 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
 </span></span><span style="display:flex;"><span><span style="color:#f92672">@</span><span style="color:#75af00">stop</span>
 </span></span></code></pre></div><p>Merk op dat je nu dus heel overzichtelijke code kan schrijven door verschillende delen op te splitsen en dat je het aantal gedupliceerde code sterk verminderd. Zo moet je op zo weinig mogelijk plaatsen iets aanpassen.</p>
 <p>Met <code>@extends('blade_naam')</code> geef je aan welke file je wil uitbreiden en met de <code>@section('section_naam')</code> en <code>@stop</code> kan je dan specifieke content injecteren. Als je gewoon een hele file wil includen kan je <code>@include('file_name')</code> gebruiken. Zitten je files in een specifieke directory dan kan je de directories scheiden met een <code>.</code> bijvoorbeel <code>@extends('layouts.layout')</code> als de <code>layout.blade.php</code> in een subfolder <code>layouts</code> zit.</p>
+<p>Merk bovendien ook op dat je je JavaScript files, CSS files en andere assets zoals images kan opvragen via <code>{{ asset('path/to/document.extension') }}</code> Die assets moeten wel in de <code>public</code>-folder zitten want anders kan die niet door de client side bereikt worden.</p>
+<p>Variabelen die werden doorgegeven aan een parent blade view zijn ook toegankelijk binnenin de children.</p>
 <p>Verder kan je nog veel meer doen met die blade files zoals, <code>if-else</code> statements toevoegen en/of <code>for</code>- en <code>while</code>-loops. Een voorbeeld hiervan vind je hieronder:</p>
 <div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;!</span><span style="color:#75af00">DOCTYPE</span> <span style="color:#75af00">html</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#75af00">html</span><span style="color:#f92672">&gt;</span>
@@ -872,7 +903,7 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Usage
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">@</span><span style="color:#00a8c8">include</span><span style="color:#111">(</span><span style="color:#d88200">&#39;components.alert&#39;</span><span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;type&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#d88200">&#39;success&#39;</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;message&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#d88200">&#39;Operation completed!&#39;</span><span style="color:#111">])</span>
-</span></span></code></pre></div><p>In Laravel kan je echter ook specifieke components aanmaken gecombineerd met een PHP Model voor de logica en dan op een zeer beknopte manier gebruiken in je project. Een voorbeeld hiervan kan een mooi gestylede button zijn. Dit gaan we hier echter niet</p>
+</span></span></code></pre></div><p>In Laravel kan je echter ook specifieke components aanmaken gecombineerd met een PHP Model voor de logica en dan op een zeer beknopte manier gebruiken in je project. Een voorbeeld hiervan kan een mooi gestylede button zijn. Dit gaan we hier echter niet verder bespreken maar je kan wel in <a href="https://laravel.com/docs/12.x/blade#components">de documentatie</a> een kijkje nemen voor meer info.</p>
 <h3 id="dump-var_dump-en-dd">dump(), var_dump() en dd()</h3>
 <p>Je kan op drie verschillende manieren data &ldquo;loggen&rdquo; in Laravel:</p>
 <ul>
@@ -880,197 +911,6 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
 <li><code>dump($variabelenaam)</code>: een mooier geformatteerde printout van de variabel waarmee je het hele object kan inspecteren.</li>
 <li><code>dd($variabelenaam)</code>: een printout zoals <code>dump()</code> maar verdere uitvoering van PHP-code wordt gehalt. Dit kan handig zijn wanneer verdere PHP code een error oproept in Laravel.</li>
 </ul>
-<h2 id="laravel-mvc-en-database">Laravel MVC en Database</h2>
-<p>Je zal je wellicht nog herinneren dat we in het vak Software Ontwerp in Java er op gehamerd werd dat we een goede architecture willen gebruiken voor onze applicaties om ze meer leesbaar, onderhoudbaar, schaalbaar, &hellip; te maken. In Java gebruikten we het <strong>Model-View-Controller</strong> (MVC) principe waarbij de logica van onze applicatie gedefinieerd stond in Modellen, wat de gebruiker te zien krijgt gedefinieerd stond in de Views en de interactie van de gebruiker met de modellen nooit rechtstreeks gebeurde maar altijd via een Controller die dan ook voor een update van de views ging zorgen. We hebben geluk want deze architectuur zit nu ook al sterk verweven in het Laravel framework. De Views (<code>.blade.php</code>) hebben we hierboven al besproken en nu gaan we verder met de Controller (<code>PHP class</code>). Hierna zullen we het over de Modellen (<code>PHP class</code>) hebben aangezien we het tegelijk over database integratie moeten hebben, aangezien Model creation en database migration sterk verweven zijn in Laravel.</p>
-<h3 id="controllers">Controllers</h3>
-<p>In webapplicaties gemaakt met PHP gaat de interactie met de gebruiker voornamelijk via HTTP-requests verlopen. De logica van wat er juist bij welke request moet gebeuren gaan we nu organiseren in aparte Controller klassen. Een controller is meestal gekoppeld aan een Model, maar je kan echter ook een standalone controller maken in Laravel met het volgende commando: <code>php artisan make:controller TestController</code></p>
-<p>Er wordt een <code>TestController.php</code>-klasse aangemaakt in de <code>app/Http/controllers</code>-directory, met al de correcte boilerplate code. Hieronder zie je een voorbeeld van de implementatie van deze TestController die een GET-request behandelt waar enkel een <code>naam</code>-parameter is meegegeven:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">namespace</span> <span style="color:#75af00">App\Http\Controllers</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Http\Request</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">TestController</span> <span style="color:#00a8c8">extends</span> <span style="color:#75af00">Controller</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">handleNameRequest</span><span style="color:#111">(</span><span style="color:#75af00">Request</span> <span style="color:#111">$request</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#111">$name</span> <span style="color:#f92672">=</span> <span style="color:#111">$request</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">query</span><span style="color:#111">(</span><span style="color:#d88200">&#34;name&#34;</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75af00">dump</span><span style="color:#111">(</span><span style="color:#111">$request</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#00a8c8">return</span> <span style="color:#75af00">view</span><span style="color:#111">(</span><span style="color:#d88200">&#39;hi&#39;</span><span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;name_example&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">$name</span><span style="color:#111">]);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
-</span></span></code></pre></div><p>Om deze functionaliteit te gebruiken in onze <code>web.php</code>, waar we nu dus <strong>geen logica gaan schrijven maar enkel de requests gaan forwarden naar de juiste controller functie</strong>, moeten we de controller klasse importeren en gebruiken op de volgende manier:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Support\Facades\Route</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Http\Request</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">App\Http\Controllers\TestController</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/process-form-controller&#39;</span><span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#75af00">TestController</span><span style="color:#f92672">::</span><span style="color:#75af00">class</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;handleNameRequest&#39;</span><span style="color:#111">]);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// ZONDER CONTROLLER
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/process-form&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span> <span style="color:#111">(</span><span style="color:#75af00">Request</span> <span style="color:#111">$request</span><span style="color:#111">)</span> <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">$name</span> <span style="color:#f92672">=</span> <span style="color:#111">$request</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">query</span><span style="color:#111">(</span><span style="color:#d88200">&#34;name&#34;</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">dump</span><span style="color:#111">(</span><span style="color:#111">$request</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">return</span> <span style="color:#75af00">view</span><span style="color:#111">(</span><span style="color:#d88200">&#39;hi&#39;</span><span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#d88200">&#39;name_example&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#111">$name</span><span style="color:#111">]);</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">});</span>
-</span></span></code></pre></div><h3 id="database">Database</h3>
-<p><strong><em>Zorg ervoor dat je MySQL database van XAMPP aanstaat</em></strong></p>
-<p>We hebben bij het aanmaken van ons Laravel project al aangeduid dat we een database willen connecteren. Er wordt dan ook specifiek voor dat Laravel project een database gecreëerd in je database onder <code>laravel -&gt; project_naam</code>. Indien je gewenst kan je ook eerst zelf deze database aanmaken. We gaan zo dadelijk ook nog zien hoe je eventueel een andere database kan koppelen.</p>
-<p>Alle info om een correcte verbinding te maken wordt opgeslagen in de <code>.env</code>-file. Krijg je een error, dan moet je dus kijken of alle instellingen voor jouw database hier correct ingevuld zijn. De waarden die hier staan worden gebruikt in de <code>config/database.php</code> file. Hieronder vind je een voorbeeld:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-env" data-lang="env"><span style="display:flex;"><span><span style="color:#111">DB_CONNECTION</span><span style="color:#f92672">=</span>mysql
-</span></span><span style="display:flex;"><span><span style="color:#111">DB_HOST</span><span style="color:#f92672">=</span>127.0.0.1
-</span></span><span style="display:flex;"><span><span style="color:#111">DB_PORT</span><span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">DB_DATABASE</span><span style="color:#f92672">=</span>database_naam
-</span></span><span style="display:flex;"><span><span style="color:#111">DB_USERNAME</span><span style="color:#f92672">=</span>root
-</span></span><span style="display:flex;"><span><span style="color:#111">DB_PASSWORD</span><span style="color:#f92672">=</span>
-</span></span></code></pre></div><p>Door de <code>DB_DATABASE=</code> variabele dus een andere waarde te geven kan je connecteren met een andere database.</p>
-<p>Om je connectie met de database te testen kan je <code>php artisan migrate:status</code> gebruiken. Dit geeft een error als er een probleem is.</p>
-<p>Heb je een wijziging aangebracht aan de instellingen van je database in de .env file of heb je migration tables gewijzigd, verwijderd of toegevoegd? Gebruik dan <code>php artisan migrate</code> om die wijzigingen te synchroniseren met de database.</p>
-<h3 id="models">Models</h3>
-<p>Nu gaan we een model aanmaken in Laravel. Aangezien de link tussen modellen en de database zo groot is gaan we bijna altijd ook onmiddellijk een migration table mee laten genereren met de <code>-m</code> flag. (Migration tables zijn files waarin we uitleggen hoe de link tussen het model en de database tabel moet gelegd worden. Hierover meer hieronder):</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>php artisan make:model &lt;modelName&gt; -m
-</span></span></code></pre></div><p>Er wordt een model klasse aangemaakt in <code>app/Models</code> en een bijhorende migration file in <code>database/migrations</code>.</p>
-<p>We geven hieronder een voorbeeld voor een <code>Student</code> model dat we al verder uitgewerkt hebben met de juiste datamembers:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">namespace</span> <span style="color:#75af00">App\Models</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Eloquent\Model</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">class</span> <span style="color:#75af00">Student</span> <span style="color:#00a8c8">extends</span> <span style="color:#75af00">Model</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Define the primary key (studnr instead of default &#39;id&#39;)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#00a8c8">protected</span> <span style="color:#111">$primaryKey</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#39;studnr&#39;</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Fields that can be mass-assigned
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#00a8c8">protected</span> <span style="color:#111">$fillable</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#d88200">&#39;voornaam&#39;</span><span style="color:#111">,</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#d88200">&#39;naam&#39;</span><span style="color:#111">,</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#d88200">&#39;goedBezig&#39;</span><span style="color:#111">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">];</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Cast &#39;goedBezig&#39; to boolean
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#00a8c8">protected</span> <span style="color:#111">$casts</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#d88200">&#39;goedBezig&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#d88200">&#39;boolean&#39;</span><span style="color:#111">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">];</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
-</span></span></code></pre></div><p><strong>Merk op dat we in het model al rekening houden met hoe de modellen opgeslagen worden in de database:</strong></p>
-<ul>
-<li>We geven de attributen mee maar specificeren hun rol binnen de tabel ook zo wordt de <code>studnr</code> de <code>$primaryKey</code>.</li>
-<li>Andere attributen/kolommen geven we op onder <code>$fillable</code></li>
-<li>Databases zoals MySQL slaan booleans op als integers (0/1) of true/false (afhankelijk van de driver). Door <code>$casts = ['goedBezig' =&gt; 'boolean'];</code> te gebruiken verzekeren we dat de waar geconverteerd wordt naar een PHP boolean bij het ophalen uit de database en de waarde als een integer wordt opgeslagen in de database.</li>
-</ul>
-<p>Merk op dat je hier geen info vind over bijvoorbeeld het type van <code>naam</code> en <code>voornaam</code>. Dit is allemaal gespecificeerd binnenin de <code>migration table</code></p>
-<h3 id="migration-tables">Migration tables</h3>
-<p>De migration table die bij voorgaande voorbeeld hoort hebben we aangevuld om te passen bij het <code>Student</code> model en ziet er als volgt uit:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#75af00">php</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Migrations\Migration</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Database\Schema\Blueprint</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Support\Facades\Schema</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">return</span> <span style="color:#00a8c8">new</span> <span style="color:#00a8c8">class</span> <span style="color:#75af00">extends</span> <span style="color:#75af00">Migration</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">up</span><span style="color:#111">()</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75af00">Schema</span><span style="color:#f92672">::</span><span style="color:#75af00">create</span><span style="color:#111">(</span><span style="color:#d88200">&#39;students&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">function</span> <span style="color:#111">(</span><span style="color:#75af00">Blueprint</span> <span style="color:#111">$table</span><span style="color:#111">)</span> <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Custom primary key (studnr) as auto-incrementing integer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">integer</span><span style="color:#111">(</span><span style="color:#d88200">&#39;studnr&#39;</span><span style="color:#111">)</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">autoIncrement</span><span style="color:#111">()</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">primary</span><span style="color:#111">();</span>
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// voornaam (string, NOT NULL)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">string</span><span style="color:#111">(</span><span style="color:#d88200">&#39;voornaam&#39;</span><span style="color:#111">)</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">nullable</span><span style="color:#111">(</span><span style="color:#00a8c8">false</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// achternaam (string, nullable)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">string</span><span style="color:#111">(</span><span style="color:#d88200">&#39;achternaam&#39;</span><span style="color:#111">)</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">nullable</span><span style="color:#111">();</span>
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// goedBezig (boolean with default value)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">boolean</span><span style="color:#111">(</span><span style="color:#d88200">&#39;goedBezig&#39;</span><span style="color:#111">)</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">default</span><span style="color:#111">(</span><span style="color:#00a8c8">false</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Timestamps (created_at and updated_at)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#111">$table</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">timestamps</span><span style="color:#111">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#111">});</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">down</span><span style="color:#111">()</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75af00">Schema</span><span style="color:#f92672">::</span><span style="color:#75af00">dropIfExists</span><span style="color:#111">(</span><span style="color:#d88200">&#39;students&#39;</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#111">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">};</span>
-</span></span></code></pre></div><p><strong>BELANGRIJIK</strong> voer <code>php artisan migrate</code> uit om de wijzigingen te synchroniseren met de database!</p>
-<p>Je kan nu studenten createn, readen, updaten en deleten (C-R-U-D)  met onderstaande PHP code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Create student
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">$student</span> <span style="color:#f92672">=</span> <span style="color:#75af00">Student</span><span style="color:#f92672">::</span><span style="color:#75af00">create</span><span style="color:#111">([</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#39;voornaam&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#d88200">&#39;John&#39;</span><span style="color:#111">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#39;achternaam&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#d88200">&#39;Doe&#39;</span><span style="color:#111">,</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#d88200">&#39;goedBezig&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#00a8c8">true</span><span style="color:#111">,</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">]);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Read: Query students
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">$students</span> <span style="color:#f92672">=</span> <span style="color:#75af00">Student</span><span style="color:#f92672">::</span><span style="color:#75af00">where</span><span style="color:#111">(</span><span style="color:#d88200">&#39;goedBezig&#39;</span><span style="color:#111">,</span> <span style="color:#00a8c8">true</span><span style="color:#111">)</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">get</span><span style="color:#111">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Update student
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">//$data (bv. [&#39;voornaam&#39; =&gt; &#39;Jan&#39;, &#39;goedBezig&#39; =&gt; false])
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// Zoek de student
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">$student</span> <span style="color:#f92672">=</span> <span style="color:#75af00">Student</span><span style="color:#f92672">::</span><span style="color:#75af00">find</span><span style="color:#111">(</span><span style="color:#111">$studnr</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Update de velden
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">$student</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">update</span><span style="color:#111">(</span><span style="color:#111">$data</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Delete student
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// Zoek de student
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">$student</span> <span style="color:#f92672">=</span> <span style="color:#75af00">Student</span><span style="color:#f92672">::</span><span style="color:#75af00">find</span><span style="color:#111">(</span><span style="color:#111">$studnr</span><span style="color:#111">);</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Verwijderen
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">$student</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">delete</span><span style="color:#111">();</span>
-</span></span></code></pre></div><p><strong><em>Nog veel meer info over migration tables vind je in de <a href="https://laravel.com/docs/12.x/migrations#migration-structure">documentatie</a>!</em></strong></p>
-<h3 id="api-routes-controller">Api routes: Controller</h3>
-<p>Wanneer we bijvoorbeeld achtergrond logica willen laten draaien zonder noodzakelijk de view aan te passen worden dit meestal api-endpoints genoemd (Application Programming Interface) Die endpoints die we hiervoor aanspreken steken we dan meestal in een <code>api.web</code> file in de <code>routes</code> folder. Je kan de endpoints dan bereiken via <code>/api/endpoint</code>. In het algemeen:</p>
-<ul>
-<li><code>web.php</code> voor web forms, Blade views en stateful interactions.</li>
-<li><code>api.php</code> voor stateless API endpoints.</li>
-</ul>
-
-<div class="notices important" ><p>Om de api.php file te laten genereren en alle instellingen correct te zetten moet je <code>php artisan install:api</code> gebruiken.</p>
-<p>Bovendien kan je met <code>php artisan route:list</code> bekijken welke endpoints allemaal beschikbaar zijn voor je Laravel webapplicatie</p>
-</div>
-
-<p>Zo kunnen we voor het studenten voorbeeld een <code>/studenten</code> endpoint hebben met formulieren om studenten aan te maken, op te vragen, te updaten en te deleten. De route <code>/studenten</code> komt dan in de <code>web.php</code> te staan aangezien deze de view teruggeeft met de verschillende forms, maar de endpoints die door de forms opgeroepen worden, zitten dan in de <code>api.php</code> bv. <code>/api/create_student</code>, <code>/api/get_students</code>, <code>/api/update_student</code>, <code>/api/delete_student</code></p>
-<p>Aangezien je dus vaak acties wil uitvoeren op de modellen heb je vaak een controller om die acties uit te voeren. De controller heeft dan een naamgeving in de aard van <code>ModelnaamController</code>. Je kan nu rechtstreeks bij het aanmaken van een model ook nog een leeg controller skeleton voor dat model laten genereren met de <code>-c</code> flag:</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>php artisan make:model ModelNaam -mc
-</span></span></code></pre></div>
-<div class="notices note" ><p>Je kan zelfs nog meer heavy lifting over laten aan Laravel/artisan door de <code>-cr</code> flag te gebruiken wat een <code>Resource Controller</code>-klasse aanmaakt waar ook al boilerplate code voor CRUD methoden aanwezig zijn.</p>
-</div>
-
-<h4 id="een-simpele-crud-application">Een simpele CRUD application</h4>
-<p>Een voorbeeld van hoe de api.php en Controller kunnen samenwerken vind je hieronder:</p>
-<ul>
-<li>Routes</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Send a student object to a controller method
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#00a8c8">use</span> <span style="color:#75af00">App\Http\Controllers\StudentController</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#00a8c8">use</span> <span style="color:#75af00">Illuminate\Support\Facades\Route</span><span style="color:#111">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75af00">Route</span><span style="color:#f92672">::</span><span style="color:#75af00">get</span><span style="color:#111">(</span><span style="color:#d88200">&#39;/students/{student}&#39;</span><span style="color:#111">,</span> <span style="color:#111">[</span><span style="color:#75af00">StudentController</span><span style="color:#f92672">::</span><span style="color:#75af00">class</span><span style="color:#111">,</span> <span style="color:#d88200">&#39;show&#39;</span><span style="color:#111">]);</span>
-</span></span></code></pre></div><ul>
-<li>Controller</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">function</span> <span style="color:#75af00">show</span><span style="color:#111">(</span><span style="color:#75af00">Student</span> <span style="color:#111">$student</span><span style="color:#111">)</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">{</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// De $student wordt automatisch opgehaald op basis van studnr
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75af00">dd</span><span style="color:#111">(</span><span style="color:#75af00">response</span><span style="color:#111">()</span><span style="color:#f92672">-&gt;</span><span style="color:#75af00">json</span><span style="color:#111">(</span><span style="color:#111">$student</span><span style="color:#111">));</span>
-</span></span><span style="display:flex;"><span><span style="color:#111">}</span>
-</span></span></code></pre></div><h5 id="oefening">Oefening</h5>
-<p>Maak de nodige views, controllers, modellen, migration tables en routes aan om het voorbeeld van een CRUD aan te maken voor de gedemonstreerde <code>Student</code>-klasse in Laravel</p>
-<!-- TODO
-### Factory
-
-### Seeders
-
-## Putting it all together: simple CRUD application TennisVlaanderen + pictures opslaan
-
-### CORS -->
-<!-- Other page: session management, authentication, tokens and cookies + Security + casus uitwerken-->
 
 </article>
 
@@ -1248,6 +1088,22 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1324,6 +1180,22 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1415,7 +1287,7 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
 			<a class="nav nav-prev" href="../../backend/php_oop/" title="OOP in PHP"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="../../backend/laravel_cheatsheet/" title="Laravel Cheatsheet" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="../../backend/laravel_mvc/" title="Laravel: MVC en Database" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1425,15 +1297,15 @@ default database migrations -&gt; yes (make sure MySQL server is turned on in XA
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1742992144"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1742992144"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1742992144"></script>
-    <script src="../../js/jquery.sticky.js?1742992144"></script>
-    <script src="../../js/featherlight.min.js?1742992144"></script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1742992144"></script>
-    <script src="../../js/learn.js?1742992144"></script>
-    <script src="../../js/hugo-learn.js?1742992144"></script>
-    <script src="../../js/mermaid.min.js?1742992144"></script>
+    <script src="../../js/clipboard.min.js?1743086664"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1743086664"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1743086664"></script>
+    <script src="../../js/jquery.sticky.js?1743086664"></script>
+    <script src="../../js/featherlight.min.js?1743086664"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1743086664"></script>
+    <script src="../../js/learn.js?1743086664"></script>
+    <script src="../../js/hugo-learn.js?1743086664"></script>
+    <script src="../../js/mermaid.min.js?1743086664"></script>
     <script>
     window.MathJax = {
       chtml: {

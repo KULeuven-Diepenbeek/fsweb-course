@@ -1,9 +1,13 @@
 ---
-title: "Laravel: code and commands"
-weight: 5
+title: "Laravel: security"
+weight: 6
 author: Arne Duyver
 draft: true
 ---
+
+## Wat verstaan we onder security
+
+In dit deel gaan we het hebben over security in Laravel. Je mag dit zeer breed beschouwen, dit gaat onder andere over form-validation, authentication, cookies, session tokens ...
 
 ## Important commandline commands
 ```bash

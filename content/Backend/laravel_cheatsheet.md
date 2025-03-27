@@ -1,6 +1,6 @@
 ---
 title: "Laravel Cheatsheet"
-weight: 5
+weight: 7
 author: Arne Duyver
 draft: false
 ---
@@ -34,10 +34,24 @@ $ php artisan make:model ModelName -mcr
 
 # MIGRATE DATABASE CHANGES
 $ php artisan migrate
+# LAST MIGRATION ROLLBACKEN
+$ php artisan migrate:rollback
+# LAST MIGRATION ROLLBACKEN van een specifieke migration table
+$ php artisan migrate:rollback --path=database/migrations/2025_03_26_111505_create_students_table.php
 
 # INSTALL API
 $ php artisan install:api
 
 # CHECK ROUTES
 $ php artisan route:list
+
+# CREATE FACTORY for an existing model
+$ php artisan make:factory ModelNaamFactory --model=ModelNaam
+
+# CREATE SEEDER for an existing model
+$ php artisan make:seeder ModelNaamSeeder
+# SEED THE DATABASE according to your ALL seeders
+$ php artisan db:seed
+# SEED THE DATABASE according to a specific seeder
+$ php artisan db:seed --class=NaamSeeder
 ```
