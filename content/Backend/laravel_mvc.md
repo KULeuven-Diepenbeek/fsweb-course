@@ -244,6 +244,10 @@ public function show(Student $student)
 ##### Oefening 
 Maak de nodige views, controllers, modellen, migration tables en routes aan om het voorbeeld van een CRUD aan te maken voor de gedemonstreerde `Student`-klasse in Laravel
 
+<!-- EXSOL -->
+_**<span style="color: #03C03C;">Solution:</span>**_
+Een voorbeeld oplossing voor deze oefening (met ook een factory en een seeder voor de Student klasse) vind je in [deze zip folder](/files/laravel-crud.zip).
+
 ### Factory
 Een **factory** in Laravel is een hulpmiddel om *nepdata* te genereren voor test- of ontwikkeldoeleinden. Het definieert hoe een model (bijv. een `Student`) automatisch aangemaakt kan worden met realistische, willekeurige waarden.
 
