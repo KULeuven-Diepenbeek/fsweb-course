@@ -35,7 +35,7 @@ Met XAMPP kun je snel en eenvoudig aan de slag met PHP-ontwikkeling zonder afhan
 
 ## Oefening
 
-Installeer `apache2` en `mysql` (MariaDB) ook eens in je WSL via de commandline en probeer zonder een GUI interface een database aan te maken en eventueel wat SQL-code uit te voeren. Bovendien kan je hierna een lichtgewicht browser based GUI-tool zoals `adminer` installeren om te interageren met je database.
+Installeer `apache2` en `mysql` (MariaDB) ook eens in je WSL (Windows Subsystem for Linux) via de commandline en probeer zonder een GUI interface een database aan te maken en eventueel wat SQL-code uit te voeren. Bovendien kan je hierna een lichtgewicht browser based GUI-tool zoals `adminer` installeren om te interageren met je database.
 
 {{% notice warning %}}
 `apache2` (80, 443), `mysql` (3306) en `adminer` (8080) gebruiken een aantal poorten om hun services op te hosten die overeenkomen met de poorten die XAMPP gebruikt op de host. Zorg er dus best voor dat je die services na deze oefening terug stopt met `sudo service <serviceName> stop` en disabled (niet starten bij startup) `sudo systemctl disable <serviceName>`. Als alternatief kan je er ook gewoon voor zorgen dat je WSL uitstaat m.b.v. `wsl --shutdown` te typen in PowerShell.
