@@ -375,6 +375,11 @@ De relaties die hier dus belangrijk zijn:
 - is de one-to-many relation tussen Opleiding en Student
 - en de many-to-many relation tussen Vak en Student
 
+Voor die many-to-may relation moeten we nu ook een aparte tabel voorzien in de database. Hiervoor moeten we dus ook een migration table aanmaken (die nu niet gekoppeld is aan een specifiek model). Je kan een migration table aanmaken met volgend commando: `php artisan make:migration create_table_name_table`. Volgens conventie is de naam "create_" + "table name" + "_table". Voor bovenstaande project wordt dit bijvoorbeeld:
+```bash
+php artisan make:migration create_student_vak_table
+```
+
 Bekijk het project om erachter te komen hoe je dit correct weergeeft in de corresponderende Models, Migration tables, Factories en Seeders.
 
 {{% notice info %}}
