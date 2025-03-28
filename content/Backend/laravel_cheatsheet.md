@@ -54,4 +54,7 @@ $ php artisan make:seeder ModelNaamSeeder
 $ php artisan db:seed
 # SEED THE DATABASE according to a specific seeder
 $ php artisan db:seed --class=NaamSeeder
+
+# CREATE A STANDALONE MIGRATION TABLE
+$ php artisan make:migration create_table_name_table
 ```
