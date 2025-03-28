@@ -22,33 +22,6 @@ PHP is al een oudere taal maar wordt nog steeds gebruikt in ongeveer 78% van all
 
 Om PHP te leren gaan we gebruik maken van [XAMPP](https://www.apachefriends.org/). Met behulp van XAMPP kunnen we op onze pc een lokale server laten draaien die onze backend implementeerd en onze website gaat kunnen displayen. Later gaan we PHP zien gebruikt worden in het populaire framework Laravel. Laravel gaat voor ons al veel organisatorisch werk verrichten.
 
-### [XAMPP](https://www.apachefriends.org/download.html)
-
-XAMPP is een gratis en open-source softwarepakket dat wordt gebruikt om een lokale webserveromgeving op te zetten. Het is een acroniem voor:
-
-- **X** – Standaard voor verschillende besturingssystemen (Windows, macOS, Linux)
-- **A** – Apache (de webserver)
-- **M** – MySQL (of MariaDB, de database)
-- **P** – PHP (de server-side programmeertaal)
-- **P** – Perl (een andere scripttaal, minder vaak gebruikt in PHP-ontwikkeling)
-
-#### Waarom XAMPP gebruiken?
-
-XAMPP maakt het eenvoudig om een complete ontwikkelomgeving op te zetten zonder dat je losse componenten zoals Apache, MySQL en PHP handmatig hoeft te installeren en configureren. Dit is vooral handig voor PHP-ontwikkeling, omdat je:
-
-- Een lokale testomgeving hebt voordat je code naar een live server uploadt.
-- Gemakkelijk databases kunt beheren met phpMyAdmin.
-- Extra modules en instellingen kunt aanpassen via de ingebouwde configuratiebestanden.
-
-#### Installatie en Gebruik
-
-1. **Download XAMPP** van de officiële website: [https://www.apachefriends.org](https://www.apachefriends.org)
-2. **Installeer XAMPP** en selecteer de gewenste componenten (standaard zijn Apache, MySQL en PHP voldoende voor PHP-ontwikkeling).
-3. **Start de server** via het XAMPP Control Panel.
-4. **Plaats PHP-bestanden** (`index.php`) in de `htdocs/dashboard/mijnproject/`-map binnen de XAMPP-installatiemap.
-5. **Toegang tot je projecten** via de browser op [`http://localhost/`](http://localhost/).
-
-Met XAMPP kun je snel en eenvoudig aan de slag met PHP-ontwikkeling zonder afhankelijk te zijn van een externe server.
 
 ### De PHP syntax
 
