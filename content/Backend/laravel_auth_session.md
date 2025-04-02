@@ -220,7 +220,15 @@ $theme = request()->cookie('theme');
 ## EXTRA:
 ### Opslag van Session Data in de Database (Laravel)
 
-Wanneer je **sessions via de database driver** (De driver kan je selecteren via de `.env` file) gebruikt in Laravel, worden de key-value pairs opgeslagen in de **`payload` kolom** van de `sessions` tabel. Hier is hoe het werkt:
+Wanneer je **sessions via de database driver** (De driver kan je selecteren via de `.env` file) gebruikt in Laravel, worden de key-value pairs opgeslagen in de **`payload` kolom** van de `sessions` tabel. 
+
+```
+# .env file example
+SESSION_DRIVER=database
+SESSION_LIFETIME=120
+```
+
+Hier is hoe het werkt:
 
 #### Structuur van de `sessions` Tabel:
 | Kolom          | Beschrijving                                                                 |
