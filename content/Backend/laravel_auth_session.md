@@ -216,3 +216,36 @@ $theme = request()->cookie('theme');
 - **Cookies** zijn geschikt voor niet-gevoelige data die lang moet blijven bestaan, zoals thema- of taalvoorkeuren.  
 - **Sessions** worden gebruikt voor tijdelijke, gevoelige data (zoals inlogstatussen) die niet direct blootgesteld mogen worden.  
 - Beide werken samen: een sessie gebruikt een cookie om een unieke ID op te slaan, terwijl de echte data server-side beveiligd blijft.  
+
+## EXTRA:
+### Opslag van Session Data in de Database (Laravel)
+
+Wanneer je **sessions via de database driver** (De driver kan je selecteren via de `.env` file) gebruikt in Laravel, worden de key-value pairs opgeslagen in de **`payload` kolom** van de `sessions` tabel. Hier is hoe het werkt:
+
+#### Structuur van de `sessions` Tabel:
+| Kolom          | Beschrijving                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| `id`           | Unieke sessie-ID (bv. een cryptografisch secure string).                     |
+| `user_id`      | ID van de ingelogde gebruiker (indien van toepassing).                      |
+| `ip_address`   | IP-adres van de gebruiker.                                                  |
+| `user_agent`   | Browser/user agent van de gebruiker.                                        |
+| `payload`      | **Hier staan de key-value pairs** (gecodeerd in een *serialized* formaat).  |
+| `last_activity`| Timestamp van de laatste interactie.                                        |
+
+#### Belangrijke details:
+1. **Payload Kolom**  
+   - Bevat alle session data (bv. `user_id`, `cart_items`, etc.) in een **geserialiseerd formaat** (meestal PHP-serialized of JSON).  
+   - De data is niet direct leesbaar, maar wordt door Laravel automatisch gedecodeerd.
+
+2. **Encryptie**  
+   - Laravel encrypteert de session data standaard (afhankelijk van de configuratie in `config/session.php`).  
+   - De `payload` kolom bevat dus **versleutelde data** als encryptie is ingeschakeld.
+
+3. **Alternatieve Drivers**  
+   - Bij drivers zoals `file` of `redis` wordt de data elders opgeslagen, maar de structuur blijft vergelijkbaar (key-value pairs in een gecodeerd formaat).
+
+**Voorbeeld van een `payload` (versleuteld):**
+```
+YTozOntzOjY6Il90b2tlbiI7czo0MDoiTlo5Z0dDaFJtczJ5cX...
+```
+Dit is een versleutelde string die na decodering de oorspronkelijke key-value pairs bevat.
