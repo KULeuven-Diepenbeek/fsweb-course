@@ -252,3 +252,7 @@ Je kan op drie verschillende manieren data "loggen" in Laravel:
 - `var_dump($variabelenaam)`: een droge printout met minimale informatie over het type en de waarde van de variabele.
 - `dump($variabelenaam)`: een mooier geformatteerde printout van de variabel waarmee je het hele object kan inspecteren.
 - `dd($variabelenaam)`: een printout zoals `dump()` maar verdere uitvoering van PHP-code wordt gehalt. Dit kan handig zijn wanneer verdere PHP code een error oproept in Laravel.
+
+### Storing files
+
+[Zie de documentatie](https://laravel.com/docs/12.x/filesystem#storing-files)
