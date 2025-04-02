@@ -185,6 +185,11 @@ In blade.php kan je dan ook aan die waarden geraken, bijvoorbeeld:
 @endif
 ```
 
+{{% notice info %}}
+<!-- EXSOL -->
+**_[Hier](/files/laravel-auth.zip) vind je een zipfolder met een voorbeeld laravel project met authentication._**
+{{% /notice %}}
+
 ### Cookies
 Een cookie is een klein stukje data dat door een webserver naar de webbrowser van een gebruiker wordt gestuurd en **lokaal** (client-side) wordt opgeslagen op het apparaat van de gebruiker. Het wordt gebruikt om informatie tussen meerdere verzoeken of sessies te onthouden, waardoor de server de gebruiker kan herkennen en **gepersonaliseerde ervaringen** (bijvoorbeeld gekozen thema: light/dark) kan bieden.
 
