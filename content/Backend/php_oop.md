@@ -1,5 +1,5 @@
 ---
-title: "OOP in PHP"
+title: "PHP: OOP"
 weight: 2
 author: Arne Duyver
 draft: false
