@@ -254,5 +254,89 @@ Je kan op drie verschillende manieren data "loggen" in Laravel:
 - `dd($variabelenaam)`: een printout zoals `dump()` maar verdere uitvoering van PHP-code wordt gehalt. Dit kan handig zijn wanneer verdere PHP code een error oproept in Laravel.
 
 ### Storing files
+Om files of images op te slaan in de backend kan je de functie `storage` gebruiken. Waar en de manier waarop dingen worden opgeslagen kan je terugvinden in de `config/filesystems.php`. Het deel wat we interessant vinden is:
+```php
+// filesystems.php
+...
 
-[Zie de documentatie](https://laravel.com/docs/12.x/filesystem#storing-files)
+/*
+    |--------------------------------------------------------------------------
+    | Filesystem Disks
+    |--------------------------------------------------------------------------
+    |
+    | Below you may configure as many filesystem disks as necessary, and you
+    | may even configure multiple disks for the same driver. Examples for
+    | most supported storage drivers are configured here for reference.
+    |
+    | Supported drivers: "local", "ftp", "sftp", "s3"
+    |
+    */
+
+    'disks' => [
+
+        'local' => [
+            'driver' => 'local',
+            'root' => storage_path('app/private'),
+            'serve' => true,
+            'throw' => false,
+            'report' => false,
+        ],
+
+        'public' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+            'report' => false,
+        ],
+        ...
+    ]
+...
+```
+
+Hierin wordt beschreven dat dingen die je in de Storage opslaat in de `app/private` of `app/public` folder onder de hoofdfolder `storage` terecht komen. Als je zo een file, bijvoorbeeld een afbeelding later ook terug in je html wil gebruiken dan moet die opslaan in de public met:
+```php
+$imagePath = $request->image->store('images', 'public');
+```
+De return van `store` geeft je het pad terug waar je de file later dan mee kan terugvinden met bijvoorbeeld: `"/storage/{{ $imagepath }}"`
+
+Om de storage te activeren moet je wel eerst nog het volgende commando gebruiken:
+```
+php artisan storage:link
+```
+
+Hieronder een voorbeeld over hoe je met een form een afbeelding kan opslaan en dan kan tonen:
+- Form in de view `uploadimage.blade.php`: **Opgelet: je moet nu zeker ook `enctype="multipart/form-data"` als attribuut toevoegen aan je form-tag**
+```php
+
+<form action="{{ route('process.imageupload') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <label for="image">image:</label>
+    <input type="file" id="image" name="image">
+    <button type="submit">upload</button>
+</form>
+
+```
+
+- Web.php route die de post-request behandelt:
+```php
+Route::post('/imageupload', function (Request $request) {
+
+    $request->validate([
+        'image' => 'required|image'
+    ]);
+
+    $imagePath = $request->image->store('images', 'public');
+
+    return view('showimage', ['imagepath' => $imagePath]);
+    
+})->name('process.imageupload');
+```
+
+- De view om de image te tonen `showimage.blade.php`:
+```php
+<img src="/storage/{{ $imagepath }}" width="300px" />
+```
+
+[Zie ook de documentatie](https://laravel.com/docs/12.x/filesystem#storing-files)
