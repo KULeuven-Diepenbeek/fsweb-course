@@ -302,7 +302,7 @@ $imagePath = $request->image->store('images', 'public');
 De return van `store` geeft je het pad terug waar je de file later dan mee kan terugvinden met bijvoorbeeld: `"/storage/{{ $imagepath }}"`
 
 Om de storage te activeren moet je wel eerst nog het volgende commando gebruiken:
-```
+```bash
 php artisan storage:link
 ```
 
