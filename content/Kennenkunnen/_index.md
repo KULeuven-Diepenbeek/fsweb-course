@@ -10,7 +10,7 @@ draft: false
 - Webdevelopmenttools (Wel kennen Laravel en Seveltekit)
 
 ### Wat **WEL** te kennen/kunnen voor het examen
-- HTML, CSS en JavaScript code kunnen lezen en begrijpen (**OPEN BOEK**: je mag de cursustekst hiervan afgedrukt meebrengen: door **_[hier](/files/openboek.pdf)_** te klikken kan je ze in pdf formaat downloaden)
+<!-- - HTML, CSS en JavaScript code kunnen lezen en begrijpen (**OPEN BOEK**: je mag de cursustekst hiervan afgedrukt meebrengen: door **_[hier](/files/openboek.pdf)_** te klikken kan je ze in pdf formaat downloaden) -->
 - Weten wat verschillende begrippen zijn en hierover vragen kunnen beantwoorden **(GESLOTEN BOEK)**:
   - Wat is het verschil tussen de client-side en de server-side
   - Wat betekend routing
