@@ -448,6 +448,62 @@ Een response die binnenkomt, zal er nu voor zorgen dat slechts een deel van de p
 
 Het grote voordeel van het asynchrone model is dat je veel directere interactie met de gebruiker kan krijgen. Het nadeel is dat het iets moeilijker is om te implementeren en dat je een extra technologie nodig hebt. Dat je hiervoor Javascript nodig hebt, zal je al wel doorhebben, want anders zouden we dit niet bespreken in het hoofdstuk Javascript. Concreet praten we dan over **Ajax**, wat meestal in combinatie met REST gebruikt wordt.
 
+### Evolutie van `callback functions` naar `promise` en `async` `await`
+
+**callback functions op twee manieren:**
+```javascript
+setTimeout(afterTimeout, 2000);
+
+  // Dit heet een callback function omdat deze functie opgeroepen wordt wanneer `SetTimeout` klaar is.
+function afterTimeout(){
+  console.log("This message appears after 2 seconds!");
+}
+
+// Met behulp van Arrow functions
+setTimeout(() => {
+  console.log("This message appears after 2 seconds!");
+}, 2000);
+```
+Stel je hebt nu veel geneste asynchrone functies die allemaal na elkaar moeten worden uitgevoerd, dan wordt dit een soep van functies. Daarom werken we met `Promises`
+
+**Promise met `.then`**
+```javascript
+fetch("https://random-word-api.herokuapp.com/word") // fetch geeft een Promise terug: als promise is aangekomen dan (=then) ...
+  .then(response => {
+    return response.json()                          // .json() geeft ook een Promise terug
+  })                                                
+  .then(json => console.log(json[0]))
+  .catch(err => console.error(err))
+```
+`.then` kan je als de callback handler beschouwen die je dan ook nog eens aan elkaar kan schakelen. Een extra pluspunt is dat je met één `.catch` errors in eender welke `.then` kan opvangen. (Bij callback functions moet je voor iedere functie ook nog apart een errorHandler functie voorzien)
+
+**Promise met `await` en `async`**
+```javascript
+async function doSomething(){
+  response = await fetch("https://random-word-api.herokuapp.com/word")
+  json = await response.json()
+  console.log(json[0])
+}
+
+
+// Met error handling
+async function doSomething() {
+  try {
+    const response = await fetch("https://random-word-api.herokuapp.com/word");
+    // je kan ook checken op andere errors
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const json = await response.json();
+    console.log(json[0]);
+  } catch (err) {
+    console.error("Something went wrong:", err);
+  }
+}
+```
+
+_Je kan ook je eigen functie schrijven die een `promise` returned, maar hier gaan we voorlopig niet verder op in_
+
 ### REST met Javascript ≈ Ajax
 De volgende stap is om de HTML-elementen te wijzigen, niet alleen maar op basis van vaste code of formulierinvoer, maar op basis van externe webpagina's/webservices. Hiervoor moeten we dus een (asynchroon) request kunnen sturen, en **wanneer we de response ontvangen** deze verwerken of rechtstreeks in een div plaatsen. Omdat de request dikwijls als XML terug komt, heb je 3 technologieën die samenkomen: Asynchroon, Javascript en XML. Dit wordt afgekort tot Ajax met de A van Asynchroon, de JA van Javascript en de X van XML. Tot enkele jaren geleden had je gespecialiseerde bibliotheken nodig zoals Prototype of jQuery om dit in verschillende browers op dezelfde manier te kunnen doen, maar nu kan dit gemakkelijk met fetch de bijhorende Promises en de functionele programmeerstijl.
 
