@@ -2,7 +2,7 @@
 title: "Opdracht"
 weight: 4
 author: Arne Duyver
-draft: false
+draft: true
 ---
 
 Officiële opgave, zie <a href="https://toledo.kuleuven.be/">Toledo</a>
