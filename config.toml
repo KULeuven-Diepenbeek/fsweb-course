@@ -77,7 +77,7 @@ weight = 10
 [[menu.shortcuts]] 
 name = "<i class='fa fa-university'></i> Studiegids"
 identifier = "stud"
-url = "https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2025&i=4891"
+url = "https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2026&i=5635"
 weight = 1
 
 [[menu.shortcuts]] 

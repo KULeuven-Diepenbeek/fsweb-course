@@ -16,30 +16,30 @@ Academiejaar 2024---2025.
 
 | nr  | datum         | onderwerp                                  |
 |-----|---------------|--------------------------------------------|
-| 01  | wo 12-02-2025 | Introductie + HTML                         |
-| 02  | vr 14-02-2025 | HTML + Webbrowser tools                    |
-| 03  | wo 19-02-2025 | CSS + Advanced CSS                         |
-| 04  | vr 21-02-2025 | JavaScript                                 |
-| 05  | wo 26-02-2025 | More JavaScript + Creative coding (p5)     |
-| 06  | vr 28-02-2025 | Responsive Design                          | 
-| 07  | vr 07-03-2025 | Example application + Frontend practice    |
-| 08  | ma 10-03-2025 | Overview of languages and frameworks       |
-| 09  | wo 12-03-2025 | PHP basics + form handling                 |
-| 10  | vr 14-03-2025 | PHP Object Oriented Programming + security |
-| 11  | wo 19-03-2025 | The XAMPP stack + WSL                      |
-| 12  | vr 21-03-2025 | Laravel: routes, blade and components      |
-| 13  | wo 26-03-2025 | Laravel: MVC                               |
-| 14  | vr 28-03-2025 | Laravel: Database and storage              |
-| 15  | wo 02-04-2025 | Laravel: Authentication, session, cookies  |
-| 16  | vr 04-04-2025 | Extra                                      |
-| 17  | wo 23-04-2025 | Svelte + SvelteKit                         |
-| 18  | vr 25-04-2025 | Svelte + SvelteKit                         |
-| 19  | wo 30-04-2025 | Svelte + SvelteKit                         |
-| 20  | vr 02-05-2025 | Svelte + SvelteKit                         |
-| 21  | wo 07-05-2025 | Svelte + SvelteKit                         |
-| 22  | vr 09-05-2025 | Svelte + SvelteKit                         |
-| 23  | wo 14-05-2025 | Svelte + SvelteKit                         |
-| 24  | vr 16-05-2025 | Svelte + SvelteKit                         |
+| 01  | ma 09-02-2026 | Introductie + HTML                         |
+| 02  | di 10-02-2026 | HTML + Webbrowser tools                    |
+| 03  | vr 13-02-2026 | CSS + Advanced CSS                         |
+| 04  | ma 23-02-2026 | JavaScript                                 |
+| 05  | wo 25-02-2026 | More JavaScript + Creative coding (p5)     |
+| 06  | vr 27-02-2026 | Responsive Design                          | 
+| 07  | wo 04-03-2026 | Example application + Frontend practice    |
+| 08  | vr 06-03-2026 | Overview of languages and frameworks       |
+| 09  | wo 11-03-2026 | PHP basics + form handling                 |
+| 10  | vr 13-03-2026 | PHP Object Oriented Programming + security |
+| 11  | wo 18-03-2026 | The XAMPP stack + WSL                      |
+| 12  | vr 20-03-2026 | Laravel: routes, blade and components      |
+| 13  | wo 25-03-2026 | Laravel: MVC                               |
+| 14  | vr 27-03-2026 | Laravel: Database and storage              |
+| 15  | wo 01-04-2026 | Laravel: Authentication, session, cookies  |
+| 16  | vr 03-04-2026 | Extra                                      |
+| 17  | wo 22-04-2026 | Svelte + SvelteKit                         |
+| 18  | vr 24-04-2026 | Svelte + SvelteKit                         |
+| 19  | wo 29-04-2026 | Svelte + SvelteKit                         |
+| 20  | vr 01-05-2026 | Svelte + SvelteKit                         |
+| 21  | wo 06-05-2026 | Svelte + SvelteKit                         |
+| 22  | vr 08-05-2026 | Svelte + SvelteKit                         |
+| 23  | wo 13-05-2026 | Svelte + SvelteKit                         |
+| 24  | vr 15-05-2026 | Svelte + SvelteKit                         |
 
 </p>
 </details>
@@ -99,7 +99,7 @@ Voor de backend leer je gebruik maken van de frameworks:
 
 #### Doelstellingen
 
-Zie ook [Studiegids UHasselt](https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2025&i=4891)
+Zie ook [Studiegids UHasselt](https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2026&i=5635)
     
 De context en het overzicht worden aangereikt in de eerste lessen van dit vak.
 
