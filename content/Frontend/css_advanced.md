@@ -212,6 +212,8 @@ div {
 ```
 **animation-timing-function**: zie `transitions`
 
+<!-- TODO: change to nederlands -->
+
 **animation-direction**:
 -**`normal`** - The animation is played as normal (forwards). This is default
 -**`reverse`** - The animation is played in reverse direction (backwards)

@@ -61,7 +61,7 @@ Een selector is een patroon dat wordt gebruikt om HTML-elementen te selecteren d
 - **een element selector** kan je alle HTML-elementen van een bepaald type selecteren en stylen. Bijvoorbeeld, de selector `p` selecteert alle paragraafelementen (`<p>`) op een webpagina. 
 - **een klasse selector**: kan je all HTML-elementen van een bepaalde klasse selecteren en stylen. Bijvoorbeeld, de selector `.mijnKlasseNaam` selecteert alle elementen (`<element class="mijnKlasseNaam">`) op een webpagina.
 - **een id selector**: kan je het HTML-element met een bepaalde id selecteren en stylen. Bijvoorbeeld, de selector `#mijnIdNaam` selecteert het element (`<element id="mijnIdNaam">`) op een webpagina.
-- **een samengestelde/complexe selector**: bv. `li.belangrijk`. Dit betekent dat elke `li` met als klasse `belangrijk` de bijhorende vormgeving moet krijgen, en de andere `li`’s niet, evenmin als de elementen van klasse belangrijk die géén `li` zijn. Wanneer je een spatie laat tussen de combinatie, bv. `p .belangrijk`, betekent dit "met daarbinnen", dus elk element met klasse belangrijk binnen een `p` krijgt de vormgeving, maar andere elementen binnen `p` niet, evenmin als elementen met klasse belangrijk die niet binnen `p` staan.
+- **een samengestelde/complexe selector**: bv. `li .belangrijk`. Dit betekent dat elke `li` met als klasse `belangrijk` de bijhorende vormgeving moet krijgen, en de andere `li`’s niet, evenmin als de elementen van klasse belangrijk die géén `li` zijn. Wanneer je een spatie laat tussen de combinatie, bv. `p .belangrijk`, betekent dit "met daarbinnen", dus elk element met klasse belangrijk binnen een `p` krijgt de vormgeving, maar andere elementen binnen `p` niet, evenmin als elementen met klasse belangrijk die niet binnen `p` staan.
   - **een attribuut selector**:  je kan dan ook nog dieper gaan selecteren op attributen (`[attribuut="waarde"]`). Bijvoorbeeld, de selector die de `<p>`-elementen selecteert die als waarde `yes` van het attribuut `mijnAttribuut` hebben ziet er als volgt uit: `p[mijnAttribuut=yes]`.
  
 ```css
@@ -107,12 +107,13 @@ _We gaan in 99% van de gevallen enkel gebruik maken van `px`, `rem` en `%` (af e
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
+<!-- TODO zet om naar nederlands -->
 ### Positioning
 - **Static**: An element with `position: static;` is not positioned in any special way; it is always positioned according to the normal flow of the page.
 <br>Static positioned elements are not affected by the top, bottom, left, and right properties.
 - **Relative**: An element with `position: relative;` is positioned relative to its normal position.
 <br>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
-- **Fixes**: An element with `position: fixed;` is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+- **Fixed**: An element with `position: fixed;` is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
 <br>A fixed element does not leave a gap in the page where it would normally have been located.
 - **Absolute**: An element with `position: absolute;` is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
 <br>Absolute positioned elements are removed from the normal flow, and can overlap elements.
@@ -132,7 +133,7 @@ _We gaan in 99% van de gevallen enkel gebruik maken van `px`, `rem` en `%` (af e
   border-style: dotted; /*dashed, solid, double, groove, ridge, inset, outset, none, hidden*/
   /*border-top-style, border-right-style, border-bottom-style, border-left-style*/
   border-width: 5rem; /*top right bottom left*/
-  border-width: black;
+  border-color: black;
   border-radius: 5px;
 
   margin: 10px; /*top right bottom left*/
@@ -228,7 +229,7 @@ element::before{
 
 ```
 
-<!-- TODO add flex-items and grid above -->
+<!-- add flex-items and grid above? niet nodig zit in responsive design  -->
 
 ### Icons
 ```html
