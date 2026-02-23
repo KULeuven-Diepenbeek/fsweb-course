@@ -276,7 +276,7 @@ Wanneer een attribuut of object niet gevonden wordt, wordt meestal `undefined` g
 Je kan nu ook snel content aanpassen door de attribuut waarde te veranderen:
 ```javaScript
 html_object.innerText = "nieweTekst";
-html_object.innerText = '<h1 id="nieuweId" > Nieuwe header </h1>'; // Je kan dus zelfs dynamisch HTML-elementen toevoegen of verwijderen 
+html_object.innerHTML = '<h1 id="nieuweId" > Nieuwe header </h1>'; // Je kan dus zelfs dynamisch HTML-elementen toevoegen of verwijderen 
 html_object.style.fontsize = "15px";
 
 html_object.setAttribute("attributeName", "newValue");
