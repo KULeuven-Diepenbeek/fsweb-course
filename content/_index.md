@@ -21,8 +21,8 @@ Academiejaar 2025---2026.
 | 03  | vr 13-02-2026 | CSS + Advanced CSS                         |
 | 04  | ma 23-02-2026 | JavaScript                                 |
 | 05  | wo 25-02-2026 | More JavaScript + Creative coding (p5)     |
-| 06  | vr 27-02-2026 | Responsive Design                          | 
-| 07  | wo 04-03-2026 | Example application + Frontend practice    |
+| 06  | vr 27-02-2026 | Creative coding deel 2                     | 
+| 07  | wo 04-03-2026 | Responsive Design                          |
 | 08  | vr 06-03-2026 | Overview of languages and frameworks       |
 | 09  | wo 11-03-2026 | PHP basics + form handling                 |
 | 10  | vr 13-03-2026 | PHP Object Oriented Programming + security |
