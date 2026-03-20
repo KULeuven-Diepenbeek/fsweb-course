@@ -2,61 +2,61 @@
 title: "Opdracht"
 weight: 4
 author: Arne Duyver
-draft: true
+draft: false
 ---
 
 Officiële opgave, zie <a href="https://toledo.kuleuven.be/">Toledo</a>
 
-## FSWEB: Projectopdracht 2024-2025
+## FSWEB: Projectopdracht 2025-2026, De sociale kaart voor jongeren
 
-In essentie mag je een eigen concept kiezen voor de website die je voor het project van "Full Stack Web Development" mag/moet maken. Hierbij gelden volgende **minimumvereisten**:
+De sociale kaart is een redelijk droge website waarmee je hulp- en zorgverleners in Vlaanderen kan opzoeken. De site is in essentie niet meer dan een formulier waarin je kan invullen naar wat je op zoek bent, en in welke locale dat moet zijn. De uitkomst geeft dan zowel zorgverleners (meer medische en/of klinische beroepen), hulpverleners (breder en dus ook sociaal, maatschappelijk, …) en instellingen (CAW, …). Om het algemeen te houden, noemen we die hieronder “actoren”.
+
+Een jongerenversie moet meer drempelverlagend zijn en de bezoeker beter begeleiden in de zoektocht naar de juiste hulp. Duidelijke rubrieken zoals “Ik wil op eigen benen staan”, “Er is een noodgeval”, “ik wil een klacht indienen”, … kunnen daarbij helpen. De relatief droge data van de sociale kaart moet daarvoor verrijkt worden gegevens over toegankelijk- en betaalbaarheid en de mate waarin het initiatief zich specifiek op jongeren richt. Ook een indeling in de rubrieken van hierboven is belangrijk.
+
+Hiervoor moet in dit vak (FSWEB) een website gemaakt worden dat een meer basic versie van de database (uit het vak DAB) gebruikt.
+
+_De database wordt jullie aangeboden in de week van 23/03/2026 wanneer we de lessen rond laravel en mysql gezien hebben_
+
+Hierbij gelden volgende technische **minimumvereisten** voor de website:
 
 - Volg de logica van de HTML-elementen om je website te structureren (bv. één main-sectie, aside voor nevenstaande elementen, ...)
-- Maak minstens de twee volgende pagina’s:
-  - Een contact-pagina met pictogrammen voor de verschillende contactmethodes en een formulier om contact met je op te nemen.
-  - Een login-pagina. Implementeer hierbij `user authentication` zodat je als gebruiker een gepersonaliseerde ervaring krijgt (anders heeft de login-pagina niet veel zin).
--	Zorg daarnaast voor minstens 3 andere webpagina’s met een duidelijk verschillend doel.
-    -	Het is interessanter om duidelijk verschillende soorten pagina’s te maken dan varianten op hetzelfde.
+- Maak minstens de drie volgende pagina’s:
+  - Een map view pagina zoals ook te zien is op deze url [De sociale kaart in kaartvorm](https://www.google.com/maps/d/u/0/viewer?mid=1QodGcXUQ-SIqoW8G-ulEjYXAQKCQ6bM&ll=50.91566005817988%2C4.216426199999974&z=8). Je kan hiervoor de [leaflet api](https://leafletjs.com/) gebruiken of google maps api.
+  - Een login-pagina. Implementeer hierbij `user authentication` zodat je als administrator een gepersonaliseerde ervaring krijgt en elementen aan de website kan updaten. (Bijvoorbeeld extra organisaties toevoegen). Niet alleen administrators moeten kunnen inloggen maar ook organisaties die hun gegevens willen updaten. (Bijvoorbeeld: Apotheek Peeters is verhuisd en wil zijn adres updaten).
+  - Een zoekpagina gelijkaardig aan de [originele sociale kaart website](https://www.desocialekaart.be/) maar met focus op jongeren en een meer intuïtieve gebruikers interface.
+-	Zorg daarnaast voor minstens 2 andere webpagina’s met een duidelijk verschillend doel.
+    -	Het is interessanter om duidelijk verschillende soorten pagina’s te maken dan varianten op hetzelfde. (Je mag deze zelf een invulling geven)
 -	Op elke pagina moet een navigatiemenu en een footer staan.
 -	Gebruik een aparte CSS-file om je website te stylen.
 -	Maak gebruik van een `flexbox` en/of `grid` voor het positioneren van de HTML-elementen
 -	Voorzie minstens 1 afbeelding, 1 animation en 1 transition. (Waar nuttig)
 -	Doe formuliervalidatie voor minstens twee soorten elementen, client- én serverside.
--	Je website moet responsive zijn voor minstens 3 schermgroottes:
+-	Je website moet responsive zijn voor minstens 2 schermgroottes:
     -	Een standaard laptop-scherm (14” of 15”, 1920x1080), enkel landscape
-    -	Een tablet (bv. IPad Air), portrait & landscape
     -	Een smartphone (bv. IPhone SE of OnePlus Nord 2T 5G, Android 14):
 afhankelijk van je eigen toestel kan je kiezen tussen iOS of Android.
 -	Implementeer een volledige CRUD (create, read, update en delete), zowel op de backend als met local storage. 
--	Integreer op minstens 2 pagina’s informatie die je uit de database aan de serverkant ophaalt.
-    -	_Maak hiervoor gebruik van het EER-schema en de SQL-database die je ontwikkeld hebt in de taak van het opleidingsonderdeel Databases (4290). **Indien je niet deelneemt aan dit opleidingsonderdeel kan een database aangeboden worden door de docenten**._ 
+    - In local/session storage moet je de zoekgegevens van de gebruikers stoppen zodat jongeren zich niet moeten inloggen, maar dat ze wanneer ze een volgende keer naar de website surfen hun favoriete diensten wel snel kunnen terugvinden.
 -	De Laravel-site moet (vrij) volledig uitgewerkt zijn. De versie in Sveltekit mag beperkter zijn.
+
+Voor de verdere indeling en specifieke uitwerking rekenen we op de individuele invulling van de student. Aangezien jullie de doelgroep van zo een website zouden kunnen zijn ... Hoe wil jij dat de website werkt en wat denk je dat jongeren kan helpen snel de juiste hulp te vinden en jongeren kan aantrekken om hiervan gebruik te maken?
 
 _Met deze minimale vereisten kan je maximaal 16/20 halen voor dit deel van het project. Je bent dus vrij om dit voorstel uit te breiden. Correct uitgewerkte uitbreidingen kunnen voor een hogere score zorgen, maar enkel als aan de minimale vereisten voldaan is. Hou echter rekening met de werklast en met het feit dat je ook nog op de andere opleidingsonderdelen moet slagen._
 
-Bedenk op tijd een voorstel van concept, want voor je database concept kan/moet je een eerste ruw idee hebben voor eind februari. Voor je finale idee krijg je wat langer tijd, nl. tot 26/3/2025.
-Bezorg je concept per email naar <a href=mailto:Kris.Aerts@kuleuven.be>Kris.Aerts@kuleuven.be</a> én <a href=mailto:Arne.Duyver@kuleuven.be>Arne.Duyver@kuleuven.be</a>. Ten laatste voor de paasvakantie krijg je dan feedback over dit voorstel. Bespreek in deze email niet alleen het algemene concept, maar ook hoe je de verschillende minimumcriteria wil aanpakken. Tijdens de uitvoering van het project mag je van dit voorstel afwijken, maar we willen vermijden dat je vergeet hieraan te denken tijdens het bedenken van je concept. 
-
-Ter inspiratie enkele voorbeelden (waarbij je zelf moet aanvullen wat er precies in zal zitten):
-- Een (fake) dashboard voor een smarthome (lichten aan- en uitdoen, verwarming instellen, ...)
--	Een eenvoudige webshop 
--	Een online movie database met zoekfunctionaliteit en waar je filmbesprekingen kan toevoegen
--	Een website ter ondersteuning van een online game met cheats en een shop voor skins e.d. 
--	Een website voor een universiteit, waar je een studie kan kiezen, of kan in- en uitschrijven voor vakken
--	Een blogplatform waar mensen zelf een blog kunnen opstarten en artikels toevoegen aan een blog, met likes voor die post, ...
-
-De opdracht moet je uiteindelijk uitvoeren in 2 verschillende frameworks (Laravel en Svelte/Sveltekit).
+Deze vraag werd ons rechtstreeks gesteld van een medewerkster van de website en ze willen graag dat wij hun helpen met een efficiënte, bruikbare en aantrekkelijke website. Midden mei zitten we terug samen met hen en willen we al een deel van jullie projecten tonen om aan hen ook feedback te vragen wat ze willen hebben, want moesten ze zeer blij zijn met het resultaat kan het zijn dat we met jou contact opnemen om na de cursus de website eventueel voor hen beschikbaar te stellen. Daarom willen we voor zondag 03/05/2026 23u59 een eerste versie van je Laravel project ontvangen, je zal hier dan ook informatieve feedback op krijgen (staat dus nog niet op punten). De uiteindelijke verdediging van je website zal ergens vlak voor of tijdens de examen periode ingepland worden voor een mondelinge verdediging.
 
 |Deel|Opdracht|Deadline|
 |----|--------|--------|
-|0.  |Concept | Woensdag 26/03/2025|
+|0.  |Eerste versie | Zondag 03/05/2026 23u59|
 |1.  |Laravel | Het examen (TBD)|
 |2.  |Svelte/Sveltekit | Het examen (TBD)|
-|3.  |Verslagen | Het examen (TBD)|
+|3.  |Verslag | Het examen (TBD)|
 
 Deel 1 en 2 worden **mondeling verdedigd**, en dit ten laatste **op het examen**. Vroeger mag ook. 
 
 Zowel deel 1 als deel 2 zijn een **individueel project**. Voor deel 3 (de verslagen) is het voldoende om ze te uploaden via Toledo, maar hier kan wel een vraag over komen op de mondelinge verdediging van het project.
+
+**Indienen deel 0** Zip de rootfolder van je gehele website (heel het Laravel project) en geef het de benaming _"AchternaamVoornaam_Laravel.zip"_. Upload dit zipbestand op Toledo.
 
 **Indienen deel 1** Zip de rootfolder van je gehele website (heel het Laravel project) en geef het de benaming _"AchternaamVoornaam_Laravel.zip"_. Upload dit zipbestand op Toledo.
 
@@ -84,10 +84,10 @@ Herbruik zoveel mogelijk de frontend van je Laravel website uit deel 1, maar maa
 
 Deadline: zie boven
 
-Naast je website dien je een **verslag van je website** in---van ongeveer 100 à 200 woorden---waarin je uitlegt wat de speciale kenmerken van je website zijn (wat-waarom-voor wie). Standaardformuleringen "op de login-pagina kan je inloggen" mag/moet je laten vallen.
+<!-- Naast je website dien je een **verslag van je website** in---van ongeveer 100 à 200 woorden---waarin je uitlegt wat de speciale kenmerken van je website zijn (wat-waarom-voor wie). Standaardformuleringen "op de login-pagina kan je inloggen" mag/moet je laten vallen. -->
 
 Je dient verder ook nog een **verslag over de verschillende frameworks** te maken---van ongeveer 250 woorden---waarin je een vergelijking maakt tussen de werking van Laravel en SvelteKit. Wat was makkelijker in het ene framework, wat was moeilijker. Vermeld ook welk framework je meer geneigd bent om in de toekomst te gebruiken en waarom.
 
-**Indienen doe je via Toledo; voeg enkel beide Word-bestanden toe. Zie boven.**
+**Indienen doe je via Toledo; voeg enkel het Word-bestand toe. Zie boven.**
 
 **ALVAST VEEL SUCCES!**
