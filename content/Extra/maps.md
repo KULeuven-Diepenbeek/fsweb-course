@@ -333,13 +333,63 @@ Beide bibliotheken bieden **veel meer** functionaliteit dan hier beschreven. Zo 
 
 ---
 
-## Eenvoudige link naar Google Maps voor routebeschrijving
+## Routebeschrijvingen
 
-Je hebt **geen API-sleutel en geen JavaScript** nodig om een klikbare link te maken die Google Maps opent met een kant-en-klare route. Google biedt hiervoor een speciale URL-structuur aan via de [Maps URLs-documentatie](https://developers.google.com/maps/documentation/urls/get-started).
+Er zijn twee aanpakken om routes te tonen in je webapplicatie: een **interactieve route op een Leaflet-kaart** via een plugin, of een **eenvoudige link** die Google Maps opent in een nieuw tabblad. Welke aanpak je kiest hangt af van je vereisten: wil je de route ingebed in je eigen pagina, of volstaat een knopje dat de gebruiker doorstuurt?
 
-### URL-structuur
+### Routing in Leaflet met Leaflet Routing Machine
 
-De basis-URL voor een routebeschrijving is:
+[Leaflet Routing Machine](https://www.liedman.net/leaflet-routing-machine/) is een plugin die routing toevoegt aan Leaflet. Standaard gebruikt het **OSRM** (Open Source Routing Machine) als routing-backend — volledig gratis en zonder API-sleutel.
+
+**Stap 1: Plugin laden via CDN**
+
+Voeg de CSS en JavaScript van de plugin toe **na** de Leaflet-bestanden:
+
+```html
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet Routing Machine -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+</head>
+```
+
+**Stap 2: Route aanmaken**
+
+```javascript
+const kaart = L.map('kaart').setView([50.9254, 5.3923], 10);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(kaart);
+
+L.Routing.control({
+    waypoints: [
+        L.latLng(50.9254, 5.3923), // vertrekpunt: UHasselt
+        L.latLng(50.8503, 4.3517)  // bestemming: Brussel
+    ],
+    routeWhileDragging: true       // route herbereken terwijl je waypoints versleept
+}).addTo(kaart);
+```
+
+Dit toont automatisch een route op de kaart én een zijpaneel met stap-voor-stap instructies. De waypoints zijn versleepbaar zodat de gebruiker de route kan aanpassen.
+
+{{% notice info %}}
+Je kan meer dan twee waypoints opgeven — voeg extra `L.latLng(...)`-elementen toe aan de `waypoints`-array om tussenstops in te lassen.
+{{% /notice %}}
+
+{{% notice warning %}}
+De OSRM demo-server die standaard gebruikt wordt (`router.project-osrm.org`) is **alleen bedoeld voor ontwikkeling en testing**. Voor productie-gebruik moet je een eigen OSRM-instantie hosten of een betaalde routing-service zoals [Mapbox Directions](https://docs.mapbox.com/api/navigation/directions/) gebruiken.
+{{% /notice %}}
+
+---
+
+### Eenvoudige link naar Google Maps
+
+Je hebt **geen API-sleutel en geen JavaScript** nodig om een klikbare link te maken die Google Maps opent met een kant-en-klare route. Google biedt hiervoor een speciale URL-structuur aan via de [Maps URLs-documentatie](https://developers.google.com/maps/documentation/urls/get-started). Dit is ideaal voor situaties waar je niet een volledige kaart wil inbedden, maar de gebruiker simpelweg wil doorsturen — denk aan een "Plan je route"-knop op een contactpagina.
+
+**URL-structuur:**
 
 ```
 https://www.google.com/maps/dir/?api=1&destination=<bestemming>
@@ -352,23 +402,21 @@ https://www.google.com/maps/dir/?api=1&destination=<bestemming>
 | `origin` | Vertrekpunt (optioneel — als je dit weglaat, gebruikt Google Maps de locatie van de gebruiker) |
 | `travelmode` | Reismodus: `driving` (auto), `walking` (te voet), `bicycling` (fiets) of `transit` (openbaar vervoer) |
 
-### Voorbeelden
-
-**Bestemming opgeven als coördinaten:**
+**Bestemming als coördinaten:**
 ```html
 <a href="https://www.google.com/maps/dir/?api=1&destination=50.8503,4.3517" target="_blank" rel="noopener">
   Open route in Google Maps
 </a>
 ```
 
-**Bestemming opgeven als adres:**
+**Bestemming als adres:**
 ```html
 <a href="https://www.google.com/maps/dir/?api=1&destination=Grote+Markt+1,+1000+Brussel" target="_blank" rel="noopener">
   Route naar de Grote Markt
 </a>
 ```
 
-**Vertrekpunt én bestemming én reismodus opgeven:**
+**Vertrekpunt én bestemming én reismodus:**
 ```html
 <a href="https://www.google.com/maps/dir/?api=1&origin=50.9254,5.3923&destination=50.8503,4.3517&travelmode=driving" target="_blank" rel="noopener">
   Route van UHasselt naar Brussel (auto)
