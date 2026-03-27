@@ -330,3 +330,55 @@ Hieronder een overzicht van de syntaxverschillen om je te helpen de overgang tus
 {{% notice note %}}
 Beide bibliotheken bieden **veel meer** functionaliteit dan hier beschreven. Zo biedt Leaflet een uitgebreid plugin-ecosysteem voor onder andere clustering van markers, heatmaps en routing. Google Maps biedt via andere API's de mogelijkheid om routes te berekenen (`Directions API`), adressen op te zoeken (`Geocoding API`) en nabijgelegen plaatsen te vinden (`Places API`). Raadpleeg de officiële documentatie voor een volledig overzicht.
 {{% /notice %}}
+
+---
+
+## Eenvoudige link naar Google Maps voor routebeschrijving
+
+Je hebt **geen API-sleutel en geen JavaScript** nodig om een klikbare link te maken die Google Maps opent met een kant-en-klare route. Google biedt hiervoor een speciale URL-structuur aan via de [Maps URLs-documentatie](https://developers.google.com/maps/documentation/urls/get-started).
+
+### URL-structuur
+
+De basis-URL voor een routebeschrijving is:
+
+```
+https://www.google.com/maps/dir/?api=1&destination=<bestemming>
+```
+
+| Parameter | Beschrijving |
+|---|---|
+| `api=1` | Verplicht — geeft aan dat je de URL-API gebruikt |
+| `destination` | Bestemming als coördinaten (`lat,lng`) of als adres |
+| `origin` | Vertrekpunt (optioneel — als je dit weglaat, gebruikt Google Maps de locatie van de gebruiker) |
+| `travelmode` | Reismodus: `driving` (auto), `walking` (te voet), `bicycling` (fiets) of `transit` (openbaar vervoer) |
+
+### Voorbeelden
+
+**Bestemming opgeven als coördinaten:**
+```html
+<a href="https://www.google.com/maps/dir/?api=1&destination=50.8503,4.3517" target="_blank" rel="noopener">
+  Open route in Google Maps
+</a>
+```
+
+**Bestemming opgeven als adres:**
+```html
+<a href="https://www.google.com/maps/dir/?api=1&destination=Grote+Markt+1,+1000+Brussel" target="_blank" rel="noopener">
+  Route naar de Grote Markt
+</a>
+```
+
+**Vertrekpunt én bestemming én reismodus opgeven:**
+```html
+<a href="https://www.google.com/maps/dir/?api=1&origin=50.9254,5.3923&destination=50.8503,4.3517&travelmode=driving" target="_blank" rel="noopener">
+  Route van UHasselt naar Brussel (auto)
+</a>
+```
+
+{{% notice info %}}
+Gebruik `target="_blank"` om de kaart in een nieuw tabblad te openen, zodat de gebruiker je website niet verliest. Voeg altijd `rel="noopener"` toe bij `target="_blank"` om een beveiligingsrisico te vermijden waarbij de nieuwe pagina toegang zou kunnen krijgen tot het `window`-object van je eigen pagina.
+{{% /notice %}}
+
+{{% notice tip %}}
+Spaties in adressen vervang je door `+` of `%20`. Coördinaten schrijf je als `breedtegraad,lengtegraad` (zonder spatie na de komma). Je kan coördinaten snel opzoeken via [openstreetmap.org](https://www.openstreetmap.org) of via Google Maps zelf door op een punt te rechtsklikken.
+{{% /notice %}}
