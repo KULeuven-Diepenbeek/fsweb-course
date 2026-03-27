@@ -29,6 +29,11 @@
     <loc>http://localhost:1313/fsweb-course/frontend/css_advanced/</loc>
     <lastmod>2026-02-13T10:34:12+01:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/fsweb-course/backend/</loc>
+    <lastmod>2026-03-06T08:11:42+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fsweb-course/extra/maps/</loc>
+  </url><url>
     <loc>http://localhost:1313/fsweb-course/frontend/javascript_basics/</loc>
     <lastmod>2026-02-23T15:07:04+01:00</lastmod>
   </url><url>
@@ -37,6 +42,15 @@
   </url><url>
     <loc>http://localhost:1313/fsweb-course/backend/laravel_basics/</loc>
     <lastmod>2025-04-04T09:25:07+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fsweb-course/opdracht/</loc>
+    <lastmod>2026-03-20T10:30:23+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fsweb-course/opdracht/opdracht2425/</loc>
+    <lastmod>2026-03-20T10:30:23+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fsweb-course/kennenkunnen/</loc>
+    <lastmod>2026-02-09T09:55:16+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/backend/laravel_mvc/</loc>
     <lastmod>2025-03-28T11:07:54+01:00</lastmod>
@@ -60,7 +74,7 @@
     <lastmod>2025-04-04T09:25:01+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/</loc>
-    <lastmod>2026-02-10T11:00:33+01:00</lastmod>
+    <lastmod>2026-03-04T10:10:23+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/fsweb-course/tags/</loc>
   </url>
