@@ -1,7 +1,7 @@
 ---
 title: 'Examen: Kennen en kunnen'
 weight: 5
-draft: true
+draft: false
 ---
 
 ### Wat **NIET** te kennen voor het examen
