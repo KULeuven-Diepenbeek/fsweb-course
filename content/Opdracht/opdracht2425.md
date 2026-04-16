@@ -91,3 +91,198 @@ Je dient verder ook nog een **verslag over de verschillende frameworks** te make
 **Indienen doe je via Toledo; voeg enkel beide Word-bestanden toe. Zie boven.**
 
 **ALVAST VEEL SUCCES!**
+
+### DE DATABASE
+
+In [deze zipfolder](/files/database_opdracht.zip) kan je een folder terugvinden met 2 sql files om een eigen MySql database te laten genereren (met eventueel dummydata). Aangezien dit ingebouwd is in Laravel kan je in de zipfolder ook alle Modellen, migrations en een database seeder terugvinden.
+
+{{% notice info %}}
+Je mag de database zelf ook uitbreiden of meer dummy data gebruiken, maar conceptueel is wat hier is aangeboden voldoende.
+{{% /notice %}}
+
+# Uitleg van de databasestructuur
+
+In deze database slaan we gegevens op over **organisaties**, die we "actoren" noemen.  
+Denk hierbij aan jeugdhuizen, hulpdiensten, welzijnsorganisaties, medische praktijken, enzovoort.
+
+De database is bewust **vereenvoudigd** opgebouwd zodat ze makkelijk te begrijpen is, maar toch voldoende krachtig blijft om realistische data op te slaan.
+
+
+## 1. De centrale tabel: Actor
+
+De belangrijkste tabel in de database is de tabel **`actor`**.
+
+Een *actor* stelt één organisatie voor.
+
+In deze tabel bewaren we alle basisinformatie van een organisatie, zoals:
+
+- de publieke naam van de organisatie  
+- de categorie waartoe de organisatie behoort  
+- het adres (straat, nummer, gemeente, postcode, coördinaten)  
+- de betaalwijze (bijvoorbeeld gratis, sociaal tarief of online betaling)  
+- de leeftijdscategorie waarop de organisatie zich richt  
+- de aangeboden diensten (als vrije tekst)  
+- eventuele opmerkingen  
+- de datum waarop de gegevens laatst werden aangepast  
+
+Belangrijk:  
+**De actor is het centrale punt van de database.**  
+Alle andere gegevens hangen op één of andere manier samen met een actor.
+
+## 2. Categorie
+
+Elke actor behoort tot **exact één categorie**.
+
+Voorbeelden van categorieën zijn:
+- Vrije tijd  
+- Gezondheid 
+- Welzijn
+- Onderwijs
+- Op eigen benen staan
+- Hulpverlening
+- Noodgevallen
+- Inspraak
+- Klachten
+- Overheidsdiensten
+
+Dit betekent dat:
+- één categorie meerdere actoren kan bevatten  
+- maar een actor slechts tot één categorie kan behoren  
+
+Technisch wordt dit gerealiseerd via een foreign key:
+- `actor.categorie_id` verwijst naar `categorie.id`
+
+## 3. Rubrieken
+
+Naast categorieën bestaan er ook **rubrieken**.  
+Rubrieken vormen een meer gedetailleerde indeling en zijn hiërarchisch opgebouwd.
+
+Elke rubriek heeft:
+- een **ID als string** (bijvoorbeeld `11`, `11.02`, `11.02.04`)  
+- een naam  
+- een level (niveau), bijvoorbeeld:
+  - level 1 = hoofdniveau  
+  - level 2 = subniveau  
+  - level 3 = detailniveau  
+
+Voorbeeld:
+- `11` → JONGEREN  
+- `11.02` → Jeugdwelzijnswerk  
+- `11.02.04` → Vrijetijdsinitiatieven  
+
+
+### Relatie tussen actor en rubriek
+
+Een actor kan tot **meerdere rubrieken** behoren.  
+En een rubriek kan ook aan **meerdere actoren** gekoppeld zijn.
+
+Dit is dus een **veel-op-veel relatie (many-to-many)**.
+
+Daarom gebruiken we een tussentabel: **`actor_rubriek`**
+
+Deze tabel bevat enkel:
+- `actor_id`
+- `rubriek_id`
+
+## 4. Adres (in de actor)
+
+Elke actor heeft **exact één adres**.
+
+In plaats van een aparte tabel te maken, hebben we ervoor gekozen om het adres rechtstreeks in de `actor`-tabel op te slaan.
+
+De adresgegevens bestaan uit:
+- straatnaam  
+- huisnummer  
+- busnummer  
+- gemeente  
+- postcode  
+- latitude en longitude (geografische coördinaten)  
+
+Waarom deze keuze?
+- eenvoudiger model  
+- minder tabellen nodig  
+- minder complexe queries  
+
+
+## 5. Contactgegevens
+
+Een actor kan **meerdere contactgegevens** hebben.
+
+Voorbeelden:
+- telefoonnummer  
+- e-mailadres  
+- website of sociale media  
+
+Daarom gebruiken we een aparte tabel: **`contactgegeven`**
+
+Elke rij in deze tabel bevat:
+- het type (mail, telefoonnr, online)  
+- de waarde (bijvoorbeeld het telefoonnummer of e-mailadres)  
+- een verwijzing naar de actor  
+
+Relatie:
+- één actor → meerdere contactgegevens  
+
+
+## 6. Openingsuren
+
+Een actor kan ook **meerdere openingsuren** hebben.
+
+Daarom bestaat er een aparte tabel: **`openingsuur`**
+
+Elke openingsuur bevat:
+- dag van de week (bijvoorbeeld maandag, dinsdag, …)  
+- startuur  
+- einduur  
+- type (bijvoorbeeld open, online, op afspraak, telefonisch)  
+- een verwijzing naar de actor  
+
+Relatie:
+- één actor → meerdere openingsuren  
+
+
+## 7. Gebruikers
+
+De tabel **`gebruiker`** stelt de personen voor die met het systeem werken.
+
+Elke gebruiker heeft:
+- een rol:
+  - administrator (beheerder van het systeem)
+  - actorbeheerder (beheerder van één actor)
+- een e-mailadres  
+- een wachtwoord  
+
+### Relatie tussen gebruiker en actor
+
+Een gebruiker kan gekoppeld zijn aan een actor.
+
+Dit betekent:
+- een actor kan een contactpersoon hebben (een gebruiker)  
+- een gebruiker kan verantwoordelijk zijn voor het beheren van een actor  
+
+Dit wordt gerealiseerd via:
+- `gebruiker.actor_id`
+- `actor.contactpersoon_gebruiker_id`
+
+
+# Samenvatting van de relaties
+
+## Eén-op-veel relaties
+- één categorie → meerdere actoren  
+- één actor → meerdere contactgegevens  
+- één actor → meerdere openingsuren  
+
+## Veel-op-veel relatie
+- actor ↔ rubriek (via `actor_rubriek`)  
+
+## Optionele één-op-één relatie
+- actor ↔ gebruiker (contactpersoon)
+
+# 🧠 Conceptueel uitgelegd
+
+Je kan de database als volgt samenvatten:
+
+> Een actor (organisatie) is het centrale element.  
+Elke actor hoort bij één categorie en heeft één adres.  
+Daarnaast kan een actor meerdere rubrieken, contactgegevens en openingsuren hebben.  
+Gebruikers beheren actoren en kunnen eraan gekoppeld zijn als contactpersoon.
